@@ -785,7 +785,7 @@ public class Room implements Tick {
 			return false;
 		}
 
-		return true;
+		return true; 
 	}
 
 	// 团队能否加入
@@ -999,7 +999,6 @@ public class Room implements Tick {
 				buffer.Add(roomPlayer.getUser().getTickName());
 				buffer.Add(roomPlayer.getGrade().getM_level().ID());
 				buffer.Add(roomPlayer.getGrade().getM_star());
-				
 			}
 
 			buffer.Send(rp.getUser());

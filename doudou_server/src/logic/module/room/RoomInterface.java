@@ -48,6 +48,8 @@ public interface RoomInterface {
 	static final int MID_TEAM_LEFTMATCH = 31;// 匹配時退出
 	static final int MID_BROADCAST_FREETEAM = 32; // 广播自建房,加入房间，离开房间后 队伍内消息
 	static final int MID_ROOM_CHOOSETEAM = 33; // 选择队伍
+	
+	static final int MID_ROOM_FRIENDLIST = 34; // 請求獲取好友列表
 
 	@RFC(ID = MID_ENTER)
 	void EnterRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID,
@@ -109,6 +111,8 @@ public interface RoomInterface {
 	@RFC(ID = MID_ROOM_GAMESATRT)
 	void gameStart(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
 
+	@RFC(ID = MID_ROOM_FRIENDLIST)
+	void getFriendList(@PU(Index = Reg.ROOM) MyUser p_user);
 
-
+	
 }

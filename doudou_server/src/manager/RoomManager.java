@@ -141,7 +141,7 @@ public class RoomManager {
 		if(room2!=null){
 			room2.RemovePlayer(user, System.currentTimeMillis());
 		}
-		
+
 		Room room = this.getRoom(roomId);
 		if(null != room){
 			LogRecord(user, user.GetUserName()+"加入房间");
@@ -210,9 +210,19 @@ public class RoomManager {
 
 	public void packFreeRoom(SendMsgBuffer p,int isTeam) {
 		// TODO Auto-generated method stub
+		int i=0;
+		Iterator<Room> its = m_freeroomlist.iterator();
+		while (its.hasNext()) {
+			Room room = (Room) its.next();
+			if(room.getRr().getM_type().ID()==isTeam){
+				i++;;
+			}
+		}
+
 		Iterator<Room> it = m_freeroomlist.iterator();
-		p.Add(isTeam);
-		p.Add((short)m_freeroomlist.size());
+/*		p.Add(isTeam);*/
+		p.Add((short)i);
+		System.err.println(i);
 		while (it.hasNext()) {
 			Room room = (Room) it.next();
 			if(room.getRr().getM_type().ID()==isTeam){

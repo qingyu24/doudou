@@ -37,7 +37,7 @@ public interface CenterInterface {
 	 void CreatTeam(@PU MyUser p_user);
 
 	 @RFC(ID = MID_TEAM_INVITATION)
-	 void InvitationFriend(@PU MyUser p_user, @PL long p_ID, @PI int p_teamID, @PL long m_friendID);
+	 void InvitationFriend(@PU MyUser p_user, @PL long p_ID, @PI int p_teamID, @PL long m_friendID,@PI int ifFree);
 
 	 @RFC(ID = MID_TEAM_JOIN)
 	 void JoinTeam(@PU MyUser p_user, @PI int p_teamID, @PL long m_friendID);

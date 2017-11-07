@@ -211,9 +211,9 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		// TODO Auto-generated method stub
 		SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
 				CenterInterface.MID_TEAM_FRIENDS);
-/*		Collections.sort(this.friends);*/
+
 		Iterator<MyUser> iterator = this.friends.iterator();
-/*System.out.println("好友個數sssss"+this.friends.size());*/
+
 		p.Add((short)this.friends.size());
 		while (iterator.hasNext()) {
 			MyUser myUser = (MyUser) iterator.next();
@@ -293,15 +293,6 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		}
 	}
 
-	/*@Override
-	public int compareTo(MyUser o) {
-		// TODO Auto-generated method stub
-		if(this.grade.getM_score()>o.getGrade().getM_score()){
-			return 1;
-		}else{
-			return -1;
-		}
 
-	}*/
 
 }
