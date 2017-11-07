@@ -37,6 +37,12 @@ public class TeamManager {
 	public Team joinTeam(MyUser user, int teamID) {
 		// TODO Auto-generated method stub
 		Team team = x_waitlist.get(teamID);
+		//先把从原来队伍去掉
+		Team team2 = this.getTeam(user.getRoomId());
+		if(team2!=null){
+			team2.removeUser(user);
+		}
+		
 		if (team != null && team.getM_users().size() < new RoomRule().getPalyerNum()) {
 			team.addUser(user);
 			this.u_teamlist.put(user.GetRoleGID(), team);

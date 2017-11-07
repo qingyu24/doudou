@@ -68,6 +68,7 @@ public class CenterImpl implements CenterInterface {
 			SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ERROR, eErrorCode.Error_1.ID());
 			p.Send(p_user);
 		}
+		
 	};
 
 	@Override
@@ -149,10 +150,8 @@ public class CenterImpl implements CenterInterface {
 				CenterInterface.MID_BROADCAST_FREEROOM);
 		p.Add(isEnter);
 		RoomManager.getInstance().packFreeRoom(p,isTeam);
-
 		p.Send(p_user);
 	
-
 	}
 
 	

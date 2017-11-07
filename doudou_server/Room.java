@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-
 import logic.LogRecord;
 import logic.MyUser;
 import logic.PackBuffer;
@@ -137,8 +136,7 @@ public class Room implements Tick {
 
 	public RoomPlayer AddPlayer(MyUser user) {
 		/* user.setRoomId(this.m_roomId); */
-		if(!this.rr.isFree())	{	
-			this.setM_state(eGameState.GAME_PLAYING);}// 如果不是团战 只要有人进入房间就开始游戏
+		this.setM_state(eGameState.GAME_PLAYING);// 如果不是团战 只要有人进入房间就开始游戏
 		RoomPlayer rp = new RoomPlayer();
 		rp.init(user);
 		this.AddPlayer(rp);
@@ -860,27 +858,27 @@ public class Room implements Tick {
 		// TODO Auto-generated method stub
 		// 先把队伍所有人加入房间
 		if(!this.m_allTeams.contains(team)){
-			Iterator<Team> it = this.m_allTeams.iterator();
-			while (it.hasNext()) {
-				Team team2 = (Team) it.next();
-				if (team2.getM_teamID() == team.getM_teamID()) {
-					return null;
-				}
-				if (team2.m_users.size() + team.m_users.size() <= rr.getPalyerNum()) {
-					team2.addTeam(team);
-					team2.setM_roomID(this.m_roomId);
-					this.AddPlayer(team, team2);
-					/* TeamManager.getInstance().destroyTeam(team); */
-					return team2;
-				}
+		Iterator<Team> it = this.m_allTeams.iterator();
+		while (it.hasNext()) {
+			Team team2 = (Team) it.next();
+			if (team2.getM_teamID() == team.getM_teamID()) {
+				return null;
 			}
-			this.m_allTeams.add(team);
-			this.m_teams.put(team.getM_teamID(), team);
-			team.setM_roomID(this.m_roomId);
-			team.setTeamName(getNewTeamName());
-			this.AddPlayer(team, team);
-			return team;
+			if (team2.m_users.size() + team.m_users.size() <= rr.getPalyerNum()) {
+				team2.addTeam(team);
+				team2.setM_roomID(this.m_roomId);
+				this.AddPlayer(team, team2);
+				/* TeamManager.getInstance().destroyTeam(team); */
+				return team2;
+			}
 		}
+		this.m_allTeams.add(team);
+		this.m_teams.put(team.getM_teamID(), team);
+		team.setM_roomID(this.m_roomId);
+		team.setTeamName(getNewTeamName());
+		this.AddPlayer(team, team);
+		return team;
+	}
 		return team;
 	}
 	private int getNewTeamName() {
@@ -983,9 +981,8 @@ public class Room implements Tick {
 			SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
 					.AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_FREETEAM);
 			buffer.Add(isTeam);
-			buffer.Add(this.rr.getTime());
+			buffer.Add(rr.getTime());
 			buffer.Add(owner.GetRoleGID());
-			buffer.Add(owner.getTickName());
 			buffer.Add(rr.getTeamNum());
 			buffer.Add(rr.getPalyerNum());
 			buffer.Add((short) m_allPlayer.size());
@@ -994,12 +991,11 @@ public class Room implements Tick {
 				RoomPlayer roomPlayer = (RoomPlayer) it.next();
 				buffer.Add(roomPlayer.getTeamID());
 				buffer.Add(roomPlayer.getTeamName());
-				buffer.Add(roomPlayer.getRoleId());
+				buffer.Add(roomPlayer.getID());
 				buffer.Add(roomPlayer.getUser().getPortrait());
 				buffer.Add(roomPlayer.getUser().getTickName());
 				buffer.Add(roomPlayer.getGrade().getM_level().ID());
 				buffer.Add(roomPlayer.getGrade().getM_star());
-				
 			}
 
 			buffer.Send(rp.getUser());

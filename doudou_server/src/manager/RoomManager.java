@@ -137,6 +137,11 @@ public class RoomManager {
 	}
 
 	public void joinRoom(MyUser user, int roomId){
+		Room room2 = this.getRoom(user.GetRoleGID());
+		if(room2!=null){
+			room2.RemovePlayer(user, System.currentTimeMillis());
+		}
+		
 		Room room = this.getRoom(roomId);
 		if(null != room){
 			LogRecord(user, user.GetUserName()+"加入房间");
