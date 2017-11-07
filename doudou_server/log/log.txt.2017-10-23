@@ -1,0 +1,1069 @@
+0 2017-10-23 11:55:35 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+1319 2017-10-23 11:55:36 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+1740 2017-10-23 11:55:36 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+1818 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+1890 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+1949 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+1954 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+2074 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+2126 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508730937572] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+2138 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+2245 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+2246 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+2247 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+2247 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+2248 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+2248 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+2249 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+2249 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+2255 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+2255 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+2256 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+2256 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+2257 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+2257 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+2259 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+2262 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+2262 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+2262 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+2262 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+2264 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+2270 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+2271 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+2271 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+2272 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+2277 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+2278 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+2279 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+2279 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+2280 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+2280 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+2281 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+2281 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+2281 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+2281 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+2403 2017-10-23 11:55:37 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508730938648] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+4513 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508731065758] Run[logic.loader.UserLoader@161479c6] SpaceTime[126000]]
+4562 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #用时[5] SQL:[com.mysql.jdbc.JDBC4PreparedStatement@56528192: SELECT * FROM account]
+4563 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #读取到[11]条数据
+4569 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+4570 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+4592 2017-10-23 11:55:39 [GlobalLog] SYSTEM_ERROR #java.net.BindException: Address already in use: bind
+4594 2017-10-23 11:55:39 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 11:55:39',0,'java.net.BindException: Address already in use: bind','sun.nio.ch.Net.bind0(Native Method)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+core.detail.impl.socket.ListenNioBase.Init(ListenNioBase.java:82)
+core.detail.impl.mgr.NetMgrImpl._StartListen(NetMgrImpl.java:139)
+core.detail.impl.mgr.NetMgrImpl.run(NetMgrImpl.java:72)
+java.lang.Thread.run(Unknown Source)
+')
+4625 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #端口异常,正在准备重新打开端口!!!
+4625 2017-10-23 11:55:39 [GlobalLog] SYSTEM_INFO #打开端口[2223]成功
+4923 2017-10-23 11:55:40 [GlobalLog] SYSTEM_INFO #正在打开端口[2223]
+4923 2017-10-23 11:55:40 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+14482 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #服务器正准备关闭,请稍候
+14483 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #停止用户的入口[StopUserEntry::Start] 2017年10月23日 11时55分49秒
+14483 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #停止用户的入口[ListenNioBase::Start:2223] 2017年10月23日 11时55分49秒
+14484 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #停止用户的入口[ListenNioBase::Finish:2223] 2017年10月23日 11时55分49秒
+14484 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #停止用户的入口[StopUserEntry::Finish] 2017年10月23日 11时55分49秒
+14484 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:NET]] 2017年10月23日 11时55分49秒
+14485 2017-10-23 11:55:49 [GlobalLog] SYSTEM_INFO #线程正常停止[[19,NET]] 2017年10月23日 11时55分49秒
+16485 2017-10-23 11:55:51 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveAllUserData::Start] 2017年10月23日 11时55分51秒
+16486 2017-10-23 11:55:51 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[core.detail.impl.mgr.UserMgrImpl@635e2bb4 UserStore[0] TempUserStore[0] QueueByUseUser[0] DisUser[0]] 2017年10月23日 11时55分51秒
+16487 2017-10-23 11:55:51 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveAllUserData::Finish] 2017年10月23日 11时55分51秒
+16487 2017-10-23 11:55:51 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveOtherData::Start] 2017年10月23日 11时55分51秒
+16488 2017-10-23 11:55:51 [GlobalLog] SYSTEM_INFO #系统正在保存全局数据[account] 一共有[11]条数据
+16493 2017-10-23 11:55:51 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveOtherData::Finish] 2017年10月23日 11时55分51秒
+0 2017-10-23 11:56:03 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+8 2017-10-23 11:56:03 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+396 2017-10-23 11:56:03 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+460 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+511 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+549 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+551 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+597 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+633 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508730964432] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+645 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+739 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+744 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+744 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+745 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+746 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+747 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+747 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+748 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+750 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+755 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+757 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+758 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+759 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+760 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+761 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+764 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+764 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+765 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+765 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+767 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+771 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+772 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+778 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+780 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+783 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+786 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+788 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+789 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+790 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+791 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+792 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+793 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+793 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+793 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+815 2017-10-23 11:56:04 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508730965415] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+1831 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508731098431] Run[logic.loader.UserLoader@161479c6] SpaceTime[133000]]
+1869 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #用时[4] SQL:[com.mysql.jdbc.JDBC4PreparedStatement@56528192: SELECT * FROM account]
+1869 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #读取到[11]条数据
+1873 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1877 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1881 2017-10-23 11:56:05 [GlobalLog] SYSTEM_ERROR #java.net.BindException: Address already in use: bind
+1884 2017-10-23 11:56:05 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 11:56:05',0,'java.net.BindException: Address already in use: bind','sun.nio.ch.Net.bind0(Native Method)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+core.detail.impl.socket.ListenNioBase.Init(ListenNioBase.java:82)
+core.detail.impl.mgr.NetMgrImpl._StartListen(NetMgrImpl.java:139)
+core.detail.impl.mgr.NetMgrImpl.run(NetMgrImpl.java:72)
+java.lang.Thread.run(Unknown Source)
+')
+1912 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #端口异常,正在准备重新打开端口!!!
+1912 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #打开端口[2223]成功
+1970 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #正在打开端口[2223]
+1970 2017-10-23 11:56:05 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+294 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+333 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+359 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+377 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+379 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+416 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+431 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508731032677] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+434 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+475 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+478 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+478 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+479 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+479 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+480 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+480 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+480 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+481 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+481 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+483 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+483 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+484 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+484 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+485 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+486 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+486 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+486 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+486 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+487 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+489 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+491 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+492 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+493 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+494 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+495 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+495 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+495 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+496 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+496 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+497 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+497 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+497 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+497 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+504 2017-10-23 11:57:12 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508731033550] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+990 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508731153036] Run[logic.loader.UserLoader@161479c6] SpaceTime[120000]]
+1020 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #用时[3] SQL:[com.mysql.jdbc.JDBC4PreparedStatement@56528192: SELECT * FROM account]
+1020 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #读取到[11]条数据
+1025 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1026 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1080 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+1080 2017-10-23 11:57:13 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+120994 2017-10-23 11:59:13 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@20917c44用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@20917c44]
+121338 2017-10-23 11:59:13 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 11:59:13',1,1,0,4)
+121599 2017-10-23 11:59:13 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 11:59:13',1,1,0,0,1)
+240993 2017-10-23 12:01:13 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@3dd276db用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@3dd276db]
+241183 2017-10-23 12:01:13 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 12:01:13',1,2,0,25)
+241761 2017-10-23 12:01:13 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 12:01:13',1,2,0,0,0)
+361002 2017-10-23 12:03:13 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@7d831ecb用时[12] SQL:[core.DBLoaderEx$SaveGlobalMethod@7d831ecb]
+361477 2017-10-23 12:03:13 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 12:03:13',1,3,0,25)
+361911 2017-10-23 12:03:13 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 12:03:13',1,3,0,0,0)
+444845 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #服务器正准备关闭,请稍候
+444846 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #停止用户的入口[StopUserEntry::Start] 2017年10月23日 12时04分36秒
+444846 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #停止用户的入口[ListenNioBase::Start:2222] 2017年10月23日 12时04分36秒
+444849 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #停止用户的入口[ListenNioBase::Finish:2222] 2017年10月23日 12时04分36秒
+444850 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:NET]] 2017年10月23日 12时04分36秒
+444850 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #线程正常停止[[18,NET]] 2017年10月23日 12时04分36秒
+444852 2017-10-23 12:04:36 [GlobalLog] SYSTEM_INFO #停止用户的入口[StopUserEntry::Finish] 2017年10月23日 12时04分36秒
+446852 2017-10-23 12:04:38 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveAllUserData::Start] 2017年10月23日 12时04分38秒
+446852 2017-10-23 12:04:38 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[core.detail.impl.mgr.UserMgrImpl@786f433f UserStore[0] TempUserStore[0] QueueByUseUser[0] DisUser[0]] 2017年10月23日 12时04分38秒
+447353 2017-10-23 12:04:39 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[core.detail.impl.mgr.UserMgrImpl@786f433f UserStore[0] TempUserStore[0] QueueByUseUser[0] DisUser[0]] 2017年10月23日 12时04分39秒
+447353 2017-10-23 12:04:39 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveAllUserData::Finish] 2017年10月23日 12时04分39秒
+447353 2017-10-23 12:04:39 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveOtherData::Start] 2017年10月23日 12时04分39秒
+447354 2017-10-23 12:04:39 [GlobalLog] SYSTEM_INFO #系统正在保存全局数据[account] 一共有[11]条数据
+447359 2017-10-23 12:04:39 [GlobalLog] SYSTEM_INFO #保存所有的用户数据[SaveOtherData::Finish] 2017年10月23日 12时04分39秒
+448359 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #开始停止线程[LogicMgr] 2017年10月23日 12时04分40秒
+448360 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:LOGIC]] 2017年10月23日 12时04分40秒
+448360 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[19,LOGIC]] 2017年10月23日 12时04分40秒
+448361 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[LogicMgr正常退出]] 2017年10月23日 12时04分40秒
+448361 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #开始停止线程[SQLMgr] 2017年10月23日 12时04分40秒
+448362 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:SQL]] 2017年10月23日 12时04分40秒
+448362 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[20,SQL]] 2017年10月23日 12时04分40秒
+448363 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[SQLMgr正常退出]] 2017年10月23日 12时04分40秒
+448363 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #开始停止线程[SQLLogMgr] 2017年10月23日 12时04分40秒
+448398 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:SQLLOG]] 2017年10月23日 12时04分40秒
+448398 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[22,SQLLOG]] 2017年10月23日 12时04分40秒
+448398 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[SQLLogMgr正常退出]] 2017年10月23日 12时04分40秒
+448400 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #开始停止线程[ThreadTask] 2017年10月23日 12时04分40秒
+448501 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:THREADTASK]] 2017年10月23日 12时04分40秒
+448501 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[23,THREADTASK]] 2017年10月23日 12时04分40秒
+448502 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[ThreadTask正常退出]] 2017年10月23日 12时04分40秒
+448502 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #开始停止线程[GMNetMgr] 2017年10月23日 12时04分40秒
+448502 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #停止用户的入口[ListenNioBase::Start:22222] 2017年10月23日 12时04分40秒
+448503 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #停止用户的入口[ListenNioBase::Finish:22222] 2017年10月23日 12时04分40秒
+448503 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:GMNET]] 2017年10月23日 12时04分40秒
+448503 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[21,GMNET]] 2017年10月23日 12时04分40秒
+448504 2017-10-23 12:04:40 [GlobalLog] SYSTEM_INFO #线程正常停止[[GMNetMgr正常退出]] 2017年10月23日 12时04分40秒
+449504 2017-10-23 12:04:41 [GlobalLog] SYSTEM_INFO #服务器执行完清理工作,GameOver:2017年10月23日 12时04分41秒
+0 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+41 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+344 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+405 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+467 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+486 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+525 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+579 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+744 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508753313003] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+791 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+911 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+914 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+914 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+915 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+916 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+917 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+917 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+917 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+918 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+918 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+919 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+921 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+922 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+922 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+931 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+932 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+933 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+933 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+933 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+934 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+936 2017-10-23 18:08:32 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+950 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+951 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+952 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+953 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+954 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+954 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+955 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+955 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+956 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+956 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+956 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+956 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+957 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+981 2017-10-23 18:08:33 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508753314039] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+2224 2017-10-23 18:08:34 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508753495283] Run[logic.loader.UserLoader@161479c6] SpaceTime[181000]]
+2394 2017-10-23 18:08:34 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+2426 2017-10-23 18:08:34 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:08:34',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+2450 2017-10-23 18:08:34 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+2452 2017-10-23 18:08:34 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+2641 2017-10-23 18:08:34 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+2641 2017-10-23 18:08:34 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+258 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+299 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+327 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+346 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+348 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+387 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+405 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508753411823] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+408 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+453 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+455 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+455 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+456 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+456 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+457 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+457 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+457 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+458 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+458 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+462 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+463 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+463 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+463 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+464 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+465 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+466 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+466 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+466 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+467 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+470 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+471 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+471 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+473 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+473 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+476 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+478 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+479 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+479 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+480 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+480 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+480 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+480 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+480 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+486 2017-10-23 18:10:11 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508753412704] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+1011 2017-10-23 18:10:12 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508753572229] Run[logic.loader.UserLoader@161479c6] SpaceTime[160000]]
+1042 2017-10-23 18:10:12 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+1044 2017-10-23 18:10:12 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:10:12',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+1068 2017-10-23 18:10:12 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1073 2017-10-23 18:10:12 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1132 2017-10-23 18:10:12 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+1132 2017-10-23 18:10:12 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+9 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+247 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+288 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+313 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+333 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+336 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+379 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+399 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508753979987] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+403 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+449 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+451 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+452 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+453 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+453 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+454 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+454 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+457 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+457 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+458 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+458 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+459 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+459 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+459 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+462 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+463 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+463 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+463 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+464 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+465 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+468 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+468 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+469 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+470 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+470 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+473 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+473 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+474 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+474 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+474 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+475 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+476 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+476 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+476 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+482 2017-10-23 18:19:39 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508753980870] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+1009 2017-10-23 18:19:40 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508754175397] Run[logic.loader.UserLoader@161479c6] SpaceTime[195000]]
+1043 2017-10-23 18:19:40 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+1045 2017-10-23 18:19:40 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:19:40',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+1070 2017-10-23 18:19:40 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1076 2017-10-23 18:19:40 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1146 2017-10-23 18:19:40 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+1146 2017-10-23 18:19:40 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+0 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+237 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+276 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+300 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+318 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+320 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+362 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+377 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508754028681] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+380 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+423 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+426 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+426 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+427 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+427 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+428 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+428 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+428 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+430 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+431 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+431 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+435 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+435 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+436 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+436 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+437 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+437 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+438 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+438 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+439 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+441 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+442 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+444 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+445 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+445 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+446 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+449 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+450 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+450 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+451 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+451 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+452 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+452 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+452 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+457 2017-10-23 18:20:28 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508754029562] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+961 2017-10-23 18:20:29 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508754246066] Run[logic.loader.UserLoader@161479c6] SpaceTime[217000]]
+1003 2017-10-23 18:20:29 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+1005 2017-10-23 18:20:29 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:20:29',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+1027 2017-10-23 18:20:29 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1028 2017-10-23 18:20:29 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1089 2017-10-23 18:20:29 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+1089 2017-10-23 18:20:29 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 18:21:57 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:21:57 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+236 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+275 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+300 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+318 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+320 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+356 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+372 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508754118401] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+376 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+423 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+423 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+424 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+424 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+424 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+426 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+426 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+427 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+427 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+430 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+430 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+430 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+431 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+431 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+432 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+433 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+433 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+433 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+433 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+434 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+436 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+436 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+439 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+439 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+440 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+441 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+441 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+443 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+444 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+444 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+445 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+445 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+445 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+445 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+452 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508754119281] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+954 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508754312783] Run[logic.loader.UserLoader@161479c6] SpaceTime[194000]]
+986 2017-10-23 18:21:58 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+988 2017-10-23 18:21:58 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:21:58',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+1015 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1016 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1074 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+1074 2017-10-23 18:21:58 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+5 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+269 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+312 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+340 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+362 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+364 2017-10-23 18:24:53 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+403 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+425 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@77167fb7 [ID:0] NextRunTime[1508754294224] Run[logic.module.login.Login@1fe20588] SpaceTime[200]]
+429 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+480 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+483 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+484 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+485 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+485 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+485 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+486 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+486 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+487 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+487 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+488 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+491 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+492 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+492 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+493 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+494 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+494 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+494 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+494 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+495 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+500 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+501 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+502 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+505 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+506 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+507 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+507 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+508 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+508 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+509 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+509 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+509 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+509 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+510 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+515 2017-10-23 18:24:54 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@5fdcaa40 [ID:1] NextRunTime[1508754295114] Run[core.ex.GatherInfo@6dc17b83] SpaceTime[1000]]
+194985 2017-10-23 18:25:12 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@62c1ec17用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@62c1ec17]
+195065 2017-10-23 18:25:12 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:25:12',1,1,0,31)
+195602 2017-10-23 18:25:13 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:25:13',1,1,0,0,30)
+87491 2017-10-23 18:26:21 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@7331196b [ID:2] NextRunTime[1508754549185] Run[logic.loader.UserLoader@3f9342d4] SpaceTime[171000]]
+199464 2017-10-23 18:28:13 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+199466 2017-10-23 18:28:13 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:28:13',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+199495 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+199496 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+199508 2017-10-23 18:28:13 [GlobalLog] SYSTEM_ERROR #java.net.BindException: Address already in use: bind
+199508 2017-10-23 18:28:13 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:28:13',0,'java.net.BindException: Address already in use: bind','sun.nio.ch.Net.bind0(Native Method)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+core.detail.impl.socket.ListenNioBase.Init(ListenNioBase.java:82)
+core.detail.impl.mgr.NetMgrImpl._StartListen(NetMgrImpl.java:139)
+core.detail.impl.mgr.NetMgrImpl.run(NetMgrImpl.java:72)
+java.lang.Thread.run(Unknown Source)
+')
+199510 2017-10-23 18:28:13 [GlobalLog] SYSTEM_ERROR #java.net.BindException: Address already in use: bind
+199513 2017-10-23 18:28:13 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:28:13',0,'java.net.BindException: Address already in use: bind','sun.nio.ch.Net.bind0(Native Method)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.Net.bind(Unknown Source)
+sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+core.detail.impl.socket.ListenNioBase.Init(ListenNioBase.java:82)
+core.detail.impl.mgr.NetMgrImpl._StartListen(NetMgrImpl.java:139)
+core.detail.impl.mgr.NetMgrImpl.run(NetMgrImpl.java:72)
+java.lang.Thread.run(Unknown Source)
+')
+199516 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #端口异常,正在准备重新打开端口!!!
+199516 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #打开端口[2223]成功
+199550 2017-10-23 18:28:13 [GlobalLog] SYSTEM_ERROR #线程[24]挂掉了 囧囧囧囧囧囧囧囧囧囧
+199551 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #线程正常停止[[StartRemove:GMNET]] 2017年10月23日 18时28分13秒
+199551 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #线程正常停止[[24,GMNET]] 2017年10月23日 18时28分13秒
+199617 2017-10-23 18:28:13 [GlobalLog] SYSTEM_INFO #正在打开端口[2223]
+0 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+265 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+306 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+333 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+354 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+356 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+395 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+416 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@77167fb7 [ID:0] NextRunTime[1508754501715] Run[logic.module.login.Login@1fe20588] SpaceTime[200]]
+420 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+472 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+475 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+475 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+475 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+476 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+476 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+477 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+479 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+480 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+481 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+481 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+482 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+483 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+483 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+484 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+485 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+485 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+485 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+485 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+486 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+491 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+492 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+492 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+493 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+494 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+494 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+495 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+495 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+496 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+496 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+496 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+497 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+497 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+497 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+505 2017-10-23 18:28:21 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@5fdcaa40 [ID:1] NextRunTime[1508754502604] Run[core.ex.GatherInfo@6dc17b83] SpaceTime[1000]]
+8769 2017-10-23 18:28:29 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@7331196b [ID:2] NextRunTime[1508754718868] Run[logic.loader.UserLoader@3f9342d4] SpaceTime[209000]]
+8801 2017-10-23 18:28:29 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+8803 2017-10-23 18:28:29 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:28:29',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+8832 2017-10-23 18:28:29 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+8836 2017-10-23 18:28:29 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+8908 2017-10-23 18:28:30 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+8908 2017-10-23 18:28:30 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 18:31:26 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:31:26 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+243 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+285 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+312 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+338 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+340 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+384 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+400 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@7006c658 [ID:0] NextRunTime[1508754687480] Run[logic.module.login.Login@34033bd0] SpaceTime[200]]
+404 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+451 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+455 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+456 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+457 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+457 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+458 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+458 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+459 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+461 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+462 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+462 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+462 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+462 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+463 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+463 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+464 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+464 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+465 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+465 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+466 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+469 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+470 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+472 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+473 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+474 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+474 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+475 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+475 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+476 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+476 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+476 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+477 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+477 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+477 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+482 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@90f6bfd [ID:1] NextRunTime[1508754688362] Run[core.ex.GatherInfo@47f6473] SpaceTime[1000]]
+999 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@75329a49 [ID:2] NextRunTime[1508754865879] Run[logic.loader.UserLoader@161479c6] SpaceTime[178000]]
+1037 2017-10-23 18:31:27 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+1039 2017-10-23 18:31:27 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:31:27',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+1066 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+1067 2017-10-23 18:31:27 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+1131 2017-10-23 18:31:28 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+1131 2017-10-23 18:31:28 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+0 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+253 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+297 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+325 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+345 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+347 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+387 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+406 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@77167fb7 [ID:0] NextRunTime[1508754725191] Run[logic.module.login.Login@1fe20588] SpaceTime[200]]
+410 2017-10-23 18:32:04 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+460 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+463 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+463 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+464 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+465 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+465 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+465 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+466 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+466 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+467 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+469 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+469 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+470 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+470 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+470 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+472 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+472 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+472 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+472 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+473 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+475 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+476 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+477 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+478 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+480 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+484 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+484 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+484 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+485 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+485 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+486 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+486 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+486 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+486 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+492 2017-10-23 18:32:05 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@5fdcaa40 [ID:1] NextRunTime[1508754726077] Run[core.ex.GatherInfo@6dc17b83] SpaceTime[1000]]
+9321 2017-10-23 18:32:13 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@7331196b [ID:2] NextRunTime[1508754927906] Run[logic.loader.UserLoader@3f9342d4] SpaceTime[194000]]
+9353 2017-10-23 18:32:13 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+9355 2017-10-23 18:32:13 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:32:13',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+9380 2017-10-23 18:32:13 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+9382 2017-10-23 18:32:13 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+9459 2017-10-23 18:32:14 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+9459 2017-10-23 18:32:14 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+203329 2017-10-23 18:35:27 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@590cadaf用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@590cadaf]
+203410 2017-10-23 18:35:27 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:35:27',1,1,0,9)
+203640 2017-10-23 18:35:28 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:35:28',1,1,0,0,5)
+397325 2017-10-23 18:38:41 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@3cd54f3f用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@3cd54f3f]
+397419 2017-10-23 18:38:42 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:38:42',1,2,0,9)
+397914 2017-10-23 18:38:42 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:38:42',1,2,0,0,0)
+591324 2017-10-23 18:41:55 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@c4ec3ce用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@c4ec3ce]
+591456 2017-10-23 18:41:56 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:41:56',1,3,0,9)
+592165 2017-10-23 18:41:56 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:41:56',1,3,0,0,0)
+609530 2017-10-23 18:42:14 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+0 2017-10-23 18:42:34 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+4 2017-10-23 18:42:34 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+260 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+307 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+334 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+359 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+361 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+403 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+422 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@77167fb7 [ID:0] NextRunTime[1508755355460] Run[logic.module.login.Login@1fe20588] SpaceTime[200]]
+426 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+477 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+480 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+480 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+481 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+481 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+481 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+482 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+482 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+482 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+483 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+485 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+486 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+486 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+486 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+487 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+488 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+488 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+489 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+489 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+490 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+492 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+492 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+493 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+494 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+497 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+498 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+498 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+499 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+499 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+500 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+500 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+500 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+500 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+501 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+508 2017-10-23 18:42:35 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@5fdcaa40 [ID:1] NextRunTime[1508755356346] Run[core.ex.GatherInfo@6dc17b83] SpaceTime[1000]]
+5225 2017-10-23 18:42:40 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@7331196b [ID:2] NextRunTime[1508755507063] Run[logic.loader.UserLoader@3f9342d4] SpaceTime[147000]]
+5258 2017-10-23 18:42:40 [GlobalLog] SYSTEM_ERROR #core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败
+5261 2017-10-23 18:42:40 [GlobalLog] SQL INSERT INTO ExceptionLog (ServerID,Tm,RoleID,ExceptionName,Detail) VALUES (18,'2017-10-23 18:42:40',0,'core.exception.WrapRuntimeException: SystemFn#CreateDBValue 使用类型[class core.db.DBInt]创建对象失败','core.detail.SystemFn.CreateDBValue(SystemFn.java:238)
+core.detail.SystemFn.CreateFieldValue(SystemFn.java:265)
+core.db.sql.ParseResult._GetSimple(ParseResult.java:162)
+core.db.sql.ParseResult._Get(ParseResult.java:112)
+core.db.sql.ParseResult.ReadAll(ParseResult.java:79)
+core.db.mysql.oper.MySQLReadAllOper.Execute(MySQLReadAllOper.java:51)
+core.db.mysql.MySQLDBReader.ReadAllData(MySQLDBReader.java:228)
+core.DBMgr.ReadAllDataAddStore(DBMgr.java:123)
+core.DBLoaderEx.OnLoad(DBLoaderEx.java:124)
+core.db.mysql.MySQLDBReader.LoadAll(MySQLDBReader.java:212)
+core.DBMgr.LoadAll(DBMgr.java:30)
+logic.MyRoot.main(MyRoot.java:106)
+')
+5292 2017-10-23 18:42:40 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+5296 2017-10-23 18:42:40 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+5390 2017-10-23 18:42:40 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+5390 2017-10-23 18:42:40 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+0 2017-10-23 18:43:45 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/RootConfig.xls]
+3 2017-10-23 18:43:45 [GlobalLog] SYSTEM_INFO #开始连接数据库[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+258 2017-10-23 18:43:45 [GlobalLog] SYSTEM_INFO #数据库连接成功[jdbc:mysql://192.168.2.254:3306/qiuqiu?rewriteBatchedStatements=true&characterEncoding=utf8]
+301 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/CommonConfig.xls]
+329 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/ServerCommonConfig.xls]
+354 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/PlayerInitIni.xls]
+356 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #读取配置文件:[data/config/MaskWordData.xls]
+394 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #读取配置文件完成:[data/config/MaskWordData.xls]
+415 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加一个定时器[0][core.detail.impl.mgr.timer.TickEvent@77167fb7 [ID:0] NextRunTime[1508755426339] Run[logic.module.login.Login@1fe20588] SpaceTime[200]]
+421 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+476 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,0][Login,Enter]
+479 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,2][Login,Register]
+479 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+480 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.login.Login]
+480 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,61][Login,Log]
+481 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,62][Login,SQLLog]
+481 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,56][Login,EchoSend]
+484 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,63][Login,LoadByUserName]
+484 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,65][Login,Binary]
+484 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,55][Login,EchoReceive]
+486 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,57][Login,Echo]
+487 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,58][Login,RunEmptySQL]
+487 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[0,64][Login,CreateWebRole]
+487 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.login.Login]
+488 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+489 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[5,0][CharacterImpl,RequestBaseInfo]
+489 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+490 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.character.CharacterImpl]
+490 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.character.CharacterImpl]
+491 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+493 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,2][RoomImpl,CreateRoom]
+495 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,7][RoomImpl,ComposeBody]
+496 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,6][RoomImpl,SplitBody]
+497 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,3][RoomImpl,MoveBody]
+500 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,13][RoomImpl,EatFood]
+500 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,4][RoomImpl,EatBody]
+501 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,1][RoomImpl,EnterRoom]
+501 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,5][RoomImpl,InitBody]
+502 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,22][RoomImpl,rebirth]
+502 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,19][RoomImpl,SplitQiuPlace]
+503 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加[1,17][RoomImpl,SplitQiu]
+503 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+503 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #开始注册模块[logic.module.room.RoomImpl]
+503 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #完成注册[logic.module.room.RoomImpl]
+509 2017-10-23 18:43:46 [GlobalLog] SYSTEM_INFO #添加一个定时器[1][core.detail.impl.mgr.timer.TickEvent@5fdcaa40 [ID:1] NextRunTime[1508755427234] Run[core.ex.GatherInfo@6dc17b83] SpaceTime[1000]]
+3466 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #添加一个定时器[2][core.detail.impl.mgr.timer.TickEvent@7331196b [ID:2] NextRunTime[1508755550191] Run[logic.loader.UserLoader@3f9342d4] SpaceTime[121000]]
+3496 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #用时[4] SQL:[com.mysql.jdbc.JDBC4PreparedStatement@27eedb64: SELECT * FROM account]
+3496 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #读取到[11]条数据
+3527 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #打开端口[22222]成功
+3528 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #打开端口[2222]成功
+3611 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #正在打开端口[22222]
+3611 2017-10-23 18:43:49 [GlobalLog] SYSTEM_INFO #正在打开端口[2222]
+124492 2017-10-23 18:45:50 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@5b77d93c用时[19] SQL:[core.DBLoaderEx$SaveGlobalMethod@5b77d93c]
+124703 2017-10-23 18:45:50 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:45:50',1,1,0,0,6)
+124899 2017-10-23 18:45:50 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:45:50',1,1,0,20)
+245469 2017-10-23 18:47:51 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@ab7d3c2用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@ab7d3c2]
+245726 2017-10-23 18:47:51 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:47:51',1,2,0,20)
+245886 2017-10-23 18:47:51 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:47:51',1,2,0,0,0)
+366468 2017-10-23 18:49:52 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@339fe4ee用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@339fe4ee]
+366522 2017-10-23 18:49:52 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:49:52',1,3,0,20)
+367030 2017-10-23 18:49:52 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:49:52',1,3,0,0,0)
+487469 2017-10-23 18:51:53 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@4efe2106用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@4efe2106]
+487815 2017-10-23 18:51:53 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:51:53',1,4,0,20)
+488178 2017-10-23 18:51:53 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:51:53',1,4,0,0,0)
+603677 2017-10-23 18:53:49 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+608469 2017-10-23 18:53:54 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@12d5a132用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@12d5a132]
+608596 2017-10-23 18:53:54 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:53:54',1,5,0,20)
+609316 2017-10-23 18:53:55 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:53:55',1,5,0,0,0)
+728707 2017-10-23 18:55:54 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+729468 2017-10-23 18:55:55 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@63996aa1用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@63996aa1]
+729908 2017-10-23 18:55:55 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:55:55',1,6,0,20)
+730462 2017-10-23 18:55:56 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:55:56',1,6,0,0,0)
+850471 2017-10-23 18:57:56 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@638899f5用时[4] SQL:[core.DBLoaderEx$SaveGlobalMethod@638899f5]
+850612 2017-10-23 18:57:56 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:57:56',1,7,0,0,0)
+850722 2017-10-23 18:57:56 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:57:56',1,7,0,20)
+971469 2017-10-23 18:59:57 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@95f066用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@95f066]
+971546 2017-10-23 18:59:57 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:59:57',1,8,0,20)
+971771 2017-10-23 18:59:57 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 18:59:57',1,8,0,0,0)
+1092469 2017-10-23 19:01:58 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@4ac18c9a用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@4ac18c9a]
+1092850 2017-10-23 19:01:58 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:01:58',1,9,0,20)
+1092924 2017-10-23 19:01:58 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:01:58',1,9,0,0,0)
+1213469 2017-10-23 19:03:59 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@2e222246用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@2e222246]
+1213662 2017-10-23 19:03:59 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:03:59',1,10,0,20)
+1214081 2017-10-23 19:03:59 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:03:59',1,10,0,0,0)
+1333865 2017-10-23 19:05:59 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+1334473 2017-10-23 19:06:00 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@3d8f43b7用时[3] SQL:[core.DBLoaderEx$SaveGlobalMethod@3d8f43b7]
+1334474 2017-10-23 19:06:00 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:06:00',1,11,0,20)
+1335229 2017-10-23 19:06:00 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:06:00',1,11,0,0,0)
+1455469 2017-10-23 19:08:01 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@52b33f2用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@52b33f2]
+1455811 2017-10-23 19:08:01 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:08:01',1,12,0,20)
+1456390 2017-10-23 19:08:02 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:08:02',1,12,0,0,0)
+1576469 2017-10-23 19:10:02 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@a0c7d4a用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@a0c7d4a]
+1576533 2017-10-23 19:10:02 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:10:02',1,13,0,0,0)
+1576659 2017-10-23 19:10:02 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:10:02',1,13,0,20)
+1697467 2017-10-23 19:12:03 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@492fada6用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@492fada6]
+1697475 2017-10-23 19:12:03 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:12:03',1,14,0,20)
+1697690 2017-10-23 19:12:03 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:12:03',1,14,0,0,0)
+1818467 2017-10-23 19:14:04 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@61cdc316用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@61cdc316]
+1818800 2017-10-23 19:14:04 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:14:04',1,15,0,20)
+1818854 2017-10-23 19:14:04 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:14:04',1,15,0,0,0)
+1939015 2017-10-23 19:16:04 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+1939470 2017-10-23 19:16:05 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@78526937用时[3] SQL:[core.DBLoaderEx$SaveGlobalMethod@78526937]
+1939633 2017-10-23 19:16:05 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:16:05',1,16,0,20)
+1940005 2017-10-23 19:16:05 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:16:05',1,16,0,0,1)
+2060469 2017-10-23 19:18:06 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@30631798用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@30631798]
+2060946 2017-10-23 19:18:06 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:18:06',1,17,0,20)
+2061172 2017-10-23 19:18:06 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:18:06',1,17,0,0,1)
+2181468 2017-10-23 19:20:07 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@66b26cad用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@66b26cad]
+2181757 2017-10-23 19:20:07 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:20:07',1,18,0,20)
+2182323 2017-10-23 19:20:08 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:20:08',1,18,0,0,1)
+2302469 2017-10-23 19:22:08 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@239a036e用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@239a036e]
+2302479 2017-10-23 19:22:08 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:22:08',1,19,0,0,0)
+2302582 2017-10-23 19:22:08 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:22:08',1,19,0,20)
+2423472 2017-10-23 19:24:09 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@7bcf106b用时[4] SQL:[core.DBLoaderEx$SaveGlobalMethod@7bcf106b]
+2423634 2017-10-23 19:24:09 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:24:09',1,20,0,0,0)
+2423928 2017-10-23 19:24:09 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:24:09',1,20,0,20)
+2544172 2017-10-23 19:26:09 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+2544467 2017-10-23 19:26:10 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@6782212b用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@6782212b]
+2544760 2017-10-23 19:26:10 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:26:10',1,21,0,20)
+2544794 2017-10-23 19:26:10 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:26:10',1,21,0,0,1)
+2665468 2017-10-23 19:28:11 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@1f7dbe09用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@1f7dbe09]
+2665574 2017-10-23 19:28:11 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:28:11',1,22,0,20)
+2665951 2017-10-23 19:28:11 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:28:11',1,22,0,0,0)
+2786469 2017-10-23 19:30:12 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@1823d8c2用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@1823d8c2]
+2786907 2017-10-23 19:30:12 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:30:12',1,23,0,20)
+2787113 2017-10-23 19:30:12 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:30:12',1,23,0,0,0)
+2907470 2017-10-23 19:32:13 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@1c947d04用时[4] SQL:[core.DBLoaderEx$SaveGlobalMethod@1c947d04]
+2907741 2017-10-23 19:32:13 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:32:13',1,24,0,20)
+2908268 2017-10-23 19:32:13 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:32:13',1,24,0,0,0)
+3028468 2017-10-23 19:34:14 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@45c63379用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@45c63379]
+3028571 2017-10-23 19:34:14 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:34:14',1,25,0,20)
+3029431 2017-10-23 19:34:15 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:34:15',1,25,0,0,0)
+3149330 2017-10-23 19:36:15 [GlobalLog] SYSTEM_INFO #[#$%释放MySQLOper:1]
+3149468 2017-10-23 19:36:15 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@60fda2c0用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@60fda2c0]
+3149596 2017-10-23 19:36:15 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:36:15',1,26,0,0,0)
+3149897 2017-10-23 19:36:15 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:36:15',1,26,0,20)
+3270470 2017-10-23 19:38:16 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@6ada5ddd用时[3] SQL:[core.DBLoaderEx$SaveGlobalMethod@6ada5ddd]
+3270744 2017-10-23 19:38:16 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:38:16',1,27,0,20)
+3270759 2017-10-23 19:38:16 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:38:16',1,27,0,0,0)
+3391469 2017-10-23 19:40:17 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@29bf0bf1用时[1] SQL:[core.DBLoaderEx$SaveGlobalMethod@29bf0bf1]
+3391555 2017-10-23 19:40:17 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:40:17',1,28,0,20)
+3391905 2017-10-23 19:40:17 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:40:17',1,28,0,0,0)
+3512469 2017-10-23 19:42:18 [GlobalLog] SYSTEM_INFO #core.DBLoaderEx$SaveGlobalMethod@3260c5a0用时[2] SQL:[core.DBLoaderEx$SaveGlobalMethod@3260c5a0]
+3512857 2017-10-23 19:42:18 [GlobalLog] SQL INSERT INTO _SQLInfoLog (ServerID,Tm,ProcessSQLNum,ProcessSQLTotalNum,ListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:42:18',1,29,0,20)
+3513059 2017-10-23 19:42:18 [GlobalLog] SQL INSERT INTO _LogicInfoLog (ServerID,Tm,ProcessLogicNum,ProcessLogicTotalNum,SQLListNum,LogicListNum,UpdateMaxTime) VALUES (18,'2017-10-23 19:42:18',1,29,0,0,0)

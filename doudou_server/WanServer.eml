@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="JavaSE-1.6">
+	<exclude-output/>
+	<contentEntry url="file://$JAR_LOC$"/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="mysql-connector-java-5.1.20-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/mysql-connector-java-5.1.20-bin.jar!/"/>
+	</lib>
+	<lib name="javassist.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/javassist.jar!/"/>
+	</lib>
+	<lib name="log4j-1.2.17.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/log4j-1.2.17.jar!/"/>
+	</lib>
+	<lib name="jxl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/jxl.jar!/"/>
+	</lib>
+	<lib name="linq4j-0.5-SNAPSHOT.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/linq4j-0.5-SNAPSHOT.jar!/"/>
+	</lib>
+</component>
