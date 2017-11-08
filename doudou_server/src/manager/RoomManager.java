@@ -216,7 +216,9 @@ public class RoomManager {
 		int i=0;
 		Iterator<Room> its = m_freeroomlist.iterator();
 		while (its.hasNext()) {
+		
 			Room room = (Room) its.next();
+		/*	if(room.check)*/
 			if(room.getRr().getM_type().ID()==isTeam){
 				i++;;
 			}

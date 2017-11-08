@@ -27,16 +27,14 @@ public class RoomImpl implements RoomInterface {
 		// TODO Auto-generated method stub
 		LogRecord.Log(null, "接收到进入房间请求");
 		Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
-/*		if (room != null&&room.getID()==roomID) {
-			LogRecord.Log(null, "用户重复发送进入房间忽略");
-			if(r)
-			return;
-		}*/
+
 		Room room2 = RoomManager.getInstance().getRoom(roomID);
 		//进入自由房
 		if (room2==null  /*&&!room2.getRr().isFree()*/) {
+		
 			Room r = RoomManager.getInstance().getFreeRoom();
-			RoomManager.getInstance().joinRoom(p_user, roomID);
+			r.setM_state(eGameState.GAME_PLAYING);
+			/*RoomManager.getInstance().joinRoom(p_user, roomID);*/
 			RoomPlayer rp = r.AddPlayer(p_user);
 
 			SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ENTER);
@@ -45,7 +43,7 @@ public class RoomImpl implements RoomInterface {
 			buffer.Send(p_user);
 			// 告诉你房间里面都有谁;1
 			r.enbroadcast(RoomInterface.MID_BROADCAST_PLAYER_ENTER, rp, time);
-			RoomManager.getInstance().joinRoom(p_user, r.getID());
+
 			// 2
 			SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_PLAYERS);
 			r.packData(p);

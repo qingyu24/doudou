@@ -134,8 +134,9 @@ public class Room implements Tick {
 	}
 
 	public RoomPlayer AddPlayer(MyUser user) {
-		/* user.setRoomId(this.m_roomId); */
-	/*	RoomManager.getInstance().joinRoom(user, m_roomId);*/
+	
+		 user.setRoomId(this.m_roomId); 
+		RoomManager.getInstance().joinRoom(user, m_roomId);
 		if(!this.rr.isFree())	{	
 			this.setM_state(eGameState.GAME_PLAYING);}// 如果不是团战 只要有人进入房间就开始游戏
 		RoomPlayer rp = new RoomPlayer();
@@ -1001,9 +1002,9 @@ public class Room implements Tick {
 		}
 		p.Add(this.rr.getM_type().ID());
 		p.Add(this.rr.getTime());
-		p.Add(this.rr.getPalyerNum());
 		p.Add(this.rr.getTeamNum());
-		p.Add(this.m_allPlayer.size());
+		p.Add(this.rr.getPalyerNum());
+		p.Add(this.m_players.size());
 		p.Add(this.rr.getAllNum());
 	}
 
@@ -1028,7 +1029,6 @@ public class Room implements Tick {
 				RoomPlayer roomPlayer = (RoomPlayer) it.next();
 				buffer.Add(roomPlayer.getTeamID());
 				buffer.Add(roomPlayer.getTeamName());
-				int i=roomPlayer.getTeamName();
 				buffer.Add(roomPlayer.getRoleId());
 				buffer.Add(roomPlayer.getUser().getPortrait());
 				buffer.Add(roomPlayer.getUser().getTickName());
