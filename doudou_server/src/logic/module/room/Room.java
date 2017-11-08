@@ -103,12 +103,10 @@ public class Room implements Tick {
 	private ArrayList<Integer> creatNewNames() {
 		// TODO Auto-generated method stub
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(4);
-		list.add(5);
-		list.add(6);
+		
+		for (int i = 0; i < rr.getTeamNum(); i++) {
+			list.add(i+1);
+		}
 		return list;
 	}
 
@@ -137,6 +135,7 @@ public class Room implements Tick {
 
 	public RoomPlayer AddPlayer(MyUser user) {
 		/* user.setRoomId(this.m_roomId); */
+	/*	RoomManager.getInstance().joinRoom(user, m_roomId);*/
 		if(!this.rr.isFree())	{	
 			this.setM_state(eGameState.GAME_PLAYING);}// 如果不是团战 只要有人进入房间就开始游戏
 		RoomPlayer rp = new RoomPlayer();
@@ -159,7 +158,7 @@ public class Room implements Tick {
 		if (m_players.size() == 0) {
 			this.owner = player.getUser();
 		}
-		if(!this.m_players.contains(player)){
+		if(!this.containsUser(player.getUser())){
 			this.m_players.add(player);
 			player.setID(m_idSum);
 			m_idSum++;
@@ -169,6 +168,18 @@ public class Room implements Tick {
 
 	}
 
+	private boolean containsUser(MyUser user) {
+		// TODO Auto-generated method stub
+		Iterator<RoomPlayer> it = this.m_players.iterator();
+		while (it.hasNext()) {
+			RoomPlayer roomPlayer = (RoomPlayer) it.next();
+			if(roomPlayer.getRoleId()==user.GetRoleGID()){
+				return true;
+			}
+		}
+		return false;
+
+	}
 	public RoomPlayer GetPlayer(int id) {
 		Iterator<RoomPlayer> it = m_players.iterator();
 		while (it.hasNext()) {
@@ -200,6 +211,7 @@ public class Room implements Tick {
 					if (this.m_players.size() == 0) {
 
 						RoomManager.getInstance().removeRoom(m_roomId);
+						this.destroy();
 					}
 					break;
 				}
@@ -859,6 +871,7 @@ public class Room implements Tick {
 	public Team addTeam(Team team) {
 		// TODO Auto-generated method stub
 		// 先把队伍所有人加入房间
+		
 		if(!this.m_allTeams.contains(team)){
 			Iterator<Team> it = this.m_allTeams.iterator();
 			while (it.hasNext()) {
@@ -883,6 +896,25 @@ public class Room implements Tick {
 		}
 		return team;
 	}
+	public Team free_addTeam(Team team) {
+		// TODO Auto-generated method stub
+		if(!this.m_allTeams.contains(team)){
+	
+			this.m_allTeams.add(team);
+			this.m_teams.put(team.getM_teamID(), team);
+			team.setM_roomID(this.m_roomId);
+			team.setTeamName(getNewTeamName());
+			this.AddPlayer(team, team);
+	/*		rp.setSkin(TeamName);
+			rp.setTeamName(TeamName);
+			rp.setTeamID(teamID);*/
+			return team;
+		}
+		return team;
+	}
+	
+	
+	
 	private int getNewTeamName() {
 		if (m_TeamNames.size() > 0) {
 			return m_TeamNames.remove(0);
@@ -982,18 +1014,21 @@ public class Room implements Tick {
 			// TODO Auto-generated method stub
 			SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
 					.AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_FREETEAM);
+			
 			buffer.Add(isTeam);
+			buffer.Add(this.m_roomId);
 			buffer.Add(this.rr.getTime());
 			buffer.Add(owner.GetRoleGID());
 			buffer.Add(owner.getTickName());
 			buffer.Add(rr.getTeamNum());
 			buffer.Add(rr.getPalyerNum());
-			buffer.Add((short) m_allPlayer.size());
+			buffer.Add((short) m_players.size());
 			Iterator<RoomPlayer> it = m_players.iterator();
 			while (it.hasNext()) {
 				RoomPlayer roomPlayer = (RoomPlayer) it.next();
 				buffer.Add(roomPlayer.getTeamID());
 				buffer.Add(roomPlayer.getTeamName());
+				int i=roomPlayer.getTeamName();
 				buffer.Add(roomPlayer.getRoleId());
 				buffer.Add(roomPlayer.getUser().getPortrait());
 				buffer.Add(roomPlayer.getUser().getTickName());
@@ -1003,5 +1038,37 @@ public class Room implements Tick {
 
 			buffer.Send(rp.getUser());
 		}
+	}
+
+	public void setTeamName(Team team, int teamName) {
+		// TODO Auto-generated method stub
+		if(team.getTeamName()!=0){
+			this.m_TeamNames.add(team.getTeamName());
+			Iterator<Integer> it = this.m_TeamNames.iterator();
+			while (it.hasNext()) {
+				Integer integer = (Integer) it.next();
+				if(integer==teamName){
+					it.remove();
+				}
+			}
+			
+		}
+		team.setTeamName(teamName);
+	}
+
+	public void dissolution() {
+		// TODO Auto-generated method stub
+		Iterator<RoomPlayer> it = this.m_players.iterator();
+		while (it.hasNext()) {
+			RoomPlayer user = it.next();
+			if (user != null) {
+				SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+						.AddID(Reg.ROOM, RoomInterface.MID_ROOM_Dissolution);
+				buffer.Send(user.getUser());
+			}
+		}
+	     	this.m_allTeams.clear();
+			RoomManager.getInstance().removeRoom(m_roomId);
+			this.destroy();
 	}
 }

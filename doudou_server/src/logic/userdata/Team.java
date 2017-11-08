@@ -32,8 +32,9 @@ public class Team implements Comparable<Team> {
 	}
 
 	public void setTeamName(int teamName) {
-		
+
 		this.teamName = teamName;
+		
 	}
 
 	public HashMap<Long, MyUser> m_users;
@@ -58,6 +59,7 @@ public class Team implements Comparable<Team> {
 
 	public Team() {
 		this.m_teamID = 0;
+		this.teamName=0;
 		m_users = new HashMap<Long, MyUser>();
 		m_allUsers = new ArrayList<MyUser>();
 
@@ -89,11 +91,14 @@ public class Team implements Comparable<Team> {
 
 	public void addUser(MyUser user) {
 		// TODO Auto-generated method stub
+		//在玩家加入队伍是 如果玩家在队伍中 应该先把他移除
+		
 		if (this.roleID == 0) {
 			this.roleID = user.GetRoleGID();
 		}
 		m_users.put(user.GetRoleGID(), user);
-		m_allUsers.add(user);
+		if(!m_allUsers.contains(user)){
+		m_allUsers.add(user);}
 	}
 
 	public void removeUser(MyUser user) {
@@ -106,7 +111,6 @@ public class Team implements Comparable<Team> {
 			}
 		}
          if(m_allUsers.size()==0){
-        	
       /*  	 Room room = RoomManager.getInstance().getRoom(m_roomID);*/
           	 Room room = RoomManager.getInstance().getRoom(user.GetRoleGID());
         	 if(room!=null){

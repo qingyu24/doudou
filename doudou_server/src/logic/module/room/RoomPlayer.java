@@ -9,6 +9,7 @@ import logic.LogRecord;
 import logic.MyUser;
 import logic.userdata.CountGrade;
 import logic.userdata.Team;
+import manager.TeamManager;
 import utility.Rand;
 
 public class RoomPlayer implements Comparable<RoomPlayer> {
@@ -26,7 +27,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 	private int coin;// 本局获得金币数目
 	private int teamID;
 	private int Skin; // 皮肤
-	private int teamName;
+/*	private int teamName;*/
 	/* private CountGrade grade; */
 
 	public CountGrade getGrade() {
@@ -61,7 +62,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 		user.getGrade().enterRoom();
 		teamID = 0;
 		Skin = 0;
-		teamName = 0;
+		/*teamName = 0;*/
 	}
 
 	public long getRoleId() {
@@ -112,11 +113,15 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 	}
 
 	public int getTeamName() {
-		return teamName;
+		Team team = TeamManager.getInstance().getTeam(teamID);
+		if(team!=null){
+			return team.getTeamName();
+		}
+		return 0;
 	}
 
 	public void setTeamName(int teamName) {
-		this.teamName = teamName;
+		/*this.teamName = teamName;*/
 	}
 
 	public void setSkin(int skin) {

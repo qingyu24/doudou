@@ -123,14 +123,17 @@ public class RoomManager {
 		r.clearUser();
 		r.destroy();
 		m_list.remove(roomId);
+		m_freeroomlist.remove(r);
 		Iterator<Entry<Long, Room>> it = x_list.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<java.lang.Long, logic.module.room.Room> entry = (Map.Entry<java.lang.Long, logic.module.room.Room>) it
 					.next();
 			if(	entry.getValue().getID()==roomId){
-				x_list.remove(entry.getKey());
+		/*		x_list.remove(entry.getKey());*/
+				it.remove();
 			}		
 		}
+/*x_*/
 		String str = String.format("房间被删除:%d\n", roomId);
 		LogRecord(null, str);
 		return true;

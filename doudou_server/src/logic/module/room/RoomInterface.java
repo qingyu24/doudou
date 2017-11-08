@@ -50,6 +50,8 @@ public interface RoomInterface {
 	static final int MID_ROOM_CHOOSETEAM = 33; // 选择队伍
 	
 	static final int MID_ROOM_FRIENDLIST = 34; // 請求獲取好友列表
+	static final int MID_ROOM_Dissolution = 35; // 解散房间
+	static final int MID_ROOM_LEAVE = 36; // 离开房间房间
 
 	@RFC(ID = MID_ENTER)
 	void EnterRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID,
@@ -101,7 +103,7 @@ public interface RoomInterface {
 			@PI int teamID, @PL long time);
 
 	@RFC(ID = MID_ROOM_CHOOSETEAM)
-	void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int teamID);
+	void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int teamID,@PI int teamName);
 
 	@RFC(ID = MID_ROOM_GAMESATRT)
 	void gameStart(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
@@ -109,5 +111,10 @@ public interface RoomInterface {
 	@RFC(ID = MID_ROOM_FRIENDLIST)
 	void getFriendList(@PU(Index = Reg.ROOM) MyUser p_user);
 
+	@RFC(ID = MID_ROOM_Dissolution)
+	void dissolution(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
+	
+	@RFC(ID = MID_ROOM_LEAVE)
+	void leaveRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
 	
 }

@@ -170,7 +170,6 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		TeamManager.getInstance().removeUser(this);
 
 
-
 		RoomManager.getInstance().removeRoomUser(this.GetRoleGID());
 		if(null != room){
 			room.RemovePlayer(this,System.currentTimeMillis());

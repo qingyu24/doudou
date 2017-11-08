@@ -27,15 +27,16 @@ public class RoomImpl implements RoomInterface {
 		// TODO Auto-generated method stub
 		LogRecord.Log(null, "接收到进入房间请求");
 		Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
-		if (room != null&&room.getID()==roomID) {
+/*		if (room != null&&room.getID()==roomID) {
 			LogRecord.Log(null, "用户重复发送进入房间忽略");
-			/*if(r)*/
+			if(r)
 			return;
-		}
+		}*/
 		Room room2 = RoomManager.getInstance().getRoom(roomID);
 		//进入自由房
-		if (room2!=null  &&!room2.getRr().isFree()) {
+		if (room2==null  /*&&!room2.getRr().isFree()*/) {
 			Room r = RoomManager.getInstance().getFreeRoom();
+			RoomManager.getInstance().joinRoom(p_user, roomID);
 			RoomPlayer rp = r.AddPlayer(p_user);
 
 			SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ENTER);
@@ -52,14 +53,14 @@ public class RoomImpl implements RoomInterface {
 			p.Send(p_user);
 			//
 		}else if(room2!=null&&room2.getRr().isFree()){ //进入自建房
-		/*	Room room2 = RoomManager.getInstance().getRoom(roomID);*/
+			/*	Room room2 = RoomManager.getInstance().getRoom(roomID);*/
 			if(room2.getRr().isFree()){
-		
+				RoomManager.getInstance().joinRoom(p_user, room2.getID());
 				room2.AddPlayer(p_user);
 				room2.broadcastFree(room2.getRr().getM_type().ID());
 			}
 		}
-	
+
 
 	}
 
@@ -201,8 +202,8 @@ public class RoomImpl implements RoomInterface {
 	public void LeftMatch(@PU(Index = Reg.ROOM) MyUser p_user, @PL long playerId, @PI int teamID, @PL long time) {
 		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		Team team = TeamManager.getInstance().getTeam(teamID);
+		//退出 队伍
 		if (r != null && team != null) {
-
 			r.RemovePlayer(p_user, time);
 			team.removeUser(p_user);
 			r.broadcast(CenterInterface.MID_BROADCAST_NEWTEAM, team);
@@ -223,19 +224,47 @@ public class RoomImpl implements RoomInterface {
 			}
 		}
 
+
+		//退出自建房
+		if(r!=null&&r.getRr().isFree()){
+			/*	r.RemovePlayer(p_user, time);*/
+
+			r.RemovePlayer(p_user, time);
+			if(team!=null){
+				team.removeUser(p_user);}
+			r.broadcastFree(r.getRr().getM_type().ID());
+
+		}
+
 	}
 
 	@Override
 	@RFC(ID = 33)
-	public void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user ,@PI int teamID){
+	public void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user ,@PI int teamID,@PI int teamName ){
 		Team team = TeamManager.getInstance().getTeam(teamID);
 		Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		if(team==null){
-			 team = TeamManager.getInstance().getNewteam();
+			team = TeamManager.getInstance().getNewteam();
+
 		}
+
 		if(team!=null&&room!=null&&team.m_allUsers.size()<room.getRr().getPalyerNum()){
+
+			RoomPlayer player = room.GetPlayer(p_user);
+			if(player!=null){
+				Team team2 = TeamManager.getInstance().getTeam(player.getTeamID()); 
+				if(team2!=null&&team2.getM_teamID()!=team.getM_teamID()){
+					team2.removeUser(p_user);
+				}
+				player.setTeamID(team.getM_teamID());
+			}
 			team.addUser(p_user);
+			room.free_addTeam(team);
 			room.addTeam(team);
+			room.setTeamName(team,teamName);
+
+
+
 			room.broadcastFree(room.getRr().getM_type().ID());
 		}else{
 			//队伍人满 加不进去 返回错误信息
@@ -250,6 +279,7 @@ public class RoomImpl implements RoomInterface {
 		if(room!=null){
 			room.setM_state(eGameState.GAME_READY);
 		}
+		/*	RoomManager.getInstance().freeStart();*/
 	}
 	@Override
 	@RFC(ID = 34)
@@ -258,28 +288,28 @@ public class RoomImpl implements RoomInterface {
 		SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_FRIENDLIST);
 		p_user.packFriends(p);
 		p.Send(p_user);
-		
-	}
-/*	@Override
+
+	}	
+
+	@Override
 	@RFC(ID = 35)
-	public void invoteFriend(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID,@PL long friendID){
+	public void dissolution(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID) {
 		// TODO Auto-generated method stub
-		
-		p_user.packFriends(p);
+		Room room = RoomManager.getInstance().getRoom(roomID);
+		if(room!=null){
+			room.dissolution();
+		}
+
+	}
+	@Override
+	@RFC(ID = 36)
+	public 	void leaveRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID) {
+		// TODO Auto-generated method stub
 		Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		if(room!=null){
-			SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_INVOTEFRIEND);
-	
-	
-		p.Add(p_user.GetRoleGID());
-		p.Add(p_user.getTickName());
-		p.Add(p_user.getPortrait());// 玩家头像
-        p.Add(room.getRr().getTime());
-     	p.Add(room.getID());
-       
-		p.Send(p_user);
-		}*/
-/*		
-	}*/
-	
+		/*		room.RemovePlayer(user, time);*/
+			room.RemovePlayer(p_user, System.currentTimeMillis());
+		}
+
+	}
 }

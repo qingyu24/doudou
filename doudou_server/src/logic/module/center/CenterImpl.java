@@ -45,11 +45,11 @@ public class CenterImpl implements CenterInterface {
 	@Override
 	@RFC(ID = 3)
 	public void InvitationFriend(@PU MyUser p_user, @PL long p_ID,
-			@PI int p_teamID, @PL long m_friendID, @PI int ifFree) {
+			@PI int p_teamID, @PL long m_friendID, @PI int roomID,@PI int ifFree) {
 		// TODO Auto-generated method stub
 		MyUser user = UserManager.getInstance().getUser(m_friendID);
 		/* Team team = TeamManager.getInstance().getTeam(p_teamID); */
-		if (user != null && ifFree != 1) {
+		if (user != null ) {
 			SendMsgBuffer p = PackBuffer
 					.GetInstance()
 					.Clear()
@@ -58,17 +58,9 @@ public class CenterImpl implements CenterInterface {
 			p.Add(p_user.getTickName());
 			p.Add(p_user.getPortrait());// 玩家头像
 			p.Add(12);// 游戏时长
-			if (ifFree == 1) {
-				if (RoomManager.getInstance().getRoom(p_user.GetRoleGID()) != null) {
-					p.Add(RoomManager.getInstance()
-							.getRoom(p_user.GetRoleGID()).getID());
-				} else {
-					p.Add(0);
-				}
-			} else {
-				p.Add(p_teamID);
-			}
+			p.Add(p_teamID);
 
+			p.Add(roomID);
 			p.Add(ifFree);
 			p.Send(user);
 		}
