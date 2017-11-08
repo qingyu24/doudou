@@ -17,7 +17,7 @@ import logic.module.login.eLoginErrorCode;
 import logic.module.room.Room;
 import logic.userdata.CountGrade;
 import logic.userdata.account;
-import logic.userdata.logindata;
+import logic.userdata.logindata;	
 import logic.userdata.handler.PlayerCenterData;
 import manager.ConfigManager;
 import manager.RoomManager;
@@ -66,7 +66,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		if(friends==null){
 			friends=new ArrayList<MyUser>();
 		}
-		
+
 		return friends;
 	}
 
@@ -76,7 +76,9 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 
 	public void friendsOnline(MyUser user) {
 		// TODO Auto-generated method stub
-		this.friends.add(user);
+		if(!friends.contains(user)){
+			this.friends.add(user);}
+
 		this.friend_borcast();
 
 	}
@@ -111,7 +113,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 	public void setFriends(ArrayList<MyUser> f){
 		this.friends=f;
 		if(f.size()>0){
-		System.out.println(this.getTickName()+"好友爲"+f.get(0).getTickName());
+			System.out.println(this.getTickName()+"好友爲"+f.get(0).getTickName());
 		}
 	}
 	//----------------------玩家需要计算的属性;
@@ -164,15 +166,15 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		Login.GetInstance().OnDisconnect(this);
 		ConfigManager.getInstance().OnDisconnect(this);
 		Room room = RoomManager.getInstance().getRoom(this.GetRoleGID());
-		
+
 		TeamManager.getInstance().removeUser(this);
-		
-		
-		
+
+
+
 		RoomManager.getInstance().removeRoomUser(this.GetRoleGID());
 		if(null != room){
 			room.RemovePlayer(this,System.currentTimeMillis());
-			
+
 			/*			this.roomId=-1;*/
 
 		}

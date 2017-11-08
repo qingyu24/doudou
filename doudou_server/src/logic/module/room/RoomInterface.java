@@ -67,11 +67,6 @@ public interface RoomInterface {
 			@PVI ArrayList<Integer> list, @PL long time);
 
 	@RFC(ID = MID_BODY_EAT)
-	/*
-	 * void EatBody(@PU (Index = Reg.ROOM) MyUser p_user,@PI int playerId,@PI
-	 * int bodyId,@PI int eatType, @PI int TargetPlayerID, @PI int bodyID,@PL
-	 * long time);
-	 */
 	void EatBody(@PU(Index = Reg.ROOM) MyUser p_user, @PI int eatType,
 			@PI int playerId, @PI int bodyId, @PI int xpos, @PI int ypos,
 			@PI int TargetPlayerID, @PI int bodyID, @PI int targetxpos,
