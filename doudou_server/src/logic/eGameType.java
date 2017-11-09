@@ -7,8 +7,6 @@ SOLO;
 		switch(this){
 		case TEAM:return 1;
 		case SOLO:return 0;
-
-		
 		}
 		return 0;
 	}

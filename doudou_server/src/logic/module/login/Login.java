@@ -68,7 +68,7 @@ public class Login implements LoginInterface, Tick
 	@Override
 	public void Enter(MyUser p_user, String p_username, String p_password, int p_nServerID, String p_deviceIdentifier, String p_deviceModel)
 	{
-/*		LogRecord.Log(null, "有人要登陆"+p_username);*/
+		LogRecord.Log(null, "有人要登陆"+p_username);
 		InternalLogin(p_user, p_username, p_password, p_nServerID, p_deviceIdentifier, p_deviceModel, 0, false, "", "", "");
 	}
 
@@ -678,7 +678,7 @@ public class Login implements LoginInterface, Tick
 				if ( r.GetHashCode() == p_user.hashCode() )
 				{
 					eLoginDebugLogType.REPEAT.Log(p_user);
-					System.out.println("* 用户重复发送登陆消息,忽略");
+					System.out.println("* 用户重复发送登陆消息,忽略1");
 					return false;
 				}
 				else
@@ -695,7 +695,7 @@ public class Login implements LoginInterface, Tick
 			if ( r.GetHashCode() == p_user.hashCode() )
 			{
 				eLoginDebugLogType.REPEAT.Log(p_user);
-				System.out.println("* 用户重复发送登陆消息,忽略");
+				System.out.println("* 用户重复发送登陆消息,忽略2");
 				return false;
 			}
 			else

@@ -97,11 +97,11 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 		buffer.Add(maxQiu);
 		buffer.Add(this.m_user.getTickName());
 
-		buffer.Add(Skin);// 皮肤编号
+		buffer.Add(this.getSkin());// 皮肤编号
 
 		buffer.Add(teamID);// 队伍信息
 
-		System.out.println("sssssssss当前队伍ＩＤ" + teamID);
+		System.out.println("sssssssss当前队伍ＩＤ" + this.getSkin());
 
 		/*
 		 * buffer.Add(1);//头像编号
@@ -109,6 +109,10 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 	}
 
 	public int getSkin() {
+		Team team = TeamManager.getInstance().getTeam(teamID);
+		if(team!=null){
+			return team.getTeamName();
+		}
 		return Skin;
 	}
 
@@ -121,6 +125,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 	}
 
 	public void setTeamName(int teamName) {
+		this.setSkin(teamName);
 		/*this.teamName = teamName;*/
 	}
 

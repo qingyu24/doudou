@@ -11,6 +11,7 @@ import core.detail.impl.log.Log;
 import core.detail.impl.socket.SendMsgBuffer;
 import logic.LogRecord;
 import logic.MyUser;
+import logic.eGameState;
 import logic.module.log.eLogicDebugLogType;
 import logic.module.room.Room;
 import logic.module.room.RoomRule;
@@ -219,7 +220,7 @@ public class RoomManager {
 		
 			Room room = (Room) its.next();
 		/*	if(room.check)*/
-			if(room.getRr().getM_type().ID()==isTeam){
+			if(room.getRr().getM_type().ID()==isTeam&&room.getM_state()!=eGameState.GAME_PLAYING){
 				i++;;
 			}
 		}
@@ -230,7 +231,7 @@ public class RoomManager {
 		System.err.println(i);
 		while (it.hasNext()) {
 			Room room = (Room) it.next();
-			if(room.getRr().getM_type().ID()==isTeam){
+			if(room.getRr().getM_type().ID()==isTeam&&room.getM_state()!=eGameState.GAME_PLAYING){
 				room.packSize(p);
 			}
 		}

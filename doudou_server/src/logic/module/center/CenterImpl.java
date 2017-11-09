@@ -142,7 +142,7 @@ public class CenterImpl implements CenterInterface {
 	// 自建房 创建房间规则
 	public void creatRoomRule(@PU MyUser p_user, @PI int isTeam,
 			@PI int gameTime, @PI int teNumber, @PI int eachSize) {
-
+	
 		RoomRule rule = new RoomRule(isTeam, gameTime, teNumber, eachSize);
 
 		Room room = RoomManager.getInstance().createFreeRoom(p_user, rule);

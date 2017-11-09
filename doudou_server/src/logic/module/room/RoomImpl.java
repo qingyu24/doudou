@@ -3,6 +3,8 @@ package logic.module.room;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.mysql.jdbc.log.Log;
+
 import core.detail.impl.socket.SendMsgBuffer;
 import core.remote.PI;
 import core.remote.PL;
@@ -186,11 +188,13 @@ public class RoomImpl implements RoomInterface {
 	public void rebirth(MyUser p_user, int playerId, @PL long time) {
 		long millis = System.currentTimeMillis();
 		// TODO Auto-generated method stub
+		LogRecord.Log("收到复活消息"+p_user.GetRoleGID());
 		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		RoomPlayer rp = r.GetPlayer(playerId);
 		if (rp != null) {
 			PlayerBody body = rp.reset();
 			r.broadcast(RoomInterface.MID_BROADCAST_REBIRTH, rp, time);
+			LogRecord.Log("收到复活消息并广播结束");
 		}
 		LogRecord.writePing("EatBody执行时间", System.currentTimeMillis() - millis);
 	}

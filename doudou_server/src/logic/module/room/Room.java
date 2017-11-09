@@ -115,10 +115,11 @@ public class Room implements Tick {
 	}
 
 	public void setM_state(eGameState m_state) {
-		this.m_state = m_state;
-		if (m_state == eGameState.GAME_PLAYING) {
+		
+		if (m_state == eGameState.GAME_PLAYING&&this.m_state!=eGameState.GAME_PLAYING) {
 			m_beginTime = System.currentTimeMillis();
 		}
+		this.m_state = m_state;
 	}
 
 	public long getM_leftTime() {
@@ -357,7 +358,7 @@ public class Room implements Tick {
 		//
 		if (m_state == eGameState.GAME_READY) {
 			this.countDowm(m_countTime++);
-			if (m_countTime == 3) {
+			if (m_countTime == 3/*||this.rr.isFree()*/) {
 				this.broadcastStart();
 
 			}
