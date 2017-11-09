@@ -100,6 +100,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 		buffer.Add(this.getSkin());// 皮肤编号
 
 		buffer.Add(teamID);// 队伍信息
+		buffer.Add(this.getUser().getCenterData().getNianJi());
 
 		System.out.println("sssssssss当前队伍ＩＤ" + this.getSkin());
 

@@ -55,12 +55,17 @@ public class PlayerCenterData implements UserData {
 
 	public void packData(SendMsgBuffer buffer) {
 		m_account.packData(buffer);
+		
 	}
 
 	public void packDatas(SendMsgBuffer buffer) {
 
 		/* buffer.Add(p_data) */
 
+	}
+	
+	public String getNianJi(){
+	return 	this.m_huiyuan.grade.Get()+"年级"+this.m_huiyuan.banji.Get()+"班";
 	}
 
 	@Override

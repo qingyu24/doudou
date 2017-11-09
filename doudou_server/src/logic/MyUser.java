@@ -94,6 +94,8 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		buffer.Add(this.getPortrait());//头像ID 
 		buffer.Add(this.getGrade().getM_level().ID());
 		buffer.Add(this.getGrade().getM_star());
+		
+		
 	}
 
 	public MyUser()

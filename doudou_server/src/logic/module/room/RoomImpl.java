@@ -56,7 +56,11 @@ public class RoomImpl implements RoomInterface {
 			/*	Room room2 = RoomManager.getInstance().getRoom(roomID);*/
 			if(room2.getRr().isFree()){
 				RoomManager.getInstance().joinRoom(p_user, room2.getID());
-				room2.AddPlayer(p_user);
+				RoomPlayer player = room2.AddPlayer(p_user);
+				if(room2.getRr().getTeamNum()>0){
+			
+					room2.free_addUser(player);
+				}
 				room2.broadcastFree(room2.getRr().getM_type().ID());
 			}
 		}
@@ -262,7 +266,7 @@ public class RoomImpl implements RoomInterface {
 			}
 			team.addUser(p_user);
 			room.free_addTeam(team);
-			room.addTeam(team);
+			/*room.addTeam(team);*/
 			room.setTeamName(team,teamName);
 
 

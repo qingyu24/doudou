@@ -124,7 +124,9 @@ public class RoomManager {
 		r.clearUser();
 		r.destroy();
 		m_list.remove(roomId);
+		m_roomlist.remove(r);
 		m_freeroomlist.remove(r);
+		m_teamroomlist.remove(r);
 		Iterator<Entry<Long, Room>> it = x_list.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<java.lang.Long, logic.module.room.Room> entry = (Map.Entry<java.lang.Long, logic.module.room.Room>) it

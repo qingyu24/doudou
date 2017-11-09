@@ -14,6 +14,7 @@ import logic.Reg;
 import logic.eGameState;
 import logic.userdata.Team;
 import manager.RoomManager;
+import manager.TeamManager;
 import manager.ThornBallManager;
 import core.EqiuType;
 import core.Root;
@@ -138,7 +139,7 @@ public class Room implements Tick {
 	
 		 user.setRoomId(this.m_roomId); 
 		RoomManager.getInstance().joinRoom(user, m_roomId);
-		if(!this.rr.isFree())	{	
+		if(!this.rr.isFree()&&rr.getTeamNum()==0)	{	
 			this.setM_state(eGameState.GAME_PLAYING);}// 如果不是团战 只要有人进入房间就开始游戏
 		RoomPlayer rp = new RoomPlayer();
 		rp.init(user);
@@ -176,6 +177,18 @@ public class Room implements Tick {
 		while (it.hasNext()) {
 			RoomPlayer roomPlayer = (RoomPlayer) it.next();
 			if(roomPlayer.getRoleId()==user.GetRoleGID()){
+				return true;
+			}
+		}
+		return false;
+
+	}
+	private boolean containsTeam(Team team) {
+		// TODO Auto-generated method stub
+		Iterator<Team> it = this.m_allTeams.iterator();
+		while (it.hasNext()) {
+			Team teams = it.next();
+			if(team.getM_teamID()==teams.getM_teamID()){
 				return true;
 			}
 		}
@@ -740,6 +753,7 @@ public class Room implements Tick {
 		} else {
 			broadcast(RoomInterface.MID_BROADCAST_LEFTTIME, (int) m_leftTime,
 					System.currentTimeMillis());
+			LogRecord.Log("发送当前倒计时"+m_leftTime);
 		}
 	}
 
@@ -870,6 +884,36 @@ public class Room implements Tick {
 		}
 	}
 
+	
+	
+	
+/*	public Team addtoTeam(Team team) {
+		// TODO Auto-generated method stub
+		// 先把队伍所有人加入房间
+		
+	
+			Iterator<Team> it = this.m_allTeams.iterator();
+			while (it.hasNext()) {
+				Team team2 = (Team) it.next();
+			
+				if (team2.m_users.size() + 1 <= rr.getPalyerNum()) {
+					team2.addTeam(team);
+					team2.setM_roomID(this.m_roomId);
+					this.AddPlayer(team, team2);
+					 TeamManager.getInstance().destroyTeam(team); 
+					return team2;
+				}
+				TeamManager.getInstance()
+			this.m_allTeams.add(team);
+			this.m_teams.put(team.getM_teamID(), team);
+			team.setM_roomID(this.m_roomId);
+			team.setTeamName(getNewTeamName());
+			this.AddPlayer(team, team);
+			return team;
+		}
+		return team;
+	}*/
+	
 	public Team addTeam(Team team) {
 		// TODO Auto-generated method stub
 		// 先把队伍所有人加入房间
@@ -900,18 +944,32 @@ public class Room implements Tick {
 	}
 	public Team free_addTeam(Team team) {
 		// TODO Auto-generated method stub
-		if(!this.m_allTeams.contains(team)){
+		if(!this.containsTeam(team)){
 	
 			this.m_allTeams.add(team);
 			this.m_teams.put(team.getM_teamID(), team);
 			team.setM_roomID(this.m_roomId);
 			team.setTeamName(getNewTeamName());
 			this.AddPlayer(team, team);
-	/*		rp.setSkin(TeamName);
-			rp.setTeamName(TeamName);
-			rp.setTeamID(teamID);*/
 			return team;
 		}
+		return team;
+	}
+	public Team free_addUser(RoomPlayer user) {
+		// TODO Auto-generated method stub
+		Iterator<Team> it = this.m_allTeams.iterator();
+		while (it.hasNext()) {
+			Team team2 = (Team) it.next();	
+			if (team2.m_users.size() + 1<= rr.getPalyerNum()) {
+				team2.addUser(user.getUser());
+				user.setTeamID(team2.getM_teamID());
+
+				return team2;
+			}
+		}
+		Team team = TeamManager.getInstance().getNewteam();
+		team.addUser(user.getUser());
+		this.addTeam(team);
 		return team;
 	}
 	
