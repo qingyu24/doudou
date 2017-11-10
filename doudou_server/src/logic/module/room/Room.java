@@ -14,6 +14,7 @@ import logic.Reg;
 import logic.eGameState;
 import logic.eGameType;
 import logic.userdata.Team;
+import logic.userdata.shopping;
 import manager.RoomManager;
 import manager.TeamManager;
 import manager.ThornBallManager;
@@ -631,6 +632,31 @@ public class Room implements Tick {
 			}
 		}
 	}
+/*	public void broadcast(int midBroadcastSplit, int playerID, int m_xpos,
+			int m_ypos, ArrayList<Integer> list, long time) {
+		// TODO Auto-generated method stub
+		
+	}*/
+	public void broadcast(int msgId, int arg1, int arg2, int arg3,
+		ArrayList<Integer>list,	long time) {
+		Iterator<RoomPlayer> it = m_players.iterator();
+		while (it.hasNext()) {
+			RoomPlayer user = it.next();
+			if (user != null) {
+				SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+						.AddID(Reg.ROOM, msgId);
+				buffer.Add(arg1);
+				buffer.Add(arg2);
+				buffer.Add(arg3);
+				buffer.Add((short)(list.size()));
+				for (Integer integer : list) {
+					buffer.Add(integer);
+				}
+				buffer.Add(time);
+				buffer.Send(user.getUser());
+			}
+		}
+	}
 
 	private void broadcast(int msgId, long msg, long time) {
 		// TODO Auto-generated method stub
@@ -1153,4 +1179,6 @@ public class Room implements Tick {
 			RoomManager.getInstance().removeRoom(m_roomId);
 			this.destroy();
 	}
+
+
 }

@@ -76,7 +76,7 @@ public interface RoomInterface {
 
 	@RFC(ID = MID_BODY_SPLIT)
 	void SplitBody(@PU(Index = Reg.ROOM) MyUser p_user, @PI int playerID,
-			@PI int bodyID, @PI int Count, @PL long time);
+			@PI int bodyID, @PI int Count,	@PVI ArrayList<Integer> list, @PL long time);
 
 	@RFC(ID = MID_BODY_COMPOSE)
 	void ComposeBody(@PU(Index = Reg.ROOM) MyUser p_user,

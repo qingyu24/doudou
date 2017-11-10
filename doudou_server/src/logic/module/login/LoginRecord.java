@@ -40,6 +40,8 @@ public class LoginRecord
 		m_CreateStartTime = 0;
 		m_CreateFinishTime = 0;
 		System.out.println("* 初始化登陆记录,用户:" + m_HashCode + " 登陆时间:" + Debug.GetShowTime(m_LoginTime) );
+
+
 	}
 	
 	public long GetLoginUseTime()

@@ -124,14 +124,14 @@ public class RoomImpl implements RoomInterface {
 	@Override
 	@RFC(ID = 6)
 	public void SplitBody(@PU(Index = 1) MyUser p_user, @PI int playerID, @PVI int m_xpos, @PI int m_ypos,
-			@PL long time) {
+			@PVI ArrayList<Integer> list,@PL long time) {
 		// TODO Auto-generated method stub
 		long millis = System.currentTimeMillis();
 		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		RoomPlayer rp = r.GetPlayer(playerID);
 		if (rp != null) {
 			rp.splitBody();
-			r.broadcast(RoomInterface.MID_BROADCAST_SPLIT, playerID, m_xpos, m_ypos, time);
+			r.broadcast(RoomInterface.MID_BROADCAST_SPLIT, playerID, m_xpos, m_ypos, list,time);
 		}
 		LogRecord.writePing("SplitBody执行时间", System.currentTimeMillis() - millis);
 	}

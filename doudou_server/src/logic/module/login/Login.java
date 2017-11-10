@@ -313,6 +313,10 @@ public class Login implements LoginInterface, Tick
 		m_Forbids.add(p_User.GetUserName());
 	}
 
+	/**
+	 * @param p_lTimerID
+	 * @throws Exception
+	 */
 	/* (non-Javadoc)
 	 * @see core.Tick#OnTick(long)
 	 */
@@ -608,7 +612,6 @@ public class Login implements LoginInterface, Tick
 			_SynLoginWaitNum(++num, m.GetUser());
 		}
 	}
-
 	private void _SToC_CreateReturn(MyUser p_user, int i)
 	{
 		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,4).Add(i).Send(p_user);		

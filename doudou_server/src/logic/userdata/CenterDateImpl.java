@@ -1,10 +1,8 @@
 package logic.userdata;
 
+import core.remote.*;
 import logic.MyUser;
 import manager.UserManager;
-import core.remote.PL;
-import core.remote.PU;
-import core.remote.RFC;
 
 
 public class CenterDateImpl implements CenterDateInterface {
@@ -33,28 +31,37 @@ public class CenterDateImpl implements CenterDateInterface {
 	}
 
 	@Override
-	public void givePresent(MyUser p_user, long friendID, int giftID) {
+	public void givePresent(@PU MyUser p_user,@PL long friendID, @PI int giftID) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void buyShopping(MyUser p_user, int giftID) {
+	public void buyShopping(@PU MyUser p_user,@PI int giftID) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void userHome(MyUser p_user, int giftID) {
+	public void userHome(@PU MyUser p_user,@PI int giftID) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	@Override
+	public void sendMessage(@PU MyUser p_user, @PL long targetID, @PS String message) {
 
-	
-	
-	
-	
-	
-	
+	}
+
+	@Override
+	public void deleteFriends(MyUser p_user, long targetID) {
+
+	}
+
+	@Override
+	public void rankingList(MyUser p_user, int list_type, int number, int size) {
+
+	}
+
+
 }
