@@ -76,9 +76,8 @@ public class CenterImpl implements CenterInterface {
 		if (team != null) {
 			team.boradcast(p_user, true);
 		} else {
-			SendMsgBuffer p = PackBuffer.GetInstance().Clear()
-					.AddID(Reg.ERROR, eErrorCode.Error_1.ID());
-			p.Send(p_user);
+
+			p_user.sendError(eErrorCode.Error_2);
 		}
 
 	};
@@ -148,7 +147,7 @@ public class CenterImpl implements CenterInterface {
 		Room room = RoomManager.getInstance().createFreeRoom(p_user, rule);
 		if (isTeam == 1) {
 			Team team = TeamManager.getInstance().getNewteam();
-			team.addUser(p_user);
+			TeamManager.getInstance().joinTeam(p_user, team.getM_teamID());
 			room.addTeam(team);
 			room.broadcastFree(1);
 		} else {

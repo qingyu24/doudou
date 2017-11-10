@@ -4,12 +4,8 @@
 package logic;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
-import core.Root;
-import core.RootConfig;
-import core.Tick;
-import core.detail.UserBase;
-import core.detail.impl.socket.SendMsgBuffer;
 import logic.module.center.CenterInterface;
 import logic.module.character.CharacterImpl;
 import logic.module.login.Login;
@@ -17,12 +13,17 @@ import logic.module.login.eLoginErrorCode;
 import logic.module.room.Room;
 import logic.userdata.CountGrade;
 import logic.userdata.account;
-import logic.userdata.logindata;	
+import logic.userdata.logindata;
 import logic.userdata.handler.PlayerCenterData;
 import manager.ConfigManager;
 import manager.RoomManager;
 import manager.TeamManager;
 import manager.UserManager;
+import core.Root;
+import core.RootConfig;
+import core.Tick;
+import core.detail.UserBase;
+import core.detail.impl.socket.SendMsgBuffer;
 /**
  * @author ddoq
  * @version 1.0.0
@@ -40,8 +41,16 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 	private int roomId =-1;
 	private CountGrade grade;
 	private  ArrayList<MyUser> friends;
+	private  ArrayList<MyUser> classmates;
 
 
+	public ArrayList<MyUser> getClassmates() {
+		return classmates;
+	}
+
+	public void setClassmates(ArrayList<MyUser> classmates) {
+		this.classmates = classmates;
+	}
 
 	public int getRoomId() {
 		return roomId;
@@ -94,8 +103,8 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		buffer.Add(this.getPortrait());//头像ID 
 		buffer.Add(this.getGrade().getM_level().ID());
 		buffer.Add(this.getGrade().getM_star());
-		
-		
+
+
 	}
 
 	public MyUser()
@@ -278,7 +287,11 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 		return	this.m_center.getShool();
 
 	}
+	public List<Integer> getNianJi() {
+		return this.m_center.getCalssInfo();
+		// TODO Auto-generated method stub
 
+	}
 	public int getPortrait() {
 		// TODO Auto-generated method stub
 		return this.m_center.getPortrait();
@@ -295,6 +308,31 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/
 			}
 		}
 	}
+
+	public void sendError(eErrorCode e){
+		SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.ERROR, 1);
+		buffer.Add(e.ID());
+		buffer.Send(this);
+	}
+
+	public int hasFriend(MyUser myUser) {
+		// TODO Auto-generated method stub
+		Iterator<MyUser> it = this.friends.iterator();
+		while (it.hasNext()) {
+			MyUser myUser2 = (MyUser) it.next();
+			if(myUser.GetRoleGID()==myUser2.GetRoleGID()){
+				return 1;
+			}
+		}
+		return 0;
+		
+	}
+
+	public int isTeacher() { // TODO Auto-generated method stub
+	
+		return 	this.getCenterData().isTeacher();
+	}
+
 
 
 

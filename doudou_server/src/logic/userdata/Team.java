@@ -13,6 +13,7 @@ import logic.LogRecord;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
+import logic.eGameState;
 import logic.module.center.CenterInterface;
 import logic.module.room.Room;
 import logic.module.room.RoomPlayer;
@@ -110,7 +111,12 @@ public class Team implements Comparable<Team> {
 				this.roleID=m_allUsers.get(0).GetRoleGID();
 			}
 		}
-         if(m_allUsers.size()==0){
+		
+	/*	Room room2 = RoomManager.getInstance().getRoom(this.getM_roomID());*/
+/*if(room2!=null&&room2.getRr().isFree()&&room2.getM_state()==eGameState.GAME_PREPARING){
+	room2.broadcastFree(room2.getRr().getM_type().ID());
+}
+  */       if(m_allUsers.size()==0){
       /*  	 Room room = RoomManager.getInstance().getRoom(m_roomID);*/
           	 Room room = RoomManager.getInstance().getRoom(user.GetRoleGID());
         	 if(room!=null){

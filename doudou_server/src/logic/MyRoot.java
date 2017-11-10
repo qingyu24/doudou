@@ -101,7 +101,7 @@ public class MyRoot extends Root implements Tick
 		{
 			r.StartShow();
 		}
-/*		LoaderManager.getInstance().loadAll();*/
+		LoaderManager.getInstance().loadAll();
 	
 		RoomManager.initRoomId();
 		DBMgr.LoadAll();

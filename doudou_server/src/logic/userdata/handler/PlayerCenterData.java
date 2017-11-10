@@ -1,6 +1,7 @@
 package logic.userdata.handler;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.management.relation.Role;
 
@@ -138,6 +139,7 @@ public class PlayerCenterData implements UserData {
 					}
 				}
 				m_user.setFriends(list);
+				
 			}
 
 			
@@ -162,6 +164,21 @@ public class PlayerCenterData implements UserData {
 	public int getPortrait() {
 		// TODO Auto-generated method stub
 		return this.m_account.portrait.Get();
+	}
+
+	public List<Integer> getCalssInfo() {
+		// TODO Auto-generated method stub
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(this.m_huiyuan.school.Get());
+		list.add(m_huiyuan.grade.Get());
+		list.add(this.m_huiyuan.banji.Get());
+		return list;
+	}
+
+	public int isTeacher() {
+		return 0;
+		// TODO Auto-generated method stub
+/*		return this.m_huiyuan.l;*/
 	}
 
 }

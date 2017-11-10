@@ -33,24 +33,24 @@ public class LoaderManager {
 
 	public  void loadAll() {
 	
-		if(needBegin()){
+	/*	if(needBegin()){*/
 			UserLoader users = new UserLoader(new account());
 			HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());
 			m_list.put(Users, users);
 			m_list.put(Huiyuan, huiyuan);
-		}
+/*		}*/
 	}
 
 	public DBLoader getLoader(String name) {
 		return m_list.get(name);
 	}
 
-	//是否需要加载
+/*	//是否需要加载
 	private boolean needBegin() {
 		// TODO Auto-generated method stub
 
 		String num2 = "SELECT * FROM zz_huiyuan where roleid is null or roleid=0";
-		/*		String num = "SELECT * FROM zz_huiyuan where roleid = 0";*/
+				String num = "SELECT * FROM zz_huiyuan where roleid = 0";
 		zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), num2);
 		if(zz_huiyuans.length>0){
 			System.out.println("=============");
@@ -63,7 +63,7 @@ public class LoaderManager {
 
 	}
 
-
+*/
 	// 把所有的学生登录信息同步到account表中
 	/*public void Synchronization() {
 		int i=0;

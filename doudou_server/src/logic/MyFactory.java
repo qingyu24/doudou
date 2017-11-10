@@ -3,16 +3,16 @@
  */
 package logic;
 
-import logic.methodex.KeepAliveMethodEx;
+import logic.module.center.CenterImpl;
+import logic.module.character.CharacterImpl;
+import logic.module.login.Login;
+import logic.module.room.RoomImpl;
+import logic.userdata.CenterDateImpl;
 import core.Factory;
 import core.Root;
 import core.User;
 import core.detail.impl.log.Log;
 import core.exception.RegException;
-import logic.module.center.CenterImpl;
-import logic.module.character.CharacterImpl;
-import logic.module.login.*;
-import logic.module.room.RoomImpl;
 
 /**
  * @author ddoq
@@ -48,6 +48,8 @@ public class MyFactory implements Factory
 			r.Reg(new CharacterImpl());
 			r.Reg(new RoomImpl());
 			r.Reg(new CenterImpl());
+			r.Reg(new CenterDateImpl());
+			
 			//todo;
 			
 		}

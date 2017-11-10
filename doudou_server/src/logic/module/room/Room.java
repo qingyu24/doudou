@@ -12,6 +12,7 @@ import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
 import logic.eGameState;
+import logic.eGameType;
 import logic.userdata.Team;
 import manager.RoomManager;
 import manager.TeamManager;
@@ -34,8 +35,7 @@ public class Room implements Tick {
 	private int MapId;
 	private ArrayList<ThornBall> m_thorns;// 房间内所有的刺球
 	private int m_idSum;// 累计生成玩家ID
-	private int m_teamIdSum;// 累计生成玩家ID
-	private long m_beginTime;// 房间游戏开始时间
+   private long m_beginTime;// 房间游戏开始时间
 	private long m_leftTime;// 游戏倒计时
 	private HashMap<Integer, Team> m_teams;// 房间内所有队伍信息
 	private ArrayList<Team> m_allTeams;
@@ -55,7 +55,6 @@ public class Room implements Tick {
 		MapId = (int) (Math.random() * 10 + 1);
 		m_thorns = ThornBallManager.getInstance().getNewlist();
 		m_idSum = 1;
-		m_teamIdSum = 0;
 		m_beginTime = System.currentTimeMillis();
 		m_leftTime = 60 * 1000 * rr.getTime();
 		isTeamGame = false;
@@ -79,7 +78,7 @@ public class Room implements Tick {
 		MapId = (int) (Math.random() * 10 + 1);
 		m_thorns = ThornBallManager.getInstance().getNewlist();
 		m_idSum = 1;
-		m_teamIdSum = 0;
+	
 		m_beginTime = System.currentTimeMillis();
 		m_leftTime = 60 * 1000 * rr.getTime();
 		isTeamGame = rr.getM_type().ID()==1;
@@ -96,6 +95,7 @@ public class Room implements Tick {
 	public RoomRule getRr() {
 		return rr;
 	}
+
 
 	public void setRr(RoomRule rr) {
 		this.rr = rr;
@@ -232,6 +232,20 @@ public class Room implements Tick {
 				}
 			}
 		}
+		
+		
+	
+		if(m_state==eGameState.GAME_PREPARING&&rr.isFree()){
+			
+			if(user==owner){
+				this.dissolution();
+			}else{
+				this.broadcastFree(this.rr.getM_type().ID());
+			}
+			
+		}
+		
+		
 		if (!find) {
 
 		}
@@ -298,6 +312,9 @@ public class Room implements Tick {
 		}
 	}
 
+	
+	
+	
 	public void broadcast(int msgId, int arg1, int arg2, int arg3, long time) {
 		Iterator<RoomPlayer> it = m_players.iterator();
 		while (it.hasNext()) {
@@ -644,6 +661,8 @@ public class Room implements Tick {
 				buffer.Add(arg4);
 				buffer.Add(arg5);
 				buffer.Add(time);
+			/*	System.err.println("______________________________");*/
+				LogRecord.Log("______________________發送一次");
 				buffer.Send(user.getUser());
 			}
 		}
@@ -813,6 +832,9 @@ public class Room implements Tick {
 			return false;
 		}
 
+		/*if(rr.getTeamNum()>0&&this.m_state!=eGameState.GAME_PREPARING){
+			return false;	
+		}*/
 		return true; 
 	}
 
@@ -961,7 +983,7 @@ public class Room implements Tick {
 		while (it.hasNext()) {
 			Team team2 = (Team) it.next();	
 			if (team2.m_users.size() + 1<= rr.getPalyerNum()) {
-				team2.addUser(user.getUser());
+				TeamManager.getInstance().joinTeam(user.getUser(), team2.getM_teamID());
 				user.setTeamID(team2.getM_teamID());
 
 				return team2;
@@ -1038,6 +1060,7 @@ public class Room implements Tick {
 	public void setTeamRoom() {
 		// TODO Auto-generated method stub
 		this.isTeamGame = true;
+		this.rr.setM_type(eGameType.TEAM);
 	}
 
 	public void removeTeam(Team team) {

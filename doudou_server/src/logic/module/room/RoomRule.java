@@ -63,6 +63,10 @@ public class RoomRule {
 		return teamNum;
 	}
 
+	public boolean	isTeam(){
+		
+		return this.m_type.ID()==1;
+	}
 	public void setTeamNum(int teamNum) {
 		this.teamNum = teamNum;
 	}

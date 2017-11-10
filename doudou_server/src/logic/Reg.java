@@ -17,5 +17,6 @@ public class Reg
 	public static final int CENTER = 3;//
 	public static final int CHARACTER = 5;
 	public static final int ERROR = 6; // 
+	public static final int CENTERDATA = 7; //
 	
 }

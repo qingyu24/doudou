@@ -3,11 +3,13 @@ package manager;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
-import core.DBMgr;
 import logic.MyUser;
-import logic.loader.HuiyuanLoader;
-import logic.userdata.zz_huiyuan;
+import logic.PackBuffer;
+import logic.Reg;
+import logic.userdata.CenterDateInterface;
+import core.detail.impl.socket.SendMsgBuffer;
 
 public class UserManager {
 
@@ -48,19 +50,19 @@ public class UserManager {
 		m_users.remove(myUser.GetRoleGID());
 		ArrayList<MyUser> friends = new ArrayList<MyUser>();
 		if(myUser.getFriends()!=null){
-		friends.addAll(myUser.getFriends());
-		
-		if (friends != null) {
-			Iterator<MyUser> it = friends.iterator();
-			while (it.hasNext()) {
-				MyUser myUser2 = (MyUser) it.next();
-				
-				myUser2.friendsOffline(myUser);
-			}
-		}}
+			friends.addAll(myUser.getFriends());
+
+			if (friends != null) {
+				Iterator<MyUser> it = friends.iterator();
+				while (it.hasNext()) {
+					MyUser myUser2 = (MyUser) it.next();
+
+					myUser2.friendsOffline(myUser);
+				}
+			}}
 	}
 
-	// 测试类 全部加为好友
+	/*	// 测试类 全部加为好友
 	public void testFriend() {
 		// TODO Auto-generated method stub
 
@@ -87,6 +89,35 @@ public class UserManager {
 			}
 
 		}
+
+	}*/
+	//同伴同學
+	public void getClassmates(MyUser p_user) {
+		// TODO Auto-generated method stub
+		List<Integer> nianJi = p_user.getNianJi();
+		ArrayList<MyUser> list = new ArrayList<MyUser>();
+
+
+		for (MyUser user : users) {
+			List<Integer> nianJi2 = user.getNianJi();
+			if(nianJi.equals(nianJi2)&&p_user.GetRoleGID()!=user.GetRoleGID()){
+				list.add(user);
+			}
+		}
+
+		SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+				.AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
+
+		for (MyUser myUser : list) {
+
+			myUser.packDate(buffer);
+			buffer.Add(p_user.hasFriend(myUser)) ;
+			/*	buffer.Add(myUser.isTeacher());*/
+
+		}
+		buffer.Send(p_user);
+
+
 
 	}
 

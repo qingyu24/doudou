@@ -15,6 +15,7 @@ import logic.LogRecord;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
+import logic.eErrorCode;
 import logic.eGameState;
 import logic.module.center.CenterInterface;
 import logic.userdata.Team;
@@ -33,7 +34,7 @@ public class RoomImpl implements RoomInterface {
 		Room room2 = RoomManager.getInstance().getRoom(roomID);
 		//进入自由房
 		if (room2==null  /*&&!room2.getRr().isFree()*/) {
-		
+
 			Room r = RoomManager.getInstance().getFreeRoom();
 			r.setM_state(eGameState.GAME_PLAYING);
 			/*RoomManager.getInstance().joinRoom(p_user, roomID);*/
@@ -41,12 +42,9 @@ public class RoomImpl implements RoomInterface {
 
 			SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ENTER);
 			buffer.Add(r.getID());
-
 			buffer.Send(p_user);
 			// 告诉你房间里面都有谁;1
-			r.enbroadcast(RoomInterface.MID_BROADCAST_PLAYER_ENTER, rp, time);
-
-			// 2
+			r.enbroadcast(RoomInterface.MID_BROADCAST_PLAYER_ENTER, rp, time);	// 2
 			SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_PLAYERS);
 			r.packData(p);
 			p.Add((int) r.getM_leftTime());
@@ -54,16 +52,21 @@ public class RoomImpl implements RoomInterface {
 			//
 		}else if(room2!=null&&room2.getRr().isFree()){ //进入自建房
 			/*	Room room2 = RoomManager.getInstance().getRoom(roomID);*/
-			if(room2.getRr().isFree()){
+			if(room2.canJoin()){
 				RoomManager.getInstance().joinRoom(p_user, room2.getID());
 				RoomPlayer player = room2.AddPlayer(p_user);
-				if(room2.getRr().getTeamNum()>0){
-			
+				if(room2.getRr().isTeam()){
+
 					room2.free_addUser(player);
 				}
 				room2.broadcastFree(room2.getRr().getM_type().ID());
+			}else{
+				p_user.sendError(eErrorCode.Error_1);//房間已滿 或遊戲開始
 			}
-		}
+		}/*else{
+			p_user.sendError(eErrorCode.Error_1);//房間已滿 或遊戲開始
+		}*/
+		
 
 
 	}
@@ -84,9 +87,15 @@ public class RoomImpl implements RoomInterface {
 
 	@Override
 	@RFC(ID = 5)
-	public void InitBody(@PU(Index = 1) MyUser p_user, @PL long time) {
+	public void BodyMove(@PU(Index = Reg.ROOM) MyUser p_user,  @PI int playerID,@PI int speedx, @PI int speedy,@PI int postx,@PI int posty, @PL long time){
 		// TODO Auto-generated method stub
-
+		LogRecord.Log("++++++++++++++++接收到移動+++++++++++++++++++++++++++++++");
+		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
+		if (r != null) {
+	
+			r.broadcast(RoomInterface.MID_BODY_BODYMOVE, playerID,speedx,speedy,postx,posty,time);
+		}
+	
 	}
 
 	@Override
@@ -109,6 +118,8 @@ public class RoomImpl implements RoomInterface {
 		LogRecord.writePing("MOVEBODY执行时间", System.currentTimeMillis() - millis);
 
 	}
+	
+	
 
 	@Override
 	@RFC(ID = 6)
@@ -264,7 +275,8 @@ public class RoomImpl implements RoomInterface {
 				}
 				player.setTeamID(team.getM_teamID());
 			}
-			team.addUser(p_user);
+		/*	team.addUser(p_user);*/
+			TeamManager.getInstance().joinTeam(p_user, team.getM_teamID());
 			room.free_addTeam(team);
 			/*room.addTeam(team);*/
 			room.setTeamName(team,teamName);
@@ -274,6 +286,7 @@ public class RoomImpl implements RoomInterface {
 			room.broadcastFree(room.getRr().getM_type().ID());
 		}else{
 			//队伍人满 加不进去 返回错误信息
+			p_user.sendError(eErrorCode.Error_2);
 		}
 	}
 
@@ -313,7 +326,7 @@ public class RoomImpl implements RoomInterface {
 		// TODO Auto-generated method stub
 		Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		if(room!=null){
-		/*		room.RemovePlayer(user, time);*/
+			/*		room.RemovePlayer(user, time);*/
 			room.RemovePlayer(p_user, System.currentTimeMillis());
 		}
 

@@ -18,7 +18,7 @@ public interface RoomInterface {
 	static final int MID_CREATE = 2;
 	static final int MID_BODY_MOVE = 3; // 移动
 	static final int MID_BODY_EAT = 4; // 吃敌人;
-	static final int MID_BODY_INIT = 5; // 初始化;
+	static final int MID_BODY_BODYMOVE = 5; // 移動;
 	static final int MID_BODY_SPLIT = 6; // 分割;
 	static final int MID_BODY_COMPOSE = 7; // 合并;
 	static final int MID_BODY_QIU = 17; // 吐球;
@@ -61,8 +61,8 @@ public interface RoomInterface {
 	void CreateRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int arg,
 			@PL long time);
 
-	@RFC(ID = MID_BODY_INIT)
-	void InitBody(@PU(Index = Reg.ROOM) MyUser p_user, @PL long time);
+	@RFC(ID = MID_BODY_BODYMOVE)
+	void BodyMove(@PU(Index = Reg.ROOM) MyUser p_user, @PI int playerID,@PI int speedx, @PI int speedy,@PI int postx,@PI int posty, @PL long time);
 
 	@RFC(ID = MID_BODY_MOVE)
 	void MoveBody(@PU(Index = Reg.ROOM) MyUser p_user, @PI int playerID,

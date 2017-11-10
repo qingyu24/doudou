@@ -67,13 +67,19 @@ public class TeamManager {
 
 	}
 
-/*	@SuppressWarnings("static-access")*/
+
 	public void removeUser(MyUser p_user) {
 		// TODO Auto-generated method stub
 		Team team = this.u_teamlist.get(p_user.GetRoleGID());
 		if(team!=null){
 		team.removeUser(p_user);
+		}else{
+			
+		System.out.println("沒有取到");	
+			
+			
 		}
+
 	/*	this.x_list.remove(p_user.GetRoleGID());
 		this.x_waitlist.remove(p_user.GetRoleGID());*/
 		this.u_teamlist.remove(p_user.GetRoleGID());

@@ -21,7 +21,6 @@ public class RoomManager {
 	private static RoomManager _instance;
 	private static Map<Long, Room> x_list = new HashMap<Long,Room>(); //根据玩家ＩＤ取
 	private static Map<Integer, Room> m_list = new HashMap<Integer, Room>();
-	/*private static Map<Integer, Room> m_teamlist = new HashMap<Integer, Room>();*/
 	private static int roomId = 1;
 	private static ArrayList<Integer> ms_roomids = new ArrayList<Integer>();
 	private static ArrayList<Room> m_roomlist = new ArrayList<Room>();

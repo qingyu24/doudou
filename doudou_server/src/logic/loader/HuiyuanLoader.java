@@ -2,10 +2,15 @@ package logic.loader;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import core.DBLoaderEx;
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.MyUser;
+import logic.PackBuffer;
+import logic.Reg;
+import logic.userdata.CenterDateInterface;
 import logic.userdata.account;
 import logic.userdata.zz_huiyuan;
 
@@ -89,6 +94,29 @@ public class HuiyuanLoader extends DBLoaderEx<zz_huiyuan> {
 		}
 		buffer.Add(this.m_Datas.size());
 	}
-	
 
+	public void getClassmates(MyUser p_user) {
+/*		// TODO Auto-generated method stub
+		ArrayList<MyUser> list = new ArrayList<MyUser>();
+		Iterator<zz_huiyuan> iterator = this.m_Datas.iterator();
+		SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+				.AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
+	while (iterator.hasNext()) {
+		zz_huiyuan it = (zz_huiyuan) iterator.next();
+		List<Integer> nianJi = p_user.getNianJi();
+		if(it.school.Get()==nianJi.get(0)&&it.grade.Get()==nianJi.get(1)&&it.banji.Get()==nianJi.get(2)){
+			list.add(it);
+		}
+
+		
+		
+		buffer.Send(user.getUser());
+		
+	}
+	*/
+
+	
+	}
+	
+	
 }

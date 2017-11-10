@@ -1,8 +1,8 @@
 package logic;
 
 public enum eErrorCode {
-	Error_1, //队伍加入失败,隊伍人滿了
-	Error_2, // 队伍加入失败,遊戲開始
+	Error_1, //房間加入失敗
+	Error_2, // 队伍加入失败,隊伍人滿
 	Error_3, // 房间的人数满了;
 	Error_4, //摸牌失败;
 	Error_5, //出牌失败;
