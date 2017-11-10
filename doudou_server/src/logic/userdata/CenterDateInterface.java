@@ -45,7 +45,7 @@ public interface CenterDateInterface {
     void deleteFriends(@PU(Index = Reg.ROOM) MyUser p_user, @PL long targetID);
 
 	@RFC(ID =MID_RANKING_LISTS)
-	void rankingList(@PU(Index = Reg.ROOM) MyUser p_user, @PI int list_type, @PI int number ,@PI int size);
+	void rankingList(@PU(Index = Reg.ROOM) MyUser p_user, @PI int list_type, @PI int number, @PI int size);
 
 
 
