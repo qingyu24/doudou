@@ -138,8 +138,8 @@ public class MyRoot extends Root implements Tick
 		}
 		//记录一下游戏的开服时间;
 		
-/*		
-UserManager.getInstance().testFriend();*/
+		
+/*UserManager.getInstance().testFriend();*/
 		
 		System.err.println("Server Start Finish!!!");
 

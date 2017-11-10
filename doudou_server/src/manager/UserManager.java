@@ -8,7 +8,10 @@ import java.util.List;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
+import logic.loader.HuiyuanLoader;
 import logic.userdata.CenterDateInterface;
+import logic.userdata.zz_huiyuan;
+import core.DBMgr;
 import core.detail.impl.socket.SendMsgBuffer;
 
 public class UserManager {
@@ -62,7 +65,7 @@ public class UserManager {
 			}}
 	}
 
-	/*	// 测试类 全部加为好友
+		// 测试类 全部加为好友
 	public void testFriend() {
 		// TODO Auto-generated method stub
 
@@ -90,7 +93,7 @@ public class UserManager {
 
 		}
 
-	}*/
+	}
 	//同伴同學
 	public void getClassmates(MyUser p_user) {
 		// TODO Auto-generated method stub
