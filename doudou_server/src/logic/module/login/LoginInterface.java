@@ -36,8 +36,21 @@ public interface LoginInterface
 			   @PI int	  p_nServerID,
 			   @PS String p_deviceIdentifier,
 			   @PS String p_deviceModel);
-	
-	
+
+
+    @RFC (ID = MID_RESET_ENTER, RunDirect = true)
+    void ResetEnter(@PU MyUser p_user,
+                    @PS String p_username,
+                    @PS String p_password,
+                    @PI int    userType,
+                    @PI int	  p_nServerID,
+                    @PS String p_deviceIdentifier,
+                    @PS String p_deviceModel,
+                    @PI int code
+    );
+
+
+
 	
 	/////////////////////////////////////////////////////////////////////////////////////
 	//测试用的接口

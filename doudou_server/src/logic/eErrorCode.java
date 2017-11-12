@@ -5,7 +5,7 @@ public enum eErrorCode {
 	Error_2, // 队伍加入失败,隊伍人滿
 	Error_3, // 房间的人数满了;
 	Error_4, //登录失败密码错误;
-	Error_5, // 有人登录相同账户即将被挤下;
+	Error_5, // 有人登录相同账户登录失败;
 	Error_6;
 	public int ID(){
 		switch(this){

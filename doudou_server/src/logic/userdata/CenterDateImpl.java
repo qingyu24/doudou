@@ -62,6 +62,7 @@ public class CenterDateImpl implements CenterDateInterface {
 	@Override
 	public void rankingList(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
 
+
 	}
 
 

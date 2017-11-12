@@ -231,7 +231,6 @@ public class RoomImpl implements RoomInterface {
 		    team.bracatstTeam(r);
 		}
 
-
 		//退出自建房
 		if(r!=null&&r.getRr().isFree()){
 			/*	r.RemovePlayer(p_user, time);*/

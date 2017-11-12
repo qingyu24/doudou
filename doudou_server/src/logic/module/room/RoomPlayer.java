@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import core.detail.impl.socket.SendMsgBuffer;
-import logic.LogRecord;
 import logic.MyUser;
 import logic.userdata.CountGrade;
 import logic.userdata.Team;
@@ -330,9 +329,9 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 	}
 
 	// 玩家结算
-	public void calGame() {
+	public void calGame(int size) {
 		// TODO Auto-generated method stub
-		if (this.getGrade().storeChange(this.ranking)) {
+		if (this.getGrade().storeChange(this.ranking)&&size>=15) {
 
 			this.m_user.changeScore(1);
 		}

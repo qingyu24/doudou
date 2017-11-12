@@ -168,8 +168,8 @@ public class Login implements LoginInterface, Tick
 					deviceIdentifier,
 					deviceModel,
 					isRegister,
-					0
-					)));
+					0,
+                    0)));
 		}
 
 		boolean c = m_LoginWait.add(p_username);
@@ -201,7 +201,7 @@ public class Login implements LoginInterface, Tick
 				p_nServerID,
 				p_deviceIdentifier,
 				p_deviceModel,
-				true,0)));
+				true,0, 0)));
 
 		boolean c = m_LoginWait.add(p_username);
 		Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "Login#Enter#AddLoginWait:" + p_username + "," + p_nServerID + "," + Debug.GetCurrTime() + ",result:" + c + ",size:" + m_LoginWait.size());
@@ -583,7 +583,7 @@ public class Login implements LoginInterface, Tick
 		return m_LoginWait.size() >= scc.LoginQueueMaxNum;
 	}
 
-	private boolean _KillOpposite(MyUser p_User, Boolean isRight)
+/*	private boolean _KillOpposite(MyUser p_User, Boolean isRight)
     {
             p_User.sendError(Error_5);
 			if ( p_User != null &&isRight)
@@ -592,8 +592,18 @@ public class Login implements LoginInterface, Tick
 			p_User.Close(eLogicCloseUserReason.LOGIN_KILL_OPPOSITE.ID(), 0);
 		}
 		return true;
-	}
+	}*/
 
+    private boolean _KillOpposite(MyUser p_User, Boolean isRight)
+    {
+        p_User.sendError(Error_5);
+ /*       if ( p_User != null &&isRight)
+        {
+            PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,0).Add(eLoginErrorCode.OPPO_KILLED.ID()).Send(p_User);
+            p_User.Close(eLogicCloseUserReason.LOGIN_KILL_OPPOSITE.ID(), 0);
+        }*/
+        return false;
+    }
 	private void _NoticeWaitTime()
 	{
 		if ( System.currentTimeMillis() < m_NoticeWaitTime )
@@ -677,7 +687,8 @@ public class Login implements LoginInterface, Tick
                 boolean isRight = loader.hasUser(p_username, p_password);
 
 				//TODO 实际情况是在某些情况下客户端断开,服务器并不清楚.需要在连接那添加一个不断用来ping的包来测试断开问题.这样就导致这个号重新上的时候还能发现登陆数据
-				return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username),isRight);
+                return  _KillOpposite(p_user,isRight);
+//	return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username),isRight);*/
 //				eLoginDebugLogType.ERR_TOOLONG.Log(p_user);
 //				System.out.println("* 前面的用户已经登陆超过:"+m_WaitLoginTime+"毫秒,用户" + r.GetHashCode() + ",登陆用时间为," + r.GetLoginUseTime() + ",不应该出现这种情况,如果出现了应该是系统出问题了,也先忽略这个用户登陆,高级别警告");
 //				return _KillSelf(p_user);
@@ -696,7 +707,8 @@ public class Login implements LoginInterface, Tick
                     HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
                     boolean isRight = loader.hasUser(p_username, p_password);
 					System.out.println(" 另外一个用户:" + p_user.hashCode() + " 想挤掉用户:" + r.GetHashCode() + ",正在执行!!!");
-					return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);
+					/*return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);*/
+					return  _KillOpposite(p_user,isRight);
 				}
 			}
 		}
@@ -715,7 +727,8 @@ public class Login implements LoginInterface, Tick
                 HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
                 boolean isRight = loader.hasUser(p_username, p_password);
 				System.out.println(" 另外一个用户:" + p_user.hashCode() + " 想挤掉用户:" + r.GetHashCode() + ",正在执行!!!");
-				return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);
+			/*	return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);*/
+                return  _KillOpposite(p_user,isRight);
 			}
 		}
 
@@ -744,5 +757,16 @@ public class Login implements LoginInterface, Tick
 				p_deviceModel);
 	}
 
+    @Override
+    @RFC(ID = 3, RunDirect = true)
+    public void ResetEnter(@PU MyUser p_user, @PS String p_username,
+                           @PS String p_password, @PI int userType, @PI int p_nServerID,
+                           @PS String p_deviceIdentifier, @PS String p_deviceModel,
+                           @PI int code) {
+
+        InternalLogin(p_user, p_username, p_password, p_nServerID, p_deviceIdentifier, p_deviceModel, code, false, "", "", "");
+
+    }
 
 }
+

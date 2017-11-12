@@ -103,6 +103,7 @@ public class Team implements Comparable<Team> {
 		if(user.GetRoleGID()==this.getCreaterID()){
 			if(m_allUsers.size()>0){
 				this.roleID=m_allUsers.get(0).GetRoleGID();
+		this.boradcastChange(this.roleID);
 			}
 		}
 
@@ -167,15 +168,7 @@ public class Team implements Comparable<Team> {
 
 		Iterator<Entry<Long, MyUser>> it = m_users.entrySet().iterator();
 		while (it.hasNext()) {
-			/*		Map.Entry<java.lang.Long, logic.MyUser> entry = (Map.Entry<java.lang.Long, logic.MyUser>) it.next();
-			MyUser user = entry.getValue();
-			if (user.GetRoleGID() != p_user.GetRoleGID()) {
-				SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
-						CenterInterface.MID_BROADCAST_ENTERTEAM);	
-				p.Add(isJoin?1:0);
-				p_user.packDate(p);
-				p.Send(user);
-			}*/
+
 			Map.Entry<java.lang.Long, logic.MyUser> entry = (Map.Entry<java.lang.Long, logic.MyUser>) it.next();
 			MyUser user = entry.getValue();
 			SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
@@ -189,6 +182,26 @@ public class Team implements Comparable<Team> {
 	}
 
 
+
+    public void boradcastChange(Long roleID) {
+        // TODO Auto-generated method stub
+        MyUser myUser = m_users.get(roleID);
+        if(myUser!=null){
+
+
+        Iterator<Entry<Long, MyUser>> it = m_users.entrySet().iterator();
+        while (it.hasNext()) {
+
+            Map.Entry<java.lang.Long, logic.MyUser> entry = (Map.Entry<java.lang.Long, logic.MyUser>) it.next();
+            MyUser user = entry.getValue();
+            SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
+                    CenterInterface.MID_TEAM_OWNERCHANGE);
+            p.Add(this.roleID);
+            p.Add(myUser.getTickName());
+            p.Send(user);
+        }
+    }
+    }
 	public long getCreaterID() {
 		// TODO Auto-generated method stub
 		return roleID;
