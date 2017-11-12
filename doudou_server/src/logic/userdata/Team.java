@@ -1,24 +1,18 @@
 package logic.userdata;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import core.detail.impl.socket.SendMsgBuffer;
 import logic.LogRecord;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
-import logic.eGameState;
 import logic.module.center.CenterInterface;
 import logic.module.room.Room;
 import logic.module.room.RoomPlayer;
 import manager.RoomManager;
 import manager.TeamManager;
+
+import java.util.*;
+import java.util.Map.Entry;
 
 public class Team implements Comparable<Team> {
 	private int m_teamID;
@@ -35,7 +29,7 @@ public class Team implements Comparable<Team> {
 	public void setTeamName(int teamName) {
 
 		this.teamName = teamName;
-		
+
 	}
 
 	public HashMap<Long, MyUser> m_users;
@@ -54,8 +48,8 @@ public class Team implements Comparable<Team> {
 			RoomPlayer rp = room.GetPlayer(myUser);
 			if(rp!=null){
 				rp.setRanking(ranking);
-			}	
-		}	
+			}
+		}
 	}
 
 	public Team() {
@@ -93,7 +87,7 @@ public class Team implements Comparable<Team> {
 	public void addUser(MyUser user) {
 		// TODO Auto-generated method stub
 		//在玩家加入队伍是 如果玩家在队伍中 应该先把他移除
-		
+
 		if (this.roleID == 0) {
 			this.roleID = user.GetRoleGID();
 		}
@@ -111,7 +105,7 @@ public class Team implements Comparable<Team> {
 				this.roleID=m_allUsers.get(0).GetRoleGID();
 			}
 		}
-		
+
 	/*	Room room2 = RoomManager.getInstance().getRoom(this.getM_roomID());*/
 /*if(room2!=null&&room2.getRr().isFree()&&room2.getM_state()==eGameState.GAME_PREPARING){
 	room2.broadcastFree(room2.getRr().getM_type().ID());
@@ -266,5 +260,21 @@ public class Team implements Comparable<Team> {
 		buffer.Add(this.teamName);
 
 	}
+
+	public void  bracatstTeam(Room r){
+            Team team=this;
+        for (MyUser myUser : team.m_allUsers) {
+            SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
+                    CenterInterface.MID_BROADCAST_MATCHPLAYERS);
+            p.Add(team.getM_teamID());
+            p.Add(r.getRr().getPalyerNum());
+            p.Add(team.getTeamName());
+
+            team.packDate(p);
+
+            p.Send(myUser);
+        }
+        }
+
 
 }

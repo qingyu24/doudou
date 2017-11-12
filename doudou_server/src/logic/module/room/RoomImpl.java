@@ -109,7 +109,8 @@ public class RoomImpl implements RoomInterface {
 			if (rp != null) {
 				rp.updatePlace(list);
 				/* LogRecord.Log(p_user, "发来为止信息"+list.toString()); */
-				r.broadcast(RoomInterface.MID_BROADCAST_MOVE, rp, time);
+/*				r.broadcast(RoomInterface.MID_BROADCAST_MOVE, playerID,rp, time);*/
+                r.broadcast(RoomInterface.MID_BROADCAST_MOVE, rp, time);
 			} else {
 
 			}
@@ -226,19 +227,8 @@ public class RoomImpl implements RoomInterface {
 			r.broadcast(CenterInterface.MID_BROADCAST_NEWTEAM, team);
 		}
 		if (team != null) {
-			Iterator<MyUser> iterator = team.m_allUsers.iterator();
-			while (iterator.hasNext()) {
-				MyUser myUser = (MyUser) iterator.next();
-				SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
-						CenterInterface.MID_BROADCAST_MATCHPLAYERS);
-				p.Add(team.getM_teamID());
-				p.Add(r.getRr().getPalyerNum());
-				p.Add(team.getTeamName());
 
-				team.packDate(p);
-
-				p.Send(myUser);
-			}
+		    team.bracatstTeam(r);
 		}
 
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+import logic.LogRecords;
 import utility.Debug;
 
 import logic.MyUser;
@@ -96,6 +97,37 @@ public class UserLoader extends DBLoaderEx<account> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+/*
+    public boolean hasUser(String name ,String passwrd) {
+
+
+		*/
+/*	bs_user[] ds = DBMgr.ReadSQL(new bs_user(), String.format(m_user_query, name));
+			*//*
+
+        LogRecords.Log(null,"即将验证账户信息"+"电话名"+name+"密码"+passwrd);
+       */
+/*         this.m_Datas.iterator();*//*
+
+
+    */
+/*    while(its.hasNext()){
+            bs_user user = its.next();
+            if(user.Tel.Get().equals(name)&&user.Password.Get().equals(passwrd)){
+                LogRecords.Log(null,"验证密码正确，即将被顶掉");
+                return true;
+
+            }
+        }*//*
+
+        for (account m_data : m_Datas) {
+
+        }
+
+        return false;
+
+    }
+*/
+
 
 }

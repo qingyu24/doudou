@@ -25,7 +25,8 @@ import manager.UserManager;
 
 public class CenterImpl implements CenterInterface {
 
-	@Override
+
+    @Override
 	@RFC(ID = 1)
 	public void CreatTeam(@PU MyUser p_user) {
 		// TODO Auto-generated method stu
@@ -89,32 +90,16 @@ public class CenterImpl implements CenterInterface {
 		Team team = TeamManager.getInstance().getTeam(p_teamID);
 		if (team != null) {
 			Room room = RoomManager.getInstance().getTeamRoom(
-					team.m_users.size());
-			if (team != null && room != null) {
+                    team.m_users.size());
+            if (team != null && room != null) {
 				Team team2 = room.addTeam(team);
-				/* room.AddPlayer(team,team2); */
 				if (team2 != null) {
-					Iterator<MyUser> iterator = team2.m_allUsers.iterator();
-					while (iterator.hasNext()) {
-						MyUser myUser = (MyUser) iterator.next();
-						SendMsgBuffer p = PackBuffer
-								.GetInstance()
-								.Clear()
-								.AddID(Reg.CENTER,
-										CenterInterface.MID_BROADCAST_MATCHPLAYERS);
-						p.Add(team2.getM_teamID());
-						p.Add(room.getRr().getPalyerNum());
-						p.Add(team2.getTeamName());
-
-						team2.packDate(p);
-
-						p.Send(myUser);
-					}
-				}
+                    team2.bracatstTeam(room);
+                }
 				room.broadcast(CenterInterface.MID_BROADCAST_NEWTEAM, team2);
 			}
 
-			if (room.canStart()) {
+            if (room.canStart()) {
 				LogRecord.Log("判断开始游戏");
 				room.setM_state(eGameState.GAME_READY);
 
@@ -136,7 +121,7 @@ public class CenterImpl implements CenterInterface {
 
 	};
 
-	@Override
+    @Override
 	@RFC(ID = 13)
 	// 自建房 创建房间规则
 	public void creatRoomRule(@PU MyUser p_user, @PI int isTeam,

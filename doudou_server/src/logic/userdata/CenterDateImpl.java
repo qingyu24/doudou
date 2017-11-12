@@ -37,7 +37,7 @@ public class CenterDateImpl implements CenterDateInterface {
 	}
 
 	@Override
-	public void buyShopping(@PU MyUser p_user,@PI int giftID) {
+	public void buyShopping(@PU MyUser p_user, @PI int giftID,@PI int price) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -54,12 +54,13 @@ public class CenterDateImpl implements CenterDateInterface {
 	}
 
 	@Override
-	public void deleteFriends(MyUser p_user, long targetID) {
+	public void deleteFriends(@PU MyUser p_user, @PL long targetID) {
+
 
 	}
 
 	@Override
-	public void rankingList(MyUser p_user, int list_type, int number, int size) {
+	public void rankingList(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
 
 	}
 

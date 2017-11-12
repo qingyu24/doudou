@@ -33,7 +33,7 @@ public interface CenterDateInterface {
 	void givePresent(@PU(Index = Reg.ROOM) MyUser p_user,@PL  long friendID ,@PI int giftID);
 
 	@RFC(ID = MID_SHOP_BUY)
-	void buyShopping(@PU(Index = Reg.ROOM) MyUser p_user,@PI int giftID);
+	void buyShopping(@PU(Index = Reg.ROOM) MyUser p_user, @PI int giftID, @PI int price);
 
 	@RFC(ID = MID_USER_HOME)
 	void userHome(@PU(Index = Reg.ROOM) MyUser p_user,@PI int giftID);

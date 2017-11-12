@@ -14,7 +14,6 @@ import logic.Reg;
 import logic.eGameState;
 import logic.eGameType;
 import logic.userdata.Team;
-import logic.userdata.shopping;
 import manager.RoomManager;
 import manager.TeamManager;
 import manager.ThornBallManager;
@@ -311,9 +310,10 @@ public class Room implements Tick {
 				buffer.Send(user.getUser());
 			}
 		}
-	}
 
-	
+    }
+
+
 	
 	
 	public void broadcast(int msgId, int arg1, int arg2, int arg3, long time) {
@@ -347,8 +347,7 @@ public class Room implements Tick {
 	}
 
 	// 广播
-	public void broadcast(int msgId, long roleId, ArrayList<Integer> list,
-			long time) {
+	public void broadcast(int msgId, long roleId, ArrayList<Integer> list,long time) {
 		Iterator<RoomPlayer> it = m_players.iterator();
 		while (it.hasNext()) {
 			RoomPlayer user = it.next();
@@ -372,8 +371,32 @@ public class Room implements Tick {
 			buffer.Send(user.getUser());
 		}
 	}
+    // 广播
+    public void broadcast(int msgId, int playerID, ArrayList<Integer> list, long time) {
+        Iterator<RoomPlayer> it = m_players.iterator();
+        while (it.hasNext()) {
+            RoomPlayer user = it.next();
 
-	@Override
+            if (null == user) {
+                continue;
+            }
+            SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                    .AddID(Reg.ROOM, msgId);
+            buffer.Add(playerID);
+            buffer.Add((short) list.size());
+
+                Iterator<Integer> it2 = list.iterator();
+                while (it2.hasNext()) {
+                    buffer.Add(it2.next());
+                }
+
+            buffer.Add(time);
+            buffer.Send(user.getUser());
+        }
+    }
+
+
+    @Override
 	public void OnTick(long p_lTimerID) throws Exception {
 		// TODO Auto-generated method stub
 
@@ -478,7 +501,7 @@ public class Room implements Tick {
 						buffer.Add(m_players.get(i).getID());
 						buffer.Add(0);
 
-						LogRecord.Log(null, "当前玩家" + m_players.get(i).getID()
+                        System.out.println( "当前玩家" + m_players.get(i).getID()
 								+ "名次" + m_players.get(i).getRanking());
 					} else {
 						break;
@@ -798,7 +821,6 @@ public class Room implements Tick {
 		} else {
 			broadcast(RoomInterface.MID_BROADCAST_LEFTTIME, (int) m_leftTime,
 					System.currentTimeMillis());
-			LogRecord.Log("发送当前倒计时"+m_leftTime);
 		}
 	}
 

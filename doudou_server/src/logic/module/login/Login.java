@@ -1,6 +1,8 @@
 package logic.module.login;
 import java.util.*;
 
+import logic.loader.HuiyuanLoader;
+import manager.LoaderManager;
 import utility.*;
 import core.*;
 import core.detail.Mgr;
@@ -16,9 +18,10 @@ import logic.module.log.*;
 import logic.module.log.sql.*;
 import logic.module.login.LoginRecord.*;
 import logic.sqlrun.*;
-import logic.config.*;
-import logic.config.handler.MaskWordHandler;
 import manager.ConfigManager;
+
+import static logic.eErrorCode.Error_5;
+
 /**
  * @author niuhao
  * @version 1.0.0
@@ -30,39 +33,39 @@ public class Login implements LoginInterface, Tick
 	private static Login m_Instance = new Login();
 	private static Map<String,LoginRecord> m_All = new HashMap<String,LoginRecord>();
 	private static Set<String>	m_Forbids = new HashSet<String>();
-	
+
 	private static byte[] m_EchoSendBytes = new byte[10240];
-	
+
 	public static Login GetInstance()
 	{
 		return m_Instance;
 	}
 	private int	m_CurrUserNum = 0;
 	private int m_MaxUserNum = 1000;
-	
+
 	private int m_CurrLinkNum = 0;
 	private int m_MaxLinkNum = 1000;
-	
+
 	private static UniqueID tokenGenerator = new UniqueID();
 
 	private Queue<String> m_LoginWait = new LinkedList<String>();
 	private Map<String,LoginMethod> m_WaitSQLRuns = new HashMap<String, LoginMethod>();
 	private Queue<String> m_Logining = new LinkedList<String>();
-	
+
 	// 登录accesstoken的缓存表，由验证服务器调用login模块的生成accesstoken，然后客户端以accesstoken发送登录请求
 	// 生成accesstoken时token写入此缓存表
 	// TODO 用户断线一段时间之后，要从此表中删除token，之所以要保留一段时间，是为了客户端的断线重连
 	private Map<Integer, Map<String, Pair<String, Integer>>> loginTokenCacheTable = new HashMap<Integer, Map<String, Pair<String, Integer>>>();
-	
+
 	private long m_NoticeWaitTime = 0;
-	
+
 	Login()
 	{
 		Root.GetInstance().AddLoopMilliTimer(this, 200, null);
 	}
 
-	
-	/* 
+
+	/*
 	 * 主要登录逻辑是在LoginMethod和LoginSQLRun，这里只是做有效性检测以及登录队列的处理
 	 */
 	@Override
@@ -72,11 +75,11 @@ public class Login implements LoginInterface, Tick
 		InternalLogin(p_user, p_username, p_password, p_nServerID, p_deviceIdentifier, p_deviceModel, 0, false, "", "", "");
 	}
 
-	private boolean Validate(MyUser p_user, 
+	private boolean Validate(MyUser p_user,
 			String p_username,
-			String p_password, 
+			String p_password,
 			int p_nServerID){
-		
+
 		if ( _CheckServerFull() )
 		{
 			_SToC_LoginReturn(p_user,eLoginErrorCode.USER_FULL.ID(), p_username);
@@ -112,9 +115,9 @@ public class Login implements LoginInterface, Tick
 		p_user.SetPassword(p_password);
 		p_user.SetServerID((short)p_nServerID);
 		//AdultFlag.GetInstance().SetFlag(p_user, p_nAdult);		// 是否检测防沉迷
-		
+
 		eLoginDebugLogType.RECEIVE.Log(p_user);
-		
+
 		// 如果相同用户名的用户已经在服务器上有登录记录，那么要做一次检测，看看是用户重复登录，还是异地登录，还是登录失败的重新登录
 		// 对于重复登录，异地顶替登录以及其他未记录的情况，就直接返回不做后续登录的处理了
 		if ( m_All.containsKey(p_user.GetServerUserName()) )
@@ -124,22 +127,22 @@ public class Login implements LoginInterface, Tick
 				return false;
 			}
 		}
-		
+
 		eLoginDebugLogType.ADD_RECORD.Log(p_user);
 		// 新增/更新 用户登录记录
-		m_All.put(p_user.GetServerUserName(), new LoginRecord(p_user.hashCode())); 
+		m_All.put(p_user.GetServerUserName(), new LoginRecord(p_user.hashCode()));
 		return true;
 	}
-	/* 
+	/*
 	 * 主要登录逻辑是在LoginMethod和LoginSQLRun，这里只是做有效性检测以及登录队列的处理
 	 */
-	private void InternalLogin(MyUser p_user, String p_username, String p_password, 
-			int p_nServerID, String deviceIdentifier, String deviceModel, int code, boolean isRegister, 
+	private void InternalLogin(MyUser p_user, String p_username, String p_password,
+			int p_nServerID, String deviceIdentifier, String deviceModel, int code, boolean isRegister,
 			String token, String headurl, String sex)
 	{
 		Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "Login#Enter:" + p_username + "," + p_nServerID + "," + Debug.GetCurrTime());
 		// 检查服务器是否已经满员
-		
+
 		if(!this.Validate(p_user, p_username, p_password, p_nServerID)){
 			return;
 		}
@@ -150,9 +153,9 @@ public class Login implements LoginInterface, Tick
 		if(!token.equals("")){
 			p_token = token;
 		}
-		
-		
-		
+
+
+
 		if(RootConfig.GetInstance().UsePasswordVerify)
 		{
 			m_WaitSQLRuns.put(p_username, new LoginMethod(p_user,new LoginSQLRun(
@@ -168,13 +171,13 @@ public class Login implements LoginInterface, Tick
 					0
 					)));
 		}
-		
+
 		boolean c = m_LoginWait.add(p_username);
 		Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "Login#Enter#AddLoginWait:" + p_username + "," + p_nServerID + "," + Debug.GetCurrTime() + ",result:" + c + ",size:" + m_LoginWait.size());
 		// 通知客户端前头还有多少人在等待登录
 		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN, 10).Add(m_LoginWait.size()).Send(p_user);
 	}
-	
+
 	private void InternalRegister(MyUser p_user, String p_username,
 			String p_password,
 			int p_nServerID, String p_deviceIdentifier,
@@ -182,7 +185,7 @@ public class Login implements LoginInterface, Tick
 	{
 		Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "Login#Register:" + p_username + "," + p_nServerID + "," + Debug.GetCurrTime());
 		// 检查服务器是否已经满员
-		
+
 		if(!this.Validate(p_user, p_username, p_password, p_nServerID)){
 			return;
 		}
@@ -199,7 +202,7 @@ public class Login implements LoginInterface, Tick
 				p_deviceIdentifier,
 				p_deviceModel,
 				true,0)));
-		
+
 		boolean c = m_LoginWait.add(p_username);
 		Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "Login#Enter#AddLoginWait:" + p_username + "," + p_nServerID + "," + Debug.GetCurrTime() + ",result:" + c + ",size:" + m_LoginWait.size());
 		// 通知客户端前头还有多少人在等待登录
@@ -214,7 +217,7 @@ public class Login implements LoginInterface, Tick
 	{
 		System.err.println(Arrays.toString(p_binary.getBytes()));
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see logic.module.login.LoginInterface#CreateWebRole(logic.MyUser, java.lang.String, java.lang.String, int, int, java.lang.String, int)
 	 */
@@ -222,8 +225,8 @@ public class Login implements LoginInterface, Tick
 	public void CreateWebRole(MyUser p_user, String p_username, String p_password, int p_nAdult, int p_nServerID, String p_RoleName, int p_TemplateID)
 	{
 		//todo by niuhao;
-	} 
-	
+	}
+
 	/* (non-Javadoc)
 	 * @see logic.module.login.LoginInterface#Echo(logic.MyUser, int, java.lang.String)
 	 */
@@ -232,7 +235,7 @@ public class Login implements LoginInterface, Tick
 	{
 		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN, MID_ECHO).Add(p_nHashcode).Add(p_sInfo).Send(p_user);
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see logic.module.login.LoginInterface#EchoReceive(logic.MyUser, int, java.lang.String)
 	 */
@@ -241,7 +244,7 @@ public class Login implements LoginInterface, Tick
 	{
 		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN, MID_ECHORECEIVE).Add(p_nHashcode).Send(p_user);
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see logic.module.login.LoginInterface#EchoSend(logic.MyUser, int, int)
 	 */
@@ -259,13 +262,13 @@ public class Login implements LoginInterface, Tick
 	{
 		System.err.println("LoadByUserName#" + p_user1);
 	}
-	
+
 	@Override
-	public void Log(MyUser p_user, String p_sLog) 
+	public void Log(MyUser p_user, String p_sLog)
 	{
 		p_user.Log(eLogicInfoLogType.LOGIC_COMMON, p_sLog);
 	}
-	
+
 	public void OnDisconnect(MyUser p_User)
 	{
 		String username = p_User.GetServerUserName();
@@ -274,9 +277,9 @@ public class Login implements LoginInterface, Tick
 			eLoginDebugLogType.LOGIN_DIS_ERR_FIND_USERNAME.Log(p_User);
 			return;
 		}
-		
+
 		m_Logining.remove(username);
-		
+
 		if ( m_All.containsKey(username) )
 		{
 			LoginRecord r = m_All.get(username);
@@ -297,13 +300,13 @@ public class Login implements LoginInterface, Tick
 			eLoginDebugLogType.LOGIN_DIS_ERR_FIND_RECORD.Log(p_User);
 		}
 	}
-	
+
 	public void OnLinkNumChange(int currnum, int maxnum)
 	{
 		m_CurrLinkNum = currnum;
 		m_MaxLinkNum = maxnum;
 	}
-	
+
 	public void OnLinkProcessMsgTooMuch(User p_User)
 	{
 		if (p_User == null || p_User.GetUserName() == null)
@@ -325,7 +328,7 @@ public class Login implements LoginInterface, Tick
 	{
 		// 更新通知客户端前头等候登录的人数变化
 		_NoticeWaitTime();
-		
+
 		if ( Mgr.GetSqlMgr().BusyRatio() > 150 )
 		{
 			Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "sql的执行超时。。");
@@ -333,13 +336,13 @@ public class Login implements LoginInterface, Tick
 		}
 		IConfig mc = ConfigManager.getInstance().getConfig("ServerCommonConfig");
 		ServerCommonConfig scc = (ServerCommonConfig)mc;
-		
+
 		if ( m_Logining.size() > scc.LoginMaxWaitNum )
 		{
 			Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "Login#OnTick#MaxWaitNum.....");
 			return;
 		}
-		
+
 		int max = 5;
 		// 把登录等待队列里的登录请求导入到登录队列里去（两个队列：登录等待队列和登录队列，登录队列里是服务器逻辑线程一次最多可以批量处理的登录请求
 		// 而登录等待队列里是当前总共发起的登录请求，两个队列分别有自己的数量上限，在服务器配置里）
@@ -347,7 +350,7 @@ public class Login implements LoginInterface, Tick
 		{
 			if ( m_LoginWait.isEmpty() )
 			{
-				
+
 				break;
 			}
 			// 从登录等待队列里获取到用户名
@@ -374,17 +377,17 @@ public class Login implements LoginInterface, Tick
 			_SynLoginWaitNum(0, m.GetUser());
 			// 登录实例交给服务器逻辑线程去执行登录流程
 			Root.GetInstance().AddSQLRun(m);
-			
+
 //			Log.out.Log(eLogicInfoLogType.LOGIC_COMMON, "* Login#EnterLoginInfo:" + m.GetUser() + ", loginingSize:" + m_Logining.size() + ", loginWaitSize:" + m_LoginWait.size());
 		}
 	}
-	
+
 	public void OnUserNumChange(int currnum, int maxnum)
 	{
 		m_CurrUserNum = currnum;
 		m_MaxUserNum = maxnum;
 	}
-	
+
 	public void RemoveLoginInfo(MyUser p_user)
 	{
 		if ( p_user == null )
@@ -480,7 +483,7 @@ public class Login implements LoginInterface, Tick
 
 	/**
 	 * 设置某个用户登陆成功
-	 * 
+	 *
 	 * @return 返回true表示登陆检查没问题
 	 */
 	public boolean SetLoginSuccess(MyUser p_user)
@@ -507,10 +510,10 @@ public class Login implements LoginInterface, Tick
 		eLoginDebugLogType.LOGIN_OK_OK.Log(p_user);
 		r.SetState(LoginState.LOGINED_SUCCESS);
 		return true;
-	}	
-	
+	}
+
 	@Override
-	public void SQLLog(MyUser p_user) 
+	public void SQLLog(MyUser p_user)
 	{
 		p_user.Log(eLogicSQLLogType.LOGIC_SQL_LOGIN,
 				RootConfig.GetInstance().ServerUniqueID,
@@ -522,7 +525,7 @@ public class Login implements LoginInterface, Tick
 				"",
 				9527);
 	}
-	
+
 	public String GenerateAccessToken(String username, int serverID, int channelID)
 	{
 		Long tokenID = tokenGenerator.Get();
@@ -538,7 +541,7 @@ public class Login implements LoginInterface, Tick
 		tmpTable.put(username, Pair.makePair(tokenIDString, channelID));
 		return tokenIDString;
 	}
-	
+
 	public void CacheAccessToken(String username, int serverID, int channelID, String token)
 	{
 		Map<String, Pair<String, Integer>> tmpTable = null;
@@ -561,7 +564,7 @@ public class Login implements LoginInterface, Tick
 	{
 		return m_LoginWait.contains(p_username);
 	}
-	
+
 	private boolean _CheckServerFull()
 	{
 		return m_CurrUserNum * 10 > m_MaxUserNum * 9;
@@ -580,10 +583,10 @@ public class Login implements LoginInterface, Tick
 		return m_LoginWait.size() >= scc.LoginQueueMaxNum;
 	}
 
-	private boolean _KillOpposite(MyUser p_User)
-	{
-//		Debug.Assert(p_User != null, "");
-		if ( p_User != null )
+	private boolean _KillOpposite(MyUser p_User, Boolean isRight)
+    {
+            p_User.sendError(Error_5);
+			if ( p_User != null &&isRight)
 		{
 			PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,0).Add(eLoginErrorCode.OPPO_KILLED.ID()).Send(p_User);
 			p_User.Close(eLogicCloseUserReason.LOGIN_KILL_OPPOSITE.ID(), 0);
@@ -598,7 +601,7 @@ public class Login implements LoginInterface, Tick
 			return;
 		}
 		m_NoticeWaitTime = System.currentTimeMillis() + 5000;
-		
+
 		int num = 0;
 		Iterator<String> it = m_LoginWait.iterator();
 		while (it.hasNext())
@@ -614,14 +617,14 @@ public class Login implements LoginInterface, Tick
 	}
 	private void _SToC_CreateReturn(MyUser p_user, int i)
 	{
-		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,4).Add(i).Send(p_user);		
+		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,4).Add(i).Send(p_user);
 	}
 
 	private void _SToC_LoginReturn(MyUser p_user, int errid, String username)
 	{
-		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,0).Add(errid).Send(p_user);	
-		
-		p_user.Log(eLogicSQLLogType.LOGIC_SQL_LOGIN, 
+		PackBuffer.GetInstance().Clear().AddID(Reg.LOGIN,0).Add(errid).Send(p_user);
+
+		p_user.Log(eLogicSQLLogType.LOGIC_SQL_LOGIN,
 				RootConfig.GetInstance().ServerUniqueID,
 				eLogicSQLLogType.GetCurrTime(),
 				0,
@@ -630,7 +633,7 @@ public class Login implements LoginInterface, Tick
 				"",
 				"",
 				errid);
-		
+
 		p_user.Close(eLogicCloseUserReason.LOGIN_RETURN_FAILID.ID(), errid);
 	}
 
@@ -663,15 +666,18 @@ public class Login implements LoginInterface, Tick
 
 	private boolean CheckLoginRecord(LoginRecord r, MyUser p_user, String p_username, String p_password)
 	{
-		if ( r.GetState() == LoginState.LOGINING 		|| 
+		if ( r.GetState() == LoginState.LOGINING 		||
 			 r.GetState() == LoginState.LOGIN_CREATE 	||
 			 r.GetState() == LoginState.LOGIN_CREATEFINISH )
 		{
 			if ( r.GetLoginUseTime() > m_WaitLoginTime )
 			{
 				eLoginDebugLogType.REPLACE.Log(p_user);
+                HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
+                boolean isRight = loader.hasUser(p_username, p_password);
+
 				//TODO 实际情况是在某些情况下客户端断开,服务器并不清楚.需要在连接那添加一个不断用来ping的包来测试断开问题.这样就导致这个号重新上的时候还能发现登陆数据
-				return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username));
+				return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username),isRight);
 //				eLoginDebugLogType.ERR_TOOLONG.Log(p_user);
 //				System.out.println("* 前面的用户已经登陆超过:"+m_WaitLoginTime+"毫秒,用户" + r.GetHashCode() + ",登陆用时间为," + r.GetLoginUseTime() + ",不应该出现这种情况,如果出现了应该是系统出问题了,也先忽略这个用户登陆,高级别警告");
 //				return _KillSelf(p_user);
@@ -687,12 +693,14 @@ public class Login implements LoginInterface, Tick
 				else
 				{
 					eLoginDebugLogType.REPLACE.Log(p_user);
+                    HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
+                    boolean isRight = loader.hasUser(p_username, p_password);
 					System.out.println(" 另外一个用户:" + p_user.hashCode() + " 想挤掉用户:" + r.GetHashCode() + ",正在执行!!!");
-					return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username));
+					return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);
 				}
 			}
 		}
-		
+
 		if ( r.GetState() == LoginState.LOGINED_SUCCESS )
 		{
 			if ( r.GetHashCode() == p_user.hashCode() )
@@ -704,18 +712,20 @@ public class Login implements LoginInterface, Tick
 			else
 			{
 				eLoginDebugLogType.REPLACE.Log(p_user);
+                HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
+                boolean isRight = loader.hasUser(p_username, p_password);
 				System.out.println(" 另外一个用户:" + p_user.hashCode() + " 想挤掉用户:" + r.GetHashCode() + ",正在执行!!!");
-				return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username));
+				return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);
 			}
 		}
-		
+
 		if ( r.GetState() == LoginState.LOGINED_FAIL )
 		{
 			eLoginDebugLogType.LOGIN_SAME_FAILED.Log(p_user);
 			r.Init(p_user.hashCode());
 			return true;
 		}
-		
+
 		Debug.Assert(false, ""); ///<没有写的其他状态?
 		return false;
 	}
@@ -724,7 +734,7 @@ public class Login implements LoginInterface, Tick
 	@Override
 	@RFC(ID = 2, RunDirect = true)
 	public void Register(@PU MyUser p_user, @PS String p_username,
-			@PS String p_password, 
+			@PS String p_password,
 			@PI int p_nServerID, @PS String p_deviceIdentifier,
 			@PS String p_deviceModel) {
 		// TODO Auto-generated method stub
@@ -734,7 +744,5 @@ public class Login implements LoginInterface, Tick
 				p_deviceModel);
 	}
 
-
-	static final int MID_BROADCAST_TEAMPLAYERS = 1; // 广播队伍信息
 
 }
