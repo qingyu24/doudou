@@ -18,61 +18,57 @@ import logic.userdata.zz_huiyuan;
 
 public class LoaderManager {
 
-	private static LoaderManager _instance;
-	private static Map<String, DBLoader> m_list = new HashMap<String, DBLoader>();
-	public static String Users = "Users";
-	public static String Huiyuan = "huiyuan";
+    private static LoaderManager _instance;
+    private static Map<String, DBLoader> m_list = new HashMap<String, DBLoader>();
+    public static String Users = "Users";
+    public static String Huiyuan = "huiyuan";
 
 
-	public static LoaderManager getInstance() {
-		if (_instance != null) {
-			return _instance;
-		}
-		return _instance = new LoaderManager();
-	}
+    public static LoaderManager getInstance() {
+        if (_instance != null) {
+            return _instance;
+        }
+        return _instance = new LoaderManager();
+    }
 
-	public  void loadAll() {
-	
+    public void loadAll() {
+
 	/*	if(needBegin()){*/
-			UserLoader users = new UserLoader(new account());
-			HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());
-			m_list.put(Users, users);
-			m_list.put(Huiyuan, huiyuan);
+        UserLoader users = new UserLoader(new account());
+        HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());
+        m_list.put(Users, users);
+        m_list.put(Huiyuan, huiyuan);
 /*		}*/
-	}
+    }
 
-	public DBLoader getLoader(String name) {
-		return m_list.get(name);
-	}
+    public DBLoader getLoader(String name) {
+        return m_list.get(name);
+    }
 
-/*	//是否需要加载
-	private boolean needBegin() {
-		// TODO Auto-generated method stub
+    //是否需要加载
+    private boolean needBegin() {
+        // TODO Auto-generated method stub
 
-		String num2 = "SELECT * FROM zz_huiyuan where roleid is null or roleid=0";
-				String num = "SELECT * FROM zz_huiyuan where roleid = 0";
-		zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), num2);
-		if(zz_huiyuans.length>0){
-			System.out.println("=============");
-			return true;
-		}else{
-			System.out.println("不需要数据同化");
-		}
-
-		return false;
-
-	}
-
-*/
-	// 把所有的学生登录信息同步到account表中
+        String num2 = "SELECT * FROM zz_huiyuan where roleid is null or roleid=0";
+        String num = "SELECT * FROM zz_huiyuan where roleid = 0";
+        zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), num2);
+        if (zz_huiyuans.length > 0) {
+            System.out.println("=============");
+            return true;
+        } else {
+            System.out.println("不需要数据同化");
+        }
+        return false;
+    }
+    //把所有的学生登录信息同步到account表中
 	/*public void Synchronization() {
 		int i=0;
 		if(this.needBegin()){
 	
 			System.out.println("开始数据同步");
-			String m_user_create = "insert into account(RoleID, Name, Password, Icon,Tickname) values (%d, '%s','%s',%d,'%s')";
+//			String m_user_create = "insert into account(RoleID, Name, Password, Icon,Tickname) values (%d, '%s','%s',%d,'%s')";
 			String add_roleID = "update zz_huiyuan set RoleID=%d where id=%d";
-			String m_MaxRoleData = "SELECT * FROM account ORDER BY ROLEID DESC LIMIT 1";
+//			String m_MaxRoleData = "SELECT * FROM account ORDER BY ROLEID DESC LIMIT 1";
 			// TODO Auto-generated method stub
 			HuiyuanLoader huiyuan = (HuiyuanLoader) this.getInstance().getLoader(Huiyuan);
 			UserLoader user = (UserLoader) this.getInstance().getLoader(Users);
@@ -112,6 +108,29 @@ public class LoaderManager {
 			}}
 
 	}*/
+    public void setRoleID() {
+
+        String add_roleID = "update zz_huiyuan set RoleID=%d where id=%d";
+        HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
+        for (zz_huiyuan zzHuiyuan : loader.getCenterDate()) {
+            if (zzHuiyuan.RoleID.Get() == 0) {
+                zzHuiyuan.id.Get();
+                RoleIDUniqueID build = DBMgr.GetCreateRoleUniqueID();
+                String m_MaxRoleData = "SELECT * FROM zz_huiyuan ORDER BY ROLEID DESC LIMIT 1";
+                zz_huiyuan[] maxrd = DBMgr.ReadSQL(new zz_huiyuan(), m_MaxRoleData);
+                if (maxrd.length == 0) {
+                    build.SetBaseValue(0);
+                } else {
+                    build.SetBaseValue(maxrd[0].RoleID.Get());
+                }
+
+                long userID = build.Get();
+                //生成的ID是
+                System.out.println("生成ID" + userID);
+
+                DBMgr.ExecuteSQL(String.format(add_roleID, userID,zzHuiyuan.id.Get()));
+            }
+        }
+    }
 }
 
-/* } */

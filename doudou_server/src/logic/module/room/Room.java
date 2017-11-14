@@ -64,8 +64,6 @@ public class Room implements Tick {
         needScore = true;
         m_countTime = 0;
         m_TeamNames = creatNewNames();
-        m_TeamNames.add(1);
-
     }
 
     public Room(int id, RoomRule rr) {
@@ -88,7 +86,7 @@ public class Room implements Tick {
         needScore = true;
         m_countTime = 0;
         m_TeamNames = creatNewNames();
-        m_TeamNames.add(1);
+
 
     }
 
@@ -247,7 +245,6 @@ public class Room implements Tick {
 
         }
 
-
         if (!find) {
 
         }
@@ -257,12 +254,12 @@ public class Room implements Tick {
     public void packInit(SendMsgBuffer buffer) {
 
         buffer.Add(m_roomId);
-		/* buffer.Add(r); */
+        /* buffer.Add(r); */
 
     }
 
     public void packData(SendMsgBuffer buffer) {
-		/* LogRecord.Log(null, "初始化发送其他玩家当前位置"); */
+        /* LogRecord.Log(null, "初始化发送其他玩家当前位置"); */
         buffer.Add(MapId);
         buffer.Add((short) m_thorns.size());
         LogRecord.Log(null, "刺球数量" + m_thorns.size());
@@ -413,7 +410,8 @@ public class Room implements Tick {
         //
         if (m_state == eGameState.GAME_READY) {
             this.countDowm(m_countTime++);
-            if (m_countTime == 3/*||this.rr.isFree()*/) {
+            if (m_countTime >= 3/*||this.rr.isFree()*/) {
+                m_countTime=0;
                 this.broadcastStart();
 
             }
@@ -619,7 +617,7 @@ public class Room implements Tick {
                 ThornBall ball = ThornBallManager.getInstance()
                         .getNewThroBall();
                 m_thorns.add(ball);
-                this.broadcast(RoomInterface.MID_BROADCAST_THORNBALL,ball.getThId(),ball.getXpos(),ball.getYpos(),ball.getWeight(),System.currentTimeMillis());
+                this.broadcast(RoomInterface.MID_BROADCAST_THORNBALL, ball.getThId(), ball.getXpos(), ball.getYpos(), ball.getWeight(), System.currentTimeMillis());
 
             }
 
@@ -1179,7 +1177,9 @@ public class Room implements Tick {
     public void setTeamName(Team team, int teamName) {
         // TODO Auto-generated method stub
         if (team.getTeamName() != 0) {
-            this.m_TeamNames.add(team.getTeamName());
+            if(!this.m_TeamNames.contains(team.getTeamName())) {
+                this.m_TeamNames.add(team.getTeamName());
+            }
             Iterator<Integer> it = this.m_TeamNames.iterator();
             while (it.hasNext()) {
                 Integer integer = (Integer) it.next();

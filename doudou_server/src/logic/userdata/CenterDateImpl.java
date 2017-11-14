@@ -1,7 +1,12 @@
 package logic.userdata;
 
+import core.User;
+import core.detail.impl.socket.SendMsgBuffer;
 import core.remote.*;
 import logic.MyUser;
+import logic.PackBuffer;
+import logic.Reg;
+import logic.module.center.CenterInterface;
 import manager.UserManager;
 
 
@@ -12,7 +17,7 @@ public class CenterDateImpl implements CenterDateInterface {
 	public void getClass(@PU MyUser p_user) {
 
 		UserManager.getInstance().getClassmates(p_user);
-	  /*  loader.getClassmates(p_user);*/
+
 	
 	}
 
@@ -20,19 +25,39 @@ public class CenterDateImpl implements CenterDateInterface {
 	@RFC(ID = 2)
 	public void addFriend(@PU MyUser p_user, @PL long friendID) {
 		// TODO Auto-generated method stub
-		
+        MyUser user = UserManager.getInstance().getUser(friendID);
+        if(user!=null&&user.hasFriend(p_user)==0){
+            SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                    .AddID(Reg.CENTERDATA, CenterDateInterface.MID_ADDFRIEND);
+            buffer.Add(p_user.GetRoleGID());
+            buffer.Add(p_user.getTickName());
+            buffer.Send(user);
+        }
+        else{
+            //如果玩家不在线或者已经是好友返回错误信息
+        }
 	}
 
 	@Override
 	@RFC(ID = 3)
-	public void agreeAdd(@PU MyUser p_user) {
+	public void agreeAdd(@PU MyUser p_user, @PL long f_ID) {
 		// TODO Auto-generated method stub
-		
-	}
+        MyUser user = UserManager.getInstance().getUser(f_ID);
+        if(user!=null){
+            SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                    .AddID(Reg.CENTERDATA, CenterDateInterface.MID_AGRREADD);
+            buffer.Add(p_user.GetRoleGID());
+            buffer.Add(p_user.getTickName());
+            buffer.Send(user);
+        }
+        UserManager.getInstance().addFriends(p_user.GetRoleGID(),f_ID);
+
+    }
 
 	@Override
 	public void givePresent(@PU MyUser p_user,@PL long friendID, @PI int giftID) {
 		// TODO Auto-generated method stub
+/*        UserManager.getInstance().*/
 		
 	}
 

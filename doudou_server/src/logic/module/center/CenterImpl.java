@@ -49,8 +49,10 @@ public class CenterImpl implements CenterInterface {
 			@PI int p_teamID, @PL long m_friendID, @PI int roomID,@PI int ifFree) {
 		// TODO Auto-generated method stub
 		MyUser user = UserManager.getInstance().getUser(m_friendID);
-		/* Team team = TeamManager.getInstance().getTeam(p_teamID); */
-		if (user != null ) {
+		 Team team = TeamManager.getInstance().getTeam(p_teamID);
+boolean s= roomID==0&&team!=null&&!team.contain(m_friendID);
+        boolean b = (user.getRoomId() != roomID && roomID != 0);
+        if (user != null&&(b||s )) {
 			SendMsgBuffer p = PackBuffer
 					.GetInstance()
 					.Clear()

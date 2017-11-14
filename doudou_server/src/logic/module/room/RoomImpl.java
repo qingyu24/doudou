@@ -1,9 +1,6 @@
 package logic.module.room;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-
-import com.mysql.jdbc.log.Log;
 
 import core.detail.impl.socket.SendMsgBuffer;
 import core.remote.PI;
@@ -33,7 +30,7 @@ public class RoomImpl implements RoomInterface {
 
 		Room room2 = RoomManager.getInstance().getRoom(roomID);
 		//进入自由房
-		if (room2==null  /*&&!room2.getRr().isFree()*/) {
+		if (room2==null&&roomID==0  /*&&!room2.getRr().isFree()*/) {
 
 			Room r = RoomManager.getInstance().getFreeRoom();
 			r.setM_state(eGameState.GAME_PLAYING);
@@ -63,12 +60,7 @@ public class RoomImpl implements RoomInterface {
 			}else{
 				p_user.sendError(eErrorCode.Error_1);//房間已滿 或遊戲開始
 			}
-		}/*else{
-			p_user.sendError(eErrorCode.Error_1);//房間已滿 或遊戲開始
-		}*/
-		
-
-
+		}
 	}
 
 	@Override
@@ -87,13 +79,13 @@ public class RoomImpl implements RoomInterface {
 
 	@Override
 	@RFC(ID = 5)
-	public void BodyMove(@PU(Index = Reg.ROOM) MyUser p_user,  @PI int playerID,@PI int speedx, @PI int speedy,@PI int postx,@PI int posty, @PL long time){
+	public void ThornMove(@PU(Index = Reg.ROOM) MyUser p_user, @PVI ArrayList<Integer> list, @PL long time){
 		// TODO Auto-generated method stub
 		LogRecord.Log("++++++++++++++++接收到移動+++++++++++++++++++++++++++++++");
 		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		if (r != null) {
 	
-			r.broadcast(RoomInterface.MID_BODY_BODYMOVE, playerID,speedx,speedy,postx,posty,time);
+			r.broadcast(RoomInterface.MID_THORN_BODYMOVE, list,time);
 		}
 	
 	}
@@ -112,15 +104,11 @@ public class RoomImpl implements RoomInterface {
 /*				r.broadcast(RoomInterface.MID_BROADCAST_MOVE, playerID,rp, time);*/
                 r.broadcast(RoomInterface.MID_BROADCAST_MOVE, rp, time);
 			} else {
-
 			}
 		}
-
 		LogRecord.writePing("MOVEBODY执行时间", System.currentTimeMillis() - millis);
 
 	}
-	
-	
 
 	@Override
 	@RFC(ID = 6)
@@ -180,12 +168,12 @@ public class RoomImpl implements RoomInterface {
 
 	@Override
 	@RFC(ID = 17)
-	public void SplitQiu(@PU MyUser p_user, @PI int playerID, @PI int xpos, @PI int ypos, @PL long time) {
+	public void SplitQiu(@PU MyUser p_user, @PI int playerID, @PVI ArrayList<Integer> list, @PL long time) {
 		// TODO Auto-generated method stub
 		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		/* RoomPlayer rp = r.GetPlayer(playerID); */
 		logic.LogRecord.Log(null, "收到玩家吐球消息");
-		r.broadcast(RoomInterface.MID_BROADCAST_QIU, playerID, xpos, ypos, time);
+		r.broadcast(RoomInterface.MID_BROADCAST_QIU, playerID, list, time);
 	}
 
 	@Override
@@ -221,19 +209,15 @@ public class RoomImpl implements RoomInterface {
 		Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		Team team = TeamManager.getInstance().getTeam(teamID);
 		//退出 队伍
-		if (r != null && team != null) {
+		if (r != null && team != null&&!r.getRr().isFree()) {
 			r.RemovePlayer(p_user, time);
 			team.removeUser(p_user);
 			r.broadcast(CenterInterface.MID_BROADCAST_NEWTEAM, team);
-		}
-		if (team != null) {
-
-		    team.bracatstTeam(r);
+            team.bracatstTeam(r);
 		}
 
 		//退出自建房
 		if(r!=null&&r.getRr().isFree()){
-			/*	r.RemovePlayer(p_user, time);*/
 
 			r.RemovePlayer(p_user, time);
 			if(team!=null){
@@ -246,8 +230,8 @@ public class RoomImpl implements RoomInterface {
 
 	@Override
 	@RFC(ID = 33)
-	public void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user ,@PI int teamID,@PI int teamName ){
-		Team team = TeamManager.getInstance().getTeam(teamID);
+	public void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user ,@PI int team_ID,@PI int teamName ){
+		Team team = TeamManager.getInstance().getTeam(team_ID);
 		Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		if(team==null){
 			team = TeamManager.getInstance().getNewteam();

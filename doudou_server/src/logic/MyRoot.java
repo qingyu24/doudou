@@ -105,7 +105,7 @@ public class MyRoot extends Root implements Tick
 	
 		RoomManager.initRoomId();
 		DBMgr.LoadAll();
-/*		LoaderManager.getInstance().Synchronization();*/
+	/*	LoaderManager.getInstance().setRoleID();*/
 		//把机器人插入到库里;
 		r.StartAllThread();
 
@@ -139,7 +139,7 @@ public class MyRoot extends Root implements Tick
 		//记录一下游戏的开服时间;
 		
 		
-///*User/**/Manager.getInstance().testFriend();*/
+/*UserManager.getInstance().testFriend();*/
 //
 		System.err.println("Server Start Finish!!!");
 

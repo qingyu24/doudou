@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import logic.MyUser;
 import logic.Reg;
-import core.remote.PF;
 import core.remote.PI;
 import core.remote.PL;
 import core.remote.PU;
@@ -18,13 +17,12 @@ public interface RoomInterface {
 	static final int MID_CREATE = 2;
 	static final int MID_BODY_MOVE = 3; // 移动
 	static final int MID_BODY_EAT = 4; // 吃敌人;
-	static final int MID_BODY_BODYMOVE = 5; // 移動;
+	static final int MID_THORN_BODYMOVE = 5; // 移動;
 	static final int MID_BODY_SPLIT = 6; // 分割;
 	static final int MID_BODY_COMPOSE = 7; // 合并;
 	static final int MID_BODY_QIU = 17; // 吐球;
 	static final int MID_REBIRTH = 22; // 复活;
-
-	static final int MID_BODY_QIUPLACE = 19; // 吐出来的球的位置信息;
+    static final int MID_BODY_QIUPLACE = 19; // 吐出来的球的位置信息;
 	static final int MID_BROADCAST_MOVE = 8; // 广播移动;
 	static final int MID_BROADCAST_EAT = 9; // 广播吃;
 	static final int MID_BROADCAST_INIT = 10; // 广播初始化;
@@ -48,7 +46,6 @@ public interface RoomInterface {
 	static final int MID_TEAM_LEFTMATCH = 31;// 匹配時退出
 	static final int MID_BROADCAST_FREETEAM = 32; // 广播自建房,加入房间，离开房间后 队伍内消息
 	static final int MID_ROOM_CHOOSETEAM = 33; // 选择队伍
-	
 	static final int MID_ROOM_FRIENDLIST = 34; // 請求獲取好友列表
 	static final int MID_ROOM_Dissolution = 35; // 解散房间
 	static final int MID_ROOM_LEAVE = 36; // 离开房间房间
@@ -61,8 +58,8 @@ public interface RoomInterface {
 	void CreateRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int arg,
 			@PL long time);
 
-	@RFC(ID = MID_BODY_BODYMOVE)
-	void BodyMove(@PU(Index = Reg.ROOM) MyUser p_user, @PI int playerID,@PI int speedx, @PI int speedy,@PI int postx,@PI int posty, @PL long time);
+	@RFC(ID = MID_THORN_BODYMOVE)
+	void ThornMove(@PU(Index = Reg.ROOM) MyUser p_user, @PVI ArrayList<Integer> list, @PL long time);
 
 	@RFC(ID = MID_BODY_MOVE)
 	void MoveBody(@PU(Index = Reg.ROOM) MyUser p_user, @PI int playerID,
@@ -88,7 +85,7 @@ public interface RoomInterface {
 
 	@RFC(ID = MID_BODY_QIU)
 	void SplitQiu(@PU(Index = Reg.ROOM) MyUser p_user, @PI int playerID,
-			@PI int xpos, @PI int ypos, @PL long time);
+                  @PVI ArrayList<Integer> list, @PL long time);
 
 	@RFC(ID = MID_BODY_QIUPLACE)
 	void SplitQiuPlace(@PU(Index = Reg.ROOM) MyUser p_user, @PI int qiuId,
@@ -103,7 +100,7 @@ public interface RoomInterface {
 			@PI int teamID, @PL long time);
 
 	@RFC(ID = MID_ROOM_CHOOSETEAM)
-	void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int teamID,@PI int teamName);
+	void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int team_ID,@PI int teamName);
 
 	@RFC(ID = MID_ROOM_GAMESATRT)
 	void gameStart(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);

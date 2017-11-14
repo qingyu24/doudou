@@ -27,7 +27,7 @@ public interface CenterDateInterface {
 	void addFriend(@PU(Index = Reg.ROOM) MyUser p_user,@PL  long friendID);
 
 	@RFC(ID = MID_AGRREADD)
-	void agreeAdd(@PU(Index = Reg.ROOM) MyUser p_user);
+	void agreeAdd(@PU(Index = Reg.ROOM) MyUser p_user, @PL long f_ID);
 
 	@RFC(ID = MID_SHOP_PRESENT)
 	void givePresent(@PU(Index = Reg.ROOM) MyUser p_user,@PL  long friendID ,@PI int giftID);
