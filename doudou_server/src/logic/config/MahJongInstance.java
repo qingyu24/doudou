@@ -1,9 +1,10 @@
 package logic.config;
+
 public class MahJongInstance extends InstanceBase {
 
     //#region 属性
 
-   // #endregion
+    // #endregion
 
     //#region 功能实现
     // 初始数据
@@ -15,6 +16,7 @@ public class MahJongInstance extends InstanceBase {
         m_TemplateDef = mahJongConfig;
         return ret;
     }
+
     // 获取模板数据
     public MahJongConfig getMahJongConfig() {
         return (MahJongConfig) m_TemplateDef;

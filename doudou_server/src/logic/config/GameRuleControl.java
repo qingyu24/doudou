@@ -7,17 +7,26 @@ public class GameRuleControl {
 
     //#region 单列
     private static GameRuleControl _instance;
+    // --------------------吃牌--------------------------
+    /// <summary>
+    /// 检查是否可以吃牌
+    /// </summary>
+    int crad1 = 0;
+    int crad2 = 1;
+    //#endregion
+    int newMahJongType = 0;
+    List<MahJongInstance> _allList = null;
+    public GameRuleControl() {
+
+    }
+
     public static GameRuleControl getInstance() {
         if (_instance == null) {
             _instance = new GameRuleControl();
         }
         return _instance;
     }
-    public GameRuleControl() {
-      
-    }
-    //#endregion
-  
+
     //#region 功能实现
     // 检查是否可以碰牌
     public List<MahJongInstance> checkTouchCards(MahJongInstance _mahJong, List<MahJongInstance> _list) {
@@ -34,16 +43,8 @@ public class GameRuleControl {
             ret = null;
         return ret;
     }
-    // --------------------吃牌--------------------------
-    /// <summary>
-    /// 检查是否可以吃牌
-    /// </summary> 
-    int crad1 = 0;
-    int crad2 = 1;
-    int newMahJongType = 0;
-    List<MahJongInstance> _allList = null;
-    public List<MahJongInstance> checkEatCards(MahJongInstance _mahJong, List<MahJongInstance> _list)
-    {
+
+    public List<MahJongInstance> checkEatCards(MahJongInstance _mahJong, List<MahJongInstance> _list) {
         List<MahJongInstance> ret = null;
         int mahSortType = _mahJong.m_iSorting;
         if (mahSortType > 27)
@@ -52,32 +53,26 @@ public class GameRuleControl {
         _allList = _list;
         if (mahSortType >= 1 && mahSortType <= 9) {
             ret = checkEatMahJong(mahSortType, 0, _mahJong.getMahJongConfig().mahJongType);
-        }
-        else if (mahSortType >= 10 && mahSortType <= 18)
-        {
+        } else if (mahSortType >= 10 && mahSortType <= 18) {
             ret = checkEatMahJong(mahSortType, 9, _mahJong.getMahJongConfig().mahJongType);
-        }
-        else if (mahSortType >= 18 && mahSortType <= 27)
-        {
+        } else if (mahSortType >= 18 && mahSortType <= 27) {
             ret = checkEatMahJong(mahSortType, 17, _mahJong.getMahJongConfig().mahJongType);
         }
         return ret;
     }
+
     // 检查可以吃的麻将范围
-    List<MahJongInstance> checkEatMahJong(int mahSortType, int _value,int _mahJongType) {
+    List<MahJongInstance> checkEatMahJong(int mahSortType, int _value, int _mahJongType) {
         List<MahJongInstance> ret = null;
         int baseNumber = mahSortType - _value;
-        if (baseNumber == 1)
-        {
+        if (baseNumber == 1) {
             // 检查单边只检查比当前牌大的
             settingSelecteMahJongId(1, mahSortType, _mahJongType);
             List<MahJongInstance> getList = getEatMahJong();
             if (getList.size() == 2)
                 ret = getList;
 
-        }
-        else if (baseNumber == 2)
-        {
+        } else if (baseNumber == 2) {
             // 检查中间可吃
             settingSelecteMahJongId(0, mahSortType, _mahJongType);
             List<MahJongInstance> getList = getEatMahJong();
@@ -89,9 +84,7 @@ public class GameRuleControl {
             List<MahJongInstance> getList1 = getEatMahJong();
             if (getList1.size() == 2)
                 ret = getList1;
-        }
-        else if (baseNumber == 8)
-        {
+        } else if (baseNumber == 8) {
             // 检查中间可吃
             settingSelecteMahJongId(0, mahSortType, _mahJongType);
             List<MahJongInstance> getList = getEatMahJong();
@@ -104,16 +97,13 @@ public class GameRuleControl {
             if (getList1.size() == 2)
                 ret = getList1;
 
-        }
-        else if (baseNumber == 9)
-        {
+        } else if (baseNumber == 9) {
             settingSelecteMahJongId(2, mahSortType, _mahJongType);
             List<MahJongInstance> getList = getEatMahJong();
             if (getList.size() == 2)
                 ret = getList;
 
-        }
-        else {
+        } else {
             // 检查中间可吃
             settingSelecteMahJongId(0, mahSortType, _mahJongType);
             List<MahJongInstance> getList = getEatMahJong();
@@ -134,22 +124,19 @@ public class GameRuleControl {
         }
         return ret;
     }
+
     // 设置要查找牌的id
-    boolean settingSelecteMahJongId(int type,int mahJongType,int _mahJongType) {
+    boolean settingSelecteMahJongId(int type, int mahJongType, int _mahJongType) {
         boolean ret = false;
         if (type == 0) {
             // 检查中间可吃
             crad1 = mahJongType - 1;
             crad2 = mahJongType + 1;
-        }
-        else if (type == 1)
-        {
+        } else if (type == 1) {
             // 检查单边只检查比当前牌大的
             crad1 = mahJongType + 1;
             crad2 = mahJongType + 2;
-        }
-        else if (type == 2)
-        {
+        } else if (type == 2) {
             // 检查单边只检查比当前牌小的
             crad1 = mahJongType - 1;
             crad2 = mahJongType - 2;
@@ -158,6 +145,7 @@ public class GameRuleControl {
         //Debug.Log("crad1  :"+ crad1+ "  crad2  :"+ crad2);
         return ret;
     }
+
     // 接收判断出的id
     List<MahJongInstance> getEatMahJong() {
         List<MahJongInstance> mahJongList = new ArrayList<MahJongInstance>();
@@ -170,13 +158,13 @@ public class GameRuleControl {
         //Debug.Log("mahJongList ====> "+ mahJongList.size());
         return mahJongList;
     }
+
     // 根据匹配的类型ID查找玩家手里是否有了类型的牌
-    public MahJongInstance checkHandMahJong(int _mahJongSorting,int _mahJongType) {
+    public MahJongInstance checkHandMahJong(int _mahJongSorting, int _mahJongType) {
         //List<MahJongInstance> all = (from c in _allList where (c.m_iSorting == _mahJongSorting) select c).ToList<MahJongInstance>();
         List<MahJongInstance> all = new ArrayList<MahJongInstance>();
         int count = _allList.size();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
             MahJongInstance mahJong = _allList.get(i);
             if (mahJong.m_iSorting == _mahJongSorting && _mahJongType == mahJong.getMahJongConfig().mahJongType) {
                 all.add(mahJong);
@@ -189,13 +177,11 @@ public class GameRuleControl {
 
     // --------------------end--------------------------
     // 检查是否可以杠牌
-    public List<MahJongInstance> checkBarsCards(int mahJongSorting, List<MahJongInstance> _list)
-    {
+    public List<MahJongInstance> checkBarsCards(int mahJongSorting, List<MahJongInstance> _list) {
         //List<MahJongInstance> ret = (from c in _list where (c.m_iSorting == mahJongType) select c).ToList<MahJongInstance>();
         List<MahJongInstance> ret = new ArrayList<MahJongInstance>();
         int length = _list.size();
-        for (int i = 0; i < length; i++)
-        {
+        for (int i = 0; i < length; i++) {
             MahJongInstance mahJong = _list.get(i);
             if (mahJong.m_iSorting == mahJongSorting) {
                 ret.add(mahJong);
@@ -213,26 +199,19 @@ public class GameRuleControl {
         for (int i = 0; i < count; i++) {
             MahJongInstance mahJong = _handMah.get(i);
             List<MahJongInstance> getCheck = checkHandMahJong(mahJong.m_iSorting, mahJong.getMahJongConfig().mahJongType, _handMah);
-            if (getCheck.size() >= 2)
-            {
+            if (getCheck.size() >= 2) {
                 continue;// 多张牌，从新查找
-            }
-            else if(getCheck.size() > 0)
-            {
+            } else if (getCheck.size() > 0) {
                 // 检查是否有和当前牌组成顺子的牌
-                List<MahJongInstance> getCheck1 = checkHandMahJong(mahJong.m_iSorting+1, mahJong.getMahJongConfig().mahJongType, _handMah);
-                List<MahJongInstance> getCheck2 = checkHandMahJong(mahJong.m_iSorting+2, mahJong.getMahJongConfig().mahJongType, _handMah);
-                if (getCheck2.size() > 0)
-                {
+                List<MahJongInstance> getCheck1 = checkHandMahJong(mahJong.m_iSorting + 1, mahJong.getMahJongConfig().mahJongType, _handMah);
+                List<MahJongInstance> getCheck2 = checkHandMahJong(mahJong.m_iSorting + 2, mahJong.getMahJongConfig().mahJongType, _handMah);
+                if (getCheck2.size() > 0) {
                     i = i + 2;
                     continue;// 多张牌，从新查找
-                }
-                else if (getCheck1.size() > 0)
-                {
+                } else if (getCheck1.size() > 0) {
                     i = i + 1;
                     continue;// 多张牌，从新查找
-                }
-                else {
+                } else {
                     ret.add(mahJong);
                 }
             }
@@ -240,18 +219,17 @@ public class GameRuleControl {
         //Debug.Log("单张抽取结果----------------》 "+ ret.size());
         return ret;
     }
+
     // 提取却中间张的牌
     public List<MahJongInstance> getLackOfMiddle(List<MahJongInstance> _handMah) {
         List<MahJongInstance> ret = new ArrayList<MahJongInstance>();
         int count = _handMah.size();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
             MahJongInstance mahJong = _handMah.get(i);
             // 检查是否有和当前牌组成顺子的牌
             List<MahJongInstance> getCheck1 = checkHandMahJong(mahJong.m_iSorting + 1, mahJong.getMahJongConfig().mahJongType, _handMah);
             List<MahJongInstance> getCheck2 = checkHandMahJong(mahJong.m_iSorting + 2, mahJong.getMahJongConfig().mahJongType, _handMah);
-            if (getCheck2.size() > 0 && getCheck1.size() <= 0)
-            {
+            if (getCheck2.size() > 0 && getCheck1.size() <= 0) {
                 i = i + 2;
                 ret.add(mahJong);
                 ret.add(getCheck2.get(0));
@@ -260,19 +238,17 @@ public class GameRuleControl {
         //Debug.Log("缺中间张抽取结果----------------》 " + ret.size());
         return ret;
     }
+
     // 提取却临边张的牌
-    public List<MahJongInstance> getLackOfEdge(List<MahJongInstance> _handMah)
-    {
+    public List<MahJongInstance> getLackOfEdge(List<MahJongInstance> _handMah) {
         List<MahJongInstance> ret = new ArrayList<MahJongInstance>();
         int count = _handMah.size();
-        for (int i = 0; i < count; i++)
-        {
+        for (int i = 0; i < count; i++) {
             MahJongInstance mahJong = _handMah.get(i);
             // 检查是否有和当前牌组成顺子的牌
             List<MahJongInstance> getCheck1 = checkHandMahJong(mahJong.m_iSorting + 1, mahJong.getMahJongConfig().mahJongType, _handMah);
             List<MahJongInstance> getCheck2 = checkHandMahJong(mahJong.m_iSorting + 2, mahJong.getMahJongConfig().mahJongType, _handMah);
-            if (getCheck2.size() <= 0 && getCheck1.size() > 0)
-            {
+            if (getCheck2.size() <= 0 && getCheck1.size() > 0) {
                 ret.add(mahJong);
                 ret.add(getCheck1.get(0));
                 i = i + 2;
@@ -281,14 +257,13 @@ public class GameRuleControl {
         //Debug.Log("缺领班张抽取结果----------------》 " + ret.size());
         return ret;
     }
+
     // 根据匹配的类型ID查找玩家手牌相同张数，多条件查找
-    public List<MahJongInstance> checkHandMahJong(int stortType, int _mahJongTypeC, List<MahJongInstance> _listC)
-    {
+    public List<MahJongInstance> checkHandMahJong(int stortType, int _mahJongTypeC, List<MahJongInstance> _listC) {
         //List<MahJongInstance> all = (from c in _listC where (c.m_iSorting == stortType && c.getMahJongConfig().MahJongType == _mahJongTypeC) select c).ToList<MahJongInstance>();
         List<MahJongInstance> all = new ArrayList<MahJongInstance>();
         int length = _listC.size();
-        for (int i = 0; i < length; i++)
-        {
+        for (int i = 0; i < length; i++) {
             MahJongInstance mahJong = _listC.get(i);
             if (mahJong.m_iSorting == stortType && mahJong.getMahJongConfig().mahJongType == _mahJongTypeC) {
                 all.add(mahJong);
@@ -296,35 +271,30 @@ public class GameRuleControl {
         }
         return all;
     }
+
     // 出牌规则，取单张牌或空闲的牌
     public MahJongInstance playerOutMahJong(List<MahJongInstance> _handMah) {
         MahJongInstance ret = null;
         List<MahJongInstance> getList = getLeaflet(_handMah);
-        if (getList.size() > 0)
-        {
+        if (getList.size() > 0) {
             ret = getList.get(0);
             return ret;
-        }
-        else 
-        {
+        } else {
             getList = getLackOfMiddle(_handMah);
-            if (getList.size() > 0)
-            {
+            if (getList.size() > 0) {
                 ret = getList.get(0);
-            }
-            else {
+            } else {
                 getList = getLackOfEdge(_handMah);
-                if (getList.size() > 0)
-                {
+                if (getList.size() > 0) {
                     ret = getList.get(0);
                 }
             }
-                
+
         }
-       
+
         return ret;
     }
-   
-  
+
+
     //#endregion
 }

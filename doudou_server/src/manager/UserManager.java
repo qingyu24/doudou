@@ -1,23 +1,25 @@
 package manager;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-
+import core.DBMgr;
+import core.detail.impl.socket.SendMsgBuffer;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
 import logic.loader.HuiyuanLoader;
 import logic.userdata.CenterDateInterface;
 import logic.userdata.zz_huiyuan;
-import core.DBMgr;
-import core.detail.impl.socket.SendMsgBuffer;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 public class UserManager {
 
     private static UserManager _instance;
     private static String addFriends = "insert into friends (RoleID,FriendID)values %d,%d ";
+    private ArrayList<MyUser> users = new ArrayList<MyUser>();
+    private HashMap<Long, MyUser> m_users = new HashMap<Long, MyUser>();
 
     public static UserManager getInstance() {
         if (_instance != null) {
@@ -25,9 +27,6 @@ public class UserManager {
         }
         return _instance = new UserManager();
     }
-
-    private ArrayList<MyUser> users = new ArrayList<MyUser>();
-    private HashMap<Long, MyUser> m_users = new HashMap<Long, MyUser>();
 
     public void addUser(MyUser user) {
         // TODO Auto-generated method stub

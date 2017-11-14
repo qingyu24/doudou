@@ -1,20 +1,14 @@
 package logic.loader;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
 import core.DBLoaderEx;
 import core.DBMgr;
 import core.detail.impl.socket.SendMsgBuffer;
 import logic.LogRecords;
-import logic.MyUser;
-import logic.PackBuffer;
-import logic.Reg;
-import logic.userdata.CenterDateInterface;
-import logic.userdata.account;
 import logic.userdata.zz_huiyuan;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class HuiyuanLoader extends DBLoaderEx<zz_huiyuan> {
 
@@ -102,7 +96,7 @@ public class HuiyuanLoader extends DBLoaderEx<zz_huiyuan> {
 
 
 		/*	bs_user[] ds = DBMgr.ReadSQL(new bs_user(), String.format(m_user_query, name));
-			*/
+            */
         LogRecords.Log(null, "即将验证账户信息" + "电话名" + name + "密码" + passwrd);
 
         String m_MaxRoleData = "SELECT * FROM zz_huiyuan ORDER BY id DESC LIMIT 1";

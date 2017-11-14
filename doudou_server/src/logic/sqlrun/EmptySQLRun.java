@@ -8,17 +8,15 @@ import logic.MyUser;
 /**
  * @author ddoq
  * @version 1.0.0
- *
+ * <p>
  * 用于在SQL线程空跑的SQLRun
  */
-public class EmptySQLRun extends MySQLRun
-{
+public class EmptySQLRun extends MySQLRun {
 
-	/* (non-Javadoc)
-	 * @see logic.sqlrun.MySQLRun#Execute(logic.MyUser)
-	 */
-	@Override
-	public void Execute(MyUser p_User) throws Exception
-	{
-	}
+    /* (non-Javadoc)
+     * @see logic.sqlrun.MySQLRun#Execute(logic.MyUser)
+     */
+    @Override
+    public void Execute(MyUser p_User) throws Exception {
+    }
 }

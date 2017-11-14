@@ -3,22 +3,20 @@
  */
 package logic.config;
 
-import java.util.Date;
-
 import utility.ExcelData;
+
+import java.util.Date;
 
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
 @ExcelData(File = "ServerCommonConfig.xls", Table = "Sheet1")
-public class ServerCommonConfig implements IConfig
-{
-	public int LoginMaxWaitNum;
-	public int LoginQueueMaxNum;
-	public boolean ForRobot;
-	public Date ServerStartUpTime;
-	
+public class ServerCommonConfig implements IConfig {
+    public int LoginMaxWaitNum;
+    public int LoginQueueMaxNum;
+    public boolean ForRobot;
+    public Date ServerStartUpTime;
+
 }
 

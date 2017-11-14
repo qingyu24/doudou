@@ -1,11 +1,6 @@
 package logic.module.center;
 
-import core.remote.PI;
-import core.remote.PL;
-import core.remote.PS;
-import core.remote.PU;
-import core.remote.RCC;
-import core.remote.RFC;
+import core.remote.*;
 import logic.MyUser;
 import logic.Reg;
 

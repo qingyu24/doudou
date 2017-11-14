@@ -1,12 +1,5 @@
 package manager;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import core.detail.impl.log.Log;
 import core.detail.impl.socket.SendMsgBuffer;
 import logic.LogRecord;
@@ -15,6 +8,12 @@ import logic.eGameState;
 import logic.module.log.eLogicDebugLogType;
 import logic.module.room.Room;
 import logic.module.room.RoomRule;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class RoomManager {
 
@@ -32,6 +31,27 @@ public class RoomManager {
             return _instance;
         }
         return _instance = new RoomManager();
+    }
+
+    public static void initRoomId() {
+        int index = 0;
+        int r = (int) (Math.random() * 900000) + 100000;
+        while (index++ < 1000) {
+            while (hasRoomId(r)) {
+                r = (int) (Math.random() * 900000) + 100000;
+            }
+            //System.out.printf("roomId:%d\n", r);
+            ms_roomids.add(r);
+        }
+    }
+
+    private static boolean hasRoomId(int id) {
+        for (int i = 0; i < ms_roomids.size(); ++i) {
+            if (ms_roomids.get(i) == id) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public Room getFreeRoom() {
@@ -89,7 +109,6 @@ public class RoomManager {
         return r;
     }
 
-
     public Room createRoom(MyUser user) {
         //todo这里需要检查是否在房间内。
         int id = this.generalRoomId();
@@ -111,12 +130,10 @@ public class RoomManager {
         return r;
     }
 
-
     public Room getRoom(long roleId) {
 
         return x_list.get(roleId);
     }
-
 
     public boolean removeRoom(int roomId) {
         Room r = this.getRoom(roomId);
@@ -132,7 +149,7 @@ public class RoomManager {
                 Map.Entry<java.lang.Long, logic.module.room.Room> entry = (Map.Entry<java.lang.Long, logic.module.room.Room>) it
                         .next();
                 if (entry.getValue().getID() == roomId) {
-		/*		x_list.remove(entry.getKey());*/
+        /*		x_list.remove(entry.getKey());*/
                     it.remove();
                 }
             }
@@ -142,6 +159,11 @@ public class RoomManager {
         LogRecord(null, str);
         return true;
     }
+
+
+	/*	public Room getTeamRoom(int roomId){
+		return m_teamroomlist.get(roomId);
+	}*/
 
     public void joinRoom(MyUser user, int roomId) {
         Room room2 = this.getRoom(user.GetRoleGID());
@@ -160,11 +182,6 @@ public class RoomManager {
         return m_list.get(roomId);
     }
 
-
-	/*	public Room getTeamRoom(int roomId){
-		return m_teamroomlist.get(roomId);
-	}*/
-
     public void removeRoomUser(long roleId) {
         x_list.remove(roleId);
         System.err.printf("删除房间内的用户:%d\n", roleId);
@@ -177,27 +194,6 @@ public class RoomManager {
         }
         return ms_roomids.get(this.roomId++);
 
-    }
-
-    public static void initRoomId() {
-        int index = 0;
-        int r = (int) (Math.random() * 900000) + 100000;
-        while (index++ < 1000) {
-            while (hasRoomId(r)) {
-                r = (int) (Math.random() * 900000) + 100000;
-            }
-            //System.out.printf("roomId:%d\n", r);
-            ms_roomids.add(r);
-        }
-    }
-
-    private static boolean hasRoomId(int id) {
-        for (int i = 0; i < ms_roomids.size(); ++i) {
-            if (ms_roomids.get(i) == id) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private void LogRecord(MyUser user, String record) {

@@ -3,16 +3,12 @@
  */
 package db;
 
-import core.db.*;
-
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public class TestTransData
-{
-	public DBLong 	RoleID;
-	public DBString	vString;
-	public DBInt	vInt;
+public class TestTransData {
+    public DBLong RoleID;
+    public DBString vString;
+    public DBInt vInt;
 }

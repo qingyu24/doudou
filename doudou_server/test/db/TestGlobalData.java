@@ -3,17 +3,13 @@
  */
 package db;
 
-import core.db.*;
-
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public class TestGlobalData
-{
-	public DBLong		GID;
-	public DBLong		RoleID;
-	public DBString		vStr;
-	public DBInt		vInt;
+public class TestGlobalData {
+    public DBLong GID;
+    public DBLong RoleID;
+    public DBString vStr;
+    public DBInt vInt;
 }

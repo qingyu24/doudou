@@ -3,23 +3,19 @@
  */
 package test.c;
 
+import core.detail.impl.log.SystemLevel;
 import org.apache.log4j.Level;
 import org.apache.log4j.chainsaw.Main;
-
-import core.detail.impl.log.SystemLevel;
 
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public class LogServer
-{
-	
-	public static void main(String[] args)
-	{
-		Level s = SystemLevel.SQL;
-		System.out.println(s);
-		Main.main(null);
-	}
+public class LogServer {
+
+    public static void main(String[] args) {
+        Level s = SystemLevel.SQL;
+        System.out.println(s);
+        Main.main(null);
+    }
 }

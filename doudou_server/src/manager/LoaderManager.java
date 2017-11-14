@@ -1,12 +1,5 @@
 package manager;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.concurrent.ConcurrentLinkedQueue;
-
-import javax.sound.midi.Synthesizer;
-
 import core.DBLoader;
 import core.DBMgr;
 import core.db.RoleIDUniqueID;
@@ -15,14 +8,16 @@ import logic.loader.UserLoader;
 import logic.userdata.account;
 import logic.userdata.zz_huiyuan;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class LoaderManager {
 
-    private static LoaderManager _instance;
-    private static Map<String, DBLoader> m_list = new HashMap<String, DBLoader>();
     public static String Users = "Users";
     public static String Huiyuan = "huiyuan";
-
+    private static LoaderManager _instance;
+    private static Map<String, DBLoader> m_list = new HashMap<String, DBLoader>();
 
     public static LoaderManager getInstance() {
         if (_instance != null) {
@@ -60,8 +55,9 @@ public class LoaderManager {
         }
         return false;
     }
+
     //把所有的学生登录信息同步到account表中
-	/*public void Synchronization() {
+    /*public void Synchronization() {
 		int i=0;
 		if(this.needBegin()){
 	
@@ -128,7 +124,7 @@ public class LoaderManager {
                 //生成的ID是
                 System.out.println("生成ID" + userID);
 
-                DBMgr.ExecuteSQL(String.format(add_roleID, userID,zzHuiyuan.id.Get()));
+                DBMgr.ExecuteSQL(String.format(add_roleID, userID, zzHuiyuan.id.Get()));
             }
         }
     }

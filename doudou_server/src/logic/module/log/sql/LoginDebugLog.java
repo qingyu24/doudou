@@ -3,19 +3,19 @@
  */
 package logic.module.log.sql;
 
-import core.db.*;
+import core.db.DBDateTime;
+import core.db.DBInt;
+import core.db.DBString;
 
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public class LoginDebugLog
-{
-	public DBInt			ServerID;
-	public DBDateTime		Tm;
-	public DBString			UserName;
-	public DBString			IP;
-	public DBInt			Type;
-	public DBString			ExData;
+public class LoginDebugLog {
+    public DBInt ServerID;
+    public DBDateTime Tm;
+    public DBString UserName;
+    public DBString IP;
+    public DBInt Type;
+    public DBString ExData;
 }

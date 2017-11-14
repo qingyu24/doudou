@@ -3,16 +3,13 @@
  */
 package test.robot;
 
-import java.lang.annotation.*;
-
 /**
  * @author ddoq
  * @version 1.0.0
- *
+ * <p>
  * robot function
  */
-@Retention(RetentionPolicy.RUNTIME) 
-public @interface RF
-{
-	String Name();
+@Retention(RetentionPolicy.RUNTIME)
+public @interface RF {
+    String Name();
 }

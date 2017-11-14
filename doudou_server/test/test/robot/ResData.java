@@ -6,9 +6,7 @@ package test.robot;
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public interface ResData
-{
-	void Reset();
+public interface ResData {
+    void Reset();
 }

@@ -1,26 +1,17 @@
 package logic.module.room;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import logic.LogRecord;
-import logic.MyUser;
-import logic.PackBuffer;
-import logic.Reg;
-import logic.eGameState;
-import logic.eGameType;
-import logic.userdata.Team;
-import manager.RoomManager;
-import manager.TeamManager;
-import manager.ThornBallManager;
 import core.EqiuType;
 import core.Root;
 import core.Tick;
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.*;
+import logic.userdata.Team;
+import manager.RoomManager;
+import manager.TeamManager;
+import manager.ThornBallManager;
+
+import java.util.*;
+import java.util.Map.Entry;
 
 public class Room implements Tick {
 
@@ -411,7 +402,7 @@ public class Room implements Tick {
         if (m_state == eGameState.GAME_READY) {
             this.countDowm(m_countTime++);
             if (m_countTime >= 3/*||this.rr.isFree()*/) {
-                m_countTime=0;
+                m_countTime = 0;
                 this.broadcastStart();
 
             }
@@ -432,7 +423,7 @@ public class Room implements Tick {
                 buffer.Send(user.getUser());
             }
         }
-		/*
+        /*
 		 * broadcast(RoomInterface.MID_BROADCAST_LEFTTIME, (int) i,
 		 * System.currentTimeMillis());
 		 */
@@ -448,6 +439,7 @@ public class Room implements Tick {
             RoomPlayer rp = it.next();
             if (rp != null) {
                 RoomManager.getInstance().removeRoomUser(rp.getRoleId());
+                rp.getUser().setRoomId(0);
                 it.remove();
             }
         }
@@ -743,6 +735,29 @@ public class Room implements Tick {
             if (user != null) {
                 SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                         .AddID(Reg.ROOM, midBroadcastEat);
+                Iterator<Integer> ite = list.iterator();
+                while (ite.hasNext()) {
+                    Integer its = (Integer) ite.next();
+                    buffer.Add(its);
+
+                }
+                buffer.Add(time);
+                buffer.Send(user.getUser());
+            }
+        }
+    }
+
+    public void broadcastst(int midBroadcastEat, ArrayList<Integer> list,
+                            long time) {
+        // TODO Auto-generated method stub
+
+        Iterator<RoomPlayer> it = m_players.iterator();
+        while (it.hasNext()) {
+            RoomPlayer user = it.next();
+            if (user != null) {
+                SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                        .AddID(Reg.ROOM, midBroadcastEat);
+                buffer.Add((short) list.size());
                 Iterator<Integer> ite = list.iterator();
                 while (ite.hasNext()) {
                     Integer its = (Integer) ite.next();
@@ -1177,7 +1192,7 @@ public class Room implements Tick {
     public void setTeamName(Team team, int teamName) {
         // TODO Auto-generated method stub
         if (team.getTeamName() != 0) {
-            if(!this.m_TeamNames.contains(team.getTeamName())) {
+            if (!this.m_TeamNames.contains(team.getTeamName())) {
                 this.m_TeamNames.add(team.getTeamName());
             }
             Iterator<Integer> it = this.m_TeamNames.iterator();

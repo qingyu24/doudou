@@ -3,10 +3,12 @@
  */
 package logic;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
+import core.DBMgr;
+import core.Root;
+import core.RootConfig;
+import core.Tick;
+import core.detail.UserBase;
+import core.detail.impl.socket.SendMsgBuffer;
 import logic.module.center.CenterInterface;
 import logic.module.character.CharacterImpl;
 import logic.module.login.Login;
@@ -14,17 +16,16 @@ import logic.module.login.eLoginErrorCode;
 import logic.module.room.Room;
 import logic.userdata.CountGrade;
 import logic.userdata.account;
-import logic.userdata.logindata;
 import logic.userdata.handler.PlayerCenterData;
+import logic.userdata.logindata;
 import manager.ConfigManager;
 import manager.RoomManager;
 import manager.TeamManager;
 import manager.UserManager;
-import core.Root;
-import core.RootConfig;
-import core.Tick;
-import core.detail.UserBase;
-import core.detail.impl.socket.SendMsgBuffer;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author ddoq
@@ -34,6 +35,7 @@ import core.detail.impl.socket.SendMsgBuffer;
  */
 public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
+    public static String BUY_SHOPPING = "insert into shopping values (%d,%d,%d,%d) ";
     public boolean client_DataReady = false;
     public boolean server_DataReady = false;
     private eLoginErrorCode m_errorCode;
@@ -44,6 +46,14 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
     private ArrayList<MyUser> friends;
     private ArrayList<MyUser> classmates;
 
+    public MyUser() {
+        //在此添加所有的UserData注册
+        this.m_center = new PlayerCenterData(this);
+        AddToUserData(this.m_center);
+        /*		grade=new CountGrade(m_center.getM_account().Garde.Get());*/
+
+
+    }
 
     public ArrayList<MyUser> getClassmates() {
         return classmates;
@@ -72,6 +82,10 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         return grade;
     }
 
+    public void setGrade(CountGrade grade) {
+        this.grade = grade;
+    }
+
     public ArrayList<MyUser> getFriends() {
         if (friends == null) {
             friends = new ArrayList<MyUser>();
@@ -80,8 +94,11 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         return friends;
     }
 
-    public void setGrade(CountGrade grade) {
-        this.grade = grade;
+    public void setFriends(ArrayList<MyUser> f) {
+        this.friends = f;
+        if (f.size() > 0) {
+            System.out.println(this.getTickName() + "好友爲" + f.get(0).getTickName());
+        }
     }
 
     public void friendsOnline(MyUser user) {
@@ -110,24 +127,8 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
     }
 
-    public MyUser() {
-        //在此添加所有的UserData注册
-        this.m_center = new PlayerCenterData(this);
-        AddToUserData(this.m_center);
-        /*		grade=new CountGrade(m_center.getM_account().Garde.Get());*/
-
-
-    }
-
     public PlayerCenterData getCenterData() {
         return this.m_center;
-    }
-
-    public void setFriends(ArrayList<MyUser> f) {
-        this.friends = f;
-        if (f.size() > 0) {
-            System.out.println(this.getTickName() + "好友爲" + f.get(0).getTickName());
-        }
     }
     //----------------------玩家需要计算的属性;
 
@@ -322,15 +323,17 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         }
         buffer.Send(this);
     }
-    public void sendMessage(int msg, ArrayList<Integer> list,long Id) {
+
+    public void sendMessage(int msg, ArrayList<Integer> list, long Id) {
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, msg);
-     buffer.Add(Id);
+        buffer.Add(Id);
 
         for (Integer integer : list) {
             buffer.Add(integer);
         }
         buffer.Send(this);
     }
+
     public int hasFriend(MyUser myUser) {
         // TODO Auto-generated method stub
         Iterator<MyUser> it = this.friends.iterator();
@@ -349,5 +352,32 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         return this.getCenterData().isTeacher();
     }
 
+
+    public void addFriend(MyUser user) {
+        if (!this.friends.contains(user))
+            this.friends.add(user);
+    }
+
+    public int GetMoney() {
+        return this.getCenterData().getM_account().Money.Get();
+    }
+
+    public void setMoney(int money) {
+        this.getCenterData().getM_account().Money.Set(this.GetMoney() + money);
+        DBMgr.ExecuteSQL("update account set money=" + this.GetMoney() + " WHENEVER roleId= " + this.GetRoleGID());
+    }
+
+    public void buyShopping(long friendID, int giftID, int price) {
+        this.setMoney(-price);
+        boolean b = DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID, System.currentTimeMillis(), price));
+    }
+
+    public void sendSucess(int msg, int i) {
+        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, msg);
+        buffer.Add(i);
+
+
+        buffer.Send(this);
+    }
 
 }

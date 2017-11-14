@@ -10,12 +10,10 @@ import org.junit.runners.Suite.SuiteClasses;
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
 @RunWith(Suite.class)
 @SuiteClasses(
-{ TestDBMgr.class, TestDBMgr_GlobalData.class, TestDBMgr_TransRead.class })
-public class AllTests
-{
+        {TestDBMgr.class, TestDBMgr_GlobalData.class, TestDBMgr_TransRead.class})
+public class AllTests {
 
 }

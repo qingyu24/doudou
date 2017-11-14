@@ -1,6 +1,5 @@
 package logic.config;
 
-public interface IConfig
-{
-	
+public interface IConfig {
+
 }

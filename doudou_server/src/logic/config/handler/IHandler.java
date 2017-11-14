@@ -8,9 +8,7 @@ import logic.config.IConfig;
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public interface IHandler
-{
-	void Init(IConfig[] val);
+public interface IHandler {
+    void Init(IConfig[] val);
 }

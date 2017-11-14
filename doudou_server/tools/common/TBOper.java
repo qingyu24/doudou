@@ -6,13 +6,10 @@ package common;
 import java.util.ArrayList;
 
 
-
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public interface TBOper
-{
-	void Execute(Class<?> c, DB aim, DB m, ArrayList<DB> merges) throws Exception;
+public interface TBOper {
+    void Execute(Class<?> c, DB aim, DB m, ArrayList<DB> merges) throws Exception;
 }

@@ -6,7 +6,6 @@ package logic.sqlrun;
 import core.DBMgr;
 import core.RootConfig;
 import core.db.RoleIDUniqueID;
-//import core.detail.impl.log.*;
 import logic.*;
 import logic.module.log.eLogicSQLLogType;
 import logic.module.log.sql.eLoginDebugLogType;
@@ -16,12 +15,22 @@ import logic.userdata.logindata;
 import logic.userdata.zz_huiyuan;
 import utility.UniqueID;
 
+//import core.detail.impl.log.*;
+
 /**
  * @author ddoq
  * @version 1.0.0
  */
 public class LoginSQLRun extends MySQLRun {
+    /*	private static final String m_user_query = "select * from zz_huiyuan where Name = '%s'";
+        //这是只是注册账号的，以后还会有微信登录的；
+        private static final String m_user_create = "insert into zz_huiyuan(RoleID, Name, Password, Icon) values (%d, '%s', '%s',%d)";//
+    */    private static final String m_MaxRoleData = "SELECT * FROM zz_huiyuan ORDER BY id DESC LIMIT 1";
+    private static final String m_user_query = "select * from zz_huiyuan where username = '%s'";
+    private static final String m_user_create = "insert into zz_huiyuan(Id, username, Password) values (%d, '%s', '%s)";//
     private static logindata m_LoginData = new logindata();    ///<这个只当成模板用,没实际效果
+    //	private long stm = 0;
+    private static UniqueID m_IDBuild = new UniqueID();
     private final int m_code;
     private String m_sUserName;
     private String m_sPassword;
@@ -33,16 +42,6 @@ public class LoginSQLRun extends MySQLRun {
     private boolean m_bCreate;
     private String m_pass;
     private int m_icon;
-
-
-    //	private long stm = 0;
-    private static UniqueID m_IDBuild = new UniqueID();
-    /*	private static final String m_user_query = "select * from zz_huiyuan where Name = '%s'";
-        //这是只是注册账号的，以后还会有微信登录的；
-        private static final String m_user_create = "insert into zz_huiyuan(RoleID, Name, Password, Icon) values (%d, '%s', '%s',%d)";//
-    */    private static final String m_MaxRoleData = "SELECT * FROM zz_huiyuan ORDER BY id DESC LIMIT 1";
-    private static final String m_user_query = "select * from zz_huiyuan where username = '%s'";
-    private static final String m_user_create = "insert into zz_huiyuan(Id, username, Password) values (%d, '%s', '%s)";//
 
     public LoginSQLRun(MyUser p_user,
                        String p_sUserName,

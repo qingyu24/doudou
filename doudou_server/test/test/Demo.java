@@ -6,20 +6,15 @@ package test;
 /**
  * @author ddoq
  * @version 1.0.0
- *
  */
-public class Demo
-{
+public class Demo {
 
-	/**
-	 * 
-	 *
-	 * <br>测试代码:{@link }
-	 *
-	 * @param args
-	 */
-	public static void main(String[] args)
-	{
-		System.out.println("Called Demo");
-	}
+    /**
+     * <br>测试代码:{@link }
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        System.out.println("Called Demo");
+    }
 }
