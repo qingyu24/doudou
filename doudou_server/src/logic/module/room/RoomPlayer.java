@@ -2,8 +2,10 @@ package logic.module.room;
 
 import core.detail.impl.socket.SendMsgBuffer;
 import logic.MyUser;
+import logic.eGameType;
 import logic.userdata.CountGrade;
 import logic.userdata.Team;
+import manager.RoomManager;
 import manager.TeamManager;
 import utility.Rand;
 
@@ -61,7 +63,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
         user.getGrade().enterRoom();
         teamID = 0;
         Skin = 0;
-		/*teamName = 0;*/
+        /*teamName = 0;*/
     }
 
     public long getRoleId() {
@@ -341,16 +343,47 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
     }
 
     private int EarnMoney(int ranking) {
-        // TODO Auto-generated method stub
-        if (ranking < 3) {
-            return 150;
-        } else if (ranking < 10) {
-            return 100;
-        } else if (ranking < 15) {
-            return 50;
-        } else {
-            return 0;
+        Room room = RoomManager.getInstance().getRoom(this.getRoleId());
+        if (room != null) {
+            RoomRule rr = room.getRr();
+
+            if (rr.getM_type() == eGameType.SOLO) {
+                if (ranking == 1) return 25;
+                else if (ranking == 2) return 20;
+                else if (ranking == 3) return 15;
+                else if (ranking == 4) return 10;
+                else if (ranking == 5) return 8;
+                else if (ranking == 6) return 5;
+                else if (ranking == 7) return 4;
+                else if (ranking == 8) return 3;
+                else if (ranking == 9) return 2;
+                else if (ranking == 10) return 1;
+                else if (ranking > 10) return 0;
+            } else if (rr.getM_type() == eGameType.TEAM) {
+                if (rr.isFree()) {//团战系统房
+                    if (ranking == 1) return 10;
+                    else if (ranking == 2) return 5;
+                    else if (ranking == 3) return 2;
+                    else return 0;
+                } else {//团战自建房
+                    if (rr.getTeamNum() == 3) {
+                        if (ranking == 1) return 10;
+                        if (ranking == 2) return 5;
+                        else return 0;
+
+                    } else if (rr.getTeamNum() == 5 || rr.getTeamNum() == 6) {
+                        if (ranking == 1) return 10;
+                        else if (ranking == 2) return 5;
+                        else if (ranking == 3) return 2;
+                        else return 0;
+                    }
+                }
+            }
+
         }
+
+        return 0;
+
     }
 
 }

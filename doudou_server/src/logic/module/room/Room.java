@@ -846,7 +846,7 @@ public class Room implements Tick {
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
             RoomPlayer player = (RoomPlayer) it.next();
-            player.calGame(this.m_players.size());
+            player.calGame(this.m_players.size(), );
 
         }
         // 广播
