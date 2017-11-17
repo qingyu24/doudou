@@ -40,6 +40,9 @@ public class CharacterImpl implements CharacterInterface {
         System.out.println("Send Msg _SToC_PlayerUserData");
         SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CHARACTER, 0);
         boolean b = p_user.packBaseData(p);
+
+
+
         if (b) {
             p.Send(p_user);
         }

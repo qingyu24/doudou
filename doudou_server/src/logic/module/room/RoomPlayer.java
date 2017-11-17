@@ -115,6 +115,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
         if (team != null) {
             return team.getTeamName();
         }
+        this.Skin=m_user.getSkin();
         return Skin;
     }
 

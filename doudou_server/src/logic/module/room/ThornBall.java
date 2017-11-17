@@ -13,7 +13,7 @@ public class ThornBall {
         this.thId = thId;
         this.xpos = (int) (-100000 + Math.random() * 200000);
         this.ypos = (int) (-100000 + Math.random() * 200000);
-        this.weight = (int) (Math.random() * 450 + 150);
+        this.weight = (int) (Math.random() * 50 + 150);
     }
 
     public void packData(SendMsgBuffer s) {

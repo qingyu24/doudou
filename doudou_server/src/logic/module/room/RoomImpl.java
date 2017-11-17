@@ -223,14 +223,12 @@ public class RoomImpl implements RoomInterface {
 
     @Override
     @RFC(ID = 33)
-    public void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int team_ID, @PI int teamName) {
-        Team team = TeamManager.getInstance().getTeam(team_ID);
+    public void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int teamID, @PI int teamName) {
+        Team team = TeamManager.getInstance().getTeam(teamID);
         Room room = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
         if (team == null) {
             team = TeamManager.getInstance().getNewteam();
-
         }
-
         if (team != null && room != null && team.m_allUsers.size() < room.getRr().getPalyerNum()) {
 
             RoomPlayer player = room.GetPlayer(p_user);
@@ -246,8 +244,6 @@ public class RoomImpl implements RoomInterface {
             room.free_addTeam(team);
 			/*room.addTeam(team);*/
             room.setTeamName(team, teamName);
-
-
             room.broadcastFree(room.getRr().getM_type().ID());
         } else {
             //队伍人满 加不进去 返回错误信息

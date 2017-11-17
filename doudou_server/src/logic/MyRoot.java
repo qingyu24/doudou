@@ -102,7 +102,7 @@ public class MyRoot extends Root implements Tick {
             }
 
         } else {
-            System.out.println("成功记录了服务器的启动时间:" + time);
+            System.out.println("成功记录了服++++务器的启动时间:" + time);
             ConfigManager.serverStartRunTime = Long.parseLong(time);
         }
         //记录一下游戏的开服时间;

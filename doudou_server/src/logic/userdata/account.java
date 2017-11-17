@@ -31,15 +31,19 @@ public class account extends RoleDataBase {
 
     public DBInt portrait;//头像ＩＤ
 
+    public DBInt Skin;//皮肤
+
     public void packData(SendMsgBuffer buffer) {
         buffer.Add(RoleID.Get());
-/*		System.out.println("ssssssssss"+RoleID.Get());*/
+
         buffer.Add(TickName.Get());
         buffer.Add(portrait.Get());
         CountGrade grade = new CountGrade(Garde.Get());
         buffer.Add(grade.getM_level().ID());
         buffer.Add(grade.getM_star());
         buffer.Add(Money.Get());
+
+
     }
 }
 

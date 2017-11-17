@@ -118,8 +118,7 @@ public class UserManager {
 
             myUser.packDate(buffer);
             buffer.Add(p_user.hasFriend(myUser));
-            /*	buffer.Add(myUser.isTeacher());*/
-
+            buffer.Add(myUser.isTeacher());
         }
         buffer.Send(p_user);
 

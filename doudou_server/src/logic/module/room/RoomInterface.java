@@ -95,7 +95,7 @@ public interface RoomInterface {
                    @PI int teamID, @PL long time);
 
     @RFC(ID = MID_ROOM_CHOOSETEAM)
-    void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int team_ID, @PI int teamName);
+    void chooseTeam(@PU(Index = Reg.ROOM) MyUser p_user, @PI int teamID, @PI int teamName);
 
     @RFC(ID = MID_ROOM_GAMESATRT)
     void gameStart(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);

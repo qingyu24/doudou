@@ -45,16 +45,15 @@ public class ConfigManager {
 
         this.parseXls(CommonConfig, new CommonConfig(), true, null);
         this.parseXls(ServerCommonConfig, new ServerCommonConfig(), true, null);
-        this.parseXls(PlayerInitIni, new PlayerInitIni(), true, null);
-        this.parseXls(MaskWordData, new MaskWordConfig(), false, new MaskWordHandler());
+        //this.parseXls(PlayerInitIni, new PlayerInitIni(), true, null);
+     //   this.parseXls(MaskWordData, new MaskWordConfig(), false, new MaskWordHandler());
 /*		this.parseXls(SpeedConfig, new SpeedConfig(), true, null);*/
     }
 
     /**
      * 解析xls文件
      *
-     * @param filename
-     * @param mapClass
+     *
      */
     public <T> void parseXls(String filename, IConfig mapInstance, Boolean iniFile, IHandler handler) {
 

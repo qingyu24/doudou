@@ -18,6 +18,7 @@ import logic.userdata.CountGrade;
 import logic.userdata.account;
 import logic.userdata.handler.PlayerCenterData;
 import logic.userdata.logindata;
+import logic.userdata.shopping;
 import manager.ConfigManager;
 import manager.RoomManager;
 import manager.TeamManager;
@@ -123,7 +124,8 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         buffer.Add(this.getPortrait());//头像ID
         buffer.Add(this.getGrade().getM_level().ID());
         buffer.Add(this.getGrade().getM_star());
-
+        buffer.Add(this.getCenterData().getM_huiyuan().grade.Get());
+        buffer.Add(this.getCenterData().getM_huiyuan().banji.Get());
 
     }
 
@@ -154,6 +156,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
     public boolean packBaseData(SendMsgBuffer buffer) {
         m_center.packData(buffer);
+
         return true;
     }
 
@@ -220,8 +223,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
     private void friend_borcast() {
         // TODO Auto-generated method stub
-        SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER,
-                CenterInterface.MID_TEAM_FRIENDS);
+        SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER, CenterInterface.MID_TEAM_FRIENDS);
 
         Iterator<MyUser> iterator = this.friends.iterator();
 
@@ -305,6 +307,8 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
             while (it.hasNext()) {
                 MyUser myUser = (MyUser) it.next();
                 myUser.packDate(p);
+             /*   p.Add(myUser.getCenterData().getM_huiyuan().grade.Get());
+                p.Add(myUser.getCenterData().getM_huiyuan().banji.Get());*/
             }
         }
     }
@@ -354,8 +358,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
 
     public void addFriend(MyUser user) {
-        if (!this.friends.contains(user))
-            this.friends.add(user);
+        if (!this.friends.contains(user)) this.friends.add(user);
     }
 
     public int GetMoney() {
@@ -367,9 +370,9 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         DBMgr.ExecuteSQL("update account set money=" + this.GetMoney() + " WHENEVER roleId= " + this.GetRoleGID());
     }
 
-    public void buyShopping(long friendID, int giftID, int price) {
+    public boolean buyShopping(long friendID, int giftID, int price) {
         this.setMoney(-price);
-        boolean b = DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID, System.currentTimeMillis(), price));
+        return DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID, System.currentTimeMillis(), price));
     }
 
     public void sendSucess(int msg, int i) {
@@ -380,4 +383,32 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         buffer.Send(this);
     }
 
+    public boolean deleteFriend(long targetID) {
+        String DELTE_FRIEND = "delete from friends where RoleID=%d and FriendID =%d";
+        MyUser user = UserManager.getInstance().getUser(targetID);
+        boolean remove = false;
+        if (user != null) {
+            remove = this.friends.remove(user);
+        }
+        boolean b = DBMgr.ExecuteSQL(String.format(DELTE_FRIEND, targetID, this.GetRoleGID()));
+        boolean b1 = DBMgr.ExecuteSQL(String.format(DELTE_FRIEND, this.GetRoleGID(), targetID));
+        this.friend_borcast();
+
+        return remove && b && b1;
+    }
+
+    public ArrayList<Integer> getskinlist() {
+        //1 获取头像 2 获取皮肤
+
+        ArrayList<Integer> list = new ArrayList<>();
+        shopping[] shoppings = DBMgr.ReadRoleIDData(this.GetRoleGID(), new shopping());
+        for (shopping shopping : shoppings) {
+            list.add(shopping.shopID.Get());
+        }
+
+        return list;
+    }
+    public  int getSkin(){
+        return this.m_center.getM_account().Skin.Get();
+    }
 }

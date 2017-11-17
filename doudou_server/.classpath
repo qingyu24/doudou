@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="**/.svn/**" kind="src" path="JAR_LOC">
-		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="JAR_LOC/jar"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="src" path="/doudou_server"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="tools"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -15,5 +11,6 @@
 	<classpathentry kind="lib" path="jar/linq4j-0.5-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="exjar/ServerCore.jar" sourcepath="D:/项目空间/ServerCore"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hamcrest-core-1.3"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

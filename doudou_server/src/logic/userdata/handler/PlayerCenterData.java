@@ -54,6 +54,7 @@ public class PlayerCenterData implements UserData {
 
     public void packData(SendMsgBuffer buffer) {
         m_account.packData(buffer);
+        m_huiyuan.packBaseData(buffer);
 
     }
 
@@ -116,9 +117,15 @@ public class PlayerCenterData implements UserData {
     }
 
     public int isTeacher() {
-        return 0;
+
+
+        return  this.m_huiyuan.usertype.Get()==1?1:0;
         // TODO Auto-generated method stub
 /*		return this.m_huiyuan.l;*/
+    }
+
+    public zz_huiyuan getM_huiyuan() {
+        return m_huiyuan;
     }
 
     public class PlayerSqlRun extends MySQLRun {

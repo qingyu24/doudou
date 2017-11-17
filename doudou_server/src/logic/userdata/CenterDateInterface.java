@@ -16,6 +16,8 @@ public interface CenterDateInterface {
     static final int MID_USER_HOME = 7;//个人主页
     static final int MID_USER_MESSAGE = 8;//发送消息
     static final int MID_RANKING_LISTS = 9;//排行榜消息
+    static final int MID_USER_SKIN = 10;// 更换头像 皮肤
+
 
 
     @RFC(ID = MID_CLASS)
@@ -34,7 +36,7 @@ public interface CenterDateInterface {
     void buyShopping(@PU(Index = Reg.ROOM) MyUser p_user, @PI int giftID, @PI int price);
 
     @RFC(ID = MID_USER_HOME)
-    void userHome(@PU(Index = Reg.ROOM) MyUser p_user, @PI int giftID);
+    void userHome(@PU(Index = Reg.ROOM) MyUser p_user, @PL long targerID);
 
     @RFC(ID = MID_USER_MESSAGE)
     void sendMessage(@PU(Index = Reg.ROOM) MyUser p_user, @PL long targetID, @PS String message);
@@ -44,6 +46,9 @@ public interface CenterDateInterface {
 
     @RFC(ID = MID_RANKING_LISTS)
     void rankingList(@PU(Index = Reg.ROOM) MyUser p_user, @PI int list_type, @PI int number, @PI int size);
+
+    @RFC(ID = MID_USER_SKIN)
+    void changeSkin(@PU(Index = Reg.ROOM) MyUser p_user, @PI int type, @PI int number);
 
 
 }
