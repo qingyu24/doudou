@@ -17,6 +17,8 @@ public interface CenterDateInterface {
     static final int MID_USER_MESSAGE = 8;//发送消息
     static final int MID_RANKING_LISTS = 9;//排行榜消息
     static final int MID_USER_SKIN = 10;// 更换头像 皮肤
+    static final int MID_USER_SEARCH = 11;//查找好友
+
 
 
 
@@ -49,6 +51,12 @@ public interface CenterDateInterface {
 
     @RFC(ID = MID_USER_SKIN)
     void changeSkin(@PU(Index = Reg.ROOM) MyUser p_user, @PI int type, @PI int number);
+
+    @RFC(ID = MID_USER_SEARCH)
+    void searchUser(@PU(Index = Reg.ROOM) MyUser p_user, @PL long  targetID);
+
+
+
 
 
 }

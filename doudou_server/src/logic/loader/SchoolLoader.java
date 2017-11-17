@@ -1,21 +1,32 @@
 package logic.loader;
 
 import core.DBLoaderEx;
+import logic.userdata.zz_huiyuan;
 import logic.userdata.zz_school;
 import logic.userdata.zz_school;
 
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class SchoolLoader extends DBLoaderEx<zz_school> {
 
-    private static ArrayList<String> m_codes = new ArrayList<String>();
-  /*  private static String sql_add = "insert into charge_record(RoleID, TargetRoleID, card)values(%d, %d, %d)";
-    private static String sql_rank = "select * from zz_sheng order by winCount desc limit %d";
-    private static String sql_query_rank = "SELECT * FROM (SELECT (@rownum:=@rownum+1) AS rownum, a.RoleID FROM `zz_sheng` a, (SELECT @rownum:= 0 ) r  ORDER BY a.`winCount` DESC) AS b  WHERE RoleID = %d";
-*/
+
     public SchoolLoader(zz_school p_Seed) {
         super(p_Seed);
     }
+
+
+
+    public ConcurrentLinkedQueue<zz_school> getCenterDate() {
+        // TODO Auto-generated method stub
+        return m_Datas;
+
+    }
+
+    public SchoolLoader(zz_school p_Seed, boolean p_bSave) {
+        super(p_Seed, p_bSave);
+    }
+
 
 
     public String getSchool(int id) {
@@ -24,8 +35,10 @@ public class SchoolLoader extends DBLoaderEx<zz_school> {
                 return m_data.SchoolName.Get();
             }
         }
-        return null;
+        return "δ֪";
     }
+    @Override
+    public void OnTick(long p_lTimerID) throws Exception {
 
-
+    }
 }

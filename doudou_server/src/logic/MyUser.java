@@ -157,6 +157,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
     public boolean packBaseData(SendMsgBuffer buffer) {
         m_center.packData(buffer);
 
+
         return true;
     }
 
@@ -389,6 +390,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         boolean remove = false;
         if (user != null) {
             remove = this.friends.remove(user);
+            user.friend_borcast();
         }
         boolean b = DBMgr.ExecuteSQL(String.format(DELTE_FRIEND, targetID, this.GetRoleGID()));
         boolean b1 = DBMgr.ExecuteSQL(String.format(DELTE_FRIEND, this.GetRoleGID(), targetID));

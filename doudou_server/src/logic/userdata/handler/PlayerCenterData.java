@@ -8,6 +8,7 @@ import logic.MyUser;
 import logic.sqlrun.MySQLRun;
 import logic.userdata.Friends;
 import logic.userdata.account;
+import logic.userdata.shopping;
 import logic.userdata.zz_huiyuan;
 import manager.UserManager;
 
@@ -24,6 +25,8 @@ public class PlayerCenterData implements UserData {
     private zz_huiyuan m_huiyuan;
     private int m_gid;
     private int m_gid2;
+    private ArrayList<Integer> skins = new ArrayList<Integer>();
+
     public PlayerCenterData(MyUser user) {
         this.m_user = user;
     }
@@ -55,6 +58,13 @@ public class PlayerCenterData implements UserData {
     public void packData(SendMsgBuffer buffer) {
         m_account.packData(buffer);
         m_huiyuan.packBaseData(buffer);
+        buffer.Add((short)skins.size()+3);
+        buffer.Add(101);
+        buffer.Add(102);
+        buffer.Add(103);
+        for (Integer skin : skins) {
+          buffer.Add(skin);
+        }
 
     }
 
@@ -119,7 +129,7 @@ public class PlayerCenterData implements UserData {
     public int isTeacher() {
 
 
-        return  this.m_huiyuan.usertype.Get()==1?1:0;
+        return this.m_huiyuan.usertype.Get() == 1 ? 1 : 0;
         // TODO Auto-generated method stub
 /*		return this.m_huiyuan.l;*/
     }
@@ -139,6 +149,10 @@ public class PlayerCenterData implements UserData {
             System.out.println("ss" + gid);
             account[] data = DBMgr.ReadRoleIDData(gid, new account());
             zz_huiyuan[] datas = DBMgr.ReadRoleIDData(gid, new zz_huiyuan());
+            shopping[] shoppings = DBMgr.ReadRoleIDData(gid, new shopping());
+            for (int i = 0; i < shoppings.length; i++) {
+                skins.add(shoppings[i].shopID.Get());
+            }
 
             if (datas.length > 0) {
                 m_huiyuan = datas[0];
@@ -148,10 +162,8 @@ public class PlayerCenterData implements UserData {
                     m_account = data[0];
 
                 } else {
-                    System.out.println(String.format("insert into account (roleid,tickname) values (%d,%s)", rid,
-                            m_huiyuan.xm.Get()));
-                    boolean sql = DBMgr.ExecuteSQL(String
-                            .format("insert into account (roleid,tickname) values (%d,'%s')", rid, m_huiyuan.xm.Get()));
+                    System.out.println(String.format("insert into account (roleid,tickname) values (%d,%s)", rid, m_huiyuan.xm.Get()));
+                    boolean sql = DBMgr.ExecuteSQL(String.format("insert into account (roleid,tickname) values (%d,'%s')", rid, m_huiyuan.xm.Get()));
 
                     if (sql) {
                         data = DBMgr.ReadRoleIDData(gid, new account());
@@ -175,7 +187,6 @@ public class PlayerCenterData implements UserData {
                     }
                 }
                 m_user.setFriends(list);
-
             }
 
 

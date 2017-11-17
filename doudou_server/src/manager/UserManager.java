@@ -102,13 +102,20 @@ public class UserManager {
         List<Integer> nianJi = p_user.getNianJi();
         ArrayList<MyUser> list = new ArrayList<MyUser>();
 
-
         for (MyUser user : users) {
             List<Integer> nianJi2 = user.getNianJi();
             if (nianJi.equals(nianJi2) && p_user.GetRoleGID() != user.GetRoleGID()) {
                 list.add(user);
+
             }
         }
+      /*  String sql="SELECT * FROM zz_huiyuan WHERE school=%d AND  grade=%d AND banji=%d;";
+        zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), String.format(sql,nianJi.get(0),nianJi.get(1),nianJi.get(2)));
+
+        for (zz_huiyuan zz_huiyuan : zz_huiyuans) {
+
+
+        }*/
 
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                 .AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
@@ -119,9 +126,10 @@ public class UserManager {
             myUser.packDate(buffer);
             buffer.Add(p_user.hasFriend(myUser));
             buffer.Add(myUser.isTeacher());
+            int teacher = myUser.isTeacher();
+            System.out.println(teacher+"是不是老师");
         }
         buffer.Send(p_user);
-
 
     }
 

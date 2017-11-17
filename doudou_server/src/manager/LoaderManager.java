@@ -33,24 +33,37 @@ public class LoaderManager {
         return _instance = new LoaderManager();
     }
 
-    public void loadAll() {
-	/*	if(needBegin()){*/
+ /*   public void loadAll() {
+	*//*	if(needBegin()){*//*
         UserLoader users = new UserLoader(new account());
-        HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());
-        SchoolLoader schoolLoader = new SchoolLoader(new zz_school());
+    *//*    HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());*//*
+        shengLoader shengLoader = new shengLoader(new zz_sheng2());
+*//*        SchoolLoader schoolLoader = new SchoolLoader(new zz_school());
+        shengLoader shengLoader = new shengLoader(new zz_sheng2());
+        shiLoader shiLoader = new shiLoader(new zz_shi2());*//*
+        m_list.put(Users, users);
+    *//*    m_list.put(Huiyuan, huiyuan);*//*
+*//*        m_list.put(zz_school,schoolLoader);
+        m_list.put(zz_shi2,shiLoader);
+        m_list.put(zz_sheng2, shengLoader);*//*  m_list.put(zz_sheng2, shengLoader);
+
+
+*//*		}*//*
+    }*/
+    public void loadAll() {
         shengLoader shengLoader = new shengLoader(new zz_sheng2());
         shiLoader shiLoader = new shiLoader(new zz_shi2());
-        m_list.put(Users, users);
-        m_list.put(Huiyuan, huiyuan);
+        SchoolLoader schoolLoader = new SchoolLoader(new zz_school());
         m_list.put(zz_school,schoolLoader);
         m_list.put(zz_shi2,shiLoader);
         m_list.put(zz_sheng2, shengLoader);
 
 
-/*		}*/
     }
 
     public String  getName(int type ,int ID,String sID){
+
+
         if(type==1){
             shengLoader shengLoader = (shengLoader) m_list.get(zz_sheng2);
             return shengLoader.getSheng(sID);

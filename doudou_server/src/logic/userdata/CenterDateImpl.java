@@ -171,5 +171,12 @@ public class CenterDateImpl implements CenterDateInterface {
 
     }
 
+    @Override
+    @RFC(ID = 11)
+    public void searchUser(@PU MyUser p_user,@PL long targetID) {
+
+
+    }
+
 
 }
