@@ -5,7 +5,6 @@ import core.db.DBLong;
 import core.db.DBString;
 import core.db.RoleDataBase;
 import core.detail.impl.socket.SendMsgBuffer;
-import manager.LoaderManager;
 
 /**
  * @author niuhao
@@ -260,19 +259,18 @@ public class zz_huiyuan extends RoleDataBase {
     }
 
     public void packBaseData(SendMsgBuffer buffer) {
-        buffer.Add(usertype.Get()==1?1:0);//是不是老师
+        buffer.Add(usertype.Get() == 1 ? 1 : 0);//是不是老师
         buffer.Add(xb.Get());
 /*        buffer.Add(LoaderManager.getInstance().getName(1,0,sheng2.Get()));
         buffer.Add(LoaderManager.getInstance().getName(2,0,shi2.Get()));*/
 
 
+        buffer.Add("省");
+        buffer.Add("市");
 
-    buffer.Add("s");
-        buffer.Add("s");
-
-        buffer.Add(id.Get()) ;
-        buffer.Add(LoaderManager.getInstance().getName(3,school.Get(),null));//学校
-
+        buffer.Add(id.Get());
+     /*   buffer.Add(LoaderManager.getInstance().getName(3,school.Get(),null));//学校*/
+        buffer.Add("学校S");
         buffer.Add(grade.Get());
         buffer.Add(banji.Get());
 
