@@ -6,6 +6,9 @@ import core.remote.*;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
+import logic.loader.hui_userLoader;
+import manager.LoaderManager;
+import manager.RankingManager;
 import manager.UserManager;
 
 import java.util.ArrayList;
@@ -16,9 +19,12 @@ public class CenterDateImpl implements CenterDateInterface {
     @Override
     @RFC(ID = 1)
     public void getClass(@PU MyUser p_user) {
+        long l = System.currentTimeMillis();
 
         UserManager.getInstance().getClassmates(p_user);
 
+        System.out.println(System.currentTimeMillis() - l);
+        ;
     }
 
     @Override
@@ -26,7 +32,7 @@ public class CenterDateImpl implements CenterDateInterface {
     public void addFriend(@PU MyUser p_user, @PL long friendID) {
         // TODO Auto-generated method stub
         MyUser user = UserManager.getInstance().getUser(friendID);
-        if (user != null && user.hasFriend(p_user) == 0) {
+        if (user != null && user.hasFriend(p_user.GetRoleGID()) == 0) {
             SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_ADDFRIEND);
             p_user.packDate(buffer);
             buffer.Send(user);
@@ -132,13 +138,23 @@ public class CenterDateImpl implements CenterDateInterface {
 
     @Override
     @RFC(ID = 9)
-    public void rankingList(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
-//SELECT   b.banji FROM account AS a ,zz_huiyuan AS  b WHERE a.RoleID=b.RoleID GROUP BY b.banji AND  b.school AND  b.grade DESC ORDER BY avg(Garde) ;
-//班级
-//SELECT b.school,b.grade,  b.banji ,avg(a.Garde) FROM account AS a ,zz_huiyuan AS  b WHERE a.RoleID=b.RoleID GROUP BY b.banji ,b.school,b.grade  ORDER BY avg(a.Garde) desc ;
-//
-        DBMgr.ExecuteSQL("");
+    public void rankingClass(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
+        UserClass[] list = new UserClass[0];
 
+        switch (list_type) {
+            case 1://班级所有
+                list = RankingManager.getInstance().getRankingByClass(list_type, p_user);
+            case 2://班级在学校
+                list = RankingManager.getInstance().getRankingByClass(list_type, p_user);
+
+        }
+        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_RANKING_CLASS);
+        buffer.Add(list_type);
+        buffer.Add((short) list.length);
+        for (UserClass userClass : list) {
+            userClass.packdate(buffer);
+        }
+        buffer.Send(p_user);
 
     }
 
@@ -163,7 +179,7 @@ public class CenterDateImpl implements CenterDateInterface {
         boolean b = false;
         if (type == 1) {
             p_user.getCenterData().getM_account().portrait.Set(number);
-            b = DBMgr.ExecuteSQL("UPDATE account SET  portrait =" + number + "Where roleid =" + p_user.GetRoleGID());
+            b = DBMgr.ExecuteSQL("UPDATE account SET  portrait =" + number + " Where roleid =" + p_user.GetRoleGID());
         }
 
         if (type == 2) {
@@ -177,8 +193,16 @@ public class CenterDateImpl implements CenterDateInterface {
 
     @Override
     @RFC(ID = 11)
-    public void searchUser(@PU MyUser p_user,@PL long targetID) {
+    public void searchUser(@PU MyUser p_user, @PS String UserName) {
 
+
+    }
+
+    @Override
+    @RFC(ID = 12)
+    public void rankingPerson(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
+        hui_userLoader loader = (hui_userLoader) LoaderManager.getInstance().getLoader(LoaderManager.hui_User);
+        loader.sendRaning_All(list_type,p_user);
 
     }
 

@@ -3,6 +3,8 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/JAR_LOC"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/tools"/>
+        <wb-resource deploy-path="/" source-path="/appClientModule" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/"/>
         <property name="context-root" value="doudou_server"/>
         <property name="java-output-path" value="/doudou_server/bin"/>
     </wb-module>

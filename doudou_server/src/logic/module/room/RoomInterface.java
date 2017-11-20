@@ -101,7 +101,7 @@ public interface RoomInterface {
     void gameStart(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
 
     @RFC(ID = MID_ROOM_FRIENDLIST)
-    void getFriendList(@PU(Index = Reg.ROOM) MyUser p_user);
+    void getFriendList(@PU(Index = Reg.ROOM) MyUser p_user, @PI int needChange);
 
     @RFC(ID = MID_ROOM_Dissolution)
     void dissolution(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);

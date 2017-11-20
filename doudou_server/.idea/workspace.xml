@@ -11,15 +11,150 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fc586b2-16ab-4a42-bb76-161bd3edcdbd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/userdata/account.class" afterPath="$PROJECT_DIR$/bin/logic/userdata/account.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/eRankingType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/loader/hui_userLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/userdata/hui_user.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/common/DB$TbNameParse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/common/DB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/common/TBOper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/LogRecord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/MyFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/MyRoot.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/MyUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/MyUserSelector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/PackBuffer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/Reg.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/SecurityBuffer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/CommonConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/GameRuleControl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/IConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/InstanceBase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/MahJongConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/MahJongInstance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/MaskWordConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/MaskWordData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/PlayerInitIni.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/ServerCommonConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/SpeedConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/TemplateBase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/handler/IHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/handler/MaskWordHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/config/package-info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eCommonMsgType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eErrorCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eErrorType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eGameState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eGameType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eGrade.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eLogicCloseUserReason.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eNoticeType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eProperty.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/eUserState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/loader/HuiyuanLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/loader/UserLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/EmptyMethod.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/KeepAliveMethodEx$MySaveUser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/KeepAliveMethodEx.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/LoadUserMethod.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/LoginMethod.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/MyMethodEx.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/methodex/package-info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/LongPairParam.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/RandomTool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/center/CenterImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/center/CenterInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/character/CharacterImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/character/CharacterInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/DataForLog$DataForLog_AttributeChange.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/DataForLog$DataForLog_VipChange.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/DataForLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/eLogicDebugLogType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/eLogicErrorLogType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/eLogicInfoLogType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/eLogicSQLLogType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/eLogicWarningLogType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/CreateRoleLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/GMLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/LoadDataLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/LogCommon.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/LoginDebugLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/LoginLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/LogoutLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/OnlineUserLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/OperationLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/RegisterLog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/eLoginDebugLogType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/roomcardlog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/log/sql/roominfolog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/login/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/login/LoginInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/login/LoginRecord$LoginState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/login/LoginRecord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/login/eLoginErrorCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/package-info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/PlayerBody.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/Room.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/RoomImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/RoomInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/RoomPlayer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/RoomQiu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/RoomRule.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/module/room/ThornBall.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/package-info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/sqlrun/EmptySQLRun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/sqlrun/KeepAliveSQLRun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/sqlrun/LoginSQLRun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/sqlrun/MySQLRun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/sqlrun/package-info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/CountGrade.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/Friends.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/Team.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/account.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/handler/PlayerCenterData$PlayerSqlRun.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/handler/PlayerCenterData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/logindata.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/package-info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_huiyuan.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_qu2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_school.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_sheng2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_shi2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_usertype.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/manager/ConfigManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/manager/LoaderManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/manager/RoomManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/manager/TeamManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/manager/ThornBallManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/manager/UserManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/mergedb/db/PKRecordData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/mergedb/db/VipData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/modifyroleid/db/Faction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/modifyroleid/db/GlobalData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/utils/Caesar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/utils/ICaesar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/utils/LetterCaesar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/utils/NumberCaesar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/utils/RandomId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/utils/WeightRand.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ConnectionManager.cs" afterPath="$PROJECT_DIR$/_ConnectionManager.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log.txt" afterPath="$PROJECT_DIR$/log/log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/MyUser.java" afterPath="$PROJECT_DIR$/src/logic/MyUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/center/CenterImpl.java" afterPath="$PROJECT_DIR$/src/logic/module/center/CenterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/login/Login.java" afterPath="$PROJECT_DIR$/src/logic/module/login/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" afterPath="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" afterPath="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" afterPath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/account.java" afterPath="$PROJECT_DIR$/src/logic/userdata/account.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/LoaderManager.java" afterPath="$PROJECT_DIR$/src/manager/LoaderManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/RankingManager.java" afterPath="$PROJECT_DIR$/src/manager/RankingManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/UserManager.java" afterPath="$PROJECT_DIR$/src/manager/UserManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RFCFn.java" afterPath="$PROJECT_DIR$/test/test/robot/RFCFn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java" afterPath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java" />
@@ -65,17 +200,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserManagerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
+      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+            <state relative-caret-position="2603">
+              <caret line="149" column="49" lean-forward="false" selection-start-line="149" selection-start-column="49" selection-end-line="149" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CenterImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="893">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyRoot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/MyRoot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="874">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2584">
+              <caret line="159" column="19" lean-forward="false" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
               <folding>
-                <marker date="1510915376493" expanded="true" signature="924:1178" ph="{...}" />
-                <marker date="1510915376493" expanded="true" signature="1225:1229" ph="{}" />
-                <marker date="1510915376493" expanded="true" signature="1384:1522" ph="SELECT b.sch... account" />
-                <marker date="1510915376493" expanded="true" signature="1543:1722" ph="SELECT b.sch... account" />
-                <marker date="1510915376493" expanded="true" signature="1974:2208" ph="SELECT b.sch... account" />
+                <element signature="e#4032#4033#0" expanded="true" />
+                <element signature="e#4057#4058#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerBody.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/PlayerBody.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1197">
+              <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
+              <folding>
+                <element signature="e#1624#1625#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,100 +279,35 @@
       <file leaf-file-name="CenterDateImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="2983">
+              <caret line="168" column="7" lean-forward="false" selection-start-line="168" selection-start-column="7" selection-end-line="169" selection-end-column="0" />
               <folding>
-                <marker date="1511148388008" expanded="true" signature="5279:5337" ph="UPDATE accou... " />
-                <marker date="1511148388008" expanded="true" signature="5501:5555" ph="UPDATE accou... " />
+                <marker date="1511173741622" expanded="true" signature="5780:5839" ph="UPDATE accou... " />
+                <marker date="1511173741622" expanded="true" signature="6003:6057" ph="UPDATE accou... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CenterDateInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
+      <file leaf-file-name="hui_userLoader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/logic/loader/hui_userLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MethodExImpl.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/MethodExImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="184" column="46" lean-forward="false" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state relative-caret-position="321">
+              <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
-                <element signature="e#3219#3231#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountGrade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/userdata/CountGrade.java">
+      <file leaf-file-name="hui_user.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/userdata/hui_user.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoaderManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="95">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
-                <marker date="1511146755653" expanded="true" signature="3235:3288" ph="SELECT * FRO... zz_huiyuan" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerCenterData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="148" column="43" lean-forward="true" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-              <folding>
-                <marker date="1511148525476" expanded="true" signature="9958:10024" ph="update accou... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/userdata/account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <marker date="1510915919188" expanded="true" signature="912:939" ph="UPDATE accou... " />
-                <marker date="1510915919188" expanded="true" signature="912:966" ph="UPDATE accou... " />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,6 +318,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -195,8 +326,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>34</find>
-      <find>33</find>
       <find>不是老</find>
+      <find>33</find>
+      <find>playerc</find>
+      <find>m_id</find>
     </findStrings>
     <replaceStrings>
       <replace>DI</replace>
@@ -234,20 +367,26 @@
         <option value="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/timer/TickEvent.class" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/TimerMgrImpl.class" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/06ed4b76-a32a-4ff7-990c-ffa8be82820a/console.sql" />
-        <option value="$PROJECT_DIR$/src/manager/RankingManager.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java" />
-        <option value="$PROJECT_DIR$/src/test/manager/UserManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" />
+        <option value="$PROJECT_DIR$/src/logic/RankingType.java" />
+        <option value="$PROJECT_DIR$/src/logic/eRankingType.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
+        <option value="$PROJECT_DIR$/src/logic/MyUser.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/account.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
         <option value="$PROJECT_DIR$/src/manager/LoaderManager.java" />
+        <option value="$PROJECT_DIR$/src/test/manager/UserManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/login/Login.java" />
+        <option value="$PROJECT_DIR$/src/manager/RankingManager.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" />
-        <option value="$PROJECT_DIR$/src/logic/MyUser.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/hui_user.java" />
         <option value="$PROJECT_DIR$/src/manager/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/center/CenterImpl.java" />
+        <option value="$PROJECT_DIR$/src/logic/loader/hui_userLoader.java" />
       </list>
     </option>
   </component>
@@ -258,10 +397,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1671" />
-    <option name="y" value="-9" />
-    <option name="width" value="1458" />
-    <option name="height" value="878" />
+    <option name="x" value="2003" />
+    <option name="y" value="53" />
+    <option name="width" value="1164" />
+    <option name="height" value="700" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -279,6 +418,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,67 +426,13 @@
               <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="server_jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,6 +445,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="doudou_server" />
+    <property name="SearchEverywhereHistoryKey" value="system.out&#9;null&#9;null" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="logic.loader" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -400,6 +496,81 @@
       <option name="PACKAGE_NAME" value="test.manager" />
       <option name="MAIN_CLASS_NAME" value="test.manager.UserManagerTest" />
       <option name="METHOD_NAME" value="testGetInstance" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserManagerTest.testGetUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="doudou_server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.manager" />
+      <option name="MAIN_CLASS_NAME" value="test.manager.UserManagerTest" />
+      <option name="METHOD_NAME" value="testGetUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserManagerTest.testRemoverUer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="doudou_server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.manager" />
+      <option name="MAIN_CLASS_NAME" value="test.manager.UserManagerTest" />
+      <option name="METHOD_NAME" value="testRemoverUer" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserManagerTest.testTestFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="doudou_server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.manager" />
+      <option name="MAIN_CLASS_NAME" value="test.manager.UserManagerTest" />
+      <option name="METHOD_NAME" value="testTestFriend" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -517,15 +688,21 @@
       <envs />
       <patterns />
     </configuration>
-    <list size="3">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.zz_huiyuanTest.testPackData" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetInstance" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetUser" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testTestFriend" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testRemoverUer" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetInstance" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.zz_huiyuanTest.testPackData" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetUser" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testTestFriend" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testRemoverUer" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetInstance" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.zz_huiyuanTest.testPackData" />
       </list>
     </recent_temporary>
   </component>
@@ -548,7 +725,11 @@
       <workItem from="1510911105089" duration="264000" />
       <workItem from="1510911451444" duration="154000" />
       <workItem from="1510911901804" duration="4989000" />
-      <workItem from="1511144173982" duration="5108000" />
+      <workItem from="1511144173982" duration="27203000" />
+      <workItem from="1511177353253" duration="3539000" />
+      <workItem from="1511183123611" duration="94000" />
+      <workItem from="1511183252470" duration="363000" />
+      <workItem from="1511183727405" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="beifne">
       <created>1510890963950</created>
@@ -571,43 +752,50 @@
       <option name="project" value="LOCAL" />
       <updated>1510916421288</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="beifne">
+      <created>1511149694194</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511149694194</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 17h 58m 54s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testGetUser - 2017.11.20 at 14h 44m 20s.xml">
+      <configuration name="UserManagerTest.testGetUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 17h 59m 53s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testGetUser - 2017.11.20 at 15h 02m 23s.xml">
+      <configuration name="UserManagerTest.testGetUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 00m 30s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testGetUser - 2017.11.20 at 21h 09m 01s.xml">
+      <configuration name="UserManagerTest.testGetUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 06m 09s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testRemoverUer - 2017.11.20 at 16h 57m 35s.xml">
+      <configuration name="UserManagerTest.testRemoverUer" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 06m 18s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testRemoverUer - 2017.11.20 at 17h 01m 58s.xml">
+      <configuration name="UserManagerTest.testRemoverUer" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 12m 41s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testRemoverUer - 2017.11.20 at 17h 02m 52s.xml">
+      <configuration name="UserManagerTest.testRemoverUer" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 19m 28s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testRemoverUer - 2017.11.20 at 17h 04m 30s.xml">
+      <configuration name="UserManagerTest.testRemoverUer" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 20m 14s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testTestFriend - 2017.11.20 at 16h 47m 07s.xml">
+      <configuration name="UserManagerTest.testTestFriend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 26m 38s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testTestFriend - 2017.11.20 at 17h 13m 46s.xml">
+      <configuration name="UserManagerTest.testTestFriend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testGetInstance - 2017.11.17 at 18h 36m 20s.xml">
-      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    <history-entry file="UserManagerTest_testTestFriend - 2017.11.20 at 17h 15m 04s.xml">
+      <configuration name="UserManagerTest.testTestFriend" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27331000" />
+    <option name="totallyTimeSpent" value="53426000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,32 +808,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1671" y="-9" width="1458" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32600734" sideWeight="0.48891625" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32722834" sideWeight="0.49414518" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32547864" sideWeight="0.48891625" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10545906" sideWeight="0.17160493" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19440353" sideWeight="0.4479769" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41636142" sideWeight="0.5554187" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19440353" sideWeight="0.5520231" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32478634" sideWeight="0.48583743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32600734" sideWeight="0.4796798" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28901735" sideWeight="0.41200545" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10982659" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18641618" sideWeight="0.41200545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21893063" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22827688" sideWeight="0.8288177" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2734531" sideWeight="0.51376146" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12007389" sideWeight="0.5879945" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44810745" sideWeight="0.49414518" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2735043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -655,27 +844,28 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10545906" sideWeight="0.17160493" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42562592" sideWeight="0.17630059" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11884236" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21893063" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10391198" sideWeight="0.8288177" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42562592" sideWeight="0.8236994" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32600734" sideWeight="0.48891625" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.49414518" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34462446" sideWeight="0.49414518" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41636142" sideWeight="0.5554187" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32478634" sideWeight="0.48583743" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32722834" sideWeight="0.5554187" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32600734" sideWeight="0.4796798" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12007389" sideWeight="0.41200545" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29913294" sideWeight="0.41200545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2735043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12007389" sideWeight="0.5879945" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -693,398 +883,395 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java</url>
-          <line>74</line>
-          <properties class="test.manager.UserManagerTest" method="testGetInstance">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="24" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java</url>
+          <line>265</line>
+          <properties />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$JAR_LOC$/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/HuiyuanLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/CustomMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/SqlMgrImpl.class">
+    <entry file="file://$PROJECT_DIR$/test/mysql/ReadTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLUpdateOper.class">
+    <entry file="file://$PROJECT_DIR$/src/logic/eErrorType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_qu2.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/eGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="19">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLOper.class">
+    <entry file="file://$PROJECT_DIR$/src/logic/eGameType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$JAR_LOC$/src.zip!/java/util/ArrayList.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/eLogicCloseUserReason.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="825" column="0" lean-forward="false" selection-start-line="825" selection-start-column="0" selection-end-line="825" selection-end-column="0" />
+        <state relative-caret-position="-532">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/LogicMgrImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/logic/eNoticeType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_sheng2.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/LogRecords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/eGrade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/eRankingType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/UserLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/MyFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1407">
-          <caret line="85" column="42" lean-forward="true" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+        <state relative-caret-position="15">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/shiLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/LogRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="-228">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/MySQLDBReader.class">
+    <entry file="file://$PROJECT_DIR$/src/logic/eUserState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="270" column="26" lean-forward="true" selection-start-line="270" selection-start-column="26" selection-end-line="270" selection-end-column="26" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/DBReader.class">
+    <entry file="file://$PROJECT_DIR$/src/logic/eProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLInserOper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/timer/TickEvent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/TimerMgrImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="208" column="36" lean-forward="false" selection-start-line="208" selection-start-column="36" selection-end-line="208" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/DBLoaderEx.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="62" column="26" lean-forward="true" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/SchoolLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INFs/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="224" column="16" lean-forward="false" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid14156.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2627">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+    <entry file="file://$PROJECT_DIR$/doudou_server.eml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_ConnectionManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1691">
-          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="90" column="32" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/shengLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="440">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="23" column="71" lean-forward="true" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+        <state relative-caret-position="358">
+          <caret line="106" column="74" lean-forward="true" selection-start-line="106" selection-start-column="74" selection-end-line="106" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid11636.log">
+    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/UserBase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="386" column="56" lean-forward="true" selection-start-line="386" selection-start-column="56" selection-end-line="386" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MyRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="69" column="21" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="75" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/logic/userdata/zz_huiyuanTest.java" />
-    <entry file="das://table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.zz_huiyuan">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/jar/mysql-connector-java-5.1.20-bin.jar!/com/mysql/jdbc/Util.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/DBMgr.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="118" column="57" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="118" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/06ed4b76-a32a-4ff7-990c-ffa8be82820a/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="234" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.zz_school">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/RankingManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding>
-            <marker date="1510914335075" expanded="true" signature="454:688" ph="SELECT b.sch... account" />
-            <marker date="1510914335075" expanded="true" signature="454:689" ph="SELECT b.sch... account" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.account">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.zz_huiyuan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="17" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3477">
-          <caret line="188" column="35" lean-forward="false" selection-start-line="188" selection-start-column="35" selection-end-line="188" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="217">
+          <caret line="100" column="16" lean-forward="false" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/userdata/UserClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
-          <folding>
-            <marker date="1510915376493" expanded="true" signature="924:1178" ph="{...}" />
-            <marker date="1510915376493" expanded="true" signature="1225:1229" ph="{}" />
-            <marker date="1510915376493" expanded="true" signature="1384:1522" ph="SELECT b.sch... account" />
-            <marker date="1510915376493" expanded="true" signature="1543:1722" ph="SELECT b.sch... account" />
-            <marker date="1510915376493" expanded="true" signature="1974:2208" ph="SELECT b.sch... account" />
-          </folding>
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/MethodExImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="184" column="46" lean-forward="false" selection-start-line="184" selection-start-column="46" selection-end-line="184" selection-end-column="46" />
+        <state relative-caret-position="123">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/LogicMgrImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="85" column="28" lean-forward="true" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLReadSQLOper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/MySQLDBReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLOper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/utility/Debug.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/Formatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="4044" column="0" lean-forward="false" selection-start-line="4044" selection-start-column="0" selection-end-line="4044" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_school.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/ThornBallManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/loader/shiLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/loader/HuiyuanLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1336">
+          <caret line="642" column="54" lean-forward="true" selection-start-line="642" selection-start-column="54" selection-end-line="642" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="43" column="21" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/Reg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <marker date="1510915919188" expanded="true" signature="912:939" ph="UPDATE accou... " />
-            <marker date="1510915919188" expanded="true" signature="912:966" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <marker date="1511148388008" expanded="true" signature="5279:5337" ph="UPDATE accou... " />
-            <marker date="1511148388008" expanded="true" signature="5501:5555" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
-          <folding>
-            <marker date="1511148525476" expanded="true" signature="9958:10024" ph="update accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CountGrade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding>
-            <marker date="1511146755653" expanded="true" signature="3235:3288" ph="SELECT * FRO... zz_huiyuan" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="148" column="43" lean-forward="true" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="1995">
+          <caret line="126" column="5" lean-forward="false" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/RankingManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar/mysql-connector-java-5.1.20-bin.jar!/com/mysql/jdbc/PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17670">
+          <caret line="978" column="0" lean-forward="false" selection-start-line="978" selection-start-column="0" selection-end-line="978" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar/mysql-connector-java-5.1.20-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28709">
+          <caret line="1571" column="0" lean-forward="false" selection-start-line="1571" selection-start-column="0" selection-end-line="1571" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2983">
+          <caret line="168" column="7" lean-forward="false" selection-start-line="168" selection-start-column="7" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <marker date="1511173741622" expanded="true" signature="5780:5839" ph="UPDATE accou... " />
+            <marker date="1511173741622" expanded="true" signature="6003:6057" ph="UPDATE accou... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/hui_user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="2603">
+          <caret line="149" column="49" lean-forward="false" selection-start-line="149" selection-start-column="49" selection-end-line="149" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/PlayerBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
           <folding>
-            <element signature="e#3219#3231#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="159" column="19" lean-forward="false" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
+          <folding>
+            <element signature="e#4032#4033#0" expanded="true" />
+            <element signature="e#4057#4058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/MyRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/loader/hui_userLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

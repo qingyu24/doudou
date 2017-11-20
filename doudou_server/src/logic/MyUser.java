@@ -233,6 +233,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
             MyUser myUser = (MyUser) iterator.next();
             myUser.packDate(p);
         }
+        p.Add(0);
         p.Send(this);
     }
 

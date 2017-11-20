@@ -41,7 +41,7 @@ public class account extends RoleDataBase {
         buffer.Add(portrait.Get());
         if(Skin.Get()==0){
             Skin.Set((int) Math.random()*3+101);
-            DBMgr.ExecuteSQL("UPDATE  account SET  Skin ="+Skin.Get()+"Where RoleID="+RoleID.Get());
+            DBMgr.ExecuteSQL("UPDATE  account SET  Skin ="+Skin.Get()+" Where RoleID="+RoleID.Get());
         }
         buffer.Add(Skin.Get());
         CountGrade grade = new CountGrade(Garde.Get());

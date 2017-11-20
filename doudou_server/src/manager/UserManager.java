@@ -6,10 +6,8 @@ import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
 import logic.loader.HuiyuanLoader;
-import logic.userdata.CenterDateInterface;
-import logic.userdata.CountGrade;
-import logic.userdata.account;
-import logic.userdata.zz_huiyuan;
+import logic.loader.hui_userLoader;
+import logic.userdata.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -102,42 +100,71 @@ public class UserManager {
     public void getClassmates(MyUser p_user) {
         // TODO Auto-generated method stub
         List<Integer> nianJi = p_user.getNianJi();
-        ArrayList<zz_huiyuan> list = new ArrayList<zz_huiyuan>();
 
-        HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
-        for (logic.userdata.zz_huiyuan zz_huiyuan : loader.getCenterDate()) {
+        ArrayList<hui_user> list = new ArrayList<hui_user>();
+
+        hui_userLoader loader = (hui_userLoader) LoaderManager.getInstance().getLoader(LoaderManager.hui_User);
+        for (logic.userdata.hui_user zz_huiyuan : loader.getCenterDate()) {
             if (zz_huiyuan.school.Get() == nianJi.get(0) && zz_huiyuan.grade.Get() == nianJi.get(1) && zz_huiyuan.banji.Get() == nianJi.get(2) && zz_huiyuan.RoleID.Get() != p_user.GetRoleGID()) {
                 list.add(zz_huiyuan);
             }
         }
-        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
-
-        buffer.Add((short) list.size());
-        for (zz_huiyuan hui : list) {
-            account[] data = DBMgr.ReadRoleIDData(hui.RoleID.Get(), new account());
-            account acc = new account();
-            if (data.length > 0) {
-                acc = data[0];
+        int isbegin = 1;
+        ArrayList<hui_user> huis = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            huis.add(list.get(i));
+            if (huis.size() > 30 || i == list.size() - 1) {
+                this.sendClass(huis, p_user, isbegin);
+                huis.clear();
+                isbegin = 0;
             }
+        }
+
+    }
+
+    public void sendClass(ArrayList<hui_user> list, MyUser p_user, int isbegin) {
+
+        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
+        buffer.Add(isbegin);
+
+        buffer.Add((short) (list.size() > 30 ? 30 : list.size()));
+        int i = ((short) (list.size() > 30 ? 30 : list.size()));
+        for (int i1 = 0; i1 < list.size(); i1++) {
+
+            hui_user hui = list.get(i1);
 
             buffer.Add(hui.RoleID.Get());  //id
             buffer.Add(hui.xm.Get());//姓名
-            buffer.Add(acc.portrait.Get());//头像ID
-            buffer.Add(CountGrade.getInstance().getnewLevel(acc.Garde.Get()));
-            buffer.Add(CountGrade.getInstance().getnewStar(acc.Garde.Get()));
-
+            buffer.Add(hui.portrait.Get() == 0 ? 1 : hui.portrait.Get());//头像ID
+            buffer.Add(CountGrade.getInstance().getnewLevel(hui.score.Get()));
+            buffer.Add(CountGrade.getInstance().getnewStar(hui.score.Get()));
             buffer.Add(hui.grade.Get());
             buffer.Add(hui.banji.Get());
-
-            buffer.Add(p_user.hasFriend(hui.RoleID.Get()));
+            buffer.Add(this.hasFriend(p_user.GetRoleGID(), hui.RoleID.Get()) ? 1 : 0);
             buffer.Add(hui.usertype.Get() == 1 ? 1 : 0);
+        }
+        buffer.Send(p_user);
 
-        } buffer.Send(p_user);
+    }
 
+    public  boolean hasFriend(long l, long get) {
+        String sql = "select * from  friends where roleid= %d and friendid=%d";
+        System.out.println(String.format(sql, l, get));
+        Friends[] friends = DBMgr.ReadSQL(new Friends(), String.format(sql, l, get));
+        Friends[] friend = DBMgr.ReadSQL(new Friends(), String.format(sql, get, l));
+
+        return friends.length > 0 || friend.length > 0;
     }
 
     public void addFriends(long l, long f_id) {
         DBMgr.ExecuteSQL(String.format(addFriends, l, f_id));
         DBMgr.ExecuteSQL(String.format(addFriends, f_id, l));
+    }
+
+
+    public boolean hasUser(String p_username, String p_password) {
+        String sql = "select * from zz_huiyuan where username='%s' and password='%s'";
+        zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), String.format(sql, p_username, p_password));
+        return zz_huiyuans.length > 0;
     }
 }

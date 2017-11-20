@@ -264,12 +264,12 @@ public class RoomImpl implements RoomInterface {
 
     @Override
     @RFC(ID = 34)
-    public void getFriendList(@PU(Index = Reg.ROOM) MyUser p_user) {
+    public void getFriendList(@PU(Index = Reg.ROOM) MyUser p_user, @PI int needChange) {
         // TODO Auto-generated method stub
         SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_FRIENDLIST);
         p_user.packFriends(p);
+        p.Add(needChange);
         p.Send(p_user);
-
     }
 
     @Override

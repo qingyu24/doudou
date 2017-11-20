@@ -41,25 +41,24 @@ public class CenterImpl implements CenterInterface {
         // TODO Auto-generated method stub
         MyUser user = UserManager.getInstance().getUser(m_friendID);
         Team team = TeamManager.getInstance().getTeam(p_teamID);
-        boolean s = roomID == 0 && team != null && !team.contain(m_friendID);
-        boolean b = (user.getRoomId() != roomID && roomID != 0);
+        if (user != null) {
+            boolean s = roomID == 0 && team != null && !team.contain(m_friendID);
+            boolean b = (user.getRoomId() != roomID && roomID != 0);
 
-        if (user != null && (b || s)) {
-            SendMsgBuffer p = PackBuffer
-                    .GetInstance()
-                    .Clear().AddID(Reg.CENTER, CenterInterface.MID_BROADCAST_INVITATION);
-            p.Add(p_ID);
-            p.Add(p_user.getTickName());
-            p.Add(p_user.getPortrait());// 玩家头像
-            p.Add(12);// 游戏时长
-            p.Add(p_teamID);
-            p.Add(roomID);
-            p.Add(ifFree);
-            p.Send(user);
+            if (user != null && (b || s)) {
+                SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER, CenterInterface.MID_BROADCAST_INVITATION);
+                p.Add(p_ID);
+                p.Add(p_user.getTickName());
+                p.Add(p_user.getPortrait());// 玩家头像
+                p.Add(12);// 游戏时长
+                p.Add(p_teamID);
+                p.Add(roomID);
+                p.Add(ifFree);
+                p.Send(user);
+            }
+
         }
-
     }
-
     @Override
     // 接受邀请 加入房间
     @RFC(ID = 4)

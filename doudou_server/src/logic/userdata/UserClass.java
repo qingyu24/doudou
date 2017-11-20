@@ -3,6 +3,7 @@ package logic.userdata;
 import core.db.DBFloat;
 import core.db.DBInt;
 import core.db.DBString;
+import core.detail.impl.socket.SendMsgBuffer;
 
 public class UserClass {
     /*    private DBString sheng;
@@ -19,7 +20,11 @@ public class UserClass {
         return "UserClass{" + "school=" + school + ", grade=" + grade + ", banji=" + banji + ", av_grade=" + av_grade + ", name=" + name.Get() + '}';
     }
 
-    public void packdate() {
-
+    public void packdate(SendMsgBuffer buffer) {
+        buffer.Add(school.Get());
+        buffer.Add(grade.Get());
+        buffer.Add(banji.Get());
+        buffer.Add(av_grade.Get());
+        buffer.Add(name.Get());
     }
 }

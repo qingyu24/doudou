@@ -12,14 +12,13 @@ import java.util.Map;
 
 public class LoaderManager {
 
-    public static String Users = "Users";
-    public static String Huiyuan = "huiyuan";
+/*    public static String Users = "Users";
+    public static String Huiyuan = "huiyuan";*/
     public static String zz_school = "zz_school";
     public static String zz_sheng2 = "zz_sheng2";
     public static String zz_shi2 = "zz_shi2";
-    public static String zz_qu2 = "zz_qu2";
-    public static String zz_usertype = "zz_usertype";
 
+    public static String hui_User = "hui_User";
 
 
 
@@ -33,34 +32,21 @@ public class LoaderManager {
         return _instance = new LoaderManager();
     }
 
- /*   public void loadAll() {
-	*//*	if(needBegin()){*//*
-        UserLoader users = new UserLoader(new account());
-    *//*    HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());*//*
-        shengLoader shengLoader = new shengLoader(new zz_sheng2());
-*//*        SchoolLoader schoolLoader = new SchoolLoader(new zz_school());
-        shengLoader shengLoader = new shengLoader(new zz_sheng2());
-        shiLoader shiLoader = new shiLoader(new zz_shi2());*//*
-        m_list.put(Users, users);
-    *//*    m_list.put(Huiyuan, huiyuan);*//*
-*//*        m_list.put(zz_school,schoolLoader);
-        m_list.put(zz_shi2,shiLoader);
-        m_list.put(zz_sheng2, shengLoader);*//*  m_list.put(zz_sheng2, shengLoader);
 
-
-*//*		}*//*
-    }*/
     public void loadAll() {
         shengLoader shengLoader = new shengLoader(new zz_sheng2());
         shiLoader shiLoader = new shiLoader(new zz_shi2());
         SchoolLoader schoolLoader = new SchoolLoader(new zz_school());
-        UserLoader users = new UserLoader(new account());
-        HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());
+        hui_userLoader huiUserLoader = new hui_userLoader(new hui_user());
+     /*   UserLoader users = new UserLoader(new account());
+        HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());*/
         m_list.put(zz_school,schoolLoader);
         m_list.put(zz_shi2,shiLoader);
         m_list.put(zz_sheng2, shengLoader);
-        m_list.put(Users, users);
-       m_list.put(Huiyuan, huiyuan);
+        m_list.put(hui_User, huiUserLoader);
+
+/*        m_list.put(Users, users);
+       m_list.put(Huiyuan, huiyuan);*/
 
     }
 
@@ -88,7 +74,7 @@ public class LoaderManager {
 
 
 
-    public void setRoleID() {
+/*    public void setRoleID() {
 
         String add_roleID = "update zz_huiyuan set RoleID=%d where id=%d";
         HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
@@ -111,6 +97,6 @@ public class LoaderManager {
                 DBMgr.ExecuteSQL(String.format(add_roleID, userID, zzHuiyuan.id.Get()));
             }
         }
-    }
+    }*/
 }
 

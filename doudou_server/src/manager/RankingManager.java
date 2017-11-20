@@ -1,13 +1,14 @@
 package manager;
 
 import core.DBMgr;
+import logic.MyUser;
 import logic.userdata.UserClass;
-
-import java.util.ArrayList;
+import logic.userdata.hui_user;
 
 
 public class RankingManager {
     private static RankingManager instance;
+
 
     public static RankingManager getInstance() {
 
@@ -18,18 +19,26 @@ public class RankingManager {
 
     }
 
-    public ArrayList getRankingByClass() {
-        new ArrayList<>();
-//在所有班级的排名
-        String allClass = "SELECT b.school,b.grade,b.banji,avg(a.Garde) AS av_grade,c.SchoolName AS name FROM account AS a ,zz_huiyuan AS  b ,zz_school AS c WHERE a.RoleID=b.RoleID AND b.school=c.id GROUP BY b.banji ,b.school,b.grade  ORDER BY avg(a.Garde) DESC";
-        UserClass[] classes = DBMgr.ReadSQL(new UserClass(), allClass);
-//班级在学校排名
-        String inSchool="";
+    public UserClass[] getRankingByClass(int type, MyUser p_user) {
+
+        String all = "SELECT * FROM class";
+        String inSchool = "select * from class Where school = " + p_user.getSchool();
+        switch (type) {
+            case 1:
+                return DBMgr.ReadSQL(new UserClass(), all);
+            case 2:
+                return DBMgr.ReadSQL(new UserClass(), inSchool);
+
+        }
 
         return null;
     }
 
 
+ /*   public hui_user getRankingPerson() {
+
+
+    }*/
 }
 
 

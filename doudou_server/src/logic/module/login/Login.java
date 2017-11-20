@@ -23,6 +23,7 @@ import logic.module.login.LoginRecord.LoginState;
 import logic.sqlrun.LoginSQLRun;
 import manager.ConfigManager;
 import manager.LoaderManager;
+import manager.UserManager;
 import utility.Debug;
 import utility.LegalityCheck;
 import utility.Pair;
@@ -601,8 +602,8 @@ public class Login implements LoginInterface, Tick {
                 r.GetState() == LoginState.LOGIN_CREATEFINISH) {
             if (r.GetLoginUseTime() > m_WaitLoginTime) {
                 eLoginDebugLogType.REPLACE.Log(p_user);
-                HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
-                boolean isRight = loader.hasUser(p_username, p_password);
+                /*HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);*/
+                boolean isRight = UserManager.getInstance().hasUser(p_username, p_password);
 
                 //TODO 实际情况是在某些情况下客户端断开,服务器并不清楚.需要在连接那添加一个不断用来ping的包来测试断开问题.这样就导致这个号重新上的时候还能发现登陆数据
                 return _KillOpposite(p_user, isRight);
@@ -617,8 +618,7 @@ public class Login implements LoginInterface, Tick {
                     return false;
                 } else {
                     eLoginDebugLogType.REPLACE.Log(p_user);
-                    HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
-                    boolean isRight = loader.hasUser(p_username, p_password);
+                    boolean isRight = UserManager.getInstance().hasUser(p_username, p_password);
                     System.out.println(" 另外一个用户:" + p_user.hashCode() + " 想挤掉用户:" + r.GetHashCode() + ",正在执行!!!");
 					/*return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);*/
                     return _KillOpposite(p_user, isRight);
@@ -633,8 +633,7 @@ public class Login implements LoginInterface, Tick {
                 return false;
             } else {
                 eLoginDebugLogType.REPLACE.Log(p_user);
-                HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
-                boolean isRight = loader.hasUser(p_username, p_password);
+                boolean isRight = UserManager.getInstance().hasUser(p_username, p_password);
                 System.out.println(" 另外一个用户:" + p_user.hashCode() + " 想挤掉用户:" + r.GetHashCode() + ",正在执行!!!");
 			/*	return _KillOpposite((MyUser) Root.GetInstance().GetUserByUserName(p_username), isRight);*/
                 return _KillOpposite(p_user, isRight);
