@@ -10,35 +10,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fc586b2-16ab-4a42-bb76-161bd3edcdbd" name="Default" comment="beifne">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/server_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/MyUser.class" afterPath="$PROJECT_DIR$/bin/logic/MyUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/module/login/Login.class" afterPath="$PROJECT_DIR$/bin/logic/module/login/Login.class" />
+    <list default="true" id="8fc586b2-16ab-4a42-bb76-161bd3edcdbd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/userdata/account.class" afterPath="$PROJECT_DIR$/bin/logic/userdata/account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/userdata/handler/PlayerCenterData$PlayerSqlRun.class" afterPath="$PROJECT_DIR$/bin/logic/userdata/handler/PlayerCenterData$PlayerSqlRun.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/userdata/handler/PlayerCenterData.class" afterPath="$PROJECT_DIR$/bin/logic/userdata/handler/PlayerCenterData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/logic/userdata/zz_huiyuan.class" afterPath="$PROJECT_DIR$/bin/logic/userdata/zz_huiyuan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/manager/LoaderManager.class" afterPath="$PROJECT_DIR$/bin/manager/LoaderManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/manager/UserManager.class" afterPath="$PROJECT_DIR$/bin/manager/UserManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ConnectionManager.cs" afterPath="$PROJECT_DIR$/_ConnectionManager.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log.txt" afterPath="$PROJECT_DIR$/log/log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/MyUser.java" afterPath="$PROJECT_DIR$/src/logic/MyUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" afterPath="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/loader/shengLoader.java" afterPath="$PROJECT_DIR$/src/logic/loader/shengLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/loader/shiLoader.java" afterPath="$PROJECT_DIR$/src/logic/loader/shiLoader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/account.java" afterPath="$PROJECT_DIR$/src/logic/userdata/account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java" afterPath="$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java" afterPath="$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" afterPath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/LoaderManager.java" afterPath="$PROJECT_DIR$/src/manager/LoaderManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/RankingManager.java" afterPath="$PROJECT_DIR$/src/manager/RankingManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/UserManager.java" afterPath="$PROJECT_DIR$/src/manager/UserManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RFCFn.java" afterPath="$PROJECT_DIR$/test/test/robot/RFCFn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java" afterPath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java" />
@@ -84,27 +65,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="zz_huiyuan.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="188" column="35" lean-forward="true" selection-start-line="188" selection-start-column="35" selection-end-line="188" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="89" column="2" lean-forward="true" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+            <state relative-caret-position="361">
+              <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
               <folding>
-                <marker date="1510915376493" expanded="true" signature="924:1192" ph="{...}" />
-                <marker date="1510915376493" expanded="true" signature="1239:1243" ph="{}" />
-                <marker date="1510915376493" expanded="true" signature="1398:1536" ph="SELECT b.sch... account" />
-                <marker date="1510915376493" expanded="true" signature="1557:1736" ph="SELECT b.sch... account" />
-                <marker date="1510915376493" expanded="true" signature="1988:2222" ph="SELECT b.sch... account" />
+                <marker date="1510915376493" expanded="true" signature="924:1178" ph="{...}" />
+                <marker date="1510915376493" expanded="true" signature="1225:1229" ph="{}" />
+                <marker date="1510915376493" expanded="true" signature="1384:1522" ph="SELECT b.sch... account" />
+                <marker date="1510915376493" expanded="true" signature="1543:1722" ph="SELECT b.sch... account" />
+                <marker date="1510915376493" expanded="true" signature="1974:2208" ph="SELECT b.sch... account" />
               </folding>
             </state>
           </provider>
@@ -113,12 +84,22 @@
       <file leaf-file-name="CenterDateImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="426">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
-                <marker date="1510909828888" expanded="true" signature="5275:5333" ph="UPDATE accou... " />
-                <marker date="1510909828888" expanded="true" signature="5497:5551" ph="UPDATE accou... " />
+                <marker date="1511148388008" expanded="true" signature="5279:5337" ph="UPDATE accou... " />
+                <marker date="1511148388008" expanded="true" signature="5501:5555" ph="UPDATE accou... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CenterDateInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,10 +117,32 @@
       <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="172">
+              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding>
-                <element signature="e#3150#3158#0" expanded="true" />
+                <element signature="e#3219#3231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountGrade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/userdata/CountGrade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoaderManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+              <folding>
+                <marker date="1511146755653" expanded="true" signature="3235:3288" ph="SELECT * FRO... zz_huiyuan" />
               </folding>
             </state>
           </provider>
@@ -148,18 +151,9 @@
       <file leaf-file-name="PlayerCenterData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="177">
+              <caret line="148" column="43" lean-forward="true" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account" pinned="false" current-in-tab="false">
-        <entry file="das://table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.account">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -167,10 +161,10 @@
       <file leaf-file-name="MyUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="123" column="45" lean-forward="true" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+            <state relative-caret-position="202">
+              <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
               <folding>
-                <marker date="1510910315323" expanded="true" signature="9973:10039" ph="update accou... " />
+                <marker date="1511148525476" expanded="true" signature="9958:10024" ph="update accou... " />
               </folding>
             </state>
           </provider>
@@ -179,23 +173,11 @@
       <file leaf-file-name="account.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/userdata/account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+            <state relative-caret-position="51">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <marker date="1510915919188" expanded="true" signature="912:939" ph="UPDATE accou... " />
                 <marker date="1510915919188" expanded="true" signature="912:966" ph="UPDATE accou... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/userdata/UserClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -244,7 +226,6 @@
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/MySQLDBReader.class" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLOper.class" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLUpdateOper.class" />
-        <option value="$PROJECT_DIR$/src/manager/UserManager.java" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/LogicMgrImpl.class" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/DBReader.class" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/mysql/oper/MySQLInserOper.class" />
@@ -253,18 +234,20 @@
         <option value="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/timer/TickEvent.class" />
         <option value="$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/TimerMgrImpl.class" />
-        <option value="$PROJECT_DIR$/src/manager/LoaderManager.java" />
         <option value="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
         <option value="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
-        <option value="$PROJECT_DIR$/src/logic/MyUser.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/06ed4b76-a32a-4ff7-990c-ffa8be82820a/console.sql" />
         <option value="$PROJECT_DIR$/src/manager/RankingManager.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java" />
         <option value="$PROJECT_DIR$/src/test/manager/UserManagerTest.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/account.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
+        <option value="$PROJECT_DIR$/src/manager/LoaderManager.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" />
+        <option value="$PROJECT_DIR$/src/logic/MyUser.java" />
+        <option value="$PROJECT_DIR$/src/manager/UserManager.java" />
       </list>
     </option>
   </component>
@@ -275,10 +258,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
+    <option name="x" value="1671" />
     <option name="y" value="-9" />
-    <option name="width" value="1698" />
-    <option name="height" value="1018" />
+    <option name="width" value="1458" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -296,10 +279,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,6 +313,12 @@
               <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,6 +343,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -558,7 +547,8 @@
       <workItem from="1510897939517" duration="13043000" />
       <workItem from="1510911105089" duration="264000" />
       <workItem from="1510911451444" duration="154000" />
-      <workItem from="1510911901804" duration="4478000" />
+      <workItem from="1510911901804" duration="4989000" />
+      <workItem from="1511144173982" duration="5108000" />
     </task>
     <task id="LOCAL-00001" summary="beifne">
       <created>1510890963950</created>
@@ -574,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510895592747</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="beifne">
+      <created>1510916421288</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510916421288</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -610,7 +607,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21712000" />
+    <option name="totallyTimeSpent" value="27331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,7 +619,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1698" height="1018" extended-state="6" />
+    <frame x="1671" y="-9" width="1458" height="878" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32600734" sideWeight="0.48891625" order="6" side_tool="false" content_ui="tabs" />
@@ -636,22 +633,22 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32478634" sideWeight="0.48583743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32600734" sideWeight="0.4796798" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13238916" sideWeight="0.41200545" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11884236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2735043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28901735" sideWeight="0.41200545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10982659" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2893773" sideWeight="0.8288177" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22827688" sideWeight="0.8288177" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12007389" sideWeight="0.5879945" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2735043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -696,18 +693,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java</url>
-          <line>121</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java</url>
-          <line>124</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java</url>
           <line>74</line>
@@ -717,18 +702,11 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/utility/Debug.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$JAR_LOC$/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -862,14 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/META-INFs/MANIFEST.MF" />
     <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -954,7 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,7 +931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="118" column="57" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="118" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,7 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="234" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,14 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="34" column="74" lean-forward="false" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.account">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1007,62 +966,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://src:table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.zz_huiyuan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="17" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3477">
+          <caret line="188" column="35" lean-forward="false" selection-start-line="188" selection-start-column="35" selection-end-line="188" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/userdata/UserClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="95">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://src:table:/624d94b6/06ed4b76-a32a-4ff7-990c-ffa8be82820a/qiuqiu.zz_huiyuan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="17" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="188" column="35" lean-forward="true" selection-start-line="188" selection-start-column="35" selection-end-line="188" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="89" column="2" lean-forward="true" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+        <state relative-caret-position="361">
+          <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
           <folding>
-            <marker date="1510915376493" expanded="true" signature="924:1192" ph="{...}" />
-            <marker date="1510915376493" expanded="true" signature="1239:1243" ph="{}" />
-            <marker date="1510915376493" expanded="true" signature="1398:1536" ph="SELECT b.sch... account" />
-            <marker date="1510915376493" expanded="true" signature="1557:1736" ph="SELECT b.sch... account" />
-            <marker date="1510915376493" expanded="true" signature="1988:2222" ph="SELECT b.sch... account" />
+            <marker date="1510915376493" expanded="true" signature="924:1178" ph="{...}" />
+            <marker date="1510915376493" expanded="true" signature="1225:1229" ph="{}" />
+            <marker date="1510915376493" expanded="true" signature="1384:1522" ph="SELECT b.sch... account" />
+            <marker date="1510915376493" expanded="true" signature="1543:1722" ph="SELECT b.sch... account" />
+            <marker date="1510915376493" expanded="true" signature="1974:2208" ph="SELECT b.sch... account" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding>
-            <marker date="1510915919188" expanded="true" signature="912:939" ph="UPDATE accou... " />
-            <marker date="1510915919188" expanded="true" signature="912:966" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,33 +1013,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <marker date="1510915919188" expanded="true" signature="912:939" ph="UPDATE accou... " />
+            <marker date="1510915919188" expanded="true" signature="912:966" ph="UPDATE accou... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="426">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
-            <marker date="1510909828888" expanded="true" signature="5275:5333" ph="UPDATE accou... " />
-            <marker date="1510909828888" expanded="true" signature="5497:5551" ph="UPDATE accou... " />
+            <marker date="1511148388008" expanded="true" signature="5279:5337" ph="UPDATE accou... " />
+            <marker date="1511148388008" expanded="true" signature="5501:5555" ph="UPDATE accou... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="123" column="45" lean-forward="true" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+        <state relative-caret-position="202">
+          <caret line="120" column="16" lean-forward="false" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
           <folding>
-            <marker date="1510910315323" expanded="true" signature="9973:10039" ph="update accou... " />
+            <marker date="1511148525476" expanded="true" signature="9958:10024" ph="update accou... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CountGrade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+          <folding>
+            <marker date="1511146755653" expanded="true" signature="3235:3288" ph="SELECT * FRO... zz_huiyuan" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="148" column="43" lean-forward="true" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="172">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <element signature="e#3150#3158#0" expanded="true" />
+            <element signature="e#3219#3231#0" expanded="true" />
           </folding>
         </state>
       </provider>

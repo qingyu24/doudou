@@ -2,24 +2,19 @@ package test.robot;
 
 public class RFCFnTest
 {
-	public static void Login_Log(Robot r, String p_sLog)
-	{
-		r.GetSendBuffer().Clear().AddID(0,61).Add(p_sLog).Send(r.GetLink());
-	}
-
 	public static void Login_SQLLog(Robot r)
 	{
 		r.GetSendBuffer().Clear().AddID(0,62).Send(r.GetLink());
 	}
 
+	public static void Login_Log(Robot r, String p_sLog)
+	{
+		r.GetSendBuffer().Clear().AddID(0,61).Add(p_sLog).Send(r.GetLink());
+	}
+
 	public static void Login_LoadByUserName(Robot r, String p_user1, String psd)
 	{
 		r.GetSendBuffer().Clear().AddID(0,63).Add(p_user1).Add(psd).Send(r.GetLink());
-	}
-
-	public static void Login_Echo(Robot r, int p_nHashcode, String p_sInfo)
-	{
-		r.GetSendBuffer().Clear().AddID(0,57).Add(p_nHashcode).Add(p_sInfo).Send(r.GetLink());
 	}
 
 	public static void Login_EchoReceive(Robot r, int p_nHashcode, String p_sInfo)
@@ -45,6 +40,11 @@ public class RFCFnTest
 	public static void Login_RunEmptySQL(Robot r, int p_nHashcode, int p_nNum)
 	{
 		r.GetSendBuffer().Clear().AddID(0,58).Add(p_nHashcode).Add(p_nNum).Send(r.GetLink());
+	}
+
+	public static void Login_Echo(Robot r, int p_nHashcode, String p_sInfo)
+	{
+		r.GetSendBuffer().Clear().AddID(0,57).Add(p_nHashcode).Add(p_sInfo).Send(r.GetLink());
 	}
 
 }

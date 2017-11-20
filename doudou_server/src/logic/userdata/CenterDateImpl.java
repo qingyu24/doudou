@@ -32,7 +32,9 @@ public class CenterDateImpl implements CenterDateInterface {
             buffer.Send(user);
         } else {
             //如果玩家不在线或者已经是好友返回错误信息
+
         }
+
     }
 
     @Override
@@ -109,6 +111,8 @@ public class CenterDateImpl implements CenterDateInterface {
         p_user.packDate(buffer);
         buffer.Add(message);
         buffer.Send(user);
+
+
     }
 
     /**

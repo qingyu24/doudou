@@ -54,10 +54,13 @@ public class LoaderManager {
         shengLoader shengLoader = new shengLoader(new zz_sheng2());
         shiLoader shiLoader = new shiLoader(new zz_shi2());
         SchoolLoader schoolLoader = new SchoolLoader(new zz_school());
+        UserLoader users = new UserLoader(new account());
+        HuiyuanLoader huiyuan = new HuiyuanLoader(new zz_huiyuan());
         m_list.put(zz_school,schoolLoader);
         m_list.put(zz_shi2,shiLoader);
         m_list.put(zz_sheng2, shengLoader);
-
+        m_list.put(Users, users);
+       m_list.put(Huiyuan, huiyuan);
 
     }
 

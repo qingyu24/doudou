@@ -339,12 +339,12 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         buffer.Send(this);
     }
 
-    public int hasFriend(MyUser myUser) {
+    public int hasFriend(Long roleID) {
         // TODO Auto-generated method stub
         Iterator<MyUser> it = this.friends.iterator();
         while (it.hasNext()) {
             MyUser myUser2 = (MyUser) it.next();
-            if (myUser.GetRoleGID() == myUser2.GetRoleGID()) {
+            if (roleID == myUser2.GetRoleGID()) {
                 return 1;
             }
         }

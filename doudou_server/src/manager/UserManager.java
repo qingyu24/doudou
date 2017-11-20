@@ -7,6 +7,8 @@ import logic.PackBuffer;
 import logic.Reg;
 import logic.loader.HuiyuanLoader;
 import logic.userdata.CenterDateInterface;
+import logic.userdata.CountGrade;
+import logic.userdata.account;
 import logic.userdata.zz_huiyuan;
 
 import java.util.ArrayList;
@@ -100,36 +102,37 @@ public class UserManager {
     public void getClassmates(MyUser p_user) {
         // TODO Auto-generated method stub
         List<Integer> nianJi = p_user.getNianJi();
-        ArrayList<MyUser> list = new ArrayList<MyUser>();
+        ArrayList<zz_huiyuan> list = new ArrayList<zz_huiyuan>();
 
-        for (MyUser user : users) {
-            List<Integer> nianJi2 = user.getNianJi();
-            if (nianJi.equals(nianJi2) && p_user.GetRoleGID() != user.GetRoleGID()) {
-                list.add(user);
-
+        HuiyuanLoader loader = (HuiyuanLoader) LoaderManager.getInstance().getLoader(LoaderManager.Huiyuan);
+        for (logic.userdata.zz_huiyuan zz_huiyuan : loader.getCenterDate()) {
+            if (zz_huiyuan.school.Get() == nianJi.get(0) && zz_huiyuan.grade.Get() == nianJi.get(1) && zz_huiyuan.banji.Get() == nianJi.get(2) && zz_huiyuan.RoleID.Get() != p_user.GetRoleGID()) {
+                list.add(zz_huiyuan);
             }
         }
-      /*  String sql="SELECT * FROM zz_huiyuan WHERE school=%d AND  grade=%d AND banji=%d;";
-        zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), String.format(sql,nianJi.get(0),nianJi.get(1),nianJi.get(2)));
-
-        for (zz_huiyuan zz_huiyuan : zz_huiyuans) {
-
-
-        }*/
-
-        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
-                .AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
+        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_CLASS);
 
         buffer.Add((short) list.size());
-        for (MyUser myUser : list) {
+        for (zz_huiyuan hui : list) {
+            account[] data = DBMgr.ReadRoleIDData(hui.RoleID.Get(), new account());
+            account acc = new account();
+            if (data.length > 0) {
+                acc = data[0];
+            }
 
-            myUser.packDate(buffer);
-            buffer.Add(p_user.hasFriend(myUser));
-            buffer.Add(myUser.isTeacher());
-            int teacher = myUser.isTeacher();
-            System.out.println(teacher+"是不是老师");
-        }
-        buffer.Send(p_user);
+            buffer.Add(hui.RoleID.Get());  //id
+            buffer.Add(hui.xm.Get());//姓名
+            buffer.Add(acc.portrait.Get());//头像ID
+            buffer.Add(CountGrade.getInstance().getnewLevel(acc.Garde.Get()));
+            buffer.Add(CountGrade.getInstance().getnewStar(acc.Garde.Get()));
+
+            buffer.Add(hui.grade.Get());
+            buffer.Add(hui.banji.Get());
+
+            buffer.Add(p_user.hasFriend(hui.RoleID.Get()));
+            buffer.Add(hui.usertype.Get() == 1 ? 1 : 0);
+
+        } buffer.Send(p_user);
 
     }
 

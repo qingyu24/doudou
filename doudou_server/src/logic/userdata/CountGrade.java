@@ -22,6 +22,17 @@ public class CountGrade {
 
     }
 
+    public CountGrade() {
+    }
+
+    private  static CountGrade instance;
+
+    public static CountGrade getInstance() {
+        if(instance==null){
+            instance=new CountGrade();
+        }
+        return instance;
+    }
     public int getM_score() {
         return m_score;
     }
@@ -99,6 +110,7 @@ public class CountGrade {
             this.m_level = eGrade.CHAOSHEN;
             this.m_star = score + 1 - 57;
         }
+
     }
 
     public void endPack(SendMsgBuffer buffer) {
@@ -112,6 +124,7 @@ public class CountGrade {
         buffer.Add(this.m_star);
 
     }
+
 
     public boolean storeChange(int ranking) {
 
@@ -158,6 +171,15 @@ public class CountGrade {
 
     }
 
+   public  int getnewLevel(int score){
+        this.setLevel(score);
+        return this.m_level.ID();
+   }
+
+    public  int getnewStar(int score){
+        this.setLevel(score);
+        return this.m_star;
+    }
     // 进入房间时候记录下初始数据
     public void enterRoom() {
         // TODO Auto-generated method stub
