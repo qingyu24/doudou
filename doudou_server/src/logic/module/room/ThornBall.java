@@ -1,6 +1,8 @@
 package logic.module.room;
 
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.LogRecord;
+import logic.LogRecords;
 
 public class ThornBall {
     private int thId;
@@ -9,7 +11,7 @@ public class ThornBall {
     private int weight;
 
     public ThornBall(int thId) {
-
+        LogRecord.Log("新生成刺球"+thId);
         this.thId = thId;
         this.xpos = (int) (-100000 + Math.random() * 200000);
         this.ypos = (int) (-100000 + Math.random() * 200000);

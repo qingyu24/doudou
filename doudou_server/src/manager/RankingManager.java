@@ -23,12 +23,14 @@ public class RankingManager {
 
         String all = "SELECT * FROM class";
         String inSchool = "select * from class Where school = " + p_user.getSchool();
+        String inshi = "select * from class Where shi2 = " + p_user.getCenterData().getM_huiyuan().shi2.Get();
         switch (type) {
             case 1:
                 return DBMgr.ReadSQL(new UserClass(), all);
             case 2:
+             return  DBMgr.ReadSQL(new UserClass(),inshi);
+            case 3:
                 return DBMgr.ReadSQL(new UserClass(), inSchool);
-
         }
 
         return null;

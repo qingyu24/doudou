@@ -20,7 +20,7 @@ public interface RoomInterface {
     static final int MID_BODY_QIUPLACE = 19; // 吐出来的球的位置信息;
     static final int MID_BROADCAST_MOVE = 8; // 广播移动;
     static final int MID_BROADCAST_EAT = 9; // 广播吃;
-    static final int MID_BROADCAST_INIT = 10; // 广播初始化;
+    static final int MID_BROADCAST_DEATH = 10; // 玩家死亡;
     static final int MID_BROADCAST_SPLIT = 11; // 广播分离;
     static final int MID_BROADCAST_COMPOSE = 12; // 广播合并;
     static final int MID_BROADCAST_QIU = 18; // 广播吐球;
@@ -44,6 +44,8 @@ public interface RoomInterface {
     static final int MID_ROOM_FRIENDLIST = 34; // 請求獲取好友列表
     static final int MID_ROOM_Dissolution = 35; // 解散房间
     static final int MID_ROOM_LEAVE = 36; // 离开房间房间
+    static final int MID_ROOM_VISIT = 37; // 观战
+
 
     @RFC(ID = MID_ENTER)
     void EnterRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID,
@@ -108,5 +110,8 @@ public interface RoomInterface {
 
     @RFC(ID = MID_ROOM_LEAVE)
     void leaveRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
+
+    @RFC(ID = MID_ROOM_VISIT)
+    void visitGame(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
 
 }

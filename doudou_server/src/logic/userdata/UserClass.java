@@ -21,10 +21,11 @@ public class UserClass {
     }
 
     public void packdate(SendMsgBuffer buffer) {
-        buffer.Add(school.Get());
+        buffer.Add(name.Get());
         buffer.Add(grade.Get());
         buffer.Add(banji.Get());
-        buffer.Add(av_grade.Get());
-        buffer.Add(name.Get());
+  /*      buffer.Add(av_grade.Get());*/
+
+
     }
 }

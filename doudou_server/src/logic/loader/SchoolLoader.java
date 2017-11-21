@@ -35,7 +35,7 @@ public class SchoolLoader extends DBLoaderEx<zz_school> {
                 return m_data.SchoolName.Get();
             }
         }
-        return "δ֪";
+        return "未知֪";
     }
     @Override
     public void OnTick(long p_lTimerID) throws Exception {

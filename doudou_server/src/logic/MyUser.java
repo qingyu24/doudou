@@ -309,8 +309,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
             while (it.hasNext()) {
                 MyUser myUser = (MyUser) it.next();
                 myUser.packDate(p);
-             /*   p.Add(myUser.getCenterData().getM_huiyuan().grade.Get());
-                p.Add(myUser.getCenterData().getM_huiyuan().banji.Get());*/
+
             }
         }
     }
@@ -374,7 +373,9 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
     public boolean buyShopping(long friendID, int giftID, int price) {
         this.setMoney(-price);
-        return DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID, System.currentTimeMillis(), price));
+        boolean b = DBMgr.ExecuteSQL("UPDATE account set money= " + this.GetMoney() + " WHENEVER roleid=" + this.GetRoleGID());
+        boolean b1 = DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID, System.currentTimeMillis(), price));
+        return b && b1;
     }
 
     public void sendSucess(int msg, int i) {
@@ -411,7 +412,8 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
         return list;
     }
-    public  int getSkin(){
+
+    public int getSkin() {
         return this.m_center.getM_account().Skin.Get();
     }
 }

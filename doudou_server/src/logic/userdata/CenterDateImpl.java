@@ -61,12 +61,20 @@ public class CenterDateImpl implements CenterDateInterface {
 
     @Override
     @RFC(ID = 5)
-    public void givePresent(@PU MyUser p_user, @PL long friendID, @PI int giftID, @PI int price) {
+    public void givePresent(@PU MyUser p_user, @PL long friendID, @PI int giftID, @PI int price, @PS String name) {
         // TODO Auto-generated method stub
         if (p_user.GetMoney() >= price) {
             p_user.buyShopping(friendID, giftID, price);
             MyUser user = UserManager.getInstance().getUser(friendID);
+            if (user != null) {
+                SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_SHOP_PRESENT);
+                p_user.packDate(p);
+                p.Add(giftID);
+                p.Add(price);
+                p.Add(name);
+                p.Send(user);
 
+            }
 
         } else {
             //金币不足购买
@@ -143,15 +151,21 @@ public class CenterDateImpl implements CenterDateInterface {
 
         switch (list_type) {
             case 1://班级所有
-                list = RankingManager.getInstance().getRankingByClass(list_type, p_user);
-            case 2://班级在学校
-                list = RankingManager.getInstance().getRankingByClass(list_type, p_user);
+
+            case 2://班级在市
+
+            case 3: //班级在学校
 
         }
+        list = RankingManager.getInstance().getRankingByClass(list_type, p_user);
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_RANKING_CLASS);
+
         buffer.Add(list_type);
-        buffer.Add((short) list.length);
+
+        buffer.Add((short) (list.length>30?30:list.length));
+        int i=0;
         for (UserClass userClass : list) {
+            if(i++>30) break;
             userClass.packdate(buffer);
         }
         buffer.Send(p_user);
@@ -194,15 +208,22 @@ public class CenterDateImpl implements CenterDateInterface {
     @Override
     @RFC(ID = 11)
     public void searchUser(@PU MyUser p_user, @PS String UserName) {
-
-
+        ArrayList<MyUser> users = UserManager.getInstance().searchByName(UserName);
+        SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_USER_SEARCH);
+        buffer.Add((short) users.size());
+        for (MyUser user : users) {
+            user.packDate(buffer);
+        }
+        buffer.Send(p_user);
     }
 
     @Override
     @RFC(ID = 12)
     public void rankingPerson(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
+
+        //1 all   2school  3 class
         hui_userLoader loader = (hui_userLoader) LoaderManager.getInstance().getLoader(LoaderManager.hui_User);
-        loader.sendRaning_All(list_type,p_user);
+        loader.sendRaning_All(list_type, p_user);
 
     }
 

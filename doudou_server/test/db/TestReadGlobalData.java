@@ -8,9 +8,12 @@ import core.DBLoaderEx;
 /**
  * @author ddoq
  * @version 1.0.0
+ *
  */
-public class TestReadGlobalData extends DBLoaderEx<TestGlobalData> {
-    protected TestReadGlobalData() {
-        super(new TestGlobalData(), false);
-    }
+public class TestReadGlobalData extends DBLoaderEx<TestGlobalData>
+{
+	protected TestReadGlobalData()
+	{
+		super(new TestGlobalData(), false);
+	}
 }

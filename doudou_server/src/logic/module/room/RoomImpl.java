@@ -294,4 +294,10 @@ public class RoomImpl implements RoomInterface {
         }
 
     }
+
+    @Override
+    @RFC(ID = 37)
+    public void visitGame(@PU MyUser p_user,@PI  int roomID) {
+
+    }
 }

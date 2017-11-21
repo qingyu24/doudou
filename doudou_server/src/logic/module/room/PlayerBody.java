@@ -1,6 +1,7 @@
 package logic.module.room;
 
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.LogRecords;
 
 public class PlayerBody {
 
@@ -21,6 +22,10 @@ public class PlayerBody {
         m_weight = 10;
         m_angle = 0;
 /*		LogRecord.Log("chushihua坐标"+m_xpos+"/t"+m_ypos);*/
+    }
+
+    public PlayerBody(Integer integer) {
+        m_id = integer;
     }
 
     public void packData(SendMsgBuffer buffer) {
@@ -57,6 +62,9 @@ public class PlayerBody {
         this.m_yspeed = m_yspeed;
         this.m_weight = m_weight;
         this.m_angle = m_angle;
+        if(m_weight==0){
+            LogRecords.Log(null,"收到体重为空");
+        }
 
 
     }
@@ -107,6 +115,9 @@ public class PlayerBody {
 
     public void setM_weight(int m_weight) {
         this.m_weight = m_weight;
+        if(m_weight==0){
+            LogRecords.Log(null,"收到体重为空");
+        }
     }
 
     public boolean near(PlayerBody b2) {

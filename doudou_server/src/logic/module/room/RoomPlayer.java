@@ -1,6 +1,9 @@
 package logic.module.room;
 
+import core.Root;
+import core.Tick;
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.LogRecords;
 import logic.MyUser;
 import logic.eGameType;
 import logic.userdata.CountGrade;
@@ -13,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class RoomPlayer implements Comparable<RoomPlayer> {
+public class RoomPlayer implements Comparable<RoomPlayer> , Tick {
 
     private ArrayList<PlayerBody> playbodylist;
     private HashMap<Integer, PlayerBody> playbodyMap;
@@ -28,6 +31,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
     private int coin;// 本局获得金币数目
     private int teamID;
     private int Skin; // 皮肤
+    private long  m_timeid ;
 /*	private int teamName;*/
     /* private CountGrade grade; */
 
@@ -63,6 +67,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
         user.getGrade().enterRoom();
         teamID = 0;
         Skin = 0;
+        m_timeid = Root.GetInstance().AddLoopMilliTimer(this, 1000, null);
         /*teamName = 0;*/
     }
 
@@ -183,7 +188,6 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 
     public void updatePlace(ArrayList<Integer> list) {
         // TODO Auto-generated method stub
-
         int num = list.size() / 7;
         while (playbodylist.size() < num && playbodylist.size() != 0) {
             PlayerBody pdo = playbodylist.get(0);
@@ -196,9 +200,13 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
             // 避免数组越界
             if (list.size() >= i * 7 + 7) {
                 PlayerBody pb = playbodyMap.get(list.get(i * 7 + 0));
+                if(pb==null)
+                   pb= new PlayerBody(list.get(i*7+0));
+
                 if (pb != null) {
                     pb.updatePosition(list.get(i * 7 + 1), list.get(i * 7 + 2), list.get(i * 7 + 3),
                             list.get(i * 7 + 4), list.get(i * 7 + 5), list.get(i * 7 + 6));
+
                 }
             }
         }
@@ -321,6 +329,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
         buffer.Add(this.m_user.getSchool());
         buffer.Add(eatNum);
         buffer.Add(this.getWeight());
+        LogRecords.Log(null,"现在体重"+this.getWeight());
         buffer.Add(this.EarnMoney(this.getRanking()));// 获得金币
         buffer.Add(this.getTeamName());
         buffer.Add(this.getRanking());
@@ -387,4 +396,12 @@ public class RoomPlayer implements Comparable<RoomPlayer> {
 
     }
 
+    @Override
+    public void OnTick(long l) throws Exception {
+
+
+    }
+    public void destroy() {
+        Root.GetInstance().RemoveTimer(this.m_timeid);
+    }
 }

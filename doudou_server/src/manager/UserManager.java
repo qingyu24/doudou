@@ -105,7 +105,7 @@ public class UserManager {
 
         hui_userLoader loader = (hui_userLoader) LoaderManager.getInstance().getLoader(LoaderManager.hui_User);
         for (logic.userdata.hui_user zz_huiyuan : loader.getCenterDate()) {
-            if (zz_huiyuan.school.Get() == nianJi.get(0) && zz_huiyuan.grade.Get() == nianJi.get(1) && zz_huiyuan.banji.Get() == nianJi.get(2) && zz_huiyuan.RoleID.Get() != p_user.GetRoleGID()) {
+            if (zz_huiyuan.schoolID.Get() == nianJi.get(0) && zz_huiyuan.grade.Get() == nianJi.get(1) && zz_huiyuan.banji.Get() == nianJi.get(2) && zz_huiyuan.RoleID.Get() != p_user.GetRoleGID()) {
                 list.add(zz_huiyuan);
             }
         }
@@ -147,7 +147,7 @@ public class UserManager {
 
     }
 
-    public  boolean hasFriend(long l, long get) {
+    public boolean hasFriend(long l, long get) {
         String sql = "select * from  friends where roleid= %d and friendid=%d";
         System.out.println(String.format(sql, l, get));
         Friends[] friends = DBMgr.ReadSQL(new Friends(), String.format(sql, l, get));
@@ -166,5 +166,15 @@ public class UserManager {
         String sql = "select * from zz_huiyuan where username='%s' and password='%s'";
         zz_huiyuan[] zz_huiyuans = DBMgr.ReadSQL(new zz_huiyuan(), String.format(sql, p_username, p_password));
         return zz_huiyuans.length > 0;
+    }
+
+    public ArrayList<MyUser> searchByName(String userName) {
+        ArrayList<MyUser> myUsers = new ArrayList<>();
+        for (MyUser user : this.users) {
+            if (user.getTickName() == userName) {
+                myUsers.add(user);
+            }
+        }
+        return myUsers;
     }
 }

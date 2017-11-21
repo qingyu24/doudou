@@ -45,8 +45,7 @@ public class LoaderManager {
         m_list.put(zz_sheng2, shengLoader);
         m_list.put(hui_User, huiUserLoader);
 
-/*        m_list.put(Users, users);
-       m_list.put(Huiyuan, huiyuan);*/
+
 
     }
 

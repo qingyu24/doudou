@@ -3,15 +3,20 @@
  */
 package test.robot;
 
+import core.*;
+
 /**
  * @author ddoq
  * @version 1.0.0
+ *
  */
-public class RobotRoot extends Root {
-    public RobotRoot() {
-        super();
-        m_Factory = new RobotFactory();
-
-        RegAll();
-    }
+public class RobotRoot extends Root
+{
+	public RobotRoot()
+	{
+		super();
+		m_Factory = new RobotFactory();
+		
+		RegAll();
+	}
 }
