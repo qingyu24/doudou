@@ -219,6 +219,7 @@ public class Room implements Tick {
             if (u != null) {
                 if (user.GetRoleGID() == u.getRoleId()) {
                     this.m_players.remove(u);
+                    u.destroy();
                     /* this.m_allPlayer.remove(u.getID()); */
                     broadcast(RoomInterface.MID_BROADCAST_lEAVE,
                             user.GetRoleGID(), time);
@@ -303,6 +304,7 @@ public class Room implements Tick {
             if (user != null && user.near(ru)) {
                 SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                         .AddID(Reg.ROOM, msgId);
+
                 ru.packData(buffer); // 该用户的数据;
                 buffer.Add(time);
                 buffer.Send(user.getUser());
@@ -311,7 +313,24 @@ public class Room implements Tick {
 
     }
 
+    public void broadcastAll(int msgId, RoomPlayer ru, long time) {
+        Iterator<RoomPlayer> it = m_players.iterator();
+        while (it.hasNext()) {
+            RoomPlayer user = it.next();
+            if (user != null && user.near(ru)) {
+                SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                        .AddID(Reg.ROOM, msgId);
+                buffer.Add((short) m_players.size());
+                for (RoomPlayer m_player : m_players) {
+                    m_player.packData(buffer); // 该用户的数据;
+                }
 
+/*                buffer.Add(time);*/
+                buffer.Send(user.getUser());
+            }
+        }
+
+    }
     public void broadcast(int msgId, int arg1, int arg2, int arg3, long time) {
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
@@ -595,6 +614,7 @@ public class Room implements Tick {
                 PlayerBody body = player.getPlaybody(bodyID);
                 if (body != null) {
                     player.getPlaybodylist().remove(body);
+                    body.destroy();
                     if (player.getPlaybodylist().size() == 0) {
                         killOne(playerId,targetPlayerID);
                     }

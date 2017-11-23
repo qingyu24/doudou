@@ -58,7 +58,8 @@ public class PlayerCenterData implements UserData {
     public void packData(SendMsgBuffer buffer) {
         m_account.packData(buffer);
         m_huiyuan.packBaseData(buffer);
-        buffer.Add((short)skins.size()+3);
+
+        buffer.Add((short)(skins.size()+3));
         buffer.Add(101);
         buffer.Add(102);
         buffer.Add(103);

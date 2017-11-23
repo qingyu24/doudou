@@ -27,4 +27,16 @@ public class tesd {
             }
         }
     }
+private boolean st=false;
+
+    public void setSt(boolean st) {
+        this.st = st;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("开始执行销毁");
+        if(st)
+        super.finalize();
+    }
 }

@@ -36,7 +36,7 @@ import java.util.List;
  */
 public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
-    public static String BUY_SHOPPING = "insert into shopping values (%d,%d,%d,%d) ";
+    public static String BUY_SHOPPING = "insert into shopping (roleid,shopid,price)values (%d,%d,%d) ";
     public boolean client_DataReady = false;
     public boolean server_DataReady = false;
     private eLoginErrorCode m_errorCode;
@@ -359,7 +359,10 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
 
     public void addFriend(MyUser user) {
-        if (!this.friends.contains(user)) this.friends.add(user);
+        if (!this.friends.contains(user))
+        {this.friends.add(user);
+        this.friend_borcast();
+        }
     }
 
     public int GetMoney() {
@@ -368,20 +371,22 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
 
     public void setMoney(int money) {
         this.getCenterData().getM_account().Money.Set(this.GetMoney() + money);
-        DBMgr.ExecuteSQL("update account set money=" + this.GetMoney() + " WHENEVER roleId= " + this.GetRoleGID());
+        DBMgr.ExecuteSQL("update account set money=" + this.GetMoney() + " where roleId= " + this.GetRoleGID());
     }
 
     public boolean buyShopping(long friendID, int giftID, int price) {
+        String sql = "select * from shopping where roleid= %d and shopid = %d ";
+        shopping[] shoppings = DBMgr.ReadSQL(new shopping(), String.format(sql, friendID, giftID));
+        if (shoppings.length != 0) return false;
         this.setMoney(-price);
-        boolean b = DBMgr.ExecuteSQL("UPDATE account set money= " + this.GetMoney() + " WHENEVER roleid=" + this.GetRoleGID());
-        boolean b1 = DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID, System.currentTimeMillis(), price));
+        boolean b = DBMgr.ExecuteSQL("UPDATE account set money= " + this.GetMoney() + " where roleid=" + this.GetRoleGID());
+        boolean b1 = DBMgr.ExecuteSQL(String.format(BUY_SHOPPING, friendID, giftID,  price));
         return b && b1;
     }
 
     public void sendSucess(int msg, int i) {
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, msg);
         buffer.Add(i);
-
 
         buffer.Send(this);
     }
@@ -392,6 +397,7 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
         boolean remove = false;
         if (user != null) {
             remove = this.friends.remove(user);
+            user.friends.remove(this);
             user.friend_borcast();
         }
         boolean b = DBMgr.ExecuteSQL(String.format(DELTE_FRIEND, targetID, this.GetRoleGID()));

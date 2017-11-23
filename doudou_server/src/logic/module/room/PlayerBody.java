@@ -1,6 +1,9 @@
 package logic.module.room;
 
+import core.Root;
+import core.Tick;
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.LogRecord;
 import logic.LogRecords;
 
 public class PlayerBody {
@@ -12,6 +15,7 @@ public class PlayerBody {
     private int m_yspeed;
     private int m_weight;
     private int m_angle;
+  /*  long m_timeid = Root.GetInstance().AddLoopMilliTimer(this, 1000 / 60, null);*/
 
     public PlayerBody(int id, int xpos, int ypos) {
         m_xpos = xpos;
@@ -37,6 +41,20 @@ public class PlayerBody {
         buffer.Add(m_weight);
         buffer.Add(m_angle);
 
+
+    }
+
+    @Override
+    public String toString() {
+        return "PlayerBody{" +
+                "m_id=" + m_id +
+                ", m_xpos=" + m_xpos +
+                ", m_ypos=" + m_ypos +
+                ", m_xspeed=" + m_xspeed +
+                ", m_yspeed=" + m_yspeed +
+                ", m_weight=" + m_weight +
+                ", m_angle=" + m_angle +
+                '}';
     }
 
     public void changeSpeed(int xp, int yp) {
@@ -49,23 +67,14 @@ public class PlayerBody {
         m_ypos += m_yspeed / 1000.0f * 0.2;
     }
 
-    @Override
-    public String toString() {
-        return "PlayerBody [m_id=" + m_id + ", m_xpos=" + m_xpos + ", m_ypos=" + m_ypos + ", m_xspeed=" + m_xspeed
-                + ", m_yspeed=" + m_yspeed + ", m_weight=" + m_weight + "]";
-    }
-
-    public void updatePosition(int m_xpos, int m_ypos, int m_xspeed, int m_yspeed, int m_weight, int m_angle) {
+    public void updatePosition(int id,int m_xpos, int m_ypos, int m_xspeed, int m_yspeed, int m_weight, int m_angle) {
+        this.m_id=id;
         this.m_xpos = m_xpos;
         this.m_xspeed = m_xspeed;
         this.m_ypos = m_ypos;
         this.m_yspeed = m_yspeed;
         this.m_weight = m_weight;
         this.m_angle = m_angle;
-        if(m_weight==0){
-            LogRecords.Log(null,"收到体重为空");
-        }
-
 
     }
 
@@ -115,8 +124,8 @@ public class PlayerBody {
 
     public void setM_weight(int m_weight) {
         this.m_weight = m_weight;
-        if(m_weight==0){
-            LogRecords.Log(null,"收到体重为空");
+        if (m_weight == 0) {
+            LogRecords.Log(null, "收到体重为空");
         }
     }
 
@@ -124,5 +133,19 @@ public class PlayerBody {
         // TODO Auto-generated method stub
 /*		(this.m_xpos-b2.m_xpos)^2+(this.)*/
         return false;
+    }
+
+
+/*
+    @Override
+    public void OnTick(long l) throws Exception {
+        m_xpos = m_xpos + m_xspeed * 1000 / 60;
+        m_ypos = m_ypos + m_yspeed * 1000 / 60;
+    }
+*/
+
+    public void destroy() {
+        /*Root.GetInstance().RemoveTimer(this.m_timeid);*/
+
     }
 }

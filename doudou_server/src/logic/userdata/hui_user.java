@@ -38,9 +38,9 @@ public class hui_user extends RoleDataBase {
         buffer.Add(this.portrait.Get() == 0 ? 1 : this.portrait.Get());//Í·ÏñID
         buffer.Add(CountGrade.getInstance().getnewLevel(this.score.Get()));
         buffer.Add(CountGrade.getInstance().getnewStar(this.score.Get()));
-        buffer.Add(school.Get());
+ /*       buffer.Add(school.Get());
         buffer.Add(this.grade.Get());
-        buffer.Add(this.banji.Get());
+        buffer.Add(this.banji.Get());*/
 
     }
 }

@@ -3,6 +3,7 @@ package logic.module.room;
 import core.Root;
 import core.Tick;
 import core.detail.impl.socket.SendMsgBuffer;
+import logic.LogRecord;
 import logic.LogRecords;
 import logic.MyUser;
 import logic.eGameType;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class RoomPlayer implements Comparable<RoomPlayer> , Tick {
+public class RoomPlayer implements Comparable<RoomPlayer>  {
 
     private ArrayList<PlayerBody> playbodylist;
     private HashMap<Integer, PlayerBody> playbodyMap;
@@ -67,7 +68,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> , Tick {
         user.getGrade().enterRoom();
         teamID = 0;
         Skin = 0;
-        m_timeid = Root.GetInstance().AddLoopMilliTimer(this, 1000, null);
+
         /*teamName = 0;*/
     }
 
@@ -77,6 +78,7 @@ public class RoomPlayer implements Comparable<RoomPlayer> , Tick {
     }
 
     public void packData(SendMsgBuffer buffer) {
+
         buffer.Add(m_id);
         buffer.Add((short) this.playbodylist.size());
         Iterator<PlayerBody> it = this.playbodylist.iterator();
@@ -196,17 +198,23 @@ public class RoomPlayer implements Comparable<RoomPlayer> , Tick {
             this.playbodylist.add(pb);
             this.playbodyMap.put(pb.getM_id(), pb);
         }
+
+        while (playbodylist.size() > num && playbodylist.size() != 0) {
+            PlayerBody remove = this.playbodylist.remove(0);
+            this.playbodyMap.remove(remove.getM_id());
+        }
+
         for (int i = 0; i * 7 < list.size(); i++) {
             // 避免数组越界
-            if (list.size() >= i * 7 + 7) {
-                PlayerBody pb = playbodyMap.get(list.get(i * 7 + 0));
-                if(pb==null)
-                   pb= new PlayerBody(list.get(i*7+0));
+            if (playbodylist.size() > 0) {
+                if (list.size() >= i * 7 + 7) {
+      /*          PlayerBody pb = playbodyMap.get(list.get(i * 7 + 0));*/
+                    PlayerBody pb = playbodylist.get(i);
+                    if (pb != null) {
+                        pb.updatePosition(list.get(i * 7), list.get(i * 7 + 1), list.get(i * 7 + 2), list.get(i * 7 + 3),
+                                list.get(i * 7 + 4), list.get(i * 7 + 5), list.get(i * 7 + 6));
 
-                if (pb != null) {
-                    pb.updatePosition(list.get(i * 7 + 1), list.get(i * 7 + 2), list.get(i * 7 + 3),
-                            list.get(i * 7 + 4), list.get(i * 7 + 5), list.get(i * 7 + 6));
-
+                    }
                 }
             }
         }
@@ -396,12 +404,11 @@ public class RoomPlayer implements Comparable<RoomPlayer> , Tick {
 
     }
 
-    @Override
-    public void OnTick(long l) throws Exception {
 
-
-    }
     public void destroy() {
-        Root.GetInstance().RemoveTimer(this.m_timeid);
+    /*    Root.GetInstance().RemoveTimer(this.m_timeid);*/
+        for (PlayerBody body : playbodylist) {
+            body.destroy();
+        }
     }
 }

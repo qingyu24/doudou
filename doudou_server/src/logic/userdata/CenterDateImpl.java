@@ -64,20 +64,30 @@ public class CenterDateImpl implements CenterDateInterface {
     public void givePresent(@PU MyUser p_user, @PL long friendID, @PI int giftID, @PI int price, @PS String name) {
         // TODO Auto-generated method stub
         if (p_user.GetMoney() >= price) {
-            p_user.buyShopping(friendID, giftID, price);
+            boolean b = p_user.buyShopping(friendID, giftID, price);
             MyUser user = UserManager.getInstance().getUser(friendID);
-            if (user != null) {
-                SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_SHOP_PRESENT);
+            if (user != null&&b) {
+                SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_SHOP_Received);
                 p_user.packDate(p);
                 p.Add(giftID);
                 p.Add(price);
                 p.Add(name);
+/*                user.packBaseData(p);*/
                 p.Send(user);
-
             }
 
+                SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_SHOP_PRESENT);
+              p.Add(price);
+            p.Add(b?1:0);
+                p.Send(p_user);
+
         } else {
+
             //金币不足购买
+            SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_SHOP_PRESENT);
+            p.Add(0);
+            p.Send(p_user);
+
         }
     }
 
@@ -157,12 +167,14 @@ public class CenterDateImpl implements CenterDateInterface {
             case 3: //班级在学校
 
         }
+
         list = RankingManager.getInstance().getRankingByClass(list_type, p_user);
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, CenterDateInterface.MID_RANKING_CLASS);
 
         buffer.Add(list_type);
 
-        buffer.Add((short) (list.length>30?30:list.length));
+       /* buffer.Add((short) (list.length>30?30:list.length));*/
+       buffer.Add((short)list.length);
         int i=0;
         for (UserClass userClass : list) {
             if(i++>30) break;
@@ -198,7 +210,7 @@ public class CenterDateImpl implements CenterDateInterface {
 
         if (type == 2) {
             p_user.getCenterData().getM_account().Skin.Set(number);
-            b = DBMgr.ExecuteSQL("UPDATE account SET  Skin =" + number + "Where roleid =" + p_user.GetRoleGID());
+            b = DBMgr.ExecuteSQL("UPDATE account SET  Skin =" + number + " Where roleid =" + p_user.GetRoleGID());
 
         }
 
@@ -213,6 +225,9 @@ public class CenterDateImpl implements CenterDateInterface {
         buffer.Add((short) users.size());
         for (MyUser user : users) {
             user.packDate(buffer);
+            buffer.Add(UserManager.getInstance().hasFriend(p_user.GetRoleGID(),user.GetRoleGID())?1:0);
+            buffer.Add(user.isTeacher());
+
         }
         buffer.Send(p_user);
     }
@@ -221,7 +236,7 @@ public class CenterDateImpl implements CenterDateInterface {
     @RFC(ID = 12)
     public void rankingPerson(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
 
-        //1 all   2school  3 class
+        //1 all   2市  3 school
         hui_userLoader loader = (hui_userLoader) LoaderManager.getInstance().getLoader(LoaderManager.hui_User);
         loader.sendRaning_All(list_type, p_user);
 

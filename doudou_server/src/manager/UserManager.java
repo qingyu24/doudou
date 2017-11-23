@@ -171,7 +171,7 @@ public class UserManager {
     public ArrayList<MyUser> searchByName(String userName) {
         ArrayList<MyUser> myUsers = new ArrayList<>();
         for (MyUser user : this.users) {
-            if (user.getTickName() == userName) {
+            if (user.getTickName()!=null&&user.getTickName().equals(userName)) {
                 myUsers.add(user);
             }
         }

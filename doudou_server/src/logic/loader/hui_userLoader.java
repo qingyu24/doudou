@@ -72,7 +72,8 @@ public class hui_userLoader extends DBLoaderEx<hui_user> {
 
     public void rankBuffer(ArrayList<hui_user> list, int msg, int isbegin, MyUser user, int type) {
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, msg);
-        buffer.Add(isbegin);
+        buffer.Add(isbegin);//是否
+        buffer.Add(type);
 
         for (hui_user hui_user : list) {
             hui_user.packDate(buffer);

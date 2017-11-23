@@ -91,6 +91,7 @@ public class RoomImpl implements RoomInterface {
             RoomPlayer rp = r.GetPlayer(playerID);
             if (rp != null) {
                 rp.updatePlace(list);
+          /*      LogRecord.Log("收到位置"+list.toString());*/
 				/* LogRecord.Log(p_user, "发来为止信息"+list.toString()); */
 /*				r.broadcast(RoomInterface.MID_BROADCAST_MOVE, playerID,rp, time);*/
                 r.broadcast(RoomInterface.MID_BROADCAST_MOVE, rp, time);
@@ -108,18 +109,30 @@ public class RoomImpl implements RoomInterface {
         // TODO Auto-generated method stub
         long millis = System.currentTimeMillis();
         Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
-        RoomPlayer rp = r.GetPlayer(playerID);
-        if (rp != null) {
-            rp.splitBody();
-            r.broadcast(RoomInterface.MID_BROADCAST_SPLIT, playerID, m_xpos, m_ypos, list, time);
-        }
-        LogRecord.writePing("SplitBody执行时间", System.currentTimeMillis() - millis);
-    }
+        if(r!=null) {
+            RoomPlayer rp = r.GetPlayer(playerID);
+            if (rp != null) {
+                rp.splitBody();
+                r.broadcast(RoomInterface.MID_BROADCAST_SPLIT, playerID, m_xpos, m_ypos, list, time);
+            }
+            LogRecord.writePing("SplitBody执行时间", System.currentTimeMillis() - millis);
+        }  }
 
     @Override
     @RFC(ID = 7)
     public void ComposeBody(@PU(Index = 1) MyUser p_user, @PVI ArrayList<Integer> list, @PL long time) {
         // TODO Auto-generated method stub
+
+
+        long t=System.currentTimeMillis()-time;
+        LogRecord.Log("ping+++++++++++++++++++++++时间"+t);
+
+        SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, MID_BODY_COMPOSE);
+        System.out.println("收到 返回");
+        p.Add(System.currentTimeMillis());
+        p.Send(p_user);
+
+
     }
 
     @Override
