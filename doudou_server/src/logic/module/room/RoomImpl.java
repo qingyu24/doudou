@@ -313,4 +313,13 @@ public class RoomImpl implements RoomInterface {
     public void visitGame(@PU MyUser p_user,@PI  int roomID) {
 
     }
+
+    @Override
+    @RFC(ID = 38)
+    public void speaking(@PU MyUser p_user, @PS  String talking) {
+        Room room = RoomManager.getInstance().getRoom(p_user.getRoomId());
+if(room!=null){
+    room.broadcast(RoomInterface.MID_ROOM_SPEAKING,talking,p_user);
+}
+    }
 }

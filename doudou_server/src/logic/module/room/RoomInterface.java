@@ -45,7 +45,7 @@ public interface RoomInterface {
     static final int MID_ROOM_Dissolution = 35; // 解散房间
     static final int MID_ROOM_LEAVE = 36; // 离开房间房间
     static final int MID_ROOM_VISIT = 37; // 观战
-
+    static final int MID_ROOM_SPEAKING = 38; // 语音
 
     @RFC(ID = MID_ENTER)
     void EnterRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID,
@@ -113,5 +113,8 @@ public interface RoomInterface {
 
     @RFC(ID = MID_ROOM_VISIT)
     void visitGame(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
+
+    @RFC(ID = MID_ROOM_SPEAKING)
+    void speaking (@PU(Index = Reg.ROOM) MyUser p_user, @PS String talking);
 
 }

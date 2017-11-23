@@ -1,5 +1,6 @@
 package logic.module.room;
 
+import core.DBLoader;
 import core.Root;
 import core.Tick;
 import core.detail.impl.socket.SendMsgBuffer;
@@ -7,8 +8,10 @@ import logic.LogRecord;
 import logic.LogRecords;
 import logic.MyUser;
 import logic.eGameType;
+import logic.loader.SchoolLoader;
 import logic.userdata.CountGrade;
 import logic.userdata.Team;
+import manager.LoaderManager;
 import manager.RoomManager;
 import manager.TeamManager;
 import utility.Rand;
@@ -334,7 +337,9 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
         buffer.Add(this.m_user.getTickName());
         // 学校 int
 		/* buffer.Add(this.m_user.getSchool()); */
-        buffer.Add(this.m_user.getSchool());
+        SchoolLoader loader = (SchoolLoader) LoaderManager.getInstance().getLoader(LoaderManager.zz_school);
+
+        buffer.Add(loader.getSchool(this.m_user.getSchool()));//
         buffer.Add(eatNum);
         buffer.Add(this.getWeight());
         LogRecords.Log(null,"现在体重"+this.getWeight());

@@ -12,7 +12,6 @@ import manager.ThornBallManager;
 
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -59,7 +58,7 @@ public class Room implements Tick {
         needScore = true;
         m_countTime = 0;
         m_TeamNames = creatNewNames();
-        m_visitUser=new ArrayList<MyUser>();
+        m_visitUser = new ArrayList<MyUser>();
     }
 
     public Room(int id, RoomRule rr) {
@@ -82,7 +81,7 @@ public class Room implements Tick {
         needScore = true;
         m_countTime = 0;
         m_TeamNames = creatNewNames();
-        m_visitUser=new ArrayList<MyUser>();
+        m_visitUser = new ArrayList<MyUser>();
 
     }
 
@@ -331,6 +330,7 @@ public class Room implements Tick {
         }
 
     }
+
     public void broadcast(int msgId, int arg1, int arg2, int arg3, long time) {
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
@@ -451,7 +451,7 @@ public class Room implements Tick {
             }
         }
         /*
-		 * broadcast(RoomInterface.MID_BROADCAST_LEFTTIME, (int) i,
+         * broadcast(RoomInterface.MID_BROADCAST_LEFTTIME, (int) i,
 		 * System.currentTimeMillis());
 		 */
     }
@@ -616,7 +616,7 @@ public class Room implements Tick {
                     player.getPlaybodylist().remove(body);
                     body.destroy();
                     if (player.getPlaybodylist().size() == 0) {
-                        killOne(playerId,targetPlayerID);
+                        killOne(playerId, targetPlayerID);
                     }
                 }
             } else {
@@ -647,12 +647,12 @@ public class Room implements Tick {
     }
 
     // 吞噬一个
-    private void killOne(int playerId,int targetID) {
+    private void killOne(int playerId, int targetID) {
         // TODO Auto-generated method stub
         RoomPlayer player = m_allPlayer.get(playerId);
         player.killone();
         RoomPlayer target = m_allPlayer.get(playerId);
-        this.broadcast(RoomInterface.MID_BROADCAST_DEATH,targetID,System.currentTimeMillis());
+        this.broadcast(RoomInterface.MID_BROADCAST_DEATH, targetID, System.currentTimeMillis());
     }
 
     private void checkKilled() {
@@ -874,7 +874,7 @@ public class Room implements Tick {
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
             RoomPlayer player = (RoomPlayer) it.next();
-            player.calGame(this.m_players.size() );
+            player.calGame(this.m_players.size());
 
         }
         // 广播
@@ -1251,5 +1251,16 @@ public class Room implements Tick {
         this.destroy();
     }
 
-
+    public void broadcast(int msg, String talking, MyUser p_user) {
+        Iterator<RoomPlayer> iterator = this.m_players.iterator();
+        while (iterator.hasNext()) {
+            RoomPlayer next = iterator.next();
+            if (next.getRoleId() != p_user.GetRoleGID()) {
+                SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                        .AddID(Reg.ROOM, msg);
+                buffer.Add(talking);
+                buffer.Send(p_user);
+            }
+        }
+    }
 }

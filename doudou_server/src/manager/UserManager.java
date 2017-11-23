@@ -17,7 +17,7 @@ import java.util.List;
 public class UserManager {
 
     private static UserManager _instance;
-    private static String addFriends = "insert into friends (RoleID,FriendID)values %d,%d ";
+    private static String addFriends = "insert into friends (RoleID,FriendID) values (%d,%d) ";
     private ArrayList<MyUser> users = new ArrayList<MyUser>();
     private HashMap<Long, MyUser> m_users = new HashMap<Long, MyUser>();
 
