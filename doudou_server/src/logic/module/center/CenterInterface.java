@@ -13,8 +13,7 @@ public interface CenterInterface {
     static final int MID_TEAM_JOIN = 4;//对收到的邀请进如队伍
 
     static final int MID_BROADCAST_JOIN = 5; //  广播给 队伍信息  当有玩家进入或离开
-    /*static final int MID_BROADCAST_ENTERTEAM = 6; // 广播给所有玩家  新加入玩家的信息
-     */
+    static final int MID_VISIT_LIST = 6; // 获得推荐观战列表
     static final int MID_BROADCAST_MATCHPLAYERS = 7; /*// 广播给新进入队伍 队伍信息 及 其他队伍信息
      */
     static final int MID_BROADCAST_NEWTEAM = 11; // 广播给其他玩家新进入队伍的信息
@@ -50,5 +49,8 @@ public interface CenterInterface {
 
     @RFC(ID = MID_ROOM_FREEROOMCENTER)
     void EnterFreeRoomCenter(@PU MyUser p_user, @PI int isEnter, @PI int isTeam);
+
+    @RFC(ID = MID_VISIT_LIST)
+    void visitList(@PU MyUser p_user);
 
 }

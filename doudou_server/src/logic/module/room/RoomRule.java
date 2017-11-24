@@ -16,6 +16,7 @@ public class RoomRule {
         this.time = time;
         this.teamNum = teamNum;
         this.palyerNum = palyerNum;
+
         isFree = true;
 
     }
@@ -23,8 +24,8 @@ public class RoomRule {
     public RoomRule() {
         this.m_type = eGameType.SOLO;
         this.time = 5;
-        this.teamNum = 2;
-        this.palyerNum = 2;
+        this.teamNum = 6;
+        this.palyerNum = 5;
         isFree = false;
     }
 

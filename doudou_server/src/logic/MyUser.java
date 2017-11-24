@@ -46,6 +46,15 @@ public class MyUser extends UserBase implements Tick /*,Comparable<MyUser>*/ {
     private CountGrade grade;
     private ArrayList<MyUser> friends;
     private ArrayList<MyUser> classmates;
+    private eGameType type;
+
+    public eGameType getType() {
+        return type;
+    }
+
+    public void setType(eGameType type) {
+        this.type = type;
+    }
 
     public MyUser() {
         //在此添加所有的UserData注册

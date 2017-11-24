@@ -13,6 +13,8 @@ import manager.RoomManager;
 import manager.TeamManager;
 import manager.UserManager;
 
+import java.util.List;
+
 public class CenterImpl implements CenterInterface {
 
 
@@ -45,7 +47,7 @@ public class CenterImpl implements CenterInterface {
             boolean s = roomID == 0 && team != null && !team.contain(m_friendID);
             boolean b = (user.getRoomId() != roomID && roomID != 0);
 
-            if (user != null && (b || s)) {
+            if (user != null && (b || s)&&user.GetRoleGID()!=p_user.GetRoleGID()) {
                 SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.CENTER, CenterInterface.MID_BROADCAST_INVITATION);
                 p.Add(p_ID);
                 p.Add(p_user.getTickName());
@@ -59,6 +61,7 @@ public class CenterImpl implements CenterInterface {
 
         }
     }
+
     @Override
     // 接受邀请 加入房间
     @RFC(ID = 4)
@@ -151,5 +154,20 @@ public class CenterImpl implements CenterInterface {
         p.Send(p_user);
 
     }
+
+    @Override
+    @RFC(ID = 6)
+    public void visitList(@PU MyUser p_user) {
+        List<MyUser> randomList = UserManager.getInstance().getRandomList();
+        SendMsgBuffer p = PackBuffer.GetInstance().Clear()
+                .AddID(Reg.CENTER, CenterInterface.MID_VISIT_LIST);
+        p.Add(randomList.size());
+        for (MyUser myUser : randomList) {
+            p.Add(myUser.getType().ID());
+            myUser.packDate(p);
+        }
+        p.Send(p_user);
+    }
+
 
 }

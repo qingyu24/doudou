@@ -5,8 +5,10 @@ import core.detail.impl.socket.SendMsgBuffer;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
+import logic.eGameState;
 import logic.loader.HuiyuanLoader;
 import logic.loader.hui_userLoader;
+import logic.module.room.Room;
 import logic.userdata.*;
 
 import java.util.ArrayList;
@@ -149,11 +151,11 @@ public class UserManager {
 
     public boolean hasFriend(long l, long get) {
         String sql = "select * from  friends where roleid= %d and friendid=%d";
-        System.out.println(String.format(sql, l, get));
+
         Friends[] friends = DBMgr.ReadSQL(new Friends(), String.format(sql, l, get));
         Friends[] friend = DBMgr.ReadSQL(new Friends(), String.format(sql, get, l));
 
-        return friends.length > 0 || friend.length > 0;
+        return friends.length > 0 || friend.length > 0||l==get;
     }
 
     public void addFriends(long l, long f_id) {
@@ -171,10 +173,41 @@ public class UserManager {
     public ArrayList<MyUser> searchByName(String userName) {
         ArrayList<MyUser> myUsers = new ArrayList<>();
         for (MyUser user : this.users) {
-            if (user.getTickName()!=null&&user.getTickName().equals(userName)) {
+            if (user.getTickName() != null && user.getTickName().equals(userName)) {
                 myUsers.add(user);
             }
         }
         return myUsers;
     }
+
+
+    public MyUser getRandomPlayingUser() {
+        int i = 0;
+        while (i < users.size()) {
+            i++;
+            MyUser myUser = this.users.get((int) (Math.random() * users.size()));
+            Room room = RoomManager.getInstance().getRoom(myUser.GetRoleGID());
+            if (room != null && room.getM_state() == eGameState.GAME_PLAYING) {
+                myUser.setType(room.getRr().getM_type());
+                return myUser;
+            }
+        }
+        return null;
+    }
+
+    public List<MyUser> getRandomList() {
+        List<MyUser> myUsers = new ArrayList<>(4);
+        int i=0;
+        while (myUsers.size()<4){
+
+            MyUser user = this.getRandomPlayingUser();
+        if(user!=null&&!myUsers.contains(user))
+        {
+            myUsers.add(user);
+        }
+        if(i++>=40)return  myUsers;
+        }
+        return myUsers;
+    }
+
 }

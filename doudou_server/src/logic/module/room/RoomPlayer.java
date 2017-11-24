@@ -336,13 +336,13 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
         // 用户名
         buffer.Add(this.m_user.getTickName());
         // 学校 int
-		/* buffer.Add(this.m_user.getSchool()); */
+	/*	 buffer.Add(this.m_user.getSchool());*/
         SchoolLoader loader = (SchoolLoader) LoaderManager.getInstance().getLoader(LoaderManager.zz_school);
 
         buffer.Add(loader.getSchool(this.m_user.getSchool()));//
         buffer.Add(eatNum);
         buffer.Add(this.getWeight());
-        LogRecords.Log(null,"现在体重"+this.getWeight());
+        LogRecords.Log(null,"现在体重"+(this.getWeight()==0?10:this.getWeight()));
         buffer.Add(this.EarnMoney(this.getRanking()));// 获得金币
         buffer.Add(this.getTeamName());
         buffer.Add(this.getRanking());

@@ -2,6 +2,7 @@ package logic.loader;
 
 import core.DBLoaderEx;
 import core.detail.impl.socket.SendMsgBuffer;
+import jxl.read.biff.SharedDateFormulaRecord;
 import logic.MyUser;
 import logic.PackBuffer;
 import logic.Reg;
@@ -50,8 +51,9 @@ public class hui_userLoader extends DBLoaderEx<hui_user> {
                 }
             }
         }
-        if (list.size() > 0)
-            this.rankBuffer(list, CenterDateInterface.MID_RANKING_PERSON, isbegin, p_user, list_type);
+
+/*        if (list.size() > 0)
+            this.rankBuffer(list, CenterDateInterface.MID_RANKING_PERSON, isbegin, p_user, list_type);*/
     }
 
     private boolean match(hui_user next, int list_type, MyUser p_user) {
@@ -72,12 +74,14 @@ public class hui_userLoader extends DBLoaderEx<hui_user> {
 
     public void rankBuffer(ArrayList<hui_user> list, int msg, int isbegin, MyUser user, int type) {
         SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.CENTERDATA, msg);
-        buffer.Add(isbegin);//是否
+/*        buffer.Add(isbegin);//是否*/
         buffer.Add(type);
-
+        buffer.Add((short) (list.size()));
         for (hui_user hui_user : list) {
             hui_user.packDate(buffer);
         }
         buffer.Send(user);
+
     }
+
 }

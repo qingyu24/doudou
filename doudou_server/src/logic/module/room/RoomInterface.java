@@ -22,7 +22,7 @@ public interface RoomInterface {
     static final int MID_BROADCAST_EAT = 9; // 广播吃;
     static final int MID_BROADCAST_DEATH = 10; // 玩家死亡;
     static final int MID_BROADCAST_SPLIT = 11; // 广播分离;
-    static final int MID_BROADCAST_COMPOSE = 12; // 广播合并;
+    static final int MID_BROADCAST_COMPOSE = 12; //p ;
     static final int MID_BROADCAST_QIU = 18; // 广播吐球;
     static final int MID_BROADCAST_QIUPLACE = 20; // 广播吐球;
     static final int MID_BROADCAST_THORNBALL = 21; // 广播刺球球;
@@ -112,7 +112,7 @@ public interface RoomInterface {
     void leaveRoom(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
 
     @RFC(ID = MID_ROOM_VISIT)
-    void visitGame(@PU(Index = Reg.ROOM) MyUser p_user, @PI int roomID);
+    void visitGame(@PU(Index = Reg.ROOM) MyUser p_user, @PL long  roleID);
 
     @RFC(ID = MID_ROOM_SPEAKING)
     void speaking (@PU(Index = Reg.ROOM) MyUser p_user, @PS String talking);

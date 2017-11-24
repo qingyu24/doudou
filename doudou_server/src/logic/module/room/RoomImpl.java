@@ -26,6 +26,7 @@ public class RoomImpl implements RoomInterface {
             Room r = RoomManager.getInstance().getFreeRoom();
             r.setM_state(eGameState.GAME_PLAYING);
             /*RoomManager.getInstance().joinRoom(p_user, roomID);*/
+
             RoomPlayer rp = r.AddPlayer(p_user);
 
             SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ENTER);
@@ -39,7 +40,7 @@ public class RoomImpl implements RoomInterface {
             p.Send(p_user);
             //
         } else if (room2 != null && room2.getRr().isFree()) { //进入自建房
-			/*	Room room2 = RoomManager.getInstance().getRoom(roomID);*/
+            /*	Room room2 = RoomManager.getInstance().getRoom(roomID);*/
             if (room2.canJoin()) {
                 RoomManager.getInstance().joinRoom(p_user, room2.getID());
                 RoomPlayer player = room2.AddPlayer(p_user);
@@ -109,14 +110,15 @@ public class RoomImpl implements RoomInterface {
         // TODO Auto-generated method stub
         long millis = System.currentTimeMillis();
         Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
-        if(r!=null) {
+        if (r != null) {
             RoomPlayer rp = r.GetPlayer(playerID);
             if (rp != null) {
                 rp.splitBody();
                 r.broadcast(RoomInterface.MID_BROADCAST_SPLIT, playerID, m_xpos, m_ypos, list, time);
             }
             LogRecord.writePing("SplitBody执行时间", System.currentTimeMillis() - millis);
-        }  }
+        }
+    }
 
     @Override
     @RFC(ID = 7)
@@ -124,8 +126,8 @@ public class RoomImpl implements RoomInterface {
         // TODO Auto-generated method stub
 
 
-        long t=System.currentTimeMillis()-time;
-        LogRecord.Log("ping+++++++++++++++++++++++时间"+t);
+        long t = System.currentTimeMillis() - time;
+        LogRecord.Log("ping+++++++++++++++++++++++时间" + t);
 
         SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, MID_BODY_COMPOSE);
         System.out.println("收到 返回");
@@ -177,8 +179,8 @@ public class RoomImpl implements RoomInterface {
         Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
 		/* RoomPlayer rp = r.GetPlayer(playerID); */
         logic.LogRecord.Log(null, "收到玩家吐球消息");
-        if(r!=null)
-        r.broadcast(RoomInterface.MID_BROADCAST_QIU, playerID, list, time);
+        if (r != null)
+            r.broadcast(RoomInterface.MID_BROADCAST_QIU, playerID, list, time);
     }
 
     @Override
@@ -310,16 +312,41 @@ public class RoomImpl implements RoomInterface {
 
     @Override
     @RFC(ID = 37)
-    public void visitGame(@PU MyUser p_user,@PI  int roomID) {
+    public void visitGame(@PU MyUser p_user, @PL long roleID) {
 
+        Room room = RoomManager.getInstance().getRoom(roleID);
+
+        if(room!=null){
+          room.addVisit(p_user);
+
+
+            SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_PLAYERS);
+            room.packData(p);
+            p.Add((int) room.getM_leftTime());
+            p.Send(p_user);
+
+            SendMsgBuffer ps = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_VISIT);
+
+            p.Add(roleID);
+
+            p.Send(p_user);
+        }
+        else{
+            SendMsgBuffer ps = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_VISIT);
+
+            ps.Add(Long.parseLong("0"));
+
+            ps.Send(p_user);
+        }
     }
 
     @Override
     @RFC(ID = 38)
-    public void speaking(@PU MyUser p_user, @PS  String talking) {
+    public void speaking(@PU MyUser p_user, @PS String talking) {
+
         Room room = RoomManager.getInstance().getRoom(p_user.getRoomId());
-if(room!=null){
-    room.broadcast(RoomInterface.MID_ROOM_SPEAKING,talking,p_user);
-}
+        if (room != null) {
+            room.broadcast(RoomInterface.MID_ROOM_SPEAKING, talking, p_user);
+        }
     }
 }

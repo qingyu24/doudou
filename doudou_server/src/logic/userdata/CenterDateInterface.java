@@ -12,7 +12,7 @@ public interface CenterDateInterface {
     static final int MID_AGRREADD = 3;//同意添加好友
     static final int MID_USER_DELETE = 4;//删除好友
     static final int MID_SHOP_PRESENT = 5;//增送礼物
-    static final int MID_SHOP_Received= 12;//购买礼物
+    static final int MID_SHOP_Received= 13;//购买礼物
     static final int MID_SHOP_BUY = 6;//购买礼物
     static final int MID_USER_HOME = 7;//个人主页
     static final int MID_USER_MESSAGE = 8;//发送消息

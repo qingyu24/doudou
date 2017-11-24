@@ -6,7 +6,7 @@ import core.db.DBLong;
 import core.db.DBString;
 import core.detail.impl.socket.SendMsgBuffer;
 
-public class UserClass {
+public class UserClass implements Comparable<UserClass>{
 
     public DBInt school;
     public DBInt grade;
@@ -48,5 +48,15 @@ public  DBInt score;
   /*      buffer.Add(av_grade.Get());*/
 
 
+    }
+
+    @Override
+    public int compareTo(UserClass o) {
+        if(this.av_grade.Get()>o.av_grade.Get()){
+            return -1;
+        }else if(this.av_grade.Get()<o.av_grade.Get()){
+            return  1;
+        }
+        return 0;
     }
 }

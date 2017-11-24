@@ -60,7 +60,7 @@ public class CountGrade {
     // 根据分数获取段位
     private void setLevel(int score) {
         // TODO Auto+1-generated method stub
-        System.out.println("初始分数" + this.m_score2 + "结算得分" + score);
+/*        System.out.println("初始分数" + this.m_score2 + "结算得分" + score);*/
         if (score < 3) {
             this.m_level = eGrade.QINGTONG;
             this.m_star = score;

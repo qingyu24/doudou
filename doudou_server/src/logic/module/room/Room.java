@@ -40,6 +40,7 @@ public class Room implements Tick {
     private ArrayList<MyUser> m_visitUser; //观战玩家
 
     public Room(int id) {
+
         rr = new RoomRule();// 默认规则
         m_roomId = id;
         m_timeid = Root.GetInstance().AddLoopMilliTimer(this, 1000, null);
@@ -219,6 +220,7 @@ public class Room implements Tick {
                 if (user.GetRoleGID() == u.getRoleId()) {
                     this.m_players.remove(u);
                     u.destroy();
+
                     /* this.m_allPlayer.remove(u.getID()); */
                     broadcast(RoomInterface.MID_BROADCAST_lEAVE,
                             user.GetRoleGID(), time);
@@ -252,6 +254,7 @@ public class Room implements Tick {
 
     public void packInit(SendMsgBuffer buffer) {
 
+
         buffer.Add(m_roomId);
         /* buffer.Add(r); */
 
@@ -282,6 +285,8 @@ public class Room implements Tick {
 
     // 将该用户的所有数据广播给其他的人；
     public void enbroadcast(int msgId, RoomPlayer ru, long time) {
+
+
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
             RoomPlayer user = it.next();
@@ -534,7 +539,7 @@ public class Room implements Tick {
     }
 
     private void sortTeams() {
-		/* LogRecord.Log("开始计时"); */
+        /* LogRecord.Log("开始计时"); */
         ArrayList<Team> list = new ArrayList<Team>();
         list.addAll(this.m_allTeams);
         Collections.sort(m_allTeams);
@@ -579,7 +584,7 @@ public class Room implements Tick {
     }
 
 	/*
-	 * //团战开始前倒计时 public void countDown() {
+     * //团战开始前倒计时 public void countDown() {
 	 * 
 	 * 
 	 * 
@@ -627,7 +632,7 @@ public class Room implements Tick {
             while (it.hasNext()) {
                 ThornBall tb = (ThornBall) it.next();
                 if (tb.getThId() == bodyID) {
-					/* m_thorns.remove(tb); */
+                    /* m_thorns.remove(tb); */
                     it.remove();
                     break;
                 }
@@ -1259,8 +1264,20 @@ public class Room implements Tick {
                 SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                         .AddID(Reg.ROOM, msg);
                 buffer.Add(talking);
-                buffer.Send(p_user);
+                buffer.Send(next.getUser());
             }
         }
+
+    }
+
+    public void addVisit(MyUser p_user) {
+        this.m_visitUser.add(p_user);
+
+
+    }
+
+    public void packVisit(SendMsgBuffer p) {
+
+
     }
 }

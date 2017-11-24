@@ -157,8 +157,8 @@ public class CenterDateImpl implements CenterDateInterface {
     @Override
     @RFC(ID = 9)
     public void rankingClass(@PU MyUser p_user, @PI int list_type, @PI int number, @PI int size) {
-        UserClass[] list = new UserClass[0];
-
+/*        UserClass[] list = new UserClass[0];*/
+        ArrayList<UserClass> list = new ArrayList<>();
         switch (list_type) {
             case 1://班级所有
 
@@ -174,11 +174,12 @@ public class CenterDateImpl implements CenterDateInterface {
         buffer.Add(list_type);
 
        /* buffer.Add((short) (list.length>30?30:list.length));*/
-       buffer.Add((short)list.length);
+       buffer.Add((short)list.size());
         int i=0;
         for (UserClass userClass : list) {
             if(i++>30) break;
             userClass.packdate(buffer);
+            System.out.println("班级分数"+userClass.av_grade.Get());
         }
         buffer.Send(p_user);
 

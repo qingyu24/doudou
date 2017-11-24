@@ -3,7 +3,9 @@ package manager;
 import core.DBMgr;
 import logic.MyUser;
 import logic.userdata.UserClass;
-import logic.userdata.hui_user;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class RankingManager {
@@ -19,7 +21,7 @@ public class RankingManager {
 
     }
 
-    public UserClass[] getRankingByClass(int type, MyUser p_user) {
+    public UserClass[] geByClass(int type, MyUser p_user) {
 
         String all = "SELECT * FROM class";
         String inSchool = "select * from class Where school = " + p_user.getSchool();
@@ -36,12 +38,22 @@ public class RankingManager {
 
         return null;
     }
+    public ArrayList<UserClass> getRankingByClass(int type, MyUser p_user) {
+        ArrayList<UserClass> list = new ArrayList<>();
+        UserClass[] userClasses = this.geByClass(type, p_user);
+
+    if(list!=null) {
+        for (UserClass userClass : userClasses) {
+            if (userClass.av_grade.Get() != 0) {
+                list.add(userClass);
+            }
+        }
+    }
+        Collections.sort(list);
+        return list;
+    }
 
 
- /*   public hui_user getRankingPerson() {
-
-
-    }*/
 }
 
 
