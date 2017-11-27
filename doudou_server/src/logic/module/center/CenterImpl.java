@@ -161,7 +161,7 @@ public class CenterImpl implements CenterInterface {
         List<MyUser> randomList = UserManager.getInstance().getRandomList();
         SendMsgBuffer p = PackBuffer.GetInstance().Clear()
                 .AddID(Reg.CENTER, CenterInterface.MID_VISIT_LIST);
-        p.Add(randomList.size());
+        p.Add((short) randomList.size());
         for (MyUser myUser : randomList) {
             p.Add(myUser.getType().ID());
             myUser.packDate(p);

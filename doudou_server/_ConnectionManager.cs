@@ -21,16 +21,6 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(5,0).Send(mgr);
 	}
 
-	static public void RoomImpl_ThornMove(this ConnectionManager mgr, int[] list, long time)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,5).Add(list).Add(time).Send(mgr);
-	}
-
-	static public void RoomImpl_SplitBody(this ConnectionManager mgr, int playerID, int m_xpos, int m_ypos, int[] list, long time)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,6).Add(playerID).Add(m_xpos).Add(m_ypos).Add(list).Add(time).Send(mgr);
-	}
-
 	static public void RoomImpl_EnterRoom(this ConnectionManager mgr, int buffer, long p)
 	{
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,1).Add(buffer).Add(p).Send(mgr);
@@ -56,14 +46,14 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,7).Add(list).Add(time).Send(mgr);
 	}
 
-	static public void RoomImpl_SplitQiu(this ConnectionManager mgr, int playerID, int[] list, long time)
+	static public void RoomImpl_ThornMove(this ConnectionManager mgr, int[] list, long time)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,17).Add(playerID).Add(list).Add(time).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,5).Add(list).Add(time).Send(mgr);
 	}
 
-	static public void RoomImpl_dissolution(this ConnectionManager mgr, int roomID)
+	static public void RoomImpl_SplitBody(this ConnectionManager mgr, int p_user, int playerID, int m_xpos, int[] m_ypos, long list)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,35).Add(roomID).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,6).Add(p_user).Add(playerID).Add(m_xpos).Add(m_ypos).Add(list).Send(mgr);
 	}
 
 	static public void RoomImpl_SplitQiuPlace(this ConnectionManager mgr, int qiuId, int playerId, int xpos, int ypos, long time)
@@ -71,14 +61,14 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,19).Add(qiuId).Add(playerId).Add(xpos).Add(ypos).Add(time).Send(mgr);
 	}
 
-	static public void RoomImpl_rebirth(this ConnectionManager mgr, int p_user, long playerId)
+	static public void RoomImpl_gameStart(this ConnectionManager mgr, int roomID)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,22).Add(p_user).Add(playerId).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,29).Add(roomID).Send(mgr);
 	}
 
-	static public void RoomImpl_visitGame(this ConnectionManager mgr, int roomID)
+	static public void RoomImpl_visitGame(this ConnectionManager mgr, long p2)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,37).Add(roomID).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,37).Add(p2).Send(mgr);
 	}
 
 	static public void RoomImpl_chooseTeam(this ConnectionManager mgr, int this, int p_user)
@@ -86,9 +76,9 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,33).Add(this).Add(p_user).Send(mgr);
 	}
 
-	static public void RoomImpl_gameStart(this ConnectionManager mgr, int roomID)
+	static public void RoomImpl_LeftMatch(this ConnectionManager mgr, long playerId, int teamID, long time)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,29).Add(roomID).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,31).Add(playerId).Add(teamID).Add(time).Send(mgr);
 	}
 
 	static public void RoomImpl_leaveRoom(this ConnectionManager mgr, int roomID)
@@ -96,14 +86,19 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,36).Add(roomID).Send(mgr);
 	}
 
+	static public void RoomImpl_SplitQiu(this ConnectionManager mgr, int playerID, int[] list, long time)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,17).Add(playerID).Add(list).Add(time).Send(mgr);
+	}
+
 	static public void RoomImpl_EatFood(this ConnectionManager mgr, int bodyID, int score, long time)
 	{
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,13).Add(bodyID).Add(score).Add(time).Send(mgr);
 	}
 
-	static public void RoomImpl_LeftMatch(this ConnectionManager mgr, long playerId, int teamID, long time)
+	static public void RoomImpl_rebirth(this ConnectionManager mgr, int this, long p_user)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(1,31).Add(playerId).Add(teamID).Add(time).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,22).Add(this).Add(p_user).Send(mgr);
 	}
 
 	static public void RoomImpl_getFriendList(this ConnectionManager mgr, int needChange)
@@ -111,34 +106,19 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(1,34).Add(needChange).Send(mgr);
 	}
 
-	static public void CenterImpl_RetreatTeam(this ConnectionManager mgr, long roleID, int p_teamID)
+	static public void RoomImpl_speaking(this ConnectionManager mgr, string talking)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(3,12).Add(roleID).Add(p_teamID).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,38).Add(talking).Send(mgr);
 	}
 
-	static public void CenterImpl_creatRoomRule(this ConnectionManager mgr, int p_user, int isTeam, int gameTime, int teNumber)
+	static public void RoomImpl_dissolution(this ConnectionManager mgr, int roomID)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(3,13).Add(p_user).Add(isTeam).Add(gameTime).Add(teNumber).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(1,35).Add(roomID).Send(mgr);
 	}
 
-	static public void CenterImpl_TeamGameMatch(this ConnectionManager mgr, int this)
+	static public void CenterImpl_visitList(this ConnectionManager mgr)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(3,10).Add(this).Send(mgr);
-	}
-
-	static public void CenterImpl_CreatTeam(this ConnectionManager mgr)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(3,1).Send(mgr);
-	}
-
-	static public void CenterImpl_JoinTeam(this ConnectionManager mgr, int p_teamID, long m_friendID)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(3,4).Add(p_teamID).Add(m_friendID).Send(mgr);
-	}
-
-	static public void CenterImpl_EnterFreeRoomCenter(this ConnectionManager mgr, int isEnter, int isTeam)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(3,14).Add(isEnter).Add(isTeam).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,6).Send(mgr);
 	}
 
 	static public void CenterImpl_InvitationFriend(this ConnectionManager mgr, long b, int this, long p_user, int p_ID, int p_teamID)
@@ -146,29 +126,44 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(3,3).Add(b).Add(this).Add(p_user).Add(p_ID).Add(p_teamID).Send(mgr);
 	}
 
+	static public void CenterImpl_CreatTeam(this ConnectionManager mgr)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,1).Send(mgr);
+	}
+
+	static public void CenterImpl_RetreatTeam(this ConnectionManager mgr, long roleID, int p_teamID)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,12).Add(roleID).Add(p_teamID).Send(mgr);
+	}
+
+	static public void CenterImpl_TeamGameMatch(this ConnectionManager mgr, int this)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,10).Add(this).Send(mgr);
+	}
+
+	static public void CenterImpl_JoinTeam(this ConnectionManager mgr, int p_teamID, long m_friendID)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,4).Add(p_teamID).Add(m_friendID).Send(mgr);
+	}
+
+	static public void CenterImpl_creatRoomRule(this ConnectionManager mgr, int p_user, int isTeam, int gameTime, int teNumber)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,13).Add(p_user).Add(isTeam).Add(gameTime).Add(teNumber).Send(mgr);
+	}
+
+	static public void CenterImpl_EnterFreeRoomCenter(this ConnectionManager mgr, int isEnter, int isTeam)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(3,14).Add(isEnter).Add(isTeam).Send(mgr);
+	}
+
 	static public void CenterDateImpl_getClass(this ConnectionManager mgr)
 	{
 		PacketBuffer.GetInstance().Clear().SetObjMethod(7,1).Send(mgr);
 	}
 
-	static public void CenterDateImpl_rankingClass(this ConnectionManager mgr, int len$, int i$, int this)
+	static public void CenterDateImpl_rankingClass(this ConnectionManager mgr, int this, int p_user, int list_type)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(7,9).Add(len$).Add(i$).Add(this).Send(mgr);
-	}
-
-	static public void CenterDateImpl_agreeAdd(this ConnectionManager mgr, long p_user)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(7,3).Add(p_user).Send(mgr);
-	}
-
-	static public void CenterDateImpl_userHome(this ConnectionManager mgr, long p)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(7,7).Add(p).Send(mgr);
-	}
-
-	static public void CenterDateImpl_deleteFriends(this ConnectionManager mgr, long targetID)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(7,4).Add(targetID).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(7,9).Add(this).Add(p_user).Add(list_type).Send(mgr);
 	}
 
 	static public void CenterDateImpl_changeSkin(this ConnectionManager mgr, int list, int buffer)
@@ -181,24 +176,39 @@ public static class _ConnectionManager
 		PacketBuffer.GetInstance().Clear().SetObjMethod(7,11).Add(this).Send(mgr);
 	}
 
+	static public void CenterDateImpl_userHome(this ConnectionManager mgr, long p)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(7,7).Add(p).Send(mgr);
+	}
+
+	static public void CenterDateImpl_deleteFriends(this ConnectionManager mgr, long targetID)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(7,4).Add(targetID).Send(mgr);
+	}
+
+	static public void CenterDateImpl_givePresent(this ConnectionManager mgr, long user, int p, int p, string this)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(7,5).Add(user).Add(p).Add(p).Add(this).Send(mgr);
+	}
+
+	static public void CenterDateImpl_agreeAdd(this ConnectionManager mgr, long p_user)
+	{
+		PacketBuffer.GetInstance().Clear().SetObjMethod(7,3).Add(p_user).Send(mgr);
+	}
+
 	static public void CenterDateImpl_rankingPerson(this ConnectionManager mgr, int list_type, int number, int size)
 	{
 		PacketBuffer.GetInstance().Clear().SetObjMethod(7,12).Add(list_type).Add(number).Add(size).Send(mgr);
 	}
 
-	static public void CenterDateImpl_givePresent(this ConnectionManager mgr, long this, int p_user, int friendID, string giftID)
+	static public void CenterDateImpl_addFriend(this ConnectionManager mgr, long p_user)
 	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(7,5).Add(this).Add(p_user).Add(friendID).Add(giftID).Send(mgr);
+		PacketBuffer.GetInstance().Clear().SetObjMethod(7,2).Add(p_user).Send(mgr);
 	}
 
 	static public void CenterDateImpl_buyShopping(this ConnectionManager mgr, int p_user, int giftID)
 	{
 		PacketBuffer.GetInstance().Clear().SetObjMethod(7,6).Add(p_user).Add(giftID).Send(mgr);
-	}
-
-	static public void CenterDateImpl_addFriend(this ConnectionManager mgr, long p_user)
-	{
-		PacketBuffer.GetInstance().Clear().SetObjMethod(7,2).Add(p_user).Send(mgr);
 	}
 
 	static public void CenterDateImpl_sendMessage(this ConnectionManager mgr, long targetID, string message)

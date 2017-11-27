@@ -37,8 +37,10 @@ public class Room implements Tick {
     private int m_countTime;
     private ArrayList<Integer> m_TeamNames;// 队伍记名
     private MyUser owner;// 房主
-    private ArrayList<MyUser> m_visitUser; //观战玩家
 
+    /*   private ArrayList<MyUser> m_visitUser; //观战玩家
+       private ArrayList<MyUser> m_allUser;
+   */
     public Room(int id) {
 
         rr = new RoomRule();// 默认规则
@@ -59,7 +61,7 @@ public class Room implements Tick {
         needScore = true;
         m_countTime = 0;
         m_TeamNames = creatNewNames();
-        m_visitUser = new ArrayList<MyUser>();
+
     }
 
     public Room(int id, RoomRule rr) {
@@ -82,9 +84,10 @@ public class Room implements Tick {
         needScore = true;
         m_countTime = 0;
         m_TeamNames = creatNewNames();
-        m_visitUser = new ArrayList<MyUser>();
+
 
     }
+
 
     public RoomRule getRr() {
         return rr;
@@ -140,20 +143,28 @@ public class Room implements Tick {
         rp.init(user);
         this.AddPlayer(rp);
         needScore = true;
-        System.out.println("房间人数" + m_players.size() + "房间ID" + m_roomId);
+        System.out.println("房间人数" + getUserSize() + "房间ID" + m_roomId);
         return rp;
     }
 
-    /*
-     * 房间人数1房间ID914433 房间人数1房间ID160627
-     */
+
+    public int getUserSize() {
+        int i = 0;
+        for (RoomPlayer m_player : m_players) {
+            if (m_player.getID() != 0) {
+                i++;
+            }
+        }
+        return i;
+    }
+
     public boolean isFull() {
-        return m_players.size() >= 30;
+        return getUserSize() >= 30;
     }
 
     public void AddPlayer(RoomPlayer player) {
         // 第一个加入房间是房主
-        if (m_players.size() == 0) {
+        if (getUserSize() == 0) {
             this.owner = player.getUser();
         }
         if (!this.containsUser(player.getUser())) {
@@ -163,6 +174,13 @@ public class Room implements Tick {
             this.m_allPlayer.put(player.getID(), player);
             needScore = true;
         }
+
+    }
+
+    public void AddVisit(RoomPlayer player) {
+        // 第一个加入房间是房主
+        this.AddPlayer(player);
+        player.setID(0);
 
     }
 
@@ -225,7 +243,7 @@ public class Room implements Tick {
                     broadcast(RoomInterface.MID_BROADCAST_lEAVE,
                             user.GetRoleGID(), time);
 
-                    if (this.m_players.size() == 0) {
+                    if (this.getUserSize() == 0) {
 
                         RoomManager.getInstance().removeRoom(m_roomId);
                         this.destroy();
@@ -272,11 +290,11 @@ public class Room implements Tick {
             thornBall.packData(buffer);
         }
 
-        buffer.Add((short) this.m_players.size());
+        buffer.Add((short) this.getUserSize());
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
             RoomPlayer user = it.next();
-            if (user != null)
+            if (user != null && user.getID() != 0)
                 user.packDataInit(buffer);
 
         }
@@ -294,11 +312,13 @@ public class Room implements Tick {
                 SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                         .AddID(Reg.ROOM, msgId);
                 ru.packDataInit(buffer);// 该用户的数据;
-                buffer.Add(time);
+                buffer.Add(ru.getRoleId());
                 buffer.Send(user.getUser());
             }
         }
     }
+
+
 
     // 将该用户的数据广播给其他的人；
     public void broadcast(int msgId, RoomPlayer ru, long time) {
@@ -324,7 +344,7 @@ public class Room implements Tick {
             if (user != null && user.near(ru)) {
                 SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                         .AddID(Reg.ROOM, msgId);
-                buffer.Add((short) m_players.size());
+                buffer.Add((short) getUserSize());
                 for (RoomPlayer m_player : m_players) {
                     m_player.packData(buffer); // 该用户的数据;
                 }
@@ -503,7 +523,7 @@ public class Room implements Tick {
         if (!list.equals(m_players) || needScore || m_countTime == 3) {
             m_countTime = 0;
             needScore = false;
-            for (int i = 0; i < m_players.size(); i++) {
+            for (int i = 0; i < getUserSize(); i++) {
                 m_players.get(i).setRanking(i + 1);
             }
             Iterator<RoomPlayer> its = m_players.iterator();
@@ -512,18 +532,18 @@ public class Room implements Tick {
                 RoomPlayer roomPlayer = (RoomPlayer) its.next();
                 SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                         .AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_SCORE);
-                if (m_players.size() >= 10) {
+                if (getUserSize() >= 10) {
                     buffer.Add((short) (10));
                 } else {
-                    buffer.Add((short) m_players.size());
+                    buffer.Add((short) getUserSize());
 
                 }
-                for (int i = 0; i < m_players.size(); i++) {
+                for (int i = 0; i < getUserSize(); i++) {
                     if (i < 10) {
-
-                        buffer.Add(m_players.get(i).getID());
-                        buffer.Add(0);
-
+                        if (m_players.get(i).getID() != 0) {
+                            buffer.Add(m_players.get(i).getID());
+                            buffer.Add(0);//
+                        }
                 /*        System.out.println("当前玩家" + m_players.get(i).getID()
                                 + "名次" + m_players.get(i).getRanking());*/
                     } else {
@@ -736,7 +756,7 @@ public class Room implements Tick {
                 buffer.Add(arg4);
                 buffer.Add(arg5);
                 buffer.Add(time);
-			/*	System.err.println("______________________________");*/
+            /*	System.err.println("______________________________");*/
                 LogRecord.Log("______________________發送一次");
                 buffer.Send(user.getUser());
             }
@@ -815,7 +835,7 @@ public class Room implements Tick {
                 buffer.Add(player.getRoleId());// 角色ＩＤ
                 buffer.Add(player.getUser().getTickName());// 姓名ＩＤ
                 buffer.Add(player.getUser().getPortrait());// 头像
-				/* buffer.Add(time); */
+                /* buffer.Add(time); */
                 buffer.Send(user.getUser());
             }
         }
@@ -824,7 +844,7 @@ public class Room implements Tick {
     public void broadcast(int msg, Team team2) {
         // TODO Auto-generated method stub
         Iterator<RoomPlayer> it = m_players.iterator();
-        LogRecord.Log("当前房间总人数" + m_players.size());
+        LogRecord.Log("当前房间总人数" + getUserSize());
         LogRecord.Log("当前共有队伍" + m_allTeams.size());
         if (team2 != null) {
             while (it.hasNext()) {
@@ -879,7 +899,7 @@ public class Room implements Tick {
         Iterator<RoomPlayer> it = m_players.iterator();
         while (it.hasNext()) {
             RoomPlayer player = (RoomPlayer) it.next();
-            player.calGame(this.m_players.size());
+            player.calGame(this.getUserSize());
 
         }
         // 广播
@@ -890,24 +910,26 @@ public class Room implements Tick {
             SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
                     .AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_GAMEOVER);
 
-            buffer.Add((short) (m_players.size()));
+            buffer.Add((short) (getUserSize()));
             if (!isTeamGame) {
-                for (int i = 0; i < m_players.size(); i++) {
-                    m_players.get(i).endpack(buffer);
-                    LogRecord.Log(null, "当前玩家" + m_players.get(i).getID()
-                            + "名次" + m_players.get(i).getRanking());
+                for (int i = 0; i < getUserSize(); i++) {
+                    if (m_players.get(i).getID() != 0) {
+                        m_players.get(i).endpack(buffer);
+                        LogRecord.Log(null, "当前玩家" + m_players.get(i).getID()
+                                + "名次" + m_players.get(i).getRanking());
+                    }
                 }
             } else {
                 Collections.sort(m_allTeams);
-
                 for (Team team : m_allTeams) {
-
                     team.endPack(buffer);
                 }
-
             }
-
-            buffer.Add(roomPlayer.getRanking());
+            if (roomPlayer.getID() != 0) {
+                buffer.Add(roomPlayer.getRanking());
+            } else {
+                buffer.Add(0);
+            }
             roomPlayer.getGrade().endPack(buffer);
             buffer.Add(System.currentTimeMillis());
             buffer.Send(roomPlayer.getUser());
@@ -920,15 +942,13 @@ public class Room implements Tick {
     // 房间是否可加入
     public boolean canJoin() {
 
-        if (m_players.size() >= 30) {
+        if (getUserSize() >= 30) {
             return false;
         }
-
         ;
         if (m_leftTime < 60 * 1000 * rr.getTime() / 2) {
             return false;
         }
-
 		/*if(rr.getTeamNum()>0&&this.m_state!=eGameState.GAME_PREPARING){
 			return false;	
 		}*/
@@ -940,7 +960,7 @@ public class Room implements Tick {
         if (m_state == eGameState.GAME_PLAYING) {
             return false;
         }
-        if (m_players.size() + size > rr.getAllNum()) {
+        if (getUserSize() + size > rr.getAllNum()) {
             return false;
         }
         ;
@@ -1003,35 +1023,6 @@ public class Room implements Tick {
         }
     }
 
-	
-	
-	
-/*	public Team addtoTeam(Team team) {
-		// TODO Auto-generated method stub
-		// 先把队伍所有人加入房间
-		
-	
-			Iterator<Team> it = this.m_allTeams.iterator();
-			while (it.hasNext()) {
-				Team team2 = (Team) it.next();
-			
-				if (team2.m_users.size() + 1 <= rr.getPalyerNum()) {
-					team2.addTeam(team);
-					team2.setM_roomID(this.m_roomId);
-					this.AddPlayer(team, team2);
-					 TeamManager.getInstance().destroyTeam(team); 
-					return team2;
-				}
-				TeamManager.getInstance()
-			this.m_allTeams.add(team);
-			this.m_teams.put(team.getM_teamID(), team);
-			team.setM_roomID(this.m_roomId);
-			team.setTeamName(getNewTeamName());
-			this.AddPlayer(team, team);
-			return team;
-		}
-		return team;
-	}*/
 
     public Team addTeam(Team team) {
         // TODO Auto-generated method
@@ -1121,10 +1112,10 @@ public class Room implements Tick {
 
     public boolean canStart() {
 
-        LogRecord.Log("游戏人数" + this.m_players.size() + "队伍"
+        LogRecord.Log("游戏人数" + this.getUserSize() + "队伍"
                 + this.m_allTeams.size());
         if (this.m_allTeams.size() >= rr.getTeamNum()
-                && this.m_players.size() >= rr.getAllNum()) {
+                && this.getUserSize() >= rr.getAllNum()) {
 
             return true;
         }
@@ -1186,7 +1177,7 @@ public class Room implements Tick {
         p.Add(this.rr.getTime());
         p.Add(this.rr.getTeamNum());
         p.Add(this.rr.getPalyerNum());
-        p.Add(this.m_players.size());
+        p.Add(this.getUserSize());
         p.Add(this.rr.getAllNum());
     }
 
@@ -1205,7 +1196,7 @@ public class Room implements Tick {
             buffer.Add(owner.getTickName());
             buffer.Add(rr.getTeamNum());
             buffer.Add(rr.getPalyerNum());
-            buffer.Add((short) m_players.size());
+            buffer.Add((short) getUserSize());
             Iterator<RoomPlayer> it = m_players.iterator();
             while (it.hasNext()) {
                 RoomPlayer roomPlayer = (RoomPlayer) it.next();
@@ -1270,14 +1261,14 @@ public class Room implements Tick {
 
     }
 
-    public void addVisit(MyUser p_user) {
-        this.m_visitUser.add(p_user);
 
-
-    }
-
-    public void packVisit(SendMsgBuffer p) {
-
+    public RoomPlayer GetPlayer(long roleID) {
+        for (RoomPlayer m_player : this.m_players) {
+            if (roleID == m_player.getRoleId() && m_player.getID() != 0) {
+                return m_player;
+            }
+        }
+        return null;
 
     }
 }

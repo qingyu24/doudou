@@ -75,6 +75,11 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
         /*teamName = 0;*/
     }
 
+    public  void getVisit(MyUser user){
+        m_user = user;
+        bodyNum = 0;
+        
+    }
     public long getRoleId() {
         return m_user.GetRoleGID();
 

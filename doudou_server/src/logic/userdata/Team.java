@@ -133,6 +133,9 @@ public class Team implements Comparable<Team> {
     public HashMap<Long, MyUser> getM_users() {
         return m_users;
     }
+    public List<MyUser> getUsers(){
+        return  m_allUsers;
+    }
 
     public void setM_users(HashMap<Long, MyUser> m_users) {
         this.m_users = m_users;

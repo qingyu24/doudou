@@ -65,7 +65,7 @@ public class RoomImpl implements RoomInterface {
             SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, 2);
             r.packData(p);
         }
-		/* r */
+        /* r */
 
     }
 
@@ -93,7 +93,7 @@ public class RoomImpl implements RoomInterface {
             if (rp != null) {
                 rp.updatePlace(list);
           /*      LogRecord.Log("收到位置"+list.toString());*/
-				/* LogRecord.Log(p_user, "发来为止信息"+list.toString()); */
+                /* LogRecord.Log(p_user, "发来为止信息"+list.toString()); */
 /*				r.broadcast(RoomInterface.MID_BROADCAST_MOVE, playerID,rp, time);*/
                 r.broadcast(RoomInterface.MID_BROADCAST_MOVE, rp, time);
             } else {
@@ -177,7 +177,7 @@ public class RoomImpl implements RoomInterface {
     public void SplitQiu(@PU MyUser p_user, @PI int playerID, @PVI ArrayList<Integer> list, @PL long time) {
         // TODO Auto-generated method stub
         Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
-		/* RoomPlayer rp = r.GetPlayer(playerID); */
+        /* RoomPlayer rp = r.GetPlayer(playerID); */
         logic.LogRecord.Log(null, "收到玩家吐球消息");
         if (r != null)
             r.broadcast(RoomInterface.MID_BROADCAST_QIU, playerID, list, time);
@@ -201,11 +201,13 @@ public class RoomImpl implements RoomInterface {
         // TODO Auto-generated method stub
         LogRecord.Log("收到复活消息" + p_user.GetRoleGID());
         Room r = RoomManager.getInstance().getRoom(p_user.GetRoleGID());
-        RoomPlayer rp = r.GetPlayer(playerId);
-        if (rp != null) {
-            PlayerBody body = rp.reset();
-            r.broadcast(RoomInterface.MID_BROADCAST_REBIRTH, rp, time);
-            LogRecord.Log("收到复活消息并广播结束");
+        if (r != null) {
+            RoomPlayer rp = r.GetPlayer(playerId);
+            if (rp != null) {
+                PlayerBody body = rp.reset();
+                r.broadcast(RoomInterface.MID_BROADCAST_REBIRTH, rp, time);
+                LogRecord.Log("收到复活消息并广播结束");
+            }
         }
         LogRecord.writePing("EatBody执行时间", System.currentTimeMillis() - millis);
     }
@@ -254,10 +256,10 @@ public class RoomImpl implements RoomInterface {
                 }
                 player.setTeamID(team.getM_teamID());
             }
-		/*	team.addUser(p_user);*/
+        /*	team.addUser(p_user);*/
             TeamManager.getInstance().joinTeam(p_user, team.getM_teamID());
             room.free_addTeam(team);
-			/*room.addTeam(team);*/
+            /*room.addTeam(team);*/
             room.setTeamName(team, teamName);
             room.broadcastFree(room.getRr().getM_type().ID());
         } else {
@@ -316,8 +318,25 @@ public class RoomImpl implements RoomInterface {
 
         Room room = RoomManager.getInstance().getRoom(roleID);
 
-        if(room!=null){
-          room.addVisit(p_user);
+        RoomPlayer rps = room.GetPlayer(roleID);
+        if (room != null && rps != null) {
+       /*   room.addVisit(p_user);*/
+            RoomPlayer rp = new RoomPlayer();
+            rp.init(p_user);
+            room.AddVisit(rp);
+
+
+            SendMsgBuffer ps = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_VISIT);
+
+            ps.Add(rps.getRoleId());
+
+            ps.Send(p_user);
+
+            SendMsgBuffer p2 = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_PLAYER_ENTER);
+
+            rps.packDataInit(p2);
+            p2.Add(rps.getRoleId());
+            p2.Send(p_user);
 
 
             SendMsgBuffer p = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_PLAYERS);
@@ -325,13 +344,7 @@ public class RoomImpl implements RoomInterface {
             p.Add((int) room.getM_leftTime());
             p.Send(p_user);
 
-            SendMsgBuffer ps = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_VISIT);
-
-            p.Add(roleID);
-
-            p.Send(p_user);
-        }
-        else{
+        } else {
             SendMsgBuffer ps = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ROOM_VISIT);
 
             ps.Add(Long.parseLong("0"));

@@ -1,156 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="doudou" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="aced158b-997e-4d30-a7d8-84d2a5bb3216" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/logic/userdata/tesd.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/server_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/battle/BattleSimulatorAPP.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/AllTests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestDBMgr.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestDBMgr_AotuSaveGlobalData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestDBMgr_GlobalData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestDBMgr_TransRead.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestGID.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestGlobalData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestReadGlobalData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestRefData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestRefData1.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestTransData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestTransData1.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestUData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/db/TestUData_Role.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/module/TestMsgManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/mysql/InsertTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/mysql/ReadTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/security/TestSecurity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/robot/RFCFn.java.mine" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/robot/RFCFn.java.r4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/robot/RFCFn.java.r5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java.mine" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java.r4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java.r5" afterPath="" />
+    <list default="true" id="aced158b-997e-4d30-a7d8-84d2a5bb3216" name="Default" comment="wwsss">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exjar/ServerCore.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jar/ServerCore.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ConnectionManager.cs" afterPath="$PROJECT_DIR$/_ConnectionManager.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log.txt" afterPath="$PROJECT_DIR$/log/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/MyUser.java" afterPath="$PROJECT_DIR$/src/logic/MyUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" afterPath="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/loader/hui_userLoader.java" afterPath="$PROJECT_DIR$/src/logic/loader/hui_userLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/PlayerBody.java" afterPath="$PROJECT_DIR$/src/logic/module/room/PlayerBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/center/CenterImpl.java" afterPath="$PROJECT_DIR$/src/logic/module/center/CenterImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/Room.java" afterPath="$PROJECT_DIR$/src/logic/module/room/Room.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" afterPath="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" afterPath="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java" afterPath="$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/module/room/ThornBall.java" afterPath="$PROJECT_DIR$/src/logic/module/room/ThornBall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" afterPath="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" afterPath="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/hui_user.java" afterPath="$PROJECT_DIR$/src/logic/userdata/hui_user.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/LoaderManager.java" afterPath="$PROJECT_DIR$/src/manager/LoaderManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/RankingManager.java" afterPath="$PROJECT_DIR$/src/manager/RankingManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logic/userdata/Team.java" afterPath="$PROJECT_DIR$/src/logic/userdata/Team.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/TeamManager.java" afterPath="$PROJECT_DIR$/src/manager/TeamManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/manager/UserManager.java" afterPath="$PROJECT_DIR$/src/manager/UserManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/Demo.java" afterPath="$PROJECT_DIR$/test/test/Demo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/CToS.java" afterPath="$PROJECT_DIR$/test/test/c/CToS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/LogServer.java" afterPath="$PROJECT_DIR$/test/test/c/LogServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/OpenPort.java" afterPath="$PROJECT_DIR$/test/test/c/OpenPort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/TestInstanceEfficiency.java" afterPath="$PROJECT_DIR$/test/test/c/TestInstanceEfficiency.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/TestStringBuilder.java" afterPath="$PROJECT_DIR$/test/test/c/TestStringBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/TraceSelf.java" afterPath="$PROJECT_DIR$/test/test/c/TraceSelf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/test.java" afterPath="$PROJECT_DIR$/test/test/c/test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/c/test1.java" afterPath="$PROJECT_DIR$/test/test/c/test1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/FreeRun.java" afterPath="$PROJECT_DIR$/test/test/robot/FreeRun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RC.java" afterPath="$PROJECT_DIR$/test/test/robot/RC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RF.java" afterPath="$PROJECT_DIR$/test/test/robot/RF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/battle/BattleSimulatorAPP.java" afterPath="$PROJECT_DIR$/test/battle/BattleSimulatorAPP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/AllTests.java" afterPath="$PROJECT_DIR$/test/db/AllTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestDBMgr.java" afterPath="$PROJECT_DIR$/test/db/TestDBMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestDBMgr_AotuSaveGlobalData.java" afterPath="$PROJECT_DIR$/test/db/TestDBMgr_AotuSaveGlobalData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestDBMgr_GlobalData.java" afterPath="$PROJECT_DIR$/test/db/TestDBMgr_GlobalData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestDBMgr_TransRead.java" afterPath="$PROJECT_DIR$/test/db/TestDBMgr_TransRead.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestGID.java" afterPath="$PROJECT_DIR$/test/db/TestGID.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestGlobalData.java" afterPath="$PROJECT_DIR$/test/db/TestGlobalData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestReadGlobalData.java" afterPath="$PROJECT_DIR$/test/db/TestReadGlobalData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestRefData.java" afterPath="$PROJECT_DIR$/test/db/TestRefData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestRefData1.java" afterPath="$PROJECT_DIR$/test/db/TestRefData1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestTransData.java" afterPath="$PROJECT_DIR$/test/db/TestTransData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestTransData1.java" afterPath="$PROJECT_DIR$/test/db/TestTransData1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestUData.java" afterPath="$PROJECT_DIR$/test/db/TestUData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/db/TestUData_Role.java" afterPath="$PROJECT_DIR$/test/db/TestUData_Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/module/TestMsgManager.java" afterPath="$PROJECT_DIR$/test/module/TestMsgManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mysql/InsertTest.java" afterPath="$PROJECT_DIR$/test/mysql/InsertTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mysql/ReadTest.java" afterPath="$PROJECT_DIR$/test/mysql/ReadTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/security/TestSecurity.java" afterPath="$PROJECT_DIR$/test/security/TestSecurity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RFCFn.java" afterPath="$PROJECT_DIR$/test/test/robot/RFCFn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java" afterPath="$PROJECT_DIR$/test/test/robot/RFCFnTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/ResData.java" afterPath="$PROJECT_DIR$/test/test/robot/ResData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/Robot.java" afterPath="$PROJECT_DIR$/test/test/robot/Robot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RobotConfig.java" afterPath="$PROJECT_DIR$/test/test/robot/RobotConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RobotFactory.java" afterPath="$PROJECT_DIR$/test/test/robot/RobotFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RobotLink.java" afterPath="$PROJECT_DIR$/test/test/robot/RobotLink.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RobotRegID.java" afterPath="$PROJECT_DIR$/test/test/robot/RobotRegID.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RobotRoot.java" afterPath="$PROJECT_DIR$/test/test/robot/RobotRoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/RobotTest.java" afterPath="$PROJECT_DIR$/test/test/robot/RobotTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/TimeBatchRun.java" afterPath="$PROJECT_DIR$/test/test/robot/TimeBatchRun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/mgr/JarTrans.java" afterPath="$PROJECT_DIR$/test/test/robot/mgr/JarTrans.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/mgr/JarTransClient.java" afterPath="$PROJECT_DIR$/test/test/robot/mgr/JarTransClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/mgr/RobotClient.java" afterPath="$PROJECT_DIR$/test/test/robot/mgr/RobotClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/chat/ChatData.java" afterPath="$PROJECT_DIR$/test/test/robot/module/chat/ChatData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/chat/ChatRtnImple.java" afterPath="$PROJECT_DIR$/test/test/robot/module/chat/ChatRtnImple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/chat/ChatRtnInterface.java" afterPath="$PROJECT_DIR$/test/test/robot/module/chat/ChatRtnInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/chat/ChatWithAnother.java" afterPath="$PROJECT_DIR$/test/test/robot/module/chat/ChatWithAnother.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho100.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho100.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho1000.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho1000.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho200.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho200.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho400.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho400.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho50.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatEcho50.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive100.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive100.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive1000.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive1000.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive200.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive200.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive400.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive400.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive50.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatReceive50.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend100.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend100.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend1000.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend1000.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend200.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend200.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend400.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend400.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend50.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/ChatSend50.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/Login.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/LoginData.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/LoginData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/LoginRtn.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/LoginRtn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/LoginRtnInterface.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/LoginRtnInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/LoginSameUserName.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/LoginSameUserName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/LoginStep.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/LoginStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/Logins.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/Logins.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/Logins1.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/Logins1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/Logins2.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/Logins2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/login/RunEmptySQL.java" afterPath="$PROJECT_DIR$/test/test/robot/module/login/RunEmptySQL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/synpos/SynPos.java" afterPath="$PROJECT_DIR$/test/test/robot/module/synpos/SynPos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/task/Task.java" afterPath="$PROJECT_DIR$/test/test/robot/module/task/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/task/TaskData.java" afterPath="$PROJECT_DIR$/test/test/robot/module/task/TaskData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/task/TaskRtn.java" afterPath="$PROJECT_DIR$/test/test/robot/module/task/TaskRtn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/task/TaskRtnInterface.java" afterPath="$PROJECT_DIR$/test/test/robot/module/task/TaskRtnInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/module/task/Tasks.java" afterPath="$PROJECT_DIR$/test/test/robot/module/task/Tasks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/AutoCreateRoleStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/AutoCreateRoleStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/AutoFinishAllTaskStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/AutoFinishAllTaskStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/AutoMoveStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/AutoMoveStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/ChatAnotherStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/ChatAnotherStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/ChatEchoStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/ChatEchoStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/ChatReceiveStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/ChatReceiveStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/ChatSendStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/ChatSendStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/CheckReceiveEnterWorldStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/CheckReceiveEnterWorldStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/EmptySQLRunStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/EmptySQLRunStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/LogStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/LogStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/LoginNormalStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/LoginNormalStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/NoticeAllStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/NoticeAllStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/OrderStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/OrderStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/RunStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/RunStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/SQLLogStep.java" afterPath="$PROJECT_DIR$/test/test/robot/step/SQLLogStep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/step/Step.java" afterPath="$PROJECT_DIR$/test/test/robot/step/Step.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/IncreaseRule.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/IncreaseRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/NameRule.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/NameRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/NormalNameRule.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/NormalNameRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/RandomNameRule.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/RandomNameRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/SolidNameRule.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/SolidNameRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/StepWait.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/StepWait.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/utility/TimeEvaluate.java" afterPath="$PROJECT_DIR$/test/test/robot/utility/TimeEvaluate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/BoolRes.java" afterPath="$PROJECT_DIR$/test/test/robot/value/BoolRes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/ChatRes.java" afterPath="$PROJECT_DIR$/test/test/robot/value/ChatRes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/Res.java" afterPath="$PROJECT_DIR$/test/test/robot/value/Res.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/ResEcho.java" afterPath="$PROJECT_DIR$/test/test/robot/value/ResEcho.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/RoleRes.java" afterPath="$PROJECT_DIR$/test/test/robot/value/RoleRes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/Value.java" afterPath="$PROJECT_DIR$/test/test/robot/value/Value.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/robot/value/eTaskOperResultRes.java" afterPath="$PROJECT_DIR$/test/test/robot/value/eTaskOperResultRes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/utility/RobotTest.java" afterPath="$PROJECT_DIR$/test/test/utility/RobotTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/utility/TestBit.java" afterPath="$PROJECT_DIR$/test/test/utility/TestBit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/utility/TestExcelIniReader.java" afterPath="$PROJECT_DIR$/test/test/utility/TestExcelIniReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/utility/TestExcelReader.java" afterPath="$PROJECT_DIR$/test/test/utility/TestExcelReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/utility/TestUniqueID.java" afterPath="$PROJECT_DIR$/test/test/utility/TestUniqueID.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testPing.txt" afterPath="$PROJECT_DIR$/testPing.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -163,67 +54,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="PlayerBody.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/module/room/PlayerBody.java">
+      <file leaf-file-name="RoomImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#2495#2496#0" expanded="true" />
-                <element signature="e#2526#2527#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/module/room/Room.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="438" column="0" lean-forward="true" selection-start-line="438" selection-start-column="0" selection-end-line="438" selection-end-column="0" />
-              <folding>
-                <element signature="e#13227#13228#0" expanded="true" />
-                <element signature="e#13288#13289#0" expanded="true" />
-                <marker date="1511261880770" expanded="true" signature="15176:15456" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThornBallManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/ThornBallManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="189">
+              <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThornBall.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/module/room/ThornBall.java">
+      <file leaf-file-name="MethodExImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/MethodExImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="291" column="0" lean-forward="false" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomPlayer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java">
+      <file leaf-file-name="LogicMgrImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/mgr/LogicMgrImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="e#11195#11196#0" expanded="true" />
-                <element signature="e#11256#11257#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3591">
+              <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -231,8 +87,38 @@
       <file leaf-file-name="RoomInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="798">
+              <caret line="46" column="30" lean-forward="false" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CenterInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="194" column="31" lean-forward="true" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-400">
+              <caret line="327" column="0" lean-forward="false" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -240,42 +126,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/Reg.java">
+      <file leaf-file-name="Sort.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$JAR_LOC$/jre/lib/rt.jar!/sun/misc/Sort.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="40" />
+            <state relative-caret-position="76">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$JAR_LOC$/src.zip!/java/util/ArrayList.java">
+      <file leaf-file-name="eGameType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/eGameType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7144">
-              <caret line="409" column="13" lean-forward="false" selection-start-line="409" selection-start-column="13" selection-end-line="409" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
+      <file leaf-file-name="RoomPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="191" column="20" lean-forward="false" selection-start-line="191" selection-start-column="20" selection-end-line="191" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RankingManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/manager/RankingManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="151">
+              <caret line="237" column="20" lean-forward="true" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="20" />
+              <folding>
+                <element signature="e#1341#1342#0" expanded="true" />
+                <element signature="e#1379#1380#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -291,31 +170,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>eqiu</find>
-      <find>5</find>
-      <find>33</find>
-      <find>bro</find>
-      <find>当前</find>
-      <find>shi2</find>
-      <find>sort</find>
-      <find>roomp</find>
-      <find>wei</find>
-      <find>gameo</find>
-      <find>reb</find>
-      <find>7,9</find>
-      <find>4</find>
+      <find>remove</find>
+      <find>12</find>
+      <find>1</find>
+      <find>pack</find>
+      <find>rangk</find>
+      <find>endp</find>
+      <find>in</find>
+      <find>sea</find>
+      <find>send</find>
+      <find>.send</find>
+      <find>/*      m_allUser.addAll();*/</find>
+      <find>broadcast</find>
+      <find>m_players.add</find>
+      <find>m_players.re</find>
+      <find>visti</find>
+      <find>visit</find>
+      <find>add</find>
+      <find>roomi</find>
+      <find>join</find>
+      <find>addv</find>
+      <find>i</find>
+      <find>packda</find>
+      <find>6</find>
       <find>endpa</find>
-      <find>rebr</find>
-      <find>spli</find>
-      <find>getnewth</find>
-      <find>7,</find>
-      <find>room</find>
-      <find>eat</find>
+      <find>16</find>
+      <find>vis</find>
       <find>move</find>
-      <find>收到的分身为</find>
-      <find>ontick</find>
-      <find>destroy</find>
+      <find>sort</find>
       <find>re</find>
+      <find>reb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -326,31 +210,58 @@
       <projects_view />
     </option>
   </component>
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+          <option name="moduleName" value="ServerCore" />
+          <option name="title" value="ServerCore (Bundled Groovy 2.4.6)" />
+        </Entry>
+      </list>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/logic/MyRoot.java" />
-        <option value="$PROJECT_DIR$/src/test/manager/UserManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
         <option value="$PROJECT_DIR$/src/logic/loader/SchoolLoader.java" />
-        <option value="$PROJECT_DIR$/src/test/logic/userdata/CenterDateImplTest.java" />
-        <option value="$PROJECT_DIR$/src/logic/MyUser.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/hui_user.java" />
-        <option value="$PROJECT_DIR$/src/manager/UserManager.java" />
         <option value="$PROJECT_DIR$/_ConnectionManager.cs" />
-        <option value="$PROJECT_DIR$/src/test/logic/userdata/tesd.java" />
         <option value="$PROJECT_DIR$/src/manager/LoaderManager.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/ThornBall.java" />
+        <option value="$PROJECT_DIR$/src/test/logic/module/room/RoomTest.java" />
+        <option value="$PROJECT_DIR$/testPing.txt" />
+        <option value="D:/项目空间/ServerCore/src/core/detail/impl/socket/ListenNioBase.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/PlayerBody.java" />
+        <option value="$PROJECT_DIR$/src/manager/TimeManager.java" />
+        <option value="$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/socket/ListenNioBase.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java" />
+        <option value="$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/db/DBString.java" />
+        <option value="$PROJECT_DIR$/src/test/logic/userdata/tesd.java" />
+        <option value="$PROJECT_DIR$/src/test/logic/userdata/K.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/hui_user.java" />
+        <option value="$PROJECT_DIR$/src/logic/loader/hui_userLoader.java" />
+        <option value="$PROJECT_DIR$/src/test/logic/userdata/CenterDateImplTest.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
+        <option value="$PROJECT_DIR$/src/logic/MyUser.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/center/CenterInterface.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/RoomRule.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/manager/UserManagerTest.java" />
         <option value="$PROJECT_DIR$/src/logic/userdata/UserClass.java" />
         <option value="$PROJECT_DIR$/src/manager/RankingManager.java" />
-        <option value="$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java" />
-        <option value="$PROJECT_DIR$/src/logic/loader/hui_userLoader.java" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/PlayerBody.java" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/ThornBall.java" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/RoomInterface.java" />
-        <option value="$PROJECT_DIR$/src/logic/module/room/Room.java" />
+        <option value="$PROJECT_DIR$/src/logic/LogRecords.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/CountGrade.java" />
         <option value="$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java" />
+        <option value="$PROJECT_DIR$/src/logic/userdata/Team.java" />
+        <option value="$PROJECT_DIR$/src/manager/TeamManager.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/center/CenterImpl.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/Room.java" />
+        <option value="$PROJECT_DIR$/src/logic/module/room/RoomImpl.java" />
+        <option value="$PROJECT_DIR$/src/manager/UserManager.java" />
       </list>
     </option>
   </component>
@@ -360,13 +271,21 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1698" />
-    <option name="height" value="1018" />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1686" />
+    <option name="y" value="56" />
+    <option name="width" value="1458" />
+    <option name="height" value="858" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -382,9 +301,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -396,7 +315,20 @@
             <path>
               <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
-              <item name="jar" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="doudou" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
@@ -407,14 +339,22 @@
               <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="userdata" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doudou_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doudou_server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="room" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -424,13 +364,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.1546875" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar/hamcrest-core-1.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../dou_/ServerCore" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="doudou_server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -449,20 +394,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
-    <configuration name="Unnamed" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="logic.MyRoot" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+  <component name="RunManager" selected="Application.myroot">
+    <configuration name="CenterDateImplTest.testUserHome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.logic.userdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="doudou_server" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="test.logic.userdata" />
+      <option name="MAIN_CLASS_NAME" value="test.logic.userdata.CenterDateImplTest" />
+      <option name="METHOD_NAME" value="testUserHome" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="doudou_server" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
     </configuration>
     <configuration name="UserManagerTest.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -477,6 +433,31 @@
       <option name="PACKAGE_NAME" value="test.manager" />
       <option name="MAIN_CLASS_NAME" value="test.manager.UserManagerTest" />
       <option name="METHOD_NAME" value="testAddUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserManagerTest.testGetInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="doudou_server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.manager" />
+      <option name="MAIN_CLASS_NAME" value="test.manager.UserManagerTest" />
+      <option name="METHOD_NAME" value="testGetInstance" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -569,17 +550,12 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="tesd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="test.logic.userdata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="test.logic.userdata.tesd" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="myroot" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="logic.MyRoot" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -588,20 +564,25 @@
       <module name="doudou_server" />
       <envs />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testAddUser" />
-      <item index="2" class="java.lang.String" itemvalue="Application.tesd" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.myroot" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CenterDateImplTest.testUserHome" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetInstance" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testAddUser" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.tesd" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testAddUser" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testAddUser" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserManagerTest.testGetInstance" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CenterDateImplTest.testUserHome" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -613,59 +594,145 @@
       <workItem from="1511230598990" duration="3031000" />
       <workItem from="1511233660604" duration="7809000" />
       <workItem from="1511248775479" duration="12262000" />
-      <workItem from="1511263932155" duration="3077000" />
+      <workItem from="1511263932155" duration="3157000" />
+      <workItem from="1511268031023" duration="7481000" />
+      <workItem from="1511321224403" duration="1916000" />
+      <workItem from="1511323694592" duration="7001000" />
+      <workItem from="1511331743376" duration="1777000" />
+      <workItem from="1511333938291" duration="9437000" />
+      <workItem from="1511343593825" duration="5907000" />
+      <workItem from="1511351812814" duration="136000" />
+      <workItem from="1511351978684" duration="240000" />
+      <workItem from="1511352602317" duration="200000" />
+      <workItem from="1511353412314" duration="12934000" />
+      <workItem from="1511416457994" duration="21626000" />
+      <workItem from="1511492780463" duration="2977000" />
+      <workItem from="1511497422363" duration="1132000" />
+      <workItem from="1511502901921" duration="18058000" />
+      <workItem from="1511526012178" duration="5683000" />
+      <workItem from="1511748596174" duration="168000" />
+      <workItem from="1511748818001" duration="2164000" />
     </task>
+    <task id="LOCAL-00001" summary="wwsss">
+      <created>1511267816771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511267816771</updated>
+    </task>
+    <task id="LOCAL-00002" summary="wwsss">
+      <created>1511410574240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511410574240</updated>
+    </task>
+    <task id="LOCAL-00003" summary="wwsss">
+      <created>1511420904952</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511420904952</updated>
+    </task>
+    <task id="LOCAL-00004" summary="wwsss">
+      <created>1511510333780</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511510333780</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserManagerTest_testAddUser - 2017.11.21 at 14h 06m 57s.xml">
+    <history-entry file="CenterDateImplTest_testUserHome - 2017.11.23 at 18h 57m 05s.xml">
+      <configuration name="CenterDateImplTest.testUserHome" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CenterDateImplTest_testUserHome - 2017.11.23 at 18h 57m 26s.xml">
+      <configuration name="CenterDateImplTest.testUserHome" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testAddUser - 2017.11.24 at 14h 47m 23s.xml">
       <configuration name="UserManagerTest.testAddUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testAddUser - 2017.11.21 at 14h 08m 04s.xml">
+    <history-entry file="UserManagerTest_testAddUser - 2017.11.24 at 14h 48m 47s.xml">
       <configuration name="UserManagerTest.testAddUser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserManagerTest_testAddUser - 2017.11.21 at 14h 41m 24s.xml">
+    <history-entry file="UserManagerTest_testAddUser - 2017.11.24 at 14h 49m 41s.xml">
       <configuration name="UserManagerTest.testAddUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testAddUser - 2017.11.24 at 14h 50m 21s.xml">
+      <configuration name="UserManagerTest.testAddUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testGetInstance - 2017.11.23 at 11h 36m 22s.xml">
+      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testGetInstance - 2017.11.24 at 11h 36m 04s.xml">
+      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testGetInstance - 2017.11.24 at 11h 36m 22s.xml">
+      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserManagerTest_testGetInstance - 2017.11.24 at 14h 48m 31s.xml">
+      <configuration name="UserManagerTest.testGetInstance" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26179000" />
+    <option name="totallyTimeSpent" value="125096000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1698" height="1018" extended-state="6" />
+    <frame x="1686" y="56" width="1458" height="858" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38880706" sideWeight="0.49421966" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2905983" sideWeight="0.14532019" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41636142" sideWeight="0.49753696" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21367522" sideWeight="0.49261084" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.49421966" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6126657" sideWeight="0.4949422" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5433456" sideWeight="0.47109827" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4430956" sideWeight="0.1849711" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294335" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16849817" sideWeight="0.8300493" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41531664" sideWeight="0.48916185" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.47976878" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.028325124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10549133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2905983" sideWeight="0.8546798" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4430956" sideWeight="0.8150289" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13991164" sideWeight="0.4913295" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2954823" sideWeight="0.4864532" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -678,450 +745,416 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java</url>
-          <line>56</line>
-          <properties class="logic.userdata.CenterDateInterface" method="searchUser">
+          <url>file://$PROJECT_DIR$/src/test/logic/userdata/CenterDateImplTest.java</url>
+          <line>60</line>
+          <properties class="test.logic.userdata.CenterDateImplTest" method="testAddFriend">
             <option name="EMULATED" value="true" />
           </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/manager/UserManager.java</url>
+          <line>213</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java</url>
+          <line>207</line>
+          <properties />
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="89" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/logic/userdata/CenterDateImplTest.java">
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/remote/PST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+        <state relative-caret-position="228">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/shopping.java">
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/mgr/methodmgr/MethodMgrBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="4579">
+          <caret line="259" column="33" lean-forward="false" selection-start-line="259" selection-start-column="33" selection-end-line="259" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/DBInt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#1990#1991#0" expanded="false" />
-            <element signature="e#2029#2030#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/SchoolLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/DBLoaderEx.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/interface_/SqlMgr.class">
+    <entry file="file://$PROJECT_DIR$/src/manager/RoomManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6346">
-          <caret line="379" column="0" lean-forward="true" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
-          <folding>
-            <element signature="e#11488#11489#0" expanded="false" />
-            <marker date="1511233848108" expanded="true" signature="9825:9891" ph="update accou... " />
-            <marker date="1511233848108" expanded="true" signature="10062:10128" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/db/TestGID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/项目空间/ServerCore/src/utility/Debug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/RootConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/Root.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/remote/RCC.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/methodmgr/MethodMgrNormalImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/EqiuType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/methodmgr/MethodType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/RoleDataBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/impl/mgr/SqlMgrImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/detail/interface_/SqlMgr.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/DBLoaderEx.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/exjar/ServerCore.jar!/core/db/DBInt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/SchoolLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/shopping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-          <folding>
-            <element signature="e#11488#11489#0" expanded="false" />
-            <marker date="1511233848108" expanded="true" signature="9825:9891" ph="update accou... " />
-            <marker date="1511233848108" expanded="true" signature="10062:10128" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/hui_user.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/logic/userdata/CenterDateImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="37" column="3" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="108" column="26" lean-forward="false" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
-          <folding>
-            <marker date="1511170597126" expanded="true" signature="631:702" ph="/**...*/" />
-            <marker date="1511170597126" expanded="true" signature="2443:2462" ph="SELECT * FRO... class" />
-            <marker date="1511170597126" expanded="true" signature="3221:3244" ph="SELECT * FRO... hui_user" />
-            <marker date="1511170597126" expanded="true" signature="5447:5479" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/logic/userdata/tesd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#374#779#0" expanded="false" />
-            <element signature="e#778#779#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/MyRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding>
-            <element signature="e#4099#4100#0" expanded="false" />
-            <element signature="e#4131#4132#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_qu2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="255" column="37" lean-forward="true" selection-start-line="255" selection-start-column="37" selection-end-line="255" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/shengLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_sheng2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
+          <caret line="121" column="24" lean-forward="false" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_ConnectionManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="202" column="0" lean-forward="true" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="228">
+          <caret line="95" column="54" lean-forward="false" selection-start-line="95" selection-start-column="54" selection-end-line="95" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/LoaderManager.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/loader/SchoolLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-          <folding>
-            <element signature="e#1990#1991#0" expanded="false" />
-            <element signature="e#2029#2030#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="215">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/UserClass.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_school.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="111">
+          <caret line="80" column="36" lean-forward="false" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/loader/hui_userLoader.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="43" column="48" lean-forward="false" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding>
-            <element signature="e#952#962#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/zz_huiyuan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="154" column="25" lean-forward="false" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
-          <folding>
-            <marker date="1511254367728" expanded="true" signature="6127:6186" ph="UPDATE accou... " />
-            <marker date="1511254367728" expanded="true" signature="6350:6404" ph="UPDATE accou... " />
-          </folding>
+        <state relative-caret-position="6">
+          <caret line="86" column="12" lean-forward="false" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/LogRecords.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/handler/PlayerCenterData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="196">
+          <caret line="112" column="33" lean-forward="false" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/UserBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/hui_user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="489" column="30" lean-forward="false" selection-start-line="489" selection-start-column="30" selection-end-line="489" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/logic/userdata/CenterDateImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/utility/CollectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="108" column="36" lean-forward="false" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="174" column="43" lean-forward="true" selection-start-line="174" selection-start-column="43" selection-end-line="174" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/ArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="595" column="33" lean-forward="true" selection-start-line="595" selection-start-column="33" selection-end-line="595" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/PlayerBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="1077" column="0" lean-forward="false" selection-start-line="1077" selection-start-column="0" selection-end-line="1077" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$JAR_LOC$/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7144">
-          <caret line="409" column="13" lean-forward="false" selection-start-line="409" selection-start-column="13" selection-end-line="409" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="101" column="13" lean-forward="false" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAR_LOC$/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="152" column="57" lean-forward="false" selection-start-line="152" selection-start-column="57" selection-end-line="152" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/logic/module/room/RoomTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/MyRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="98" column="46" lean-forward="false" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/UserClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/RankingManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="182">
+          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/LogRecords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/module/room/PlayerBody.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/loader/hui_userLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="199">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/manager/UserManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CenterDateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="228" column="53" lean-forward="false" selection-start-line="228" selection-start-column="53" selection-end-line="228" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/socket/SendMsgBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="315" column="16" lean-forward="false" selection-start-line="315" selection-start-column="16" selection-end-line="315" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/MyUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="199" column="21" lean-forward="false" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#2495#2496#0" expanded="true" />
-            <element signature="e#2526#2527#0" expanded="true" />
+            <marker date="1511494129803" expanded="true" signature="10057:10106" ph="update accou... " />
+            <marker date="1511494129803" expanded="true" signature="10057:10120" ph="update accou... " />
+            <marker date="1511494129803" expanded="true" signature="10521:10584" ph="UPDATE accou... " />
+            <marker date="1511494129803" expanded="true" signature="10576:10584" ph="UPDATE accou... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/Reg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="40" />
+        <state relative-caret-position="247">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/module/room/ThornBall.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/Team.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="1976">
+          <caret line="132" column="40" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3544#3545#0" expanded="false" />
+            <element signature="e#3574#3575#0" expanded="false" />
+            <element signature="e#3610#3611#0" expanded="false" />
+            <element signature="e#3644#3645#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/ThornBallManager.java">
+    <entry file="file://$PROJECT_DIR$/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        <state relative-caret-position="278">
+          <caret line="744" column="64" lean-forward="false" selection-start-line="744" selection-start-column="54" selection-end-line="744" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/TeamManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="160" column="65" lean-forward="true" selection-start-line="160" selection-start-column="65" selection-end-line="160" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/userdata/CountGrade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="115" column="16" lean-forward="false" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/mgr/LogicMgrImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3591">
+          <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/center/CenterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/eGameType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="798">
+          <caret line="46" column="30" lean-forward="false" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/module/room/Room.java">
+    <entry file="jar://$JAR_LOC$/jre/lib/rt.jar!/sun/misc/Sort.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="438" column="0" lean-forward="true" selection-start-line="438" selection-start-column="0" selection-end-line="438" selection-end-column="0" />
-          <folding>
-            <element signature="e#13227#13228#0" expanded="true" />
-            <element signature="e#13288#13289#0" expanded="true" />
-            <marker date="1511261880770" expanded="true" signature="15176:15456" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="191" column="20" lean-forward="false" selection-start-line="191" selection-start-column="20" selection-end-line="191" selection-end-column="20" />
+        <state relative-caret-position="76">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+        <state relative-caret-position="151">
+          <caret line="237" column="20" lean-forward="true" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="20" />
           <folding>
-            <element signature="e#11195#11196#0" expanded="true" />
-            <element signature="e#11256#11257#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/RoomImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../dou_/ServerCore/src/core/detail/impl/MethodExImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="291" column="0" lean-forward="false" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/module/room/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="327" column="0" lean-forward="false" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="194" column="31" lean-forward="true" selection-start-line="194" selection-start-column="31" selection-end-line="194" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,10 +1164,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>doudou</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1142,7 +1177,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1202,7 +1237,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>hamcrest-core-1.3</last-edited>
+          <last-edited>ServerCore</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

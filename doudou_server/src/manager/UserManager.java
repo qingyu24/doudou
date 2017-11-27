@@ -9,6 +9,7 @@ import logic.eGameState;
 import logic.loader.HuiyuanLoader;
 import logic.loader.hui_userLoader;
 import logic.module.room.Room;
+import logic.module.room.RoomPlayer;
 import logic.userdata.*;
 
 import java.util.ArrayList;
@@ -188,8 +189,10 @@ public class UserManager {
             MyUser myUser = this.users.get((int) (Math.random() * users.size()));
             Room room = RoomManager.getInstance().getRoom(myUser.GetRoleGID());
             if (room != null && room.getM_state() == eGameState.GAME_PLAYING) {
+                RoomPlayer rp = room.GetPlayer(myUser);
+                if(rp!=null&&rp.getID()!=0){
                 myUser.setType(room.getRr().getM_type());
-                return myUser;
+                return myUser;}
             }
         }
         return null;
@@ -205,7 +208,8 @@ public class UserManager {
         {
             myUsers.add(user);
         }
-        if(i++>=40)return  myUsers;
+        if(i++>=40)
+            return  myUsers;
         }
         return myUsers;
     }
