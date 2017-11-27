@@ -84,7 +84,6 @@ public class RoomRule {
 
     public int getAllNum() {
 
-
         return this.palyerNum * this.teamNum;
     }
 }

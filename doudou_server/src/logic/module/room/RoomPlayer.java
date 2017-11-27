@@ -1,10 +1,6 @@
 package logic.module.room;
 
-import core.DBLoader;
-import core.Root;
-import core.Tick;
 import core.detail.impl.socket.SendMsgBuffer;
-import logic.LogRecord;
 import logic.LogRecords;
 import logic.MyUser;
 import logic.eGameType;
@@ -20,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class RoomPlayer implements Comparable<RoomPlayer>  {
+public class RoomPlayer implements Comparable<RoomPlayer> {
 
     private ArrayList<PlayerBody> playbodylist;
     private HashMap<Integer, PlayerBody> playbodyMap;
@@ -35,13 +31,25 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
     private int coin;// 本局获得金币数目
     private int teamID;
     private int Skin; // 皮肤
-    private long  m_timeid ;
+    private long m_timeid;
+
+    private boolean isVisit;
+    private long visitID;
 /*	private int teamName;*/
     /* private CountGrade grade; */
 
     public CountGrade getGrade() {
         // TODO Auto-generated method stub
         return this.m_user.getGrade();
+    }
+
+    public void setVisit(long visit) {
+        isVisit = true;
+        visitID=visit;
+    }
+
+    public long getVisitID() {
+        return visitID;
     }
 
     public int getRanking() {
@@ -71,15 +79,17 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
         user.getGrade().enterRoom();
         teamID = 0;
         Skin = 0;
+        isVisit = false;
 
         /*teamName = 0;*/
     }
 
-    public  void getVisit(MyUser user){
+    public void getVisit(MyUser user) {
         m_user = user;
         bodyNum = 0;
-        
+
     }
+
     public long getRoleId() {
         return m_user.GetRoleGID();
 
@@ -95,7 +105,7 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
             pb.packData(buffer);
         }
         buffer.Add(maxQiu);
-		/* buffer.Add(teamID); */
+        /* buffer.Add(teamID); */
 
     }
 
@@ -130,7 +140,7 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
         if (team != null) {
             return team.getTeamName();
         }
-        this.Skin=m_user.getSkin();
+        this.Skin = m_user.getSkin();
         return Skin;
     }
 
@@ -295,6 +305,9 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
             PlayerBody playerBody = (PlayerBody) it.next();
             i += playerBody.getM_weight();
         }
+        if (isVisit) {
+            return -1;
+        }
         return i;
     }
 
@@ -347,7 +360,7 @@ public class RoomPlayer implements Comparable<RoomPlayer>  {
         buffer.Add(loader.getSchool(this.m_user.getSchool()));//
         buffer.Add(eatNum);
         buffer.Add(this.getWeight());
-        LogRecords.Log(null,"现在体重"+(this.getWeight()==0?10:this.getWeight()));
+        LogRecords.Log(null, "现在体重" + (this.getWeight() == 0 ? 10 : this.getWeight()));
         buffer.Add(this.EarnMoney(this.getRanking()));// 获得金币
         buffer.Add(this.getTeamName());
         buffer.Add(this.getRanking());

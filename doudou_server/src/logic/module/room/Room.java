@@ -544,8 +544,8 @@ public class Room implements Tick {
                             buffer.Add(m_players.get(i).getID());
                             buffer.Add(0);//
                         }
-                /*        System.out.println("当前玩家" + m_players.get(i).getID()
-                                + "名次" + m_players.get(i).getRanking());*/
+                        System.out.println("当前玩家" + m_players.get(i).getID()
+                                + "名次" + m_players.get(i).getRanking());
                     } else {
                         break;
                     }
@@ -571,43 +571,49 @@ public class Room implements Tick {
             Iterator<RoomPlayer> its = m_players.iterator();
             while (its.hasNext()) {
                 RoomPlayer rp = (RoomPlayer) its.next();
+
+                SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
+                        .AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_SCORE);
+                if (m_allTeams.size() >= 10) {
+                    buffer.Add((short) (10));
+                } else {
+                    buffer.Add((short) m_allTeams.size());
+
+                }
+                for (int i = 0; i < m_allTeams.size(); i++) {
+                    if (i < 10) {
+                        buffer.Add(m_allTeams.get(i).getTeamName());
+                        buffer.Add(m_allTeams.get(i).m_allUsers.size());
+                        LogRecord.Log(null, "当前队伍"
+                                + m_allTeams.get(i).getTeamName() + "名次"
+                                + m_allTeams.get(i).getRanking() + "renshu"
+                                + m_allTeams.get(i).m_allUsers.size());
+                    } else {
+                        break;
+                    }
+                }
                 Team team = this.getTeam(rp.getRoleId());
                 if (team != null) {
-                    SendMsgBuffer buffer = PackBuffer.GetInstance().Clear()
-                            .AddID(Reg.ROOM, RoomInterface.MID_BROADCAST_SCORE);
-                    if (m_allTeams.size() >= 10) {
-                        buffer.Add((short) (10));
-                    } else {
-                        buffer.Add((short) m_allTeams.size());
-
-                    }
-                    for (int i = 0; i < m_allTeams.size(); i++) {
-                        if (i < 10) {
-                            buffer.Add(m_allTeams.get(i).getTeamName());
-                            buffer.Add(m_allTeams.get(i).m_allUsers.size());
-                            LogRecord.Log(null, "当前队伍"
-                                    + m_allTeams.get(i).getTeamName() + "名次"
-                                    + m_allTeams.get(i).getRanking() + "renshu"
-                                    + m_allTeams.get(i).m_allUsers.size());
-                        } else {
-                            break;
-                        }
-                    }
-
                     buffer.Add(team.getTeamName());
-
+                }
+                else{
+                    RoomPlayer roomPlayer = this.GetPlayer(rp.getVisitID());
+                    if (roomPlayer != null) {
+                        buffer.Add(roomPlayer.getTeamName());
+                    } else {
+                        buffer.Add(0);
+                    }
+                }
                     buffer.Add(System.currentTimeMillis());
                     buffer.Send(rp.getUser());
                 }
             }
-        }
+
     }
 
 	/*
      * //团战开始前倒计时 public void countDown() {
-	 * 
-	 * 
-	 * 
+	 *
 	 * }
 	 */
 
@@ -702,7 +708,6 @@ public class Room implements Tick {
             }
         }
     }
-
     /*	public void broadcast(int midBroadcastSplit, int playerID, int m_xpos,
                 int m_ypos, ArrayList<Integer> list, long time) {
             // TODO Auto-generated method stub
