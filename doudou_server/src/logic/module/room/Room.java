@@ -920,7 +920,7 @@ public class Room implements Tick {
                 for (int i = 0; i < getUserSize(); i++) {
                     if (m_players.get(i).getID() != 0) {
                         m_players.get(i).endpack(buffer);
-                        LogRecord.Log(null, "当前玩家" + m_players.get(i).getID()
+                        LogRecord.Log(null, "团战结算当前玩家" + m_players.get(i).getID()
                                 + "名次" + m_players.get(i).getRanking());
                     }
                 }
@@ -928,6 +928,7 @@ public class Room implements Tick {
                 Collections.sort(m_allTeams);
                 for (Team team : m_allTeams) {
                     team.endPack(buffer);
+
                 }
             }
             if (roomPlayer.getID() != 0) {

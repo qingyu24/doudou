@@ -28,6 +28,7 @@ public class RoomImpl implements RoomInterface {
             /*RoomManager.getInstance().joinRoom(p_user, roomID);*/
 
             RoomPlayer rp = r.AddPlayer(p_user);
+
             SendMsgBuffer buffer = PackBuffer.GetInstance().Clear().AddID(Reg.ROOM, RoomInterface.MID_ENTER);
             buffer.Add(r.getID());
             buffer.Send(p_user);
