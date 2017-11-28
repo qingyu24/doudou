@@ -43,7 +43,7 @@ public class TeamManager {
             team2.removeUser(user);
         }
 
-        if (team != null && team.getUsers().size() < new RoomRule().getPalyerNum()) {
+        if (team != null) {
             team.addUser(user);
             this.u_teamlist.put(user.GetRoleGID(), team);
             return team;
